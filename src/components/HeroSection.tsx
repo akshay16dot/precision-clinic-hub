@@ -20,8 +20,8 @@ const HeroSection = () => {
           className="mb-6"
         >
           <h1 className="sr-only">Board-Certified Prosthodontist &amp; Implant Specialist in New Jersey</h1>
-          <p className="font-display text-6xl md:text-8xl lg:text-9xl font-light tracking-tight text-navy leading-[0.95]">
-            Dr. Akshay Parmar
+          <p className="font-body text-4xl md:text-6xl lg:text-7xl font-extralight tracking-[0.25em] uppercase text-charcoal leading-none">
+            Akshay Parmar
           </p>
         </motion.div>
 
