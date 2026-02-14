@@ -22,8 +22,8 @@ const services = [
     description: "Multidisciplinary treatment planning for medically and dentally compromised patients.",
   },
   {
-    title: "Maxillofacial Prosthetics",
-    description: "Specialized prosthetic rehabilitation for congenital, surgical, and trauma-related defects.",
+    title: "Oncologic & Maxillofacial Rehabilitation",
+    description: "Specialized prosthetic rehabilitation for oncologic, congenital, surgical, and trauma-related defects.",
   },
 ];
 
@@ -42,7 +42,7 @@ const ServicesSection = () => {
             Specialized Services
           </p>
           <h2 className="font-display text-4xl md:text-5xl font-light text-navy">
-            Clinical Excellence
+            Prosthodontic &amp; Implant Services
           </h2>
         </motion.div>
 
@@ -56,7 +56,7 @@ const ServicesSection = () => {
               transition={{ duration: 0.6, delay: i * 0.1 }}
               className="bg-background p-10 md:p-12 group"
             >
-              <h3 className="font-display text-xl md:text-2xl font-medium text-charcoal mb-4 group-hover:text-navy transition-colors duration-300">
+              <h3 className="font-display text-xl md:text-2xl font-medium text-charcoal mb-4 group-hover:text-navy transition-colors duration-300" role="heading" aria-level={3}>
                 {service.title}
               </h3>
               <p className="font-body text-sm text-charcoal-light font-light leading-relaxed">

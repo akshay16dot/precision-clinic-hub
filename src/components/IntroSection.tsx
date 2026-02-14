@@ -13,12 +13,16 @@ const IntroSection = () => {
         >
           <div className="w-12 h-px bg-navy mx-auto mb-12" />
           
-          <p className="font-display text-2xl md:text-3xl lg:text-4xl font-light text-charcoal leading-relaxed mb-8">
-            Dr. Akshay Parmar is a Board-Certified Prosthodontist specializing in advanced dental implants, full-arch rehabilitation, and complex oral reconstruction.
+          <h2 className="font-display text-2xl md:text-3xl lg:text-4xl font-light text-charcoal leading-relaxed mb-8">
+            Dr. Akshay Parmar is a Board-Certified Prosthodontist providing advanced dental implant and prosthodontic rehabilitation across New Jersey.
+          </h2>
+
+          <p className="font-body text-sm md:text-base text-charcoal-light font-light leading-relaxed max-w-2xl mx-auto mb-6">
+            His clinical approach focuses on precision-driven, biologically respectful dentistry designed to restore function, aesthetics, and long-term stability.
           </p>
 
           <p className="font-body text-sm md:text-base text-charcoal-light font-light leading-relaxed max-w-2xl mx-auto">
-            His clinical approach focuses on precision-driven, biologically respectful dentistry designed to restore function, aesthetics, and long-term stability.
+            Care ranges from implant rehabilitation to complex oral and maxillofacial reconstruction.
           </p>
         </motion.div>
       </div>

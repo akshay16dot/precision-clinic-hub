@@ -4,8 +4,8 @@ import { Instagram } from "lucide-react";
 const credentials = [
   "Founder – STABLE IMPLANT Protocol™",
   "Founder – Floxient Digital Dentistry Platform",
-  "Clinical Educator – Implant & Rehabilitation Dentistry",
   "Former Teaching Faculty – NYU Prosthodontics",
+  "Clinical Educator – Implant & Rehabilitation Dentistry",
   "Key Opinion Leader – Advanced Implant Systems",
 ];
 
@@ -20,9 +20,9 @@ const AuthoritySection = () => {
           transition={{ duration: 1 }}
           className="max-w-3xl mx-auto"
         >
-          <p className="font-body text-xs tracking-[0.3em] uppercase text-charcoal-light text-center mb-16">
+          <h2 className="font-body text-xs tracking-[0.3em] uppercase text-charcoal-light text-center mb-16">
             Clinical &nbsp;•&nbsp; Educational &nbsp;•&nbsp; Technological Leadership
-          </p>
+          </h2>
 
           <div className="space-y-6 mb-20">
             {credentials.map((item, i) => (
