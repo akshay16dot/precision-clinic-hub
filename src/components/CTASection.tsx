@@ -1,0 +1,38 @@
+import { motion } from "framer-motion";
+
+const CTASection = () => {
+  return (
+    <section className="section-padding bg-warm-gray">
+      <div className="luxury-container text-center">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 1 }}
+          className="max-w-2xl mx-auto"
+        >
+          <div className="w-12 h-px bg-navy mx-auto mb-12" />
+
+          <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-light text-navy mb-8">
+            Begin Your
+            <br />
+            <span className="italic">Rehabilitation Journey</span>
+          </h2>
+
+          <p className="font-body text-sm text-charcoal-light font-light mb-14 max-w-md mx-auto leading-relaxed">
+            Every case begins with a thorough evaluation and a commitment to clinical excellence.
+          </p>
+
+          <a
+            href="#contact"
+            className="inline-block px-12 py-4 bg-navy text-primary-foreground font-body text-xs tracking-[0.2em] uppercase transition-all duration-300 hover:opacity-90"
+          >
+            Schedule Consultation
+          </a>
+        </motion.div>
+      </div>
+    </section>
+  );
+};
+
+export default CTASection;
