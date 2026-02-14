@@ -1,41 +1,27 @@
 import { motion } from "framer-motion";
-import heroImage from "@/assets/hero-dental.jpg";
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background image with overlay */}
-      <div className="absolute inset-0">
-        <img
-          src={heroImage}
-          alt="Precision dental instruments in a modern clinic"
-          className="w-full h-full object-cover"
-          loading="eager"
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/60 to-background" />
-      </div>
-
+    <section className="relative min-h-screen flex items-center justify-center bg-background">
       <div className="relative z-10 luxury-container text-center">
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="font-body text-xs tracking-[0.35em] uppercase text-charcoal-light mb-8"
+          className="font-body text-xs tracking-[0.35em] uppercase text-charcoal-light mb-10"
         >
-          Board-Certified Prosthodontist · New Jersey
+          Board-Certified Prosthodontist
         </motion.p>
 
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.4 }}
-          className="mb-8"
+          className="mb-6"
         >
           <h1 className="sr-only">Board-Certified Prosthodontist &amp; Implant Specialist in New Jersey</h1>
-          <p className="font-display text-5xl md:text-7xl lg:text-8xl font-light tracking-tight text-navy leading-[0.95]" aria-hidden="true">
-            Rehabilitation Without
-            <br />
-            <span className="italic font-light">Compromise.</span>
+          <p className="font-display text-6xl md:text-8xl lg:text-9xl font-light tracking-tight text-navy leading-[0.95]">
+            Dr. Akshay Parmar
           </p>
         </motion.div>
 
@@ -43,17 +29,27 @@ const HeroSection = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.7 }}
-          className="font-body text-sm md:text-base text-charcoal-light tracking-wide max-w-xl mx-auto mb-14 font-light"
+          className="font-body text-sm md:text-base text-charcoal-light tracking-wide max-w-xl mx-auto mb-16 font-light"
         >
           Advanced Implant &amp; Prosthodontic Rehabilitation
-          <br className="hidden md:block" />
-          in New Jersey
         </motion.p>
+
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1.2, delay: 1.1 }}
+          className="mb-16"
+        >
+          <div className="w-12 h-px bg-navy/30 mx-auto mb-12" />
+          <p className="font-display text-2xl md:text-3xl lg:text-4xl font-light italic text-charcoal tracking-tight">
+            Rehabilitation Without Compromise
+          </p>
+        </motion.div>
 
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 1 }}
+          transition={{ duration: 0.8, delay: 1.4 }}
           className="flex flex-col sm:flex-row gap-4 justify-center"
         >
           <a
@@ -75,7 +71,7 @@ const HeroSection = () => {
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ delay: 1.5, duration: 1 }}
+        transition={{ delay: 2, duration: 1 }}
         className="absolute bottom-10 left-1/2 -translate-x-1/2"
       >
         <motion.div
