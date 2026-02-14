@@ -22,19 +22,22 @@ const HeroSection = () => {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="font-body text-xs tracking-[0.35em] uppercase text-charcoal-light mb-8"
         >
-          Board-Certified Prosthodontist
+          Board-Certified Prosthodontist · New Jersey
         </motion.p>
 
-        <motion.h1
+        <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.4 }}
-          className="font-display text-5xl md:text-7xl lg:text-8xl font-light tracking-tight text-navy leading-[0.95] mb-8"
+          className="mb-8"
         >
-          Precision. Function.
-          <br />
-          <span className="italic font-light">Rehabilitation.</span>
-        </motion.h1>
+          <h1 className="sr-only">Board-Certified Prosthodontist &amp; Implant Specialist in New Jersey</h1>
+          <p className="font-display text-5xl md:text-7xl lg:text-8xl font-light tracking-tight text-navy leading-[0.95]" aria-hidden="true">
+            Rehabilitation Without
+            <br />
+            <span className="italic font-light">Compromise.</span>
+          </p>
+        </motion.div>
 
         <motion.p
           initial={{ opacity: 0, y: 20 }}
@@ -42,9 +45,9 @@ const HeroSection = () => {
           transition={{ duration: 0.8, delay: 0.7 }}
           className="font-body text-sm md:text-base text-charcoal-light tracking-wide max-w-xl mx-auto mb-14 font-light"
         >
-          Advanced Prosthodontics, Implant Rehabilitation
+          Advanced Implant &amp; Prosthodontic Rehabilitation
           <br className="hidden md:block" />
-          & Clinical Education
+          in New Jersey
         </motion.p>
 
         <motion.div
