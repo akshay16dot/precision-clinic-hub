@@ -28,7 +28,7 @@ const PhilosophySection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.8 }}
-          className="text-center mb-20"
+          className="text-center mb-14"
         >
           <p className="font-body text-xs tracking-[0.3em] uppercase text-primary-foreground/50 mb-6">
             Treatment Philosophy

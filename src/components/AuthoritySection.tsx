@@ -11,7 +11,7 @@ const credentials = [
 
 const AuthoritySection = () => {
   return (
-    <section className="section-padding bg-warm-gray">
+    <section className="section-padding" style={{ background: "linear-gradient(180deg, hsl(40 10% 94.5%) 0%, hsl(40 12% 93%) 100%)" }}>
       <div className="luxury-container">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
