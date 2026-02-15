@@ -27,7 +27,7 @@ const PageFooter = () => {
           {/* Logo & Contact */}
           <div>
             <Link to="/">
-              <img src={logoAP} alt="Dr. Akshay Parmar" className="h-20 md:h-24 mb-5" style={{ filter: "invert(1)" }} />
+              <img src={logoAP} alt="Dr. Akshay Parmar" className="h-32 md:h-40 mb-5" style={{ filter: "invert(1)" }} />
             </Link>
             <p className="font-body text-[10px] tracking-[0.3em] uppercase text-primary-foreground/30 mb-3">
               Board-Certified Prosthodontist
