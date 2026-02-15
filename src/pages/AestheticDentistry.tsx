@@ -5,41 +5,41 @@ import PageHero from "@/components/PageHero";
 import PageCTA from "@/components/PageCTA";
 import PageFooter from "@/components/PageFooter";
 
-const beneficiaries = [
+const services = [
   {
-    title: "Extensive Tooth Loss",
-    description: "Patients experiencing significant tooth loss requiring comprehensive prosthetic rehabilitation of one or both arches.",
+    title: "Porcelain Veneers",
+    description: "Custom-fabricated porcelain restorations designed to refine tooth shape, alignment, and shade. Each veneer is individually crafted to harmonize with the surrounding dentition and facial proportions.",
   },
   {
-    title: "Failing Dentition",
-    description: "Individuals with compromised remaining teeth where extraction and full-arch restoration provides superior long-term outcomes.",
+    title: "Smile Rehabilitation",
+    description: "Comprehensive aesthetic treatment planning addressing multiple concerns — alignment, proportion, shade, and gingival symmetry — through a coordinated, phased approach to achieve a naturally harmonious result.",
   },
   {
-    title: "Functional Instability",
-    description: "Cases where existing prosthetics or remaining dentition no longer provide adequate masticatory function or occlusal stability.",
+    title: "Ceramic Crowns & Bridges",
+    description: "Metal-free ceramic restorations that replicate the translucency, contour, and vitality of natural teeth. Designed for both anterior aesthetics and posterior durability.",
   },
   {
-    title: "Advanced Restorative Needs",
-    description: "Complex clinical presentations requiring multidisciplinary treatment planning and comprehensive prosthetic rehabilitation.",
+    title: "Functional & Aesthetic Harmony",
+    description: "Every aesthetic treatment is planned with equal consideration for occlusal function, biomechanical stability, and long-term material performance — ensuring beauty that endures.",
   },
 ];
 
-const treatmentGoals = [
+const principles = [
   {
-    title: "Functional Restoration",
-    description: "Re-establishment of complete masticatory function, phonetics, and oral comfort through implant-supported fixed prosthetics.",
+    title: "Facial Integration",
+    description: "Aesthetic outcomes are designed relative to facial proportions, lip dynamics, and smile architecture — not isolated tooth appearance.",
   },
   {
-    title: "Structural Stability",
-    description: "Biomechanically sound implant positioning and prosthetic design ensuring long-term load distribution and osseous health.",
+    title: "Material Excellence",
+    description: "Advanced ceramic systems selected for optical properties that replicate natural enamel translucency, depth, and surface texture.",
   },
   {
-    title: "Aesthetic Integration",
-    description: "Prosthetic design harmonized with facial proportions, soft tissue contours, and natural dental anatomy.",
+    title: "Conservative Approach",
+    description: "Preservation of natural tooth structure wherever possible, utilizing minimally invasive preparation techniques and bonded restorations.",
   },
   {
-    title: "Long-Term Predictability",
-    description: "Evidence-based protocols and precision engineering designed to maximize the longevity and maintainability of the rehabilitation.",
+    title: "Predictable Outcomes",
+    description: "Digital smile design, diagnostic wax-ups, and provisional restorations ensure the final result is visualized and approved before definitive treatment.",
   },
 ];
 
@@ -49,10 +49,10 @@ const fadeUp = {
   viewport: { once: true, margin: "-100px" },
 };
 
-const FullArchImplants = () => {
+const AestheticDentistry = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
-    document.title = "Full-Arch Implants in New Jersey | Dr. Akshay Parmar";
+    document.title = "Aesthetic & Cosmetic Dentistry | Dr. Akshay Parmar";
     return () => {
       document.title = "Dr. Akshay Parmar | Board-Certified Prosthodontist in New Jersey";
     };
@@ -64,12 +64,12 @@ const FullArchImplants = () => {
 
       <PageHero
         subtitle="Board-Certified Prosthodontist · New Jersey"
-        title="Full-Arch Implant"
-        titleItalic="Rehabilitation"
+        title="Aesthetic &amp; Cosmetic"
+        titleItalic="Dentistry"
         paragraphs={[
-          "Full-arch implant rehabilitation is designed for patients requiring comprehensive restoration of function, stability, and aesthetics.",
-          "Dr. Akshay Parmar provides advanced full-arch implant rehabilitation across New Jersey, focusing on precision-driven planning, biological stability, and long-term functional outcomes.",
-          "Treatment is guided by prosthodontic principles, structural biomechanics, and individualized care.",
+          "Aesthetic dentistry is the intersection of clinical precision and artistic vision.",
+          "Dr. Akshay Parmar approaches every cosmetic case with the rigor of prosthodontic training — ensuring that visual beauty is always supported by functional integrity and long-term material performance.",
+          "The result is refined, natural, and enduring.",
         ]}
       />
 
@@ -77,20 +77,20 @@ const FullArchImplants = () => {
         <div className="w-12 h-px bg-navy mx-auto" />
       </div>
 
-      {/* Who Benefits */}
+      {/* Services */}
       <section className="section-padding bg-background">
         <div className="luxury-container">
           <motion.div {...fadeUp} transition={{ duration: 0.8 }} className="text-center mb-20">
             <p className="font-body text-xs tracking-[0.3em] uppercase text-charcoal-light mb-6">
-              Clinical Indications
+              Aesthetic Services
             </p>
             <h2 className="font-display text-4xl md:text-5xl font-light text-navy">
-              Who Benefits from Full-Arch Implants
+              Treatment Scope
             </h2>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-divider max-w-4xl mx-auto">
-            {beneficiaries.map((item, i) => (
+            {services.map((item, i) => (
               <motion.div
                 key={i}
                 {...fadeUp}
@@ -109,41 +109,41 @@ const FullArchImplants = () => {
         </div>
       </section>
 
-      {/* Clinical Approach */}
+      {/* Philosophy */}
       <section className="section-padding bg-warm-gray">
         <div className="luxury-container">
           <motion.div {...fadeUp} transition={{ duration: 1 }} className="max-w-3xl mx-auto text-center">
             <p className="font-body text-xs tracking-[0.3em] uppercase text-charcoal-light mb-6">
-              Treatment Philosophy
+              Aesthetic Philosophy
             </p>
             <h2 className="font-display text-4xl md:text-5xl font-light text-navy mb-12">
-              Clinical Approach
+              Beyond Appearance
             </h2>
             <div className="w-12 h-px bg-navy mx-auto mb-12" />
             <p className="font-display text-xl md:text-2xl font-light text-charcoal leading-relaxed mb-8">
-              Full-arch rehabilitation demands precision-driven diagnosis, prosthodontic rehabilitation principles, and biologically respectful protocols to achieve long-term stability and function.
+              True aesthetic excellence is invisible — it looks natural, feels effortless, and functions without compromise.
             </p>
             <p className="font-body text-sm md:text-base text-charcoal-light font-light leading-relaxed max-w-2xl mx-auto">
-              Treatment philosophy reflects principles incorporated within the STABLE IMPLANT Protocol™, emphasizing soft tissue stability, bone preservation, and biomechanical integration.
+              Every treatment is designed to honor the natural beauty of the smile while correcting imperfections with precision and restraint.
             </p>
           </motion.div>
         </div>
       </section>
 
-      {/* Treatment Goals */}
+      {/* Principles */}
       <section className="section-padding bg-background">
         <div className="luxury-container">
           <motion.div {...fadeUp} transition={{ duration: 0.8 }} className="text-center mb-20">
             <p className="font-body text-xs tracking-[0.3em] uppercase text-charcoal-light mb-6">
-              Rehabilitation Outcomes
+              Clinical Standards
             </p>
             <h2 className="font-display text-4xl md:text-5xl font-light text-navy">
-              Treatment Goals
+              Guiding Principles
             </h2>
           </motion.div>
 
           <div className="max-w-3xl mx-auto space-y-0">
-            {treatmentGoals.map((goal, i) => (
+            {principles.map((item, i) => (
               <motion.div
                 key={i}
                 {...fadeUp}
@@ -151,10 +151,10 @@ const FullArchImplants = () => {
                 className="border-b border-divider py-10 md:py-12"
               >
                 <h3 className="font-display text-xl md:text-2xl font-medium text-charcoal mb-4">
-                  {goal.title}
+                  {item.title}
                 </h3>
                 <p className="font-body text-sm text-charcoal-light font-light leading-relaxed">
-                  {goal.description}
+                  {item.description}
                 </p>
               </motion.div>
             ))}
@@ -163,11 +163,11 @@ const FullArchImplants = () => {
       </section>
 
       <PageCTA
-        description="Begin with a comprehensive evaluation to determine the most appropriate full-arch rehabilitation pathway for your clinical needs."
+        description="Begin with a personalized aesthetic consultation to explore the possibilities for your smile."
       />
       <PageFooter />
     </main>
   );
 };
 
-export default FullArchImplants;
+export default AestheticDentistry;

@@ -5,41 +5,37 @@ import PageHero from "@/components/PageHero";
 import PageCTA from "@/components/PageCTA";
 import PageFooter from "@/components/PageFooter";
 
-const beneficiaries = [
+const specialties = [
   {
-    title: "Extensive Tooth Loss",
-    description: "Patients experiencing significant tooth loss requiring comprehensive prosthetic rehabilitation of one or both arches.",
+    title: "Post-Oncologic Rehabilitation",
+    description: "Prosthetic restoration following surgical resection for oral, head, and neck cancers. Treatment focuses on re-establishing oral function, speech, swallowing, and facial form through individualized obturator prostheses and implant-supported rehabilitations.",
   },
   {
-    title: "Failing Dentition",
-    description: "Individuals with compromised remaining teeth where extraction and full-arch restoration provides superior long-term outcomes.",
+    title: "Congenital Defect Management",
+    description: "Prosthetic solutions for patients born with craniofacial anomalies, including cleft palate and other developmental conditions requiring coordinated, multidisciplinary rehabilitative care.",
   },
   {
-    title: "Functional Instability",
-    description: "Cases where existing prosthetics or remaining dentition no longer provide adequate masticatory function or occlusal stability.",
+    title: "Surgical & Trauma Rehabilitation",
+    description: "Prosthetic reconstruction following facial trauma, accident-related injuries, or complex surgical interventions. Restorations are designed to restore both function and natural appearance.",
   },
   {
-    title: "Advanced Restorative Needs",
-    description: "Complex clinical presentations requiring multidisciplinary treatment planning and comprehensive prosthetic rehabilitation.",
+    title: "Extraoral Prosthetics",
+    description: "Fabrication of custom facial prostheses — including orbital, auricular, and nasal prostheses — for patients who have experienced tissue loss due to disease, surgery, or trauma.",
   },
 ];
 
-const treatmentGoals = [
+const approach = [
   {
-    title: "Functional Restoration",
-    description: "Re-establishment of complete masticatory function, phonetics, and oral comfort through implant-supported fixed prosthetics.",
+    title: "Multidisciplinary Coordination",
+    description: "Close collaboration with surgical oncologists, radiation oncologists, speech pathologists, and other specialists to ensure comprehensive, well-timed rehabilitation.",
   },
   {
-    title: "Structural Stability",
-    description: "Biomechanically sound implant positioning and prosthetic design ensuring long-term load distribution and osseous health.",
+    title: "Patient-Centered Planning",
+    description: "Every rehabilitation plan is developed with deep respect for the patient's emotional journey, personal goals, and quality-of-life priorities.",
   },
   {
-    title: "Aesthetic Integration",
-    description: "Prosthetic design harmonized with facial proportions, soft tissue contours, and natural dental anatomy.",
-  },
-  {
-    title: "Long-Term Predictability",
-    description: "Evidence-based protocols and precision engineering designed to maximize the longevity and maintainability of the rehabilitation.",
+    title: "Precision Prosthetic Design",
+    description: "Advanced materials and digital workflows ensure prosthetic outcomes that are functionally sound, aesthetically refined, and personally meaningful.",
   },
 ];
 
@@ -49,10 +45,10 @@ const fadeUp = {
   viewport: { once: true, margin: "-100px" },
 };
 
-const FullArchImplants = () => {
+const MaxillofacialRehabilitation = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
-    document.title = "Full-Arch Implants in New Jersey | Dr. Akshay Parmar";
+    document.title = "Maxillofacial & Oncology Rehabilitation | Dr. Akshay Parmar";
     return () => {
       document.title = "Dr. Akshay Parmar | Board-Certified Prosthodontist in New Jersey";
     };
@@ -64,12 +60,12 @@ const FullArchImplants = () => {
 
       <PageHero
         subtitle="Board-Certified Prosthodontist · New Jersey"
-        title="Full-Arch Implant"
+        title="Maxillofacial &amp; Oncology"
         titleItalic="Rehabilitation"
         paragraphs={[
-          "Full-arch implant rehabilitation is designed for patients requiring comprehensive restoration of function, stability, and aesthetics.",
-          "Dr. Akshay Parmar provides advanced full-arch implant rehabilitation across New Jersey, focusing on precision-driven planning, biological stability, and long-term functional outcomes.",
-          "Treatment is guided by prosthodontic principles, structural biomechanics, and individualized care.",
+          "Maxillofacial prosthetic rehabilitation addresses some of the most complex and deeply personal clinical challenges in dentistry.",
+          "Dr. Akshay Parmar provides specialized care for patients who have experienced tissue loss or functional compromise due to cancer treatment, congenital conditions, or trauma.",
+          "Every case is approached with clinical precision, human compassion, and a commitment to restoring dignity and quality of life.",
         ]}
       />
 
@@ -77,20 +73,20 @@ const FullArchImplants = () => {
         <div className="w-12 h-px bg-navy mx-auto" />
       </div>
 
-      {/* Who Benefits */}
+      {/* Specialties */}
       <section className="section-padding bg-background">
         <div className="luxury-container">
           <motion.div {...fadeUp} transition={{ duration: 0.8 }} className="text-center mb-20">
             <p className="font-body text-xs tracking-[0.3em] uppercase text-charcoal-light mb-6">
-              Clinical Indications
+              Specialized Care
             </p>
             <h2 className="font-display text-4xl md:text-5xl font-light text-navy">
-              Who Benefits from Full-Arch Implants
+              Areas of Expertise
             </h2>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-divider max-w-4xl mx-auto">
-            {beneficiaries.map((item, i) => (
+            {specialties.map((item, i) => (
               <motion.div
                 key={i}
                 {...fadeUp}
@@ -109,41 +105,41 @@ const FullArchImplants = () => {
         </div>
       </section>
 
-      {/* Clinical Approach */}
+      {/* Philosophy */}
       <section className="section-padding bg-warm-gray">
         <div className="luxury-container">
           <motion.div {...fadeUp} transition={{ duration: 1 }} className="max-w-3xl mx-auto text-center">
             <p className="font-body text-xs tracking-[0.3em] uppercase text-charcoal-light mb-6">
-              Treatment Philosophy
+              Rehabilitation Philosophy
             </p>
             <h2 className="font-display text-4xl md:text-5xl font-light text-navy mb-12">
-              Clinical Approach
+              Restoring More Than Function
             </h2>
             <div className="w-12 h-px bg-navy mx-auto mb-12" />
             <p className="font-display text-xl md:text-2xl font-light text-charcoal leading-relaxed mb-8">
-              Full-arch rehabilitation demands precision-driven diagnosis, prosthodontic rehabilitation principles, and biologically respectful protocols to achieve long-term stability and function.
+              Maxillofacial rehabilitation is not simply about replacing what was lost. It is about restoring confidence, comfort, and connection to the world.
             </p>
             <p className="font-body text-sm md:text-base text-charcoal-light font-light leading-relaxed max-w-2xl mx-auto">
-              Treatment philosophy reflects principles incorporated within the STABLE IMPLANT Protocol™, emphasizing soft tissue stability, bone preservation, and biomechanical integration.
+              Treatment is guided by a deep understanding of the physical and emotional dimensions of recovery, ensuring that every prosthetic solution serves the whole patient.
             </p>
           </motion.div>
         </div>
       </section>
 
-      {/* Treatment Goals */}
+      {/* Approach */}
       <section className="section-padding bg-background">
         <div className="luxury-container">
           <motion.div {...fadeUp} transition={{ duration: 0.8 }} className="text-center mb-20">
             <p className="font-body text-xs tracking-[0.3em] uppercase text-charcoal-light mb-6">
-              Rehabilitation Outcomes
+              Clinical Standards
             </p>
             <h2 className="font-display text-4xl md:text-5xl font-light text-navy">
-              Treatment Goals
+              Our Approach
             </h2>
           </motion.div>
 
           <div className="max-w-3xl mx-auto space-y-0">
-            {treatmentGoals.map((goal, i) => (
+            {approach.map((item, i) => (
               <motion.div
                 key={i}
                 {...fadeUp}
@@ -151,10 +147,10 @@ const FullArchImplants = () => {
                 className="border-b border-divider py-10 md:py-12"
               >
                 <h3 className="font-display text-xl md:text-2xl font-medium text-charcoal mb-4">
-                  {goal.title}
+                  {item.title}
                 </h3>
                 <p className="font-body text-sm text-charcoal-light font-light leading-relaxed">
-                  {goal.description}
+                  {item.description}
                 </p>
               </motion.div>
             ))}
@@ -163,11 +159,13 @@ const FullArchImplants = () => {
       </section>
 
       <PageCTA
-        description="Begin with a comprehensive evaluation to determine the most appropriate full-arch rehabilitation pathway for your clinical needs."
+        title="Begin the Conversation"
+        description="If you or a loved one requires maxillofacial or oncologic rehabilitation, we welcome the opportunity to discuss how we can help."
+        buttonText="Schedule a Consultation"
       />
       <PageFooter />
     </main>
   );
 };
 
-export default FullArchImplants;
+export default MaxillofacialRehabilitation;
