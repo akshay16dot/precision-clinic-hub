@@ -11,7 +11,7 @@ const HeroSection = () => {
           transition={{ duration: 1.2, delay: 0.2 }}
           className="mb-12"
         >
-          <img src={logoAP} alt="AP Monogram" className="h-36 md:h-48 lg:h-56 mx-auto" />
+          <img src={logoAP} alt="AP Monogram" className="h-44 md:h-56 lg:h-64 mx-auto" />
         </motion.div>
 
         <motion.div
