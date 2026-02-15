@@ -5,14 +5,9 @@ const HeroSection = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center bg-background">
       <div className="relative z-10 luxury-container text-center">
-        <motion.div
-          initial={{ opacity: 0, scale: 0.95 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1.2, delay: 0.2 }}
-          className="mb-12"
-        >
-          <img src={logoAP} alt="AP Monogram" className="h-44 md:h-56 lg:h-64 mx-auto" />
-        </motion.div>
+        <div className="mb-12">
+          <img src={logoAP} alt="Dr. Akshay Parmar — Prosthodontist" className="h-44 md:h-56 lg:h-64 mx-auto" />
+        </div>
 
         <motion.div
           initial={{ opacity: 0, y: 30 }}
