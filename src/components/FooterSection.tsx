@@ -27,7 +27,7 @@ const FooterSection = () => {
           {/* Logo & Contact */}
           <div>
             <Link to="/">
-              <img src={logoAP} alt="Dr. Akshay Parmar" className="h-32 md:h-36 mb-6 brightness-0 invert" />
+              <img src={logoAP} alt="Dr. Akshay Parmar" className="h-40 md:h-48 mb-6 brightness-0 invert" />
             </Link>
             <p className="font-body text-xs tracking-[0.2em] uppercase text-primary-foreground/40 mb-8">
               Board-Certified Prosthodontist
