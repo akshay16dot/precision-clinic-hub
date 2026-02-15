@@ -5,35 +5,15 @@ const HeroSection = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center bg-background py-20">
       <div className="relative z-10 luxury-container text-center">
-        <div className="mb-20 md:mb-24">
-          <img src={logoAP} alt="Dr. Akshay Parmar — Prosthodontist" className="h-48 md:h-60 lg:h-72 mx-auto" />
+        <div className="mb-20 md:mb-28">
+          <h1 className="sr-only">Board-Certified Prosthodontist &amp; Implant Specialist in New Jersey</h1>
+          <img src={logoAP} alt="Dr. Akshay Parmar — Board-Certified Prosthodontist" className="h-56 md:h-72 lg:h-80 mx-auto" />
         </div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.6 }}
-          className="mb-6"
-        >
-          <h1 className="sr-only">Board-Certified Prosthodontist &amp; Implant Specialist in New Jersey</h1>
-          <p className="font-body text-4xl md:text-6xl lg:text-7xl font-extralight tracking-[0.25em] uppercase text-charcoal leading-none">
-            Akshay Parmar
-          </p>
-        </motion.div>
-
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.9 }}
-          className="font-body text-xs tracking-[0.35em] uppercase text-charcoal-light mb-10"
-        >
-          Prosthodontist
-        </motion.p>
-
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.7 }}
+          transition={{ duration: 0.8, delay: 0.6 }}
           className="font-body text-sm md:text-base text-charcoal-light tracking-wide max-w-xl mx-auto mb-20 font-light"
         >
           Advanced Implant &amp; Prosthodontic Rehabilitation
