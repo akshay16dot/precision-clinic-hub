@@ -107,8 +107,20 @@ const ClinicalCases = () => {
         </div>
       </section>
 
-      <div className="luxury-container px-6 md:px-8">
-        <div className="w-12 h-px bg-navy mx-auto" />
+      {/* Logo watermark divider */}
+      <div className="luxury-container px-6 md:px-8 py-12 md:py-16">
+        <div className="flex items-center justify-center">
+          <div className="flex-1 h-px bg-divider" />
+          <div className="mx-8 md:mx-12">
+            <img
+              src={logoAP}
+              alt=""
+              aria-hidden="true"
+              className="h-20 md:h-28 opacity-[0.06]"
+            />
+          </div>
+          <div className="flex-1 h-px bg-divider" />
+        </div>
       </div>
 
       {/* Cases */}

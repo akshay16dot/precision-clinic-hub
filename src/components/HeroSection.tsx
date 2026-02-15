@@ -40,11 +40,11 @@ const HeroSection = () => {
         <div className="flex-1 flex items-center">
           <div className="w-full grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-4 items-center">
             {/* Logo — dominant left anchor */}
-            <div className="lg:col-span-5 flex justify-center lg:justify-start">
+            <div className="lg:col-span-5 flex items-center justify-center lg:justify-start">
               <img
                 src={logoAP}
                 alt="Dr. Akshay Parmar — Board-Certified Prosthodontist"
-                className="h-72 md:h-[22rem] lg:h-[28rem] brightness-0 invert opacity-[0.92] drop-shadow-[0_0_80px_rgba(255,255,255,0.03)]"
+                className="h-80 md:h-[24rem] lg:h-[32rem] w-auto max-w-full object-contain brightness-0 invert opacity-[0.93]"
               />
             </div>
 
