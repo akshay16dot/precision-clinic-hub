@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import logoAP from "@/assets/logo-ap-full.png";
+import logoAP from "@/assets/logo-ap.png";
 
 const professionalLinks = [
   {
@@ -27,7 +27,7 @@ const PageFooter = () => {
           {/* Logo & Contact */}
           <div>
             <Link to="/">
-              <img src={logoAP} alt="Dr. Akshay Parmar" className="h-52 md:h-64 lg:h-72 mb-3" style={{ filter: "brightness(0) invert(1)" }} />
+              <img src={logoAP} alt="Dr. Akshay Parmar" className="h-44 md:h-52 mb-3 brightness-0 invert" />
             </Link>
             <p className="font-body text-[10px] tracking-[0.3em] uppercase text-primary-foreground/35 mb-3">
               Board-Certified Prosthodontist
