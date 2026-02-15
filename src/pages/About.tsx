@@ -84,7 +84,7 @@ const About = () => {
                 Dr. Akshay Parmar is a board-certified prosthodontist specializing in advanced implant, full-arch, and complex oral rehabilitation.
               </p>
               <p className="font-body text-sm md:text-base text-charcoal-light font-light leading-relaxed">
-                His work centers on precision-driven, biologically respectful dentistry — restoring function, aesthetics, and long-term stability through carefully engineered treatment planning.
+                His work centers on precision-driven, biologically respectful dentistry, restoring function, aesthetics, and long-term stability through carefully engineered treatment planning.
               </p>
             </motion.div>
           </div>
