@@ -1,3 +1,4 @@
+import SiteNavigation from "@/components/SiteNavigation";
 import HeroSection from "@/components/HeroSection";
 import IntroSection from "@/components/IntroSection";
 import AuthoritySection from "@/components/AuthoritySection";
@@ -11,6 +12,7 @@ import FooterSection from "@/components/FooterSection";
 const Index = () => {
   return (
     <main className="bg-background">
+      <SiteNavigation />
       <HeroSection />
       <IntroSection />
       <AuthoritySection />
