@@ -8,6 +8,7 @@ const navLinks = [
   { to: "/full-arch-implants-new-jersey", label: "Full-Arch" },
   { to: "/aesthetic-dentistry", label: "Aesthetic Dentistry" },
   { to: "/maxillofacial-rehabilitation", label: "Maxillofacial" },
+  { to: "/education", label: "Education" },
   { to: "/about", label: "About" },
   { to: "/contact", label: "Contact" },
 ];
