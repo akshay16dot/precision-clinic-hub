@@ -61,6 +61,16 @@ const EducationSection = () => {
               <h3 className="font-display text-xl font-medium text-charcoal group-hover:text-navy transition-colors duration-300">
                 {course.title}
               </h3>
+              {i === 0 && (
+                <a
+                  href="https://docs.google.com/forms/d/e/1FAIpQLSfZWiMIyOBL39evfad_BD-9E0qSgf3StwI1zjOel10hQReI-g/viewform"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block mt-5 font-body text-[10px] tracking-[0.2em] uppercase text-navy border-b border-navy/30 pb-0.5 hover:border-navy transition-colors duration-300"
+                >
+                  Clinical Course Registration
+                </a>
+              )}
             </motion.div>
           ))}
         </div>
