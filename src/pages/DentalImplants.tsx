@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
+import logoAP from "@/assets/logo-ap.png";
 
 const benefits = [
   {
@@ -60,11 +61,8 @@ const DentalImplants = () => {
       {/* Navigation back */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-background/90 backdrop-blur-sm border-b border-divider">
         <div className="luxury-container flex items-center justify-between py-5 px-6 md:px-8">
-          <Link
-            to="/"
-            className="font-display text-lg md:text-xl text-navy hover:opacity-70 transition-opacity duration-300"
-          >
-            Dr. Akshay Parmar
+          <Link to="/" className="hover:opacity-70 transition-opacity duration-300">
+            <img src={logoAP} alt="Dr. Akshay Parmar" className="h-10 md:h-12" />
           </Link>
           <Link
             to="/"
@@ -233,7 +231,7 @@ const DentalImplants = () => {
       {/* Footer */}
       <footer className="py-16 px-6 md:px-8 bg-background border-t border-divider">
         <div className="luxury-container text-center">
-          <p className="font-display text-xl text-navy mb-2">Dr. Akshay Parmar</p>
+          <img src={logoAP} alt="Dr. Akshay Parmar" className="h-12 mx-auto mb-4 brightness-0 invert" />
           <p className="font-body text-xs tracking-[0.2em] uppercase text-charcoal-light">
             Board-Certified Prosthodontist · New Jersey
           </p>

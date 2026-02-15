@@ -1,12 +1,12 @@
+import logoAP from "@/assets/logo-ap.png";
+
 const FooterSection = () => {
   return (
     <footer id="contact" className="py-20 px-6 md:px-8 bg-navy">
       <div className="luxury-container">
         <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-12">
           <div>
-            <h3 className="font-display text-2xl md:text-3xl font-light text-primary-foreground mb-2">
-              Dr. Akshay Parmar
-            </h3>
+            <img src={logoAP} alt="Dr. Akshay Parmar" className="h-14 mb-4 brightness-0 invert" />
             <p className="font-body text-xs tracking-[0.2em] uppercase text-primary-foreground/40 mb-8">
               Board-Certified Prosthodontist
             </p>
