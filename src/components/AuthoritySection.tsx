@@ -1,72 +1,88 @@
 import { motion } from "framer-motion";
-import { Instagram } from "lucide-react";
+import drParmar from "@/assets/dr-parmar-portrait.png";
 
 const credentials = [
-  "Founder – STABLE IMPLANT Protocol™",
-  "Founder – Floxient Digital Dentistry Platform",
-  "Former Teaching Faculty – NYU Prosthodontics",
-  "Clinical Educator – Implant & Rehabilitation Dentistry",
-  "Key Opinion Leader – Advanced Implant Systems",
+  "Board-Certified Prosthodontist",
+  "Implant & Full-Arch Specialist",
+  "Veneers & Smile Reconstruction",
+  "Maxillofacial / Implant Reconstruction Expertise",
+  "Founder — STABLE IMPLANT Protocol™",
+  "Former Teaching Faculty — NYU Prosthodontics",
 ];
 
 const AuthoritySection = () => {
   return (
-    <section className="section-padding" style={{ background: "linear-gradient(180deg, hsl(40 10% 94.5%) 0%, hsl(40 12% 93%) 100%)" }}>
+    <section
+      className="section-padding"
+      style={{
+        background:
+          "linear-gradient(180deg, hsl(40 10% 95%) 0%, hsl(40 12% 93%) 100%)",
+      }}
+    >
       <div className="luxury-container">
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 1 }}
-          className="max-w-3xl mx-auto"
-        >
-          <h2 className="font-body text-xs tracking-[0.3em] uppercase text-charcoal-light text-center mb-16">
-            Clinical &nbsp;•&nbsp; Educational &nbsp;•&nbsp; Technological Leadership
-          </h2>
-
-          <div className="space-y-6 mb-20">
-            {credentials.map((item, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: i * 0.1 }}
-                className="border-b border-divider pb-5"
-              >
-                <p className="font-display text-xl md:text-2xl font-light text-charcoal">
-                  {item}
-                </p>
-              </motion.div>
-            ))}
-          </div>
-
-          {/* Instagram link */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center max-w-5xl mx-auto">
+          {/* Portrait */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="text-center"
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 1 }}
+            className="flex justify-center lg:justify-end"
           >
-            <a
-              href="https://instagram.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-3 group"
-            >
-              <Instagram className="w-5 h-5 text-charcoal-light group-hover:text-navy transition-colors duration-300" />
-              <div className="text-left">
-                <p className="font-body text-sm text-charcoal group-hover:text-navy transition-colors duration-300">
-                  Clinical Education & Professional Insights
-                </p>
-                <p className="font-body text-xs text-charcoal-light mt-0.5">
-                  For Dental Professionals
-                </p>
-              </div>
-            </a>
+            <div className="relative">
+              <img
+                src={drParmar}
+                alt="Dr. Akshay Parmar — Board-Certified Prosthodontist"
+                className="w-72 md:w-80 lg:w-96 object-cover"
+                style={{
+                  filter: "contrast(1.02) brightness(0.98) saturate(0.9)",
+                }}
+              />
+              <div
+                className="absolute inset-0"
+                style={{
+                  background:
+                    "linear-gradient(180deg, transparent 60%, hsl(40 10% 95% / 0.5) 100%)",
+                }}
+              />
+            </div>
           </motion.div>
-        </motion.div>
+
+          {/* Credentials */}
+          <motion.div
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 1 }}
+          >
+            <p className="font-body text-[10px] tracking-[0.4em] uppercase text-charcoal-light mb-6">
+              About Dr. Parmar
+            </p>
+            <h2 className="font-display text-3xl md:text-4xl font-light text-navy mb-3">
+              Clinical <span className="italic">Authority</span>
+            </h2>
+            <p className="font-body text-sm text-charcoal-light font-light leading-relaxed mb-10 max-w-md">
+              A specialist committed to precision-driven, biologically respectful rehabilitation — restoring function, aesthetics, and long-term stability.
+            </p>
+
+            <div className="space-y-4">
+              {credentials.map((item, i) => (
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0, x: 15 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: i * 0.08 }}
+                  className="border-b border-divider pb-4"
+                >
+                  <p className="font-display text-lg md:text-xl font-light text-charcoal">
+                    {item}
+                  </p>
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
+        </div>
       </div>
     </section>
   );

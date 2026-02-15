@@ -3,7 +3,12 @@ import { Link } from "react-router-dom";
 
 const CTASection = () => {
   return (
-    <section className="section-padding bg-warm-gray">
+    <section
+      className="section-padding"
+      style={{
+        background: "linear-gradient(180deg, hsl(40 10% 94%) 0%, hsl(40 12% 93%) 100%)",
+      }}
+    >
       <div className="luxury-container text-center">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -12,15 +17,15 @@ const CTASection = () => {
           transition={{ duration: 1 }}
           className="max-w-2xl mx-auto"
         >
-          <div className="w-12 h-px bg-navy mx-auto mb-12" />
+          <div className="w-12 h-px bg-navy mx-auto mb-10" />
 
-          <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-light text-navy mb-8">
+          <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-light text-navy mb-6">
             Begin Your
             <br />
             <span className="italic">Rehabilitation Journey</span>
           </h2>
 
-          <p className="font-body text-sm text-charcoal-light font-light mb-14 max-w-md mx-auto leading-relaxed">
+          <p className="font-body text-sm text-charcoal-light font-light mb-12 max-w-md mx-auto leading-relaxed">
             Every case begins with a thorough evaluation and a commitment to clinical excellence.
           </p>
 

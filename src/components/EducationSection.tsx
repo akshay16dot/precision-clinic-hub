@@ -17,7 +17,13 @@ const courses = [
 
 const EducationSection = () => {
   return (
-    <section id="education" className="section-padding bg-background">
+    <section
+      id="education"
+      className="section-padding"
+      style={{
+        background: "linear-gradient(180deg, hsl(40 15% 97%) 0%, hsl(40 18% 96%) 100%)",
+      }}
+    >
       <div className="luxury-container">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -26,10 +32,10 @@ const EducationSection = () => {
           transition={{ duration: 0.8 }}
           className="max-w-3xl mx-auto text-center mb-14"
         >
-          <p className="font-body text-xs tracking-[0.3em] uppercase text-charcoal-light mb-6">
+          <p className="font-body text-[10px] tracking-[0.4em] uppercase text-charcoal-light mb-5">
             For Dental Professionals
           </p>
-          <h2 className="font-display text-4xl md:text-5xl font-light text-navy mb-6">
+          <h2 className="font-display text-4xl md:text-5xl font-light text-navy mb-5">
             Implant Education
             <br />
             <span className="italic">Without Shortcuts</span>
@@ -39,7 +45,7 @@ const EducationSection = () => {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-divider max-w-4xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
           {courses.map((course, i) => (
             <motion.div
               key={i}
@@ -47,9 +53,9 @@ const EducationSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: i * 0.15 }}
-              className="bg-background p-10 text-center group"
+              className="p-10 text-center border border-divider bg-background group transition-all duration-500 hover:border-navy/20 hover:shadow-[0_4px_20px_-8px_hsl(220_20%_15%/0.1)]"
             >
-              <p className="font-body text-[10px] tracking-[0.3em] uppercase text-charcoal-light mb-4">
+              <p className="font-body text-[10px] tracking-[0.3em] uppercase text-charcoal-light/50 mb-4">
                 {course.type}
               </p>
               <h3 className="font-display text-xl font-medium text-charcoal group-hover:text-navy transition-colors duration-300">
