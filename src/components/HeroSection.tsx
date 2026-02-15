@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import logoAP from "@/assets/logo-ap.png";
+import logoAP from "@/assets/logo-ap-full.png";
 import heroPortrait from "@/assets/dr-parmar-hero.jpg";
 
 const HeroSection = () => {
@@ -54,8 +54,7 @@ const HeroSection = () => {
               <img
                 src={logoAP}
                 alt="Dr. Akshay Parmar — Board-Certified Prosthodontist"
-                className="w-[75%] md:w-[65%] lg:w-[85%] lg:scale-[2.5] object-contain"
-                style={{ filter: "brightness(0) invert(1)" }}
+                className="w-[80%] md:w-[70%] lg:w-[90%] lg:scale-[1.8] object-contain"
               />
             </div>
 
