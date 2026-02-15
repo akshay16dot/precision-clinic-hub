@@ -36,8 +36,8 @@ const HeroSection = () => {
 
         {/* Main composition — tighter */}
         <div className="flex-1 flex items-center py-4 md:py-6">
-          <div className="w-full grid grid-cols-1 lg:grid-cols-12 gap-4 lg:gap-2 items-center">
-            {/* Logo — dominant left anchor, larger */}
+          <div className="w-full grid grid-cols-1 lg:grid-cols-12 gap-4 lg:gap-0 items-center">
+            {/* Logo — dominant left anchor */}
             <div className="lg:col-span-5 flex items-center justify-center">
               <img
                 src={logoAP}
@@ -46,8 +46,11 @@ const HeroSection = () => {
               />
             </div>
 
+            {/* Spacer column for breathing room */}
+            <div className="hidden lg:block lg:col-span-1" />
+
             {/* Typography block — right */}
-            <div className="lg:col-span-7 text-center lg:text-left">
+            <div className="lg:col-span-6 text-center lg:text-left lg:pl-4">
               <h1 className="sr-only">
                 Board-Certified Prosthodontist &amp; Implant Specialist in New Jersey
               </h1>
