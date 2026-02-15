@@ -54,13 +54,13 @@ const About = () => {
                 <img
                   src={drParmar}
                   alt="Dr. Akshay Parmar, Board-Certified Prosthodontist"
-                  className="w-72 md:w-80 lg:w-[22rem] object-cover"
+                  className="w-72 md:w-80 lg:w-[24rem] object-cover"
                   style={{
-                    filter: "contrast(1.05) brightness(0.93) saturate(0.3) sepia(0.15)",
+                    filter: "contrast(1.04) brightness(0.95) saturate(0.35) sepia(0.1)",
                     maskImage:
-                      "radial-gradient(ellipse 88% 82% at 50% 38%, black 40%, transparent 85%)",
+                      "radial-gradient(ellipse 85% 90% at 50% 35%, black 45%, transparent 82%)",
                     WebkitMaskImage:
-                      "radial-gradient(ellipse 88% 82% at 50% 38%, black 40%, transparent 85%)",
+                      "radial-gradient(ellipse 85% 90% at 50% 35%, black 45%, transparent 82%)",
                   }}
                 />
               </div>

@@ -13,7 +13,7 @@ const HeroSection = () => {
           aria-hidden="true"
           className="absolute inset-0 w-full h-full object-cover object-[15%_top]"
           style={{
-            filter: "brightness(0.22) contrast(1.1) saturate(0.05) hue-rotate(-5deg) blur(1.5px)",
+            filter: "brightness(0.18) contrast(1.1) saturate(0.04) hue-rotate(-5deg) blur(2px)",
             transform: "scale(1.05)",
           }}
         />
@@ -69,11 +69,7 @@ const HeroSection = () => {
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.9, delay: 0.3 }}
               >
-                <p className="font-body text-[10px] md:text-xs tracking-[0.4em] uppercase text-primary-foreground/35 mb-3">
-                  Board-Certified Prosthodontist
-                </p>
-
-                <p className="font-display text-3xl md:text-5xl lg:text-6xl xl:text-7xl font-light text-primary-foreground leading-[0.95] tracking-tight mb-4">
+                <p className="font-display text-3xl md:text-5xl lg:text-6xl xl:text-7xl font-light text-primary-foreground leading-[0.95] tracking-tight mb-5">
                   Advanced
                   <br />
                   Prosthodontics &amp;
@@ -81,8 +77,12 @@ const HeroSection = () => {
                   <span className="italic">Implant Reconstruction</span>
                 </p>
 
-                <p className="font-body text-[11px] md:text-xs tracking-[0.25em] uppercase text-primary-foreground/50 leading-relaxed mb-7 max-w-md">
-                  Dental Implants &nbsp; · &nbsp; Immediate Implants &nbsp; · &nbsp; Veneers &nbsp; · &nbsp; Full-Arch Rehabilitation
+                <p className="font-body text-[10px] md:text-xs tracking-[0.3em] uppercase text-primary-foreground/40 leading-relaxed mb-8 max-w-md">
+                  Board-Certified Prosthodontist
+                </p>
+
+                <p className="font-body text-[11px] md:text-xs tracking-[0.2em] uppercase text-primary-foreground/45 leading-relaxed mb-9 max-w-md">
+                  Dental Implants &nbsp;·&nbsp; Immediate Implants &nbsp;·&nbsp; Veneers &nbsp;·&nbsp; Full-Arch Rehabilitation
                 </p>
 
                 <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
@@ -100,7 +100,7 @@ const HeroSection = () => {
                   </a>
                 </div>
 
-                <p className="font-body text-[10px] tracking-[0.2em] uppercase text-primary-foreground/30 mt-6 text-center lg:text-left">
+                <p className="font-body text-[10px] tracking-[0.2em] uppercase text-primary-foreground/25 mt-8 text-center lg:text-left">
                   Serving patients across New Jersey
                 </p>
               </motion.div>
