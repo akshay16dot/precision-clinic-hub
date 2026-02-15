@@ -4,94 +4,110 @@ import heroClinical from "@/assets/hero-clinical.jpg";
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-screen flex flex-col lg:flex-row bg-background">
-      {/* Left: Brand Identity */}
-      <div className="flex-1 flex items-center justify-center px-8 py-20 lg:py-0" style={{ background: 'linear-gradient(160deg, hsl(40 10% 95%) 0%, hsl(40 20% 98%) 100%)' }}>
-        <div className="max-w-md text-center lg:text-left">
-          <h1 className="sr-only">Board-Certified Prosthodontist &amp; Implant Specialist in New Jersey</h1>
+    <section className="relative min-h-screen overflow-hidden">
+      {/* Background layers */}
+      <div className="absolute inset-0">
+        {/* Tonal gradient base */}
+        <div
+          className="absolute inset-0 z-0"
+          style={{
+            background:
+              "linear-gradient(135deg, hsl(220 15% 12%) 0%, hsl(220 20% 16%) 40%, hsl(220 15% 22%) 100%)",
+          }}
+        />
+        {/* Subtle image overlay for texture */}
+        <img
+          src={heroClinical}
+          alt=""
+          aria-hidden="true"
+          className="absolute inset-0 w-full h-full object-cover opacity-[0.07] mix-blend-luminosity"
+        />
+      </div>
 
-          <img
-            src={logoAP}
-            alt="Dr. Akshay Parmar — Board-Certified Prosthodontist"
-            className="h-56 md:h-72 lg:h-80 mx-auto lg:mx-0 mb-8"
+      {/* Content grid */}
+      <div className="relative z-10 min-h-screen flex flex-col justify-between px-6 md:px-12 lg:px-20">
+        {/* Top bar */}
+        <div className="pt-8 md:pt-12 flex items-center justify-between">
+          <p className="font-body text-[10px] tracking-[0.4em] uppercase text-primary-foreground/40">
+            Board-Certified Prosthodontist
+          </p>
+          <p className="font-body text-[10px] tracking-[0.4em] uppercase text-primary-foreground/40">
+            New Jersey
+          </p>
+        </div>
+
+        {/* Main composition */}
+        <div className="flex-1 flex items-center">
+          <div className="w-full grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-4 items-center">
+            {/* Logo — dominant left anchor */}
+            <div className="lg:col-span-5 flex justify-center lg:justify-start">
+              <img
+                src={logoAP}
+                alt="Dr. Akshay Parmar — Board-Certified Prosthodontist"
+                className="h-52 md:h-72 lg:h-[22rem] brightness-0 invert"
+              />
+            </div>
+
+            {/* Typography block — right */}
+            <div className="lg:col-span-7 text-center lg:text-left">
+              <h1 className="sr-only">
+                Board-Certified Prosthodontist &amp; Implant Specialist in New Jersey
+              </h1>
+
+              <motion.div
+                initial={{ opacity: 0, x: 30 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 1, delay: 0.3 }}
+              >
+                <p className="font-body text-[10px] md:text-xs tracking-[0.4em] uppercase text-primary-foreground/50 mb-6 md:mb-8">
+                  Advanced Rehabilitation
+                </p>
+
+                <p className="font-display text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-light text-primary-foreground leading-[0.9] tracking-tight mb-6 md:mb-8">
+                  Implant &amp;
+                  <br />
+                  Prosthodontic
+                  <br />
+                  <span className="italic">Precision</span>
+                </p>
+
+                <div className="w-16 h-px bg-primary-foreground/20 mx-auto lg:mx-0 mb-6 md:mb-8" />
+
+                <p className="font-display text-lg md:text-xl lg:text-2xl font-light italic text-primary-foreground/60 tracking-tight mb-10 md:mb-14">
+                  Rehabilitation Without Compromise
+                </p>
+
+                <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                  <a
+                    href="#services"
+                    className="inline-block px-10 py-4 border border-primary-foreground/30 bg-primary-foreground text-navy font-body text-[11px] tracking-[0.25em] uppercase transition-all duration-300 hover:bg-transparent hover:text-primary-foreground"
+                  >
+                    For Patients
+                  </a>
+                  <a
+                    href="#education"
+                    className="inline-block px-10 py-4 border border-primary-foreground/20 text-primary-foreground/70 font-body text-[11px] tracking-[0.25em] uppercase transition-all duration-300 hover:border-primary-foreground/50 hover:text-primary-foreground"
+                  >
+                    For Dentists
+                  </a>
+                </div>
+              </motion.div>
+            </div>
+          </div>
+        </div>
+
+        {/* Bottom bar */}
+        <div className="pb-8 md:pb-12 flex items-end justify-between">
+          <p className="font-body text-[10px] tracking-[0.3em] uppercase text-primary-foreground/25">
+            © {new Date().getFullYear()}
+          </p>
+          <motion.div
+            animate={{ y: [0, 6, 0] }}
+            transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
+            className="w-px h-10 bg-primary-foreground/20"
           />
-
-          <motion.p
-            initial={{ opacity: 0, y: 16 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            className="font-body text-xs md:text-sm text-charcoal-light tracking-[0.2em] font-light mb-10"
-          >
-            Advanced Implant &amp; Prosthodontic Rehabilitation
-          </motion.p>
-
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 1, delay: 0.7 }}
-            className="mb-12"
-          >
-            <div className="w-10 h-px bg-navy/20 mx-auto lg:mx-0 mb-8" />
-            <p className="font-display text-2xl md:text-3xl font-light italic text-charcoal tracking-tight">
-              Rehabilitation Without Compromise
-            </p>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 16 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 1 }}
-            className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
-          >
-            <a
-              href="#services"
-              className="inline-block px-10 py-4 border border-navy bg-navy text-primary-foreground font-body text-[11px] tracking-[0.25em] uppercase transition-all duration-300 hover:bg-transparent hover:text-navy"
-            >
-              For Patients
-            </a>
-            <a
-              href="#education"
-              className="inline-block px-10 py-4 border border-charcoal-light/30 text-charcoal font-body text-[11px] tracking-[0.25em] uppercase transition-all duration-300 hover:border-navy hover:text-navy"
-            >
-              For Dentists
-            </a>
-          </motion.div>
         </div>
       </div>
-
-      {/* Right: Visual Element */}
-      <div className="hidden lg:block lg:w-[45%] relative overflow-hidden">
-        <img
-          src={heroClinical}
-          alt="Precision prosthodontic rehabilitation"
-          className="absolute inset-0 w-full h-full object-cover"
-        />
-        <div className="absolute inset-0 bg-gradient-to-l from-transparent to-background/10" />
-      </div>
-
-      {/* Mobile: subtle image strip */}
-      <div className="lg:hidden h-48 relative overflow-hidden">
-        <img
-          src={heroClinical}
-          alt="Precision prosthodontic rehabilitation"
-          className="w-full h-full object-cover"
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-background/20 to-transparent" />
-      </div>
-
-      {/* Scroll indicator */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 2, duration: 1 }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10"
-      >
-        <motion.div
-          animate={{ y: [0, 8, 0] }}
-          transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
-          className="w-px h-10 bg-charcoal-light/30"
-        />
-      </motion.div>
     </section>
   );
 };
