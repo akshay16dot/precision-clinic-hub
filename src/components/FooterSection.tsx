@@ -3,47 +3,45 @@ import logoAP from "@/assets/logo-ap.png";
 
 const professionalLinks = [
   {
-    name: "The Dental Project",
-    description: "Clinical Education & Surgical Training",
-    url: "https://www.instagram.com/thedental_project/",
-  },
-  {
     name: "Dr. Akshay Parmar",
     description: "Clinical Work & Insights",
     url: "https://www.instagram.com/dr.akshayparmar/",
   },
   {
+    name: "The Dental Project",
+    description: "Clinical Education & Surgical Training",
+    url: "https://www.instagram.com/thedental_project/",
+  },
+  {
     name: "Decoded Weekly",
-    description: "Professional Newsletter",
+    description: "Professional Newsletter & Thought Leadership",
     url: "https://substack.com/@decodedweekly",
   },
 ];
 
 const FooterSection = () => {
   return (
-    <footer id="contact" className="py-20 px-6 md:px-8 bg-navy">
+    <footer id="contact" className="py-16 md:py-20 px-6 md:px-8 bg-navy">
       <div className="luxury-container">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-16 md:gap-12 items-start">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-10 items-start">
           {/* Logo & Contact */}
           <div>
             <Link to="/">
-              <img src={logoAP} alt="Dr. Akshay Parmar" className="h-40 md:h-48 mb-6 brightness-0 invert" />
+              <img src={logoAP} alt="Dr. Akshay Parmar" className="h-36 md:h-44 mb-5 brightness-0 invert" />
             </Link>
-            <p className="font-body text-xs tracking-[0.2em] uppercase text-primary-foreground/40 mb-8">
+            <p className="font-body text-[10px] tracking-[0.3em] uppercase text-primary-foreground/35 mb-6">
               Board-Certified Prosthodontist
             </p>
-            <div className="space-y-2">
-              <a
-                href="mailto:akshaytheparmar@gmail.com"
-                className="block font-body text-sm text-primary-foreground/50 font-light hover:text-primary-foreground/70 transition-colors"
-              >
-                akshaytheparmar@gmail.com
-              </a>
-            </div>
+            <a
+              href="mailto:akshaytheparmar@gmail.com"
+              className="block font-body text-sm text-primary-foreground/50 font-light hover:text-primary-foreground/70 transition-colors"
+            >
+              akshaytheparmar@gmail.com
+            </a>
           </div>
 
           {/* Navigation */}
-          <div className="space-y-3">
+          <div className="space-y-2.5">
             <p className="font-body text-[10px] tracking-[0.3em] uppercase text-primary-foreground/30 mb-4">
               Practice
             </p>
@@ -73,9 +71,9 @@ const FooterSection = () => {
           {/* Professional Links */}
           <div>
             <p className="font-body text-[10px] tracking-[0.3em] uppercase text-primary-foreground/30 mb-4">
-              Professional & Educational Platforms
+              Professional Platforms
             </p>
-            <div className="space-y-5">
+            <div className="space-y-4">
               {professionalLinks.map((link, i) => (
                 <a
                   key={i}
@@ -97,7 +95,7 @@ const FooterSection = () => {
         </div>
 
         {/* Bottom bar */}
-        <div className="mt-16 pt-8 border-t border-primary-foreground/10">
+        <div className="mt-12 pt-6 border-t border-primary-foreground/10">
           <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-2">
             <p className="font-body text-xs text-primary-foreground/25 tracking-wide">
               © {new Date().getFullYear()} Dr. Akshay Parmar
