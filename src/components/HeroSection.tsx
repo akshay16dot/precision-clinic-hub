@@ -11,7 +11,7 @@ const HeroSection = () => {
           src={heroPortrait}
           alt=""
           aria-hidden="true"
-          className="absolute inset-0 w-full h-full object-cover object-top"
+          className="absolute inset-0 w-full h-full object-cover object-[35%_top]"
           style={{
             filter: "brightness(0.35) contrast(1.1) saturate(0.15)",
           }}
