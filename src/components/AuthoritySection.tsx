@@ -6,8 +6,8 @@ const credentials = [
   "Implant & Full-Arch Specialist",
   "Veneers & Smile Reconstruction",
   "Maxillofacial Prosthodontics",
-  "Founder — STABLE IMPLANT Protocol™",
-  "Former Teaching Faculty — NYU Prosthodontics",
+  "Founder, STABLE IMPLANT Protocol™",
+  "Former Teaching Faculty, NYU Prosthodontics",
 ];
 
 const AuthoritySection = () => {
@@ -32,22 +32,22 @@ const AuthoritySection = () => {
             <div className="relative">
               <img
                 src={drParmar}
-                alt="Dr. Akshay Parmar — Board-Certified Prosthodontist"
+                alt="Dr. Akshay Parmar, Board-Certified Prosthodontist"
                 className="w-72 md:w-80 lg:w-96 object-cover"
                 style={{
-                  filter: "contrast(1.02) brightness(0.98) saturate(0.9)",
+                  filter: "contrast(1.04) brightness(0.97) saturate(0.85)",
                   maskImage:
-                    "linear-gradient(to bottom, black 50%, transparent 100%)",
+                    "radial-gradient(ellipse 85% 75% at 50% 35%, black 40%, transparent 90%)",
                   WebkitMaskImage:
-                    "linear-gradient(to bottom, black 50%, transparent 100%)",
+                    "radial-gradient(ellipse 85% 75% at 50% 35%, black 40%, transparent 90%)",
                 }}
               />
-              {/* Soft radial glow behind portrait for depth */}
+              {/* Soft shadow beneath for dimensional separation */}
               <div
-                className="absolute inset-0 -z-10 scale-110"
+                className="absolute inset-0 -z-10 scale-105 translate-y-2"
                 style={{
                   background:
-                    "radial-gradient(ellipse at center 40%, hsl(220 20% 15% / 0.08) 0%, transparent 70%)",
+                    "radial-gradient(ellipse at center 50%, hsl(220 20% 15% / 0.12) 0%, transparent 65%)",
                 }}
               />
             </div>
@@ -63,11 +63,11 @@ const AuthoritySection = () => {
             <p className="font-body text-[10px] tracking-[0.4em] uppercase text-charcoal-light mb-6">
               About Dr. Parmar
             </p>
-            <h2 className="font-display text-3xl md:text-4xl font-light text-navy mb-3">
+            <h2 className="font-display text-3xl md:text-4xl font-light text-navy mb-2">
               Clinical <span className="italic">Authority</span>
             </h2>
-            <p className="font-body text-sm text-charcoal-light font-light leading-relaxed mb-10 max-w-md">
-              A specialist committed to precision-driven, biologically respectful rehabilitation — restoring function, aesthetics, and long-term stability.
+            <p className="font-body text-sm text-charcoal-light font-light leading-relaxed mb-8 max-w-md">
+              A specialist committed to precision-driven, biologically respectful rehabilitation, restoring function, aesthetics, and long-term stability.
             </p>
 
             <div className="space-y-4">
