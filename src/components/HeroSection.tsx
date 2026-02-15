@@ -38,13 +38,13 @@ const HeroSection = () => {
 
         {/* Main composition */}
         <div className="flex-1 flex items-center">
-          <div className="w-full grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-4 items-center">
+          <div className="w-full grid grid-cols-1 lg:grid-cols-12 gap-4 lg:gap-0 items-center">
             {/* Logo — dominant left anchor */}
             <div className="lg:col-span-5 flex items-center justify-center lg:justify-start">
               <img
                 src={logoAP}
                 alt="Dr. Akshay Parmar — Board-Certified Prosthodontist"
-                className="h-80 md:h-[24rem] lg:h-[32rem] w-auto max-w-full object-contain brightness-0 invert opacity-[0.93]"
+                className="h-80 md:h-[24rem] lg:h-[32rem] w-auto max-w-full object-contain brightness-0 invert opacity-[0.97]"
               />
             </div>
 
