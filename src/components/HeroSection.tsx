@@ -54,7 +54,12 @@ const HeroSection = () => {
               <img
                 src={logoAP}
                 alt="Dr. Akshay Parmar — Board-Certified Prosthodontist"
-                className="w-[75%] md:w-[65%] lg:w-[85%] lg:scale-[2.5] object-contain brightness-0 invert"
+                className="w-[75%] md:w-[65%] lg:w-[85%] lg:scale-[2.5] object-contain"
+                style={{
+                  filter: "brightness(0) invert(1) contrast(2)",
+                  imageRendering: "auto",
+                  WebkitFontSmoothing: "antialiased",
+                }}
               />
             </div>
 
