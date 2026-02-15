@@ -11,7 +11,7 @@ const HeroSection = () => {
           src={heroPortrait}
           alt=""
           aria-hidden="true"
-          className="absolute inset-0 w-full h-full object-cover object-[22%_top]"
+          className="absolute inset-0 w-full h-full object-cover object-[15%_top]"
           style={{
             filter: "brightness(0.22) contrast(1.1) saturate(0.05) hue-rotate(-5deg) blur(1.5px)",
             transform: "scale(1.05)",
@@ -39,10 +39,10 @@ const HeroSection = () => {
       <div className="relative z-10 min-h-[85vh] flex flex-col justify-between px-6 md:px-12 lg:px-20">
         {/* Top bar */}
         <div className="pt-5 md:pt-6 flex items-center justify-between">
-          <p className="font-body text-[10px] tracking-[0.4em] uppercase text-primary-foreground/35">
+          <p className="font-body text-[10px] tracking-[0.3em] uppercase text-primary-foreground/45">
             Board-Certified Prosthodontist
           </p>
-          <p className="font-body text-[10px] tracking-[0.4em] uppercase text-primary-foreground/35">
+          <p className="font-body text-[10px] tracking-[0.3em] uppercase text-primary-foreground/45">
             New Jersey
           </p>
         </div>
@@ -55,9 +55,9 @@ const HeroSection = () => {
               <img
                 src={logoAP}
                 alt="Dr. Akshay Parmar, Board-Certified Prosthodontist"
-                className="w-[75%] md:w-[65%] lg:w-[85%] lg:scale-[2.5] object-contain"
+                className="w-[70%] md:w-[60%] lg:w-[80%] lg:scale-[2.4] object-contain"
                 style={{
-                  filter: "invert(1) contrast(1.3)",
+                  filter: "invert(1)",
                 }}
               />
             </div>
@@ -88,8 +88,8 @@ const HeroSection = () => {
                   <span className="italic">Implant Reconstruction</span>
                 </p>
 
-                <p className="font-body text-[11px] md:text-xs tracking-[0.2em] uppercase text-primary-foreground/45 leading-relaxed mb-7 max-w-md">
-                  Dental Implants &nbsp;·&nbsp; Immediate Implants &nbsp;·&nbsp; Veneers &nbsp;·&nbsp; Full-Arch Rehabilitation
+                <p className="font-body text-[11px] md:text-xs tracking-[0.25em] uppercase text-primary-foreground/50 leading-relaxed mb-7 max-w-md">
+                  Dental Implants &nbsp; · &nbsp; Immediate Implants &nbsp; · &nbsp; Veneers &nbsp; · &nbsp; Full-Arch Rehabilitation
                 </p>
 
                 <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
@@ -101,7 +101,7 @@ const HeroSection = () => {
                   </a>
                   <a
                     href="#education"
-                    className="inline-block px-10 py-4 border border-primary-foreground/15 text-primary-foreground/60 font-body text-[11px] tracking-[0.25em] uppercase transition-all duration-300 hover:border-primary-foreground/40 hover:text-primary-foreground"
+                    className="inline-block px-10 py-4 border border-primary-foreground/25 text-primary-foreground/70 font-body text-[11px] tracking-[0.25em] uppercase transition-all duration-300 hover:border-primary-foreground/50 hover:text-primary-foreground"
                   >
                     For Dentists
                   </a>
