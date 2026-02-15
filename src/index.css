@@ -142,7 +142,7 @@
   }
 
   .section-padding {
-    @apply py-24 px-6 md:py-32 md:px-8 lg:py-40;
+    @apply py-16 px-6 md:py-24 md:px-8 lg:py-28;
   }
 
   .luxury-container {

@@ -11,7 +11,7 @@ const GallerySection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.8 }}
-          className="text-center mb-20"
+          className="text-center mb-14"
         >
           <p className="font-body text-xs tracking-[0.3em] uppercase text-charcoal-light mb-6">
             Selected Work
