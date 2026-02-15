@@ -1,29 +1,39 @@
 import { motion } from "framer-motion";
+import logoAP from "@/assets/logo-ap.png";
 
 const HeroSection = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center bg-background">
       <div className="relative z-10 luxury-container text-center">
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="font-body text-xs tracking-[0.35em] uppercase text-charcoal-light mb-10"
+        <motion.div
+          initial={{ opacity: 0, scale: 0.95 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 1.2, delay: 0.2 }}
+          className="mb-12"
         >
-          Board-Certified Prosthodontist
-        </motion.p>
+          <img src={logoAP} alt="AP Monogram" className="h-24 md:h-32 mx-auto" />
+        </motion.div>
 
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.4 }}
-          className="mb-6"
+          transition={{ duration: 1, delay: 0.6 }}
+          className="mb-4"
         >
           <h1 className="sr-only">Board-Certified Prosthodontist &amp; Implant Specialist in New Jersey</h1>
           <p className="font-body text-4xl md:text-6xl lg:text-7xl font-extralight tracking-[0.25em] uppercase text-charcoal leading-none">
             Akshay Parmar
           </p>
         </motion.div>
+
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.9 }}
+          className="font-body text-xs tracking-[0.35em] uppercase text-charcoal-light mb-16"
+        >
+          Prosthodontist
+        </motion.p>
 
         <motion.p
           initial={{ opacity: 0, y: 20 }}
