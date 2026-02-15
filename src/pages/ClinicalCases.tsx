@@ -14,79 +14,91 @@ const cases = [
   {
     title: "Full-Arch Implant Rehabilitation",
     concern:
-      "Patient presented with failing dentition across the upper arch, experiencing difficulty eating and persistent discomfort. Confidence in daily interactions had been significantly affected.",
-    approach:
-      "Treatment was precision-planned using advanced imaging and guided surgical protocols. Strategically positioned implants supported a fixed full-arch restoration, designed for structural longevity and natural function.",
+      "Loss of multiple teeth had made eating uncomfortable and unpredictable. The patient felt limited in what they could enjoy and had lost confidence in social situations.",
+    insight:
+      "A thorough evaluation revealed that the remaining teeth could no longer provide reliable support. A fixed, implant-supported solution offered the best path to lasting comfort and stability.",
+    strategy:
+      "A precision-planned full-arch implant restoration was designed to replace the entire upper arch. Treatment focused on structural balance, natural appearance, and long-term durability.",
     outcome: [
-      "Restored chewing comfort",
-      "Improved speech clarity",
-      "Stable, fixed teeth",
-      "Natural aesthetic result",
+      "Comfortable, stable teeth",
+      "Confident eating and speaking",
+      "Natural-looking result",
+      "Built for long-term function",
     ],
   },
   {
     title: "Immediate Implant Restoration",
     concern:
-      "A front tooth was fractured due to trauma. The patient sought a reliable, same-day solution that would preserve their appearance and avoid a prolonged gap in their smile.",
-    approach:
-      "The damaged tooth was carefully removed and an implant placed in the same visit. A provisional restoration was delivered immediately, maintaining aesthetics and tissue architecture throughout healing.",
+      "A front tooth was suddenly lost due to an accident. The patient needed a dependable replacement quickly, without a visible gap or prolonged treatment.",
+    insight:
+      "The surrounding bone and tissue were healthy enough to support immediate placement. Acting quickly also helped preserve the natural contour of the gum line.",
+    strategy:
+      "The damaged tooth was gently removed and an implant placed in the same visit. A temporary tooth was provided immediately, so the patient left the office with a complete smile.",
     outcome: [
-      "Same-day tooth replacement",
-      "Preserved natural tissue contour",
-      "Seamless aesthetic integration",
-      "Minimal disruption to daily life",
+      "Tooth replaced same day",
+      "Natural gum contour preserved",
+      "No visible gap at any stage",
+      "Smooth, efficient process",
     ],
   },
   {
     title: "Complex Bite Reconstruction",
     concern:
-      "Years of wear and multiple failing restorations had compromised the patient's bite stability, causing jaw discomfort and difficulty with everyday function.",
-    approach:
-      "A comprehensive evaluation guided a staged treatment plan combining implant placement, prosthodontic reconstruction, and precise occlusal design to restore balanced, comfortable function.",
+      "Years of wear had gradually shifted the bite out of balance. The patient experienced jaw tension, difficulty chewing, and a growing sense that things were getting worse over time.",
+    insight:
+      "The underlying issue was structural. Individual repairs would not solve the problem. A comprehensive approach was needed to restore balance across the entire bite.",
+    strategy:
+      "A carefully staged plan combined implant placement with custom restorations, rebuilding the bite from the foundation up. Every step was designed to restore comfortable, even function.",
     outcome: [
-      "Balanced bite function",
-      "Reduced jaw discomfort",
-      "Long-term structural stability",
-      "Improved overall comfort",
+      "Balanced, comfortable bite",
+      "Jaw tension resolved",
+      "Stable long-term structure",
+      "Renewed daily comfort",
     ],
   },
   {
     title: "Veneer Rehabilitation",
     concern:
-      "The patient was self-conscious about the shape, spacing, and color inconsistencies of their front teeth. Previous treatments had not achieved the natural result they desired.",
-    approach:
-      "Custom-designed porcelain veneers were crafted based on facial proportions, dental anatomy, and the patient's personal goals. Minimal preparation preserved healthy tooth structure while achieving a harmonious, natural-looking result.",
+      "Uneven spacing, color differences, and shapes that did not feel natural had left the patient hesitant to smile openly. Previous attempts at correction had fallen short.",
+    insight:
+      "The goal was not to create a dramatic transformation but to bring the teeth into natural harmony with the patient's face. Subtlety and precision were the priority.",
+    strategy:
+      "Custom porcelain veneers were designed around the patient's facial proportions and personal goals. Minimal preparation preserved healthy tooth structure while achieving a refined, natural result.",
     outcome: [
       "Natural smile harmony",
-      "Improved confidence",
-      "Minimal tooth preparation",
-      "Lasting aesthetic refinement",
+      "Renewed confidence",
+      "Healthy structure preserved",
+      "Lasting, refined result",
     ],
   },
   {
     title: "Mandibular Full-Arch Reconstruction",
     concern:
-      "Extensive bone loss and missing teeth in the lower jaw left the patient relying on an unstable removable denture. Eating, speaking, and social comfort were significantly compromised.",
-    approach:
-      "Strategically placed implants with guided surgical protocols supported a precision-engineered fixed prosthesis. Treatment was designed to maximize available bone and deliver immediate functional improvement.",
+      "A loose lower denture had made everyday life difficult. Eating required constant adjustment, speaking felt uncertain, and the patient had withdrawn from social situations.",
+    insight:
+      "Despite significant bone loss, careful analysis identified enough support for a fixed implant solution. The goal was to eliminate the denture entirely and restore reliable function.",
+    strategy:
+      "Implants were positioned to maximize available bone. A fixed prosthesis was precision-engineered to provide immediate improvement in comfort, appearance, and chewing ability.",
     outcome: [
-      "Eliminated removable denture",
-      "Restored full chewing ability",
-      "Improved speech and comfort",
-      "Designed for long-term stability",
+      "No more removable denture",
+      "Full chewing ability restored",
+      "Clear, confident speech",
+      "Designed for lasting stability",
     ],
   },
   {
     title: "Maxillofacial Prosthetic Rehabilitation",
     concern:
-      "Following surgical treatment for a medical condition, the patient required restoration of facial structures to improve comfort, function, and quality of life.",
-    approach:
-      "A custom-designed prosthetic solution was developed in close coordination with the patient's medical team. Treatment prioritized compassionate care, functional restoration, and natural appearance.",
+      "Following medical treatment, the patient needed restoration of facial structures that affected daily comfort, appearance, and quality of life.",
+    insight:
+      "This type of rehabilitation requires close coordination between specialists. Understanding the patient's personal goals was just as important as the clinical details.",
+    strategy:
+      "A custom prosthetic solution was developed in partnership with the patient's medical team. Every element was designed for natural appearance, comfortable fit, and compassionate care.",
     outcome: [
-      "Restored facial appearance",
+      "Natural facial appearance",
       "Improved daily comfort",
       "Coordinated specialist care",
-      "Personalized treatment design",
+      "Personally designed solution",
     ],
   },
 ];
@@ -179,7 +191,7 @@ const ClinicalCases = () => {
               </div>
 
               {/* Concern + Approach */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+              <div className="space-y-6 mb-8">
                 <div>
                   <p className="font-body text-[10px] tracking-[0.3em] uppercase text-charcoal-light mb-3">
                     Patient Concern
@@ -190,10 +202,18 @@ const ClinicalCases = () => {
                 </div>
                 <div>
                   <p className="font-body text-[10px] tracking-[0.3em] uppercase text-charcoal-light mb-3">
-                    Clinical Approach
+                    Clinical Insight
                   </p>
                   <p className="font-body text-sm text-charcoal-light font-light leading-relaxed">
-                    {c.approach}
+                    {c.insight}
+                  </p>
+                </div>
+                <div>
+                  <p className="font-body text-[10px] tracking-[0.3em] uppercase text-charcoal-light mb-3">
+                    Treatment Strategy
+                  </p>
+                  <p className="font-body text-sm text-charcoal-light font-light leading-relaxed">
+                    {c.strategy}
                   </p>
                 </div>
               </div>
