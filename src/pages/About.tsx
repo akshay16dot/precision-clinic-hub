@@ -166,7 +166,7 @@ const About = () => {
               Clinical <span className="italic">Philosophy</span>
             </h2>
             <p className="font-body text-sm md:text-base text-charcoal-light font-light leading-relaxed mb-4">
-              Modern dentistry is not simply about replacing teeth — it is about rebuilding biology, mechanics, and aesthetics in harmony.
+              Modern dentistry is not simply about replacing teeth, it is about rebuilding biology, mechanics, and aesthetics in harmony.
             </p>
             <p className="font-body text-sm md:text-base text-charcoal-light font-light leading-relaxed">
               Every treatment decision is guided by structural integrity, tissue preservation, and long-term predictability.

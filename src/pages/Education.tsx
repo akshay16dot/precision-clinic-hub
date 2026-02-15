@@ -77,7 +77,7 @@ const Education = () => {
         paragraphs={[
           "Evidence-based surgical and prosthetic training for modern implant dentistry.",
           "Dr. Akshay Parmar's educational programs are designed for clinicians who value precision, biological principles, and long-term clinical outcomes over expedient techniques.",
-          "Training reflects the same standard of care applied in clinical practice — rigorous, methodical, and uncompromising.",
+          "Training reflects the same standard of care applied in clinical practice, rigorous, methodical, and uncompromising.",
         ]}
       />
 
