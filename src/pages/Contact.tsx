@@ -168,12 +168,12 @@ const Contact = () => {
                   <p className="font-body text-xs tracking-[0.2em] uppercase text-charcoal-light mb-4">
                     Contact
                   </p>
-                  <p className="font-body text-sm text-charcoal-light font-light mb-2">
-                    info@drparmar.com
-                  </p>
-                  <p className="font-body text-sm text-charcoal-light font-light">
-                    +1 (555) 000-0000
-                  </p>
+              <a
+                    href="mailto:akshaytheparmar@gmail.com"
+                    className="font-body text-sm text-charcoal-light font-light hover:text-navy transition-colors"
+                  >
+                    akshaytheparmar@gmail.com
+                  </a>
                 </div>
 
                 <div className="w-12 h-px bg-navy" />

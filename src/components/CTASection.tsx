@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 const CTASection = () => {
   return (
@@ -23,12 +24,12 @@ const CTASection = () => {
             Every case begins with a thorough evaluation and a commitment to clinical excellence.
           </p>
 
-          <a
-            href="#contact"
+          <Link
+            to="/contact"
             className="inline-block px-12 py-4 bg-navy text-primary-foreground font-body text-xs tracking-[0.2em] uppercase transition-all duration-300 hover:opacity-90"
           >
             Schedule Consultation
-          </a>
+          </Link>
         </motion.div>
       </div>
     </section>
