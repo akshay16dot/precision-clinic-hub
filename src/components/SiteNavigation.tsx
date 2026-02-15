@@ -95,14 +95,14 @@ const SiteNavigation = () => {
             : "bg-transparent"
         }`}
       >
-        <div className="luxury-container flex items-center justify-between py-4 px-6 md:px-8">
+        <div className="luxury-container flex items-center justify-between py-5 px-6 md:px-10">
           {/* Logo */}
-          <Link to="/" className="hover:opacity-75 transition-opacity duration-300 shrink-0">
+          <Link to="/" className="hover:opacity-80 transition-opacity duration-300 shrink-0">
             <img
               src={logoAP}
               alt="Dr. Akshay Parmar"
               className={`transition-all duration-500 ${
-                scrolled ? "h-10 md:h-11" : "h-11 md:h-12"
+                scrolled ? "h-14 md:h-16" : "h-16 md:h-[4.5rem]"
               }`}
               style={{ filter: scrolled ? "none" : "invert(1)" }}
             />
@@ -111,17 +111,17 @@ const SiteNavigation = () => {
           {/* Menu toggle */}
           <button
             onClick={() => setMenuOpen(!menuOpen)}
-            className={`transition-colors duration-300 ${
+            className={`p-3 -mr-3 rounded-sm transition-all duration-300 ${
               scrolled
-                ? "text-muted-foreground hover:text-navy"
-                : "text-primary-foreground/60 hover:text-primary-foreground"
+                ? "text-muted-foreground hover:text-navy hover:bg-muted/50"
+                : "text-primary-foreground/70 hover:text-primary-foreground hover:bg-primary-foreground/5"
             }`}
             aria-label="Toggle menu"
           >
             {menuOpen ? (
-              <X size={20} strokeWidth={1.5} />
+              <X size={24} strokeWidth={1.2} />
             ) : (
-              <Menu size={20} strokeWidth={1.5} />
+              <Menu size={24} strokeWidth={1.2} />
             )}
           </button>
         </div>
@@ -138,36 +138,36 @@ const SiteNavigation = () => {
             className="fixed inset-0 z-[60] bg-navy/[0.97] backdrop-blur-sm"
           >
             {/* Close button */}
-            <div className="luxury-container flex justify-end pt-4 px-6 md:px-8">
+            <div className="luxury-container flex justify-end pt-5 px-6 md:px-10">
               <button
                 onClick={() => setMenuOpen(false)}
-                className="text-primary-foreground/50 hover:text-primary-foreground transition-colors duration-300"
+                className="p-3 -mr-3 text-primary-foreground/50 hover:text-primary-foreground transition-all duration-300 hover:bg-primary-foreground/5 rounded-sm"
                 aria-label="Close menu"
               >
-                <X size={20} strokeWidth={1.5} />
+                <X size={24} strokeWidth={1.2} />
               </button>
             </div>
 
             {/* Menu content */}
-            <div className="luxury-container px-6 md:px-8 pt-8 md:pt-16 pb-12 overflow-y-auto max-h-[calc(100vh-60px)]">
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 md:gap-12">
+            <div className="luxury-container px-6 md:px-10 pt-12 md:pt-20 pb-12 overflow-y-auto max-h-[calc(100vh-70px)]">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 md:gap-16">
                 {menuSections.map((section, si) => (
                   <motion.div
                     key={section.title}
-                    initial={{ opacity: 0, y: 16 }}
+                    initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.1 + si * 0.06, duration: 0.4, ease: "easeOut" }}
+                    transition={{ delay: 0.12 + si * 0.07, duration: 0.5, ease: "easeOut" }}
                   >
-                    <p className="font-body text-[10px] tracking-[0.15em] uppercase text-primary-foreground/30 mb-5">
+                    <p className="font-body text-[10px] tracking-[0.2em] uppercase text-primary-foreground/25 mb-6">
                       {section.title}
                     </p>
-                    <div className="space-y-3.5">
+                    <div className="space-y-4">
                       {section.links.map((link) =>
                         link.isAnchor ? (
                           <button
                             key={link.label}
                             onClick={() => handleAnchorClick(link.to.replace("/", ""))}
-                            className="block font-body text-[13px] tracking-[0.01em] text-primary-foreground/60 hover:text-primary-foreground transition-colors duration-300"
+                            className="block font-body text-[13px] tracking-[0.02em] text-primary-foreground/55 hover:text-primary-foreground transition-colors duration-300"
                           >
                             {link.label}
                           </button>
@@ -176,7 +176,7 @@ const SiteNavigation = () => {
                             key={link.label}
                             to={link.to}
                             onClick={() => setMenuOpen(false)}
-                            className="block font-body text-[13px] tracking-[0.01em] text-primary-foreground/60 hover:text-primary-foreground transition-colors duration-300"
+                            className="block font-body text-[13px] tracking-[0.02em] text-primary-foreground/55 hover:text-primary-foreground transition-colors duration-300"
                           >
                             {link.label}
                           </Link>
@@ -191,10 +191,10 @@ const SiteNavigation = () => {
               <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
-                transition={{ delay: 0.5, duration: 0.4 }}
-                className="mt-16 pt-6 border-t border-primary-foreground/10"
+                transition={{ delay: 0.55, duration: 0.4 }}
+                className="mt-20 pt-6 border-t border-primary-foreground/8"
               >
-                <p className="font-body text-[10px] tracking-[0.12em] uppercase text-primary-foreground/20">
+                <p className="font-body text-[10px] tracking-[0.15em] uppercase text-primary-foreground/20">
                   Board-Certified Prosthodontist · New Jersey
                 </p>
               </motion.div>
