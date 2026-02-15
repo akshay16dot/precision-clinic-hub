@@ -7,7 +7,7 @@ const HeroSection = () => {
       <div className="relative z-10 luxury-container text-center">
         <div className="mb-20 md:mb-28">
           <h1 className="sr-only">Board-Certified Prosthodontist &amp; Implant Specialist in New Jersey</h1>
-          <img src={logoAP} alt="Dr. Akshay Parmar — Board-Certified Prosthodontist" className="h-56 md:h-72 lg:h-80 mx-auto" />
+          <img src={logoAP} alt="Dr. Akshay Parmar — Board-Certified Prosthodontist" className="h-72 md:h-96 lg:h-[28rem] mx-auto" />
         </div>
 
         <motion.p
