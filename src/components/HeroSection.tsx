@@ -12,7 +12,7 @@ const HeroSection = () => {
           className="absolute inset-0 z-0"
           style={{
             background:
-              "linear-gradient(135deg, hsl(220 15% 12%) 0%, hsl(220 20% 16%) 40%, hsl(220 15% 22%) 100%)",
+              "linear-gradient(160deg, hsl(220 18% 10%) 0%, hsl(220 20% 14%) 35%, hsl(220 16% 17%) 65%, hsl(218 14% 13%) 100%)",
           }}
         />
         {/* Subtle image overlay for texture */}
@@ -44,7 +44,7 @@ const HeroSection = () => {
               <img
                 src={logoAP}
                 alt="Dr. Akshay Parmar — Board-Certified Prosthodontist"
-                className="h-64 md:h-80 lg:h-[26rem] brightness-0 invert opacity-95"
+                className="h-72 md:h-[22rem] lg:h-[28rem] brightness-0 invert opacity-[0.92] drop-shadow-[0_0_80px_rgba(255,255,255,0.03)]"
               />
             </div>
 
