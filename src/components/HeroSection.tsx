@@ -4,25 +4,25 @@ import heroPortrait from "@/assets/dr-parmar-hero.jpg";
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-[85vh] overflow-hidden">
-      {/* Background portrait — cinematic atmospheric element */}
+    <section className="relative min-h-[90vh] overflow-hidden">
+      {/* Background portrait — pushed left, subdued atmospheric element */}
       <div className="absolute inset-0">
         <img
           src={heroPortrait}
           alt=""
           aria-hidden="true"
-          className="absolute inset-0 w-full h-full object-cover object-[15%_top]"
+          className="absolute inset-0 w-full h-full object-cover object-[8%_top]"
           style={{
-            filter: "brightness(0.18) contrast(1.1) saturate(0.04) hue-rotate(-5deg) blur(2px)",
-            transform: "scale(1.05)",
+            filter: "brightness(0.14) contrast(1.08) saturate(0.03) hue-rotate(-5deg) blur(2.5px)",
+            transform: "scale(1.08)",
           }}
         />
-        {/* Cold navy overlay — deep cinematic */}
+        {/* Cold navy overlay */}
         <div
           className="absolute inset-0"
           style={{
             background:
-              "linear-gradient(145deg, hsl(220 30% 10% / 0.92) 0%, hsl(220 22% 14% / 0.80) 45%, hsl(218 20% 16% / 0.82) 75%, hsl(220 30% 10% / 0.95) 100%)",
+              "linear-gradient(145deg, hsl(220 30% 10% / 0.94) 0%, hsl(220 22% 14% / 0.85) 45%, hsl(218 20% 16% / 0.86) 75%, hsl(220 30% 10% / 0.96) 100%)",
           }}
         />
         {/* Bottom fade */}
@@ -30,25 +30,25 @@ const HeroSection = () => {
           className="absolute inset-0"
           style={{
             background:
-              "linear-gradient(180deg, transparent 55%, hsl(220 28% 10% / 0.97) 100%)",
+              "linear-gradient(180deg, transparent 50%, hsl(220 28% 10% / 0.98) 100%)",
           }}
         />
       </div>
 
       {/* Content */}
-      <div className="relative z-10 min-h-[85vh] flex flex-col justify-between px-6 md:px-12 lg:px-20">
+      <div className="relative z-10 min-h-[90vh] flex flex-col justify-between px-6 md:px-12 lg:px-24">
         {/* Top spacer for nav */}
-        <div className="pt-16 md:pt-20" />
+        <div className="pt-20 md:pt-28" />
 
         {/* Main composition */}
-        <div className="flex-1 flex items-center py-4">
-          <div className="w-full grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-0 items-center">
-            {/* Left — Logo — flat, crisp, no effects */}
-            <div className="lg:col-span-5 flex flex-col items-center justify-center">
+        <div className="flex-1 flex items-center py-6">
+          <div className="w-full grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-0 items-center">
+            {/* Left — Logo */}
+            <div className="lg:col-span-4 flex flex-col items-center justify-center">
               <img
                 src={logoAP}
                 alt="Dr. Akshay Parmar, Board-Certified Prosthodontist"
-                className="w-[70%] md:w-[60%] lg:w-[80%] lg:scale-[2.4] object-contain"
+                className="w-[65%] md:w-[55%] lg:w-[75%] lg:scale-[2.5] object-contain"
                 style={{
                   filter: "invert(1)",
                 }}
@@ -59,7 +59,7 @@ const HeroSection = () => {
             <div className="hidden lg:block lg:col-span-1" />
 
             {/* Right — Typography */}
-            <div className="lg:col-span-6 text-center lg:text-left lg:pl-4">
+            <div className="lg:col-span-7 text-center lg:text-left lg:pl-6">
               <h1 className="sr-only">
                 Board-Certified Prosthodontist &amp; Implant Specialist in New Jersey
               </h1>
@@ -69,7 +69,7 @@ const HeroSection = () => {
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.9, delay: 0.3 }}
               >
-                <p className="font-display text-3xl md:text-5xl lg:text-6xl xl:text-7xl font-light text-primary-foreground leading-[0.95] tracking-tight mb-5">
+                <p className="font-display text-4xl md:text-5xl lg:text-[3.8rem] xl:text-[4.5rem] font-light text-primary-foreground leading-[0.93] tracking-tight mb-7">
                   Advanced
                   <br />
                   Prosthodontics &amp;
@@ -77,11 +77,11 @@ const HeroSection = () => {
                   <span className="italic">Implant Reconstruction</span>
                 </p>
 
-                <p className="font-body text-[10px] md:text-xs tracking-[0.3em] uppercase text-primary-foreground/40 leading-relaxed mb-8 max-w-md">
+                <p className="font-body text-[10px] md:text-xs tracking-[0.3em] uppercase text-primary-foreground/35 leading-relaxed mb-4 max-w-md">
                   Board-Certified Prosthodontist
                 </p>
 
-                <p className="font-body text-[11px] md:text-xs tracking-[0.2em] uppercase text-primary-foreground/45 leading-relaxed mb-9 max-w-md">
+                <p className="font-body text-[11px] md:text-xs tracking-[0.2em] uppercase text-primary-foreground/40 leading-relaxed mb-10 max-w-lg">
                   Dental Implants &nbsp;·&nbsp; Immediate Implants &nbsp;·&nbsp; Veneers &nbsp;·&nbsp; Full-Arch Rehabilitation
                 </p>
 
@@ -100,7 +100,7 @@ const HeroSection = () => {
                   </a>
                 </div>
 
-                <p className="font-body text-[10px] tracking-[0.2em] uppercase text-primary-foreground/25 mt-8 text-center lg:text-left">
+                <p className="font-body text-[10px] tracking-[0.2em] uppercase text-primary-foreground/22 mt-10 text-center lg:text-left">
                   Serving patients across New Jersey
                 </p>
               </motion.div>
