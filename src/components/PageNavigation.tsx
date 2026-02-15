@@ -20,7 +20,7 @@ const PageNavigation = () => {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/90 backdrop-blur-sm border-b border-divider">
       <div className="luxury-container flex items-center justify-between py-5 px-6 md:px-8">
         <Link to="/" className="hover:opacity-70 transition-opacity duration-300">
-          <img src={logoAP} alt="Dr. Akshay Parmar" className="h-14 md:h-16" />
+          <img src={logoAP} alt="Dr. Akshay Parmar" className="h-20 md:h-24" />
         </Link>
 
         {/* Desktop nav */}
