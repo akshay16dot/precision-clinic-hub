@@ -3,11 +3,11 @@ import logoAP from "@/assets/logo-ap.png";
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center bg-background py-20">
+    <section className="relative min-h-screen flex items-center justify-center py-20" style={{ background: 'linear-gradient(180deg, hsl(40 10% 95%) 0%, hsl(40 20% 98%) 50%, hsl(0 0% 100%) 100%)' }}>
       <div className="relative z-10 luxury-container text-center">
-        <div className="mb-12 md:mb-16">
+        <div className="mb-6 md:mb-8">
           <h1 className="sr-only">Board-Certified Prosthodontist &amp; Implant Specialist in New Jersey</h1>
-          <img src={logoAP} alt="Dr. Akshay Parmar — Board-Certified Prosthodontist" className="h-80 md:h-[26rem] lg:h-[30rem] mx-auto" />
+          <img src={logoAP} alt="Dr. Akshay Parmar — Board-Certified Prosthodontist" className="h-[22rem] md:h-[30rem] lg:h-[34rem] mx-auto" />
         </div>
 
         <motion.p
