@@ -12,7 +12,7 @@ const services = [
   },
   {
     title: "Smile Rehabilitation",
-    description: "Comprehensive aesthetic treatment planning addressing multiple concerns — alignment, proportion, shade, and gingival symmetry — through a coordinated, phased approach to achieve a naturally harmonious result.",
+    description: "Comprehensive aesthetic treatment planning addressing multiple concerns, including alignment, proportion, shade, and gingival symmetry, through a coordinated, phased approach to achieve a naturally harmonious result.",
   },
   {
     title: "Ceramic Crowns & Bridges",
@@ -20,14 +20,14 @@ const services = [
   },
   {
     title: "Functional & Aesthetic Harmony",
-    description: "Every aesthetic treatment is planned with equal consideration for occlusal function, biomechanical stability, and long-term material performance — ensuring beauty that endures.",
+    description: "Every aesthetic treatment is planned with equal consideration for occlusal function, biomechanical stability, and long-term material performance, ensuring beauty that endures.",
   },
 ];
 
 const principles = [
   {
     title: "Facial Integration",
-    description: "Aesthetic outcomes are designed relative to facial proportions, lip dynamics, and smile architecture — not isolated tooth appearance.",
+    description: "Aesthetic outcomes are designed relative to facial proportions, lip dynamics, and smile architecture, not isolated tooth appearance.",
   },
   {
     title: "Material Excellence",
@@ -68,7 +68,7 @@ const AestheticDentistry = () => {
         titleItalic="Dentistry"
         paragraphs={[
           "Aesthetic dentistry is the intersection of clinical precision and artistic vision.",
-          "Dr. Akshay Parmar approaches every cosmetic case with the rigor of prosthodontic training — ensuring that visual beauty is always supported by functional integrity and long-term material performance.",
+          "Dr. Akshay Parmar approaches every cosmetic case with the rigor of prosthodontic training, ensuring that visual beauty is always supported by functional integrity and long-term material performance.",
           "The result is refined, natural, and enduring.",
         ]}
       />
@@ -121,7 +121,7 @@ const AestheticDentistry = () => {
             </h2>
             <div className="w-12 h-px bg-navy mx-auto mb-12" />
             <p className="font-display text-xl md:text-2xl font-light text-charcoal leading-relaxed mb-8">
-              True aesthetic excellence is invisible — it looks natural, feels effortless, and functions without compromise.
+              True aesthetic excellence is invisible, it looks natural, feels effortless, and functions without compromise.
             </p>
             <p className="font-body text-sm md:text-base text-charcoal-light font-light leading-relaxed max-w-2xl mx-auto">
               Every treatment is designed to honor the natural beauty of the smile while correcting imperfections with precision and restraint.

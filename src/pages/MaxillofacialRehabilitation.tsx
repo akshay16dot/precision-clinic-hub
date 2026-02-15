@@ -20,7 +20,7 @@ const specialties = [
   },
   {
     title: "Extraoral Prosthetics",
-    description: "Fabrication of custom facial prostheses — including orbital, auricular, and nasal prostheses — for patients who have experienced tissue loss due to disease, surgery, or trauma.",
+    description: "Fabrication of custom facial prostheses, including orbital, auricular, and nasal prostheses, for patients who have experienced tissue loss due to disease, surgery, or trauma.",
   },
 ];
 
