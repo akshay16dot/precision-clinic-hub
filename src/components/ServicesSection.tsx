@@ -10,7 +10,7 @@ const coreServices = [
   },
   {
     title: "Immediate Implants",
-    description: "Same-day implant placement at the time of extraction — preserving bone architecture, reducing treatment time, and accelerating rehabilitation.",
+    description: "Same-day implant placement at the time of extraction, preserving bone architecture, reducing treatment time, and accelerating rehabilitation.",
     link: "/dental-implants-new-jersey",
     icon: "02",
   },
@@ -31,6 +31,12 @@ const coreServices = [
     description: "Full mouth reconstruction addressing function, occlusion, and long-term dental health through coordinated advanced prosthetic solutions.",
     link: "/dental-implants-new-jersey",
     icon: "05",
+  },
+  {
+    title: "Maxillofacial Prosthodontics",
+    description: "Specialized rehabilitation of complex maxillofacial defects, restoring form, function, and quality of life through precision prosthetic solutions.",
+    link: "/maxillofacial-rehabilitation",
+    icon: "06",
   },
 ];
 

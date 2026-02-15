@@ -21,15 +21,15 @@ const professionalLinks = [
 
 const PageFooter = () => {
   return (
-    <footer className="py-16 md:py-20 px-6 md:px-8 bg-navy">
+    <footer className="py-12 md:py-16 px-6 md:px-8 bg-navy">
       <div className="luxury-container">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-10 items-start">
           {/* Logo & Contact */}
           <div>
             <Link to="/">
-              <img src={logoAP} alt="Dr. Akshay Parmar" className="h-36 md:h-44 mb-5 brightness-0 invert" />
+              <img src={logoAP} alt="Dr. Akshay Parmar" className="h-44 md:h-52 mb-3 brightness-0 invert" />
             </Link>
-            <p className="font-body text-[10px] tracking-[0.3em] uppercase text-primary-foreground/35 mb-6">
+            <p className="font-body text-[10px] tracking-[0.3em] uppercase text-primary-foreground/35 mb-3">
               Board-Certified Prosthodontist
             </p>
             <a
