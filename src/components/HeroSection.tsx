@@ -5,16 +5,16 @@ const HeroSection = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center bg-background py-20">
       <div className="relative z-10 luxury-container text-center">
-        <div className="mb-20 md:mb-28">
+        <div className="mb-12 md:mb-16">
           <h1 className="sr-only">Board-Certified Prosthodontist &amp; Implant Specialist in New Jersey</h1>
-          <img src={logoAP} alt="Dr. Akshay Parmar — Board-Certified Prosthodontist" className="h-72 md:h-96 lg:h-[28rem] mx-auto" />
+          <img src={logoAP} alt="Dr. Akshay Parmar — Board-Certified Prosthodontist" className="h-80 md:h-[26rem] lg:h-[30rem] mx-auto" />
         </div>
 
         <motion.p
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
-          className="font-body text-sm md:text-base text-charcoal-light tracking-wide max-w-xl mx-auto mb-20 font-light"
+          transition={{ duration: 0.8, delay: 0.5 }}
+          className="font-body text-xs md:text-sm text-charcoal-light tracking-[0.2em] max-w-md mx-auto mb-12 font-light"
         >
           Advanced Implant &amp; Prosthodontic Rehabilitation
         </motion.p>
@@ -22,19 +22,19 @@ const HeroSection = () => {
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 1.2, delay: 1.1 }}
-          className="mb-20"
+          transition={{ duration: 1, delay: 0.9 }}
+          className="mb-14"
         >
-          <div className="w-12 h-px bg-navy/20 mx-auto mb-14" />
+          <div className="w-10 h-px bg-navy/20 mx-auto mb-10" />
           <p className="font-display text-2xl md:text-3xl lg:text-4xl font-light italic text-charcoal tracking-tight">
             Rehabilitation Without Compromise
           </p>
         </motion.div>
 
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 1.4 }}
+          transition={{ duration: 0.8, delay: 1.2 }}
           className="flex flex-col sm:flex-row gap-5 justify-center"
         >
           <a
