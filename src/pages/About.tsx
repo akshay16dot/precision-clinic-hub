@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import PageNavigation from "@/components/PageNavigation";
 import PageCTA from "@/components/PageCTA";
 import PageFooter from "@/components/PageFooter";
-import drParmar from "@/assets/dr-parmar-portrait.png";
+import drParmar from "@/assets/dr-parmar-about.png";
 
 const focusAreas = [
   "Dental Implants",
@@ -54,13 +54,13 @@ const About = () => {
                 <img
                   src={drParmar}
                   alt="Dr. Akshay Parmar, Board-Certified Prosthodontist"
-                  className="w-72 md:w-80 lg:w-96 object-cover"
+                  className="w-72 md:w-80 lg:w-[22rem] object-cover"
                   style={{
-                    filter: "contrast(1.04) brightness(0.97) saturate(0.85)",
+                    filter: "contrast(1.05) brightness(0.93) saturate(0.3) sepia(0.15)",
                     maskImage:
-                      "radial-gradient(ellipse 85% 80% at 50% 35%, black 45%, transparent 88%)",
+                      "radial-gradient(ellipse 88% 82% at 50% 38%, black 40%, transparent 85%)",
                     WebkitMaskImage:
-                      "radial-gradient(ellipse 85% 80% at 50% 35%, black 45%, transparent 88%)",
+                      "radial-gradient(ellipse 88% 82% at 50% 38%, black 40%, transparent 85%)",
                   }}
                 />
               </div>
