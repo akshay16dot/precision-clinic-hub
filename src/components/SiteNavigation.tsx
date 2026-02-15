@@ -108,19 +108,6 @@ const SiteNavigation = () => {
             />
           </Link>
 
-          {/* Center links — desktop */}
-          <div className="hidden md:flex items-center gap-8">
-            {headerLinks.map((link) => (
-              <Link
-                key={link.to}
-                to={link.to}
-                className={`font-body text-[11px] tracking-[0.06em] uppercase transition-colors duration-300 ${headerLinkClass}`}
-              >
-                {link.label}
-              </Link>
-            ))}
-          </div>
-
           {/* Menu toggle */}
           <button
             onClick={() => setMenuOpen(!menuOpen)}
