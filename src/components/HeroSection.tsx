@@ -5,23 +5,24 @@ import heroPortrait from "@/assets/dr-parmar-hero.jpg";
 const HeroSection = () => {
   return (
     <section className="relative min-h-[85vh] overflow-hidden">
-      {/* Background portrait — cold clinical grading */}
+      {/* Background portrait — cinematic atmospheric element */}
       <div className="absolute inset-0">
         <img
           src={heroPortrait}
           alt=""
           aria-hidden="true"
-          className="absolute inset-0 w-full h-full object-cover object-[28%_top]"
+          className="absolute inset-0 w-full h-full object-cover object-[22%_top]"
           style={{
-            filter: "brightness(0.3) contrast(1.15) saturate(0.08) hue-rotate(-5deg)",
+            filter: "brightness(0.22) contrast(1.1) saturate(0.05) hue-rotate(-5deg) blur(1.5px)",
+            transform: "scale(1.05)",
           }}
         />
-        {/* Cold navy overlay — no glow */}
+        {/* Cold navy overlay — deep cinematic */}
         <div
           className="absolute inset-0"
           style={{
             background:
-              "linear-gradient(145deg, hsl(220 30% 10% / 0.88) 0%, hsl(220 22% 14% / 0.72) 45%, hsl(218 20% 16% / 0.78) 75%, hsl(220 30% 10% / 0.92) 100%)",
+              "linear-gradient(145deg, hsl(220 30% 10% / 0.92) 0%, hsl(220 22% 14% / 0.80) 45%, hsl(218 20% 16% / 0.82) 75%, hsl(220 30% 10% / 0.95) 100%)",
           }}
         />
         {/* Bottom fade */}
@@ -49,12 +50,15 @@ const HeroSection = () => {
         {/* Main composition */}
         <div className="flex-1 flex items-center py-4">
           <div className="w-full grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-0 items-center">
-            {/* Left — Logo — crisp, no glow */}
+            {/* Left — Logo — flat, crisp, no effects */}
             <div className="lg:col-span-5 flex flex-col items-center justify-center">
               <img
                 src={logoAP}
-                alt="Dr. Akshay Parmar — Board-Certified Prosthodontist"
-                className="w-[75%] md:w-[65%] lg:w-[85%] lg:scale-[2.5] object-contain invert"
+                alt="Dr. Akshay Parmar, Board-Certified Prosthodontist"
+                className="w-[75%] md:w-[65%] lg:w-[85%] lg:scale-[2.5] object-contain"
+                style={{
+                  filter: "invert(1) contrast(1.3)",
+                }}
               />
             </div>
 
