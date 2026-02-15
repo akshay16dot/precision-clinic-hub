@@ -3,17 +3,17 @@ import logoAP from "@/assets/logo-ap.png";
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center bg-background">
+    <section className="relative min-h-screen flex items-center justify-center bg-background py-20">
       <div className="relative z-10 luxury-container text-center">
-        <div className="mb-12">
-          <img src={logoAP} alt="Dr. Akshay Parmar — Prosthodontist" className="h-44 md:h-56 lg:h-64 mx-auto" />
+        <div className="mb-20 md:mb-24">
+          <img src={logoAP} alt="Dr. Akshay Parmar — Prosthodontist" className="h-48 md:h-60 lg:h-72 mx-auto" />
         </div>
 
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.6 }}
-          className="mb-4"
+          className="mb-6"
         >
           <h1 className="sr-only">Board-Certified Prosthodontist &amp; Implant Specialist in New Jersey</h1>
           <p className="font-body text-4xl md:text-6xl lg:text-7xl font-extralight tracking-[0.25em] uppercase text-charcoal leading-none">
@@ -25,7 +25,7 @@ const HeroSection = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.9 }}
-          className="font-body text-xs tracking-[0.35em] uppercase text-charcoal-light mb-16"
+          className="font-body text-xs tracking-[0.35em] uppercase text-charcoal-light mb-10"
         >
           Prosthodontist
         </motion.p>
@@ -34,7 +34,7 @@ const HeroSection = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.7 }}
-          className="font-body text-sm md:text-base text-charcoal-light tracking-wide max-w-xl mx-auto mb-16 font-light"
+          className="font-body text-sm md:text-base text-charcoal-light tracking-wide max-w-xl mx-auto mb-20 font-light"
         >
           Advanced Implant &amp; Prosthodontic Rehabilitation
         </motion.p>
@@ -43,9 +43,9 @@ const HeroSection = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1.2, delay: 1.1 }}
-          className="mb-16"
+          className="mb-20"
         >
-          <div className="w-12 h-px bg-navy/30 mx-auto mb-12" />
+          <div className="w-12 h-px bg-navy/20 mx-auto mb-14" />
           <p className="font-display text-2xl md:text-3xl lg:text-4xl font-light italic text-charcoal tracking-tight">
             Rehabilitation Without Compromise
           </p>
@@ -55,17 +55,17 @@ const HeroSection = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 1.4 }}
-          className="flex flex-col sm:flex-row gap-4 justify-center"
+          className="flex flex-col sm:flex-row gap-5 justify-center"
         >
           <a
             href="#services"
-            className="inline-block px-10 py-4 bg-navy text-primary-foreground font-body text-xs tracking-[0.2em] uppercase transition-all duration-300 hover:opacity-90"
+            className="inline-block px-12 py-4 border border-navy bg-navy text-primary-foreground font-body text-[11px] tracking-[0.25em] uppercase transition-all duration-300 hover:bg-transparent hover:text-navy"
           >
             For Patients
           </a>
           <a
             href="#education"
-            className="inline-block px-10 py-4 border border-navy text-navy font-body text-xs tracking-[0.2em] uppercase transition-all duration-300 hover:bg-navy hover:text-primary-foreground"
+            className="inline-block px-12 py-4 border border-charcoal-light/30 text-charcoal font-body text-[11px] tracking-[0.25em] uppercase transition-all duration-300 hover:border-navy hover:text-navy"
           >
             For Dentists
           </a>
