@@ -5,7 +5,7 @@ const credentials = [
   "Board-Certified Prosthodontist",
   "Implant & Full-Arch Specialist",
   "Veneers & Smile Reconstruction",
-  "Maxillofacial / Implant Reconstruction Expertise",
+  "Maxillofacial Prosthodontics",
   "Founder — STABLE IMPLANT Protocol™",
   "Former Teaching Faculty — NYU Prosthodontics",
 ];
@@ -21,7 +21,7 @@ const AuthoritySection = () => {
     >
       <div className="luxury-container">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center max-w-5xl mx-auto">
-          {/* Portrait */}
+          {/* Portrait — immersive blend */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -36,13 +36,18 @@ const AuthoritySection = () => {
                 className="w-72 md:w-80 lg:w-96 object-cover"
                 style={{
                   filter: "contrast(1.02) brightness(0.98) saturate(0.9)",
+                  maskImage:
+                    "linear-gradient(to bottom, black 50%, transparent 100%)",
+                  WebkitMaskImage:
+                    "linear-gradient(to bottom, black 50%, transparent 100%)",
                 }}
               />
+              {/* Soft radial glow behind portrait for depth */}
               <div
-                className="absolute inset-0"
+                className="absolute inset-0 -z-10 scale-110"
                 style={{
                   background:
-                    "linear-gradient(180deg, transparent 60%, hsl(40 10% 95% / 0.5) 100%)",
+                    "radial-gradient(ellipse at center 40%, hsl(220 20% 15% / 0.08) 0%, transparent 70%)",
                 }}
               />
             </div>

@@ -1,18 +1,38 @@
 import { motion } from "framer-motion";
 import logoAP from "@/assets/logo-ap.png";
-import drParmar from "@/assets/dr-parmar-portrait.png";
+import heroPortrait from "@/assets/dr-parmar-hero.jpg";
 
 const HeroSection = () => {
   return (
     <section className="relative min-h-[90vh] overflow-hidden">
-      {/* Luxury gradient background */}
-      <div
-        className="absolute inset-0"
-        style={{
-          background:
-            "linear-gradient(135deg, hsl(220 20% 14%) 0%, hsl(220 18% 18%) 40%, hsl(215 15% 22%) 70%, hsl(220 20% 14%) 100%)",
-        }}
-      />
+      {/* Background portrait with monochromatic grading */}
+      <div className="absolute inset-0">
+        <img
+          src={heroPortrait}
+          alt=""
+          aria-hidden="true"
+          className="absolute inset-0 w-full h-full object-cover object-top"
+          style={{
+            filter: "brightness(0.35) contrast(1.1) saturate(0.15)",
+          }}
+        />
+        {/* Deep navy overlay for brand cohesion */}
+        <div
+          className="absolute inset-0"
+          style={{
+            background:
+              "linear-gradient(135deg, hsl(220 25% 12% / 0.85) 0%, hsl(220 20% 16% / 0.7) 40%, hsl(215 18% 20% / 0.75) 70%, hsl(220 25% 12% / 0.9) 100%)",
+          }}
+        />
+        {/* Bottom fade */}
+        <div
+          className="absolute inset-0"
+          style={{
+            background:
+              "linear-gradient(180deg, transparent 50%, hsl(220 25% 12% / 0.95) 100%)",
+          }}
+        />
+      </div>
 
       {/* Content */}
       <div className="relative z-10 min-h-[90vh] flex flex-col justify-between px-6 md:px-12 lg:px-20">
@@ -29,30 +49,13 @@ const HeroSection = () => {
         {/* Main composition */}
         <div className="flex-1 flex items-center py-6 md:py-8">
           <div className="w-full grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-0 items-center">
-            {/* Left — Logo + Photo */}
-            <div className="lg:col-span-5 flex flex-col items-center gap-6">
+            {/* Left — Logo */}
+            <div className="lg:col-span-5 flex flex-col items-center justify-center">
               <img
                 src={logoAP}
                 alt="Dr. Akshay Parmar — Board-Certified Prosthodontist"
                 className="w-[70%] md:w-[60%] lg:w-[80%] lg:scale-[2.2] object-contain brightness-0 invert opacity-[0.97]"
               />
-              <div className="relative mt-8 lg:mt-16">
-                <div
-                  className="absolute inset-0 rounded-sm"
-                  style={{
-                    background:
-                      "linear-gradient(180deg, transparent 0%, hsl(220 20% 14% / 0.6) 100%)",
-                  }}
-                />
-                <img
-                  src={drParmar}
-                  alt="Dr. Akshay Parmar holding a dental implant"
-                  className="w-64 md:w-72 lg:w-80 object-cover rounded-sm"
-                  style={{
-                    filter: "contrast(1.05) brightness(0.95)",
-                  }}
-                />
-              </div>
             </div>
 
             {/* Spacer */}
