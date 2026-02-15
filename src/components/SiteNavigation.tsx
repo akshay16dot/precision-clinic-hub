@@ -26,6 +26,7 @@ const menuSections = [
     links: [
       { to: "/#services", label: "For Patients", isAnchor: true },
       { to: "/contact", label: "Consultations" },
+      { to: "/about", label: "About Dr. Parmar" },
       { to: "/about", label: "Treatment Philosophy", hash: "#philosophy" },
     ],
   },
