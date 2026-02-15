@@ -37,15 +37,8 @@ const HeroSection = () => {
 
       {/* Content */}
       <div className="relative z-10 min-h-[85vh] flex flex-col justify-between px-6 md:px-12 lg:px-20">
-        {/* Top bar */}
-        <div className="pt-5 md:pt-6 flex items-center justify-between">
-          <p className="font-body text-[10px] tracking-[0.3em] uppercase text-primary-foreground/45">
-            Board-Certified Prosthodontist
-          </p>
-          <p className="font-body text-[10px] tracking-[0.3em] uppercase text-primary-foreground/45">
-            New Jersey
-          </p>
-        </div>
+        {/* Top spacer for nav */}
+        <div className="pt-16 md:pt-20" />
 
         {/* Main composition */}
         <div className="flex-1 flex items-center py-4">
@@ -106,6 +99,10 @@ const HeroSection = () => {
                     For Dentists
                   </a>
                 </div>
+
+                <p className="font-body text-[10px] tracking-[0.2em] uppercase text-primary-foreground/30 mt-6 text-center lg:text-left">
+                  Serving patients across New Jersey
+                </p>
               </motion.div>
             </div>
           </div>
