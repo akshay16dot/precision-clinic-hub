@@ -13,7 +13,7 @@ const HeroSection = () => {
           aria-hidden="true"
           className="absolute inset-0 w-full h-full object-cover object-[8%_top]"
           style={{
-            filter: "brightness(0.14) contrast(1.08) saturate(0.03) hue-rotate(-5deg) blur(2.5px)",
+            filter: "brightness(0.25) contrast(1.08) saturate(0.05) hue-rotate(-5deg) blur(1px)",
             transform: "scale(1.08)",
           }}
         />
