@@ -15,6 +15,9 @@ import Contact from "./pages/Contact";
 import ClinicalCases from "./pages/ClinicalCases";
 import Education from "./pages/Education";
 import PatientEducation from "./pages/PatientEducation";
+import SmileDesign from "./pages/SmileDesign";
+import ToothWearRehabilitation from "./pages/ToothWearRehabilitation";
+import TeethWhitening from "./pages/TeethWhitening";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -33,6 +36,9 @@ const App = () => (
           <Route path="/aesthetic-dentistry" element={<AestheticDentistry />} />
           <Route path="/veneers-aesthetic-reconstruction" element={<VeneersAesthetic />} />
           <Route path="/maxillofacial-rehabilitation" element={<MaxillofacialRehabilitation />} />
+          <Route path="/smile-design" element={<SmileDesign />} />
+          <Route path="/tooth-wear-rehabilitation" element={<ToothWearRehabilitation />} />
+          <Route path="/teeth-whitening" element={<TeethWhitening />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/clinical-cases" element={<ClinicalCases />} />
