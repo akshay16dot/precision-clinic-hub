@@ -36,7 +36,7 @@ const About = () => {
       <section className="relative pt-24 md:pt-0 min-h-[90vh] overflow-hidden">
         <div className="grid grid-cols-1 lg:grid-cols-12 min-h-[90vh]">
           {/* Left: Dominant color portrait */}
-          <div className="relative lg:col-span-5 xl:col-span-6 min-h-[55vh] lg:min-h-full">
+          <div className="relative lg:col-span-5 xl:col-span-5 min-h-[55vh] lg:min-h-full">
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -46,41 +46,41 @@ const About = () => {
               <img
                 src={drParmar}
                 alt="Dr. Akshay Parmar, Board-Certified Prosthodontist"
-                className="w-full h-full object-cover object-top"
+                className="w-full h-full object-cover"
                 style={{
-                  filter: "contrast(1.04) brightness(0.98) saturate(0.85)",
-                  maskImage: "linear-gradient(to right, black 0%, black 80%, transparent 100%), linear-gradient(to bottom, transparent 0%, black 5%, black 88%, transparent 100%)",
-                  maskComposite: "intersect",
-                  WebkitMaskImage: "linear-gradient(to right, black 0%, black 80%, transparent 100%)",
+                  objectPosition: "center 15%",
+                  filter: "contrast(1.03) brightness(0.99) saturate(0.9)",
+                  maskImage: "linear-gradient(to right, black 0%, black 88%, transparent 100%)",
+                  WebkitMaskImage: "linear-gradient(to right, black 0%, black 88%, transparent 100%)",
                 }}
               />
             </motion.div>
           </div>
 
           {/* Right: Editorial text */}
-          <div className="lg:col-span-7 xl:col-span-6 flex items-center px-8 md:px-12 lg:px-16 xl:px-24 py-16 lg:py-0">
+          <div className="lg:col-span-7 xl:col-span-7 flex items-center px-8 md:px-12 lg:px-20 xl:px-28 py-16 lg:py-0">
             <motion.div
               initial={{ opacity: 0, y: 25 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 0.5 }}
               className="max-w-lg"
             >
-              <p className="font-body text-[10px] tracking-[0.4em] uppercase text-charcoal-light mb-10">
+              <p className="font-body text-[10px] tracking-[0.4em] uppercase text-charcoal-light mb-8">
                 About the Specialist
               </p>
 
-              <h1 className="font-display text-4xl md:text-5xl lg:text-[3.5rem] xl:text-6xl font-light tracking-tight text-navy leading-[0.93] mb-12">
+              <h1 className="font-display text-4xl md:text-5xl lg:text-[3.5rem] xl:text-6xl font-light tracking-tight text-navy leading-[0.93] mb-10">
                 Precision. Biology.
                 <br />
                 <span className="italic font-light">Longevity.</span>
               </h1>
 
-              <div className="w-10 h-px bg-navy mb-12" />
+              <div className="w-10 h-px bg-navy mb-10" />
 
-              <p className="font-body text-sm md:text-[15px] text-charcoal-light font-light leading-[1.85] mb-6">
+              <p className="font-body text-sm md:text-[15px] text-charcoal-light font-light leading-[1.85] mb-5">
                 Dr. Akshay Parmar is a board-certified prosthodontist specializing in advanced implant dentistry, full-arch rehabilitation, aesthetic reconstruction, and maxillofacial prosthodontics.
               </p>
-              <p className="font-body text-sm md:text-[15px] text-charcoal-light font-light leading-[1.85] mb-12">
+              <p className="font-body text-sm md:text-[15px] text-charcoal-light font-light leading-[1.85] mb-11">
                 His work centers on precision-driven, biologically respectful dentistry, restoring function, aesthetics, and long-term stability through carefully engineered treatment planning.
               </p>
 
