@@ -92,7 +92,7 @@ const MaxillofacialRehabilitation = () => {
               aria-hidden="true"
               className="w-[75%] max-w-md object-contain"
               style={{
-                filter: "brightness(0.55) contrast(1.15) saturate(0.3) sepia(0.05)",
+                filter: "brightness(0.85) contrast(1.1) saturate(0.35) sepia(0.05)",
                 maskImage: "radial-gradient(ellipse 85% 85% at center, black 40%, transparent 100%)",
                 WebkitMaskImage: "radial-gradient(ellipse 85% 85% at center, black 40%, transparent 100%)",
                 mixBlendMode: "lighten",
