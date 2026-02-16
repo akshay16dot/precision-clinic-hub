@@ -468,6 +468,41 @@ const FullArchImplants = () => {
         </div>
       </section>
 
+      {/* Editorial – What To Expect */}
+      <section className="py-24 md:py-36" style={{ background: 'linear-gradient(180deg, hsl(40 18% 97%) 0%, hsl(40 12% 95%) 100%)' }}>
+        <div className="luxury-container">
+          <motion.div {...fadeUp} transition={{ duration: 1 }} className="max-w-2xl mx-auto text-center">
+            <p className="font-body text-xs tracking-[0.3em] uppercase text-charcoal-light/60 mb-6">
+              Your Treatment Journey
+            </p>
+            <h2 className="font-display text-3xl md:text-5xl font-light text-navy leading-tight mb-10">
+              What To <span className="italic">Expect</span>
+            </h2>
+            <div className="space-y-6 mb-12">
+              <p className="font-body text-sm md:text-base text-charcoal-light font-light leading-relaxed">
+                Full-arch implant rehabilitation is a carefully sequenced clinical process designed for precision, comfort, and long-term stability.
+              </p>
+              <p className="font-body text-sm md:text-base text-charcoal-light font-light leading-relaxed">
+                Treatment typically begins with a comprehensive diagnostic evaluation, including digital imaging, bite analysis, and anatomical assessment.
+              </p>
+              <p className="font-body text-sm md:text-base text-charcoal-light font-light leading-relaxed">
+                Based on this data, a personalized treatment plan is developed to ensure biological compatibility, functional balance, and aesthetic harmony.
+              </p>
+              <p className="font-body text-sm md:text-base text-charcoal-light font-light leading-relaxed">
+                Each phase of care is performed methodically, allowing healing, refinement, and adaptation at every stage.
+              </p>
+              <p className="font-body text-sm md:text-base text-charcoal-light font-light leading-relaxed">
+                For most patients, the experience is significantly more controlled and comfortable than anticipated.
+              </p>
+            </div>
+            <div className="w-12 h-px bg-navy/20 mx-auto mb-8" />
+            <p className="font-body text-xs tracking-[0.3em] uppercase text-charcoal-light/60">
+              Clarity replaces uncertainty.
+            </p>
+          </motion.div>
+        </div>
+      </section>
+
       {/* Clinical Approach */}
       <section className="section-padding bg-warm-gray">
         <div className="luxury-container">
