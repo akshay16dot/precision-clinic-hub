@@ -13,14 +13,17 @@ const treatments = [
   {
     title: "Smile Design",
     text: "Comprehensive aesthetic planning driven by facial and functional analysis.",
+    link: "/smile-design",
   },
   {
     title: "Tooth Wear Rehabilitation",
     text: "Restore lost tooth structure with biomechanical precision.",
+    link: "/tooth-wear-rehabilitation",
   },
   {
     title: "Whitening & Enhancement",
     text: "Conservative refinements for brighter, natural aesthetics.",
+    link: "/teeth-whitening",
   },
 ];
 

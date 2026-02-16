@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { useEffect } from "react";
+import { Link } from "react-router-dom";
 import PageNavigation from "@/components/PageNavigation";
 import PageCTA from "@/components/PageCTA";
 import PageFooter from "@/components/PageFooter";
@@ -138,6 +139,20 @@ const TeethWhitening = () => {
           <motion.p {...fadeUp} transition={{ duration: 0.8 }} className="font-display text-2xl md:text-3xl font-light text-navy italic leading-snug">
             "Refinement, not transformation. That is the standard."
           </motion.p>
+        </div>
+      </section>
+
+      {/* Patient Guide Link */}
+      <section className="py-12 md:py-16 px-6 md:px-8 bg-background">
+        <div className="luxury-container text-center">
+          <motion.div {...fadeUp} transition={{ duration: 0.8 }}>
+            <Link
+              to="/guide/teeth-whitening"
+              className="inline-block font-body text-[10px] tracking-[0.25em] uppercase text-navy border-b border-navy/30 pb-0.5 hover:border-navy transition-colors"
+            >
+              Learn About the Process
+            </Link>
+          </motion.div>
         </div>
       </section>
 
