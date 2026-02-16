@@ -2,59 +2,45 @@ import { motion } from "framer-motion";
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import PageNavigation from "@/components/PageNavigation";
-import PageHero from "@/components/PageHero";
-import PageCTA from "@/components/PageCTA";
 import PageFooter from "@/components/PageFooter";
 
-const services = [
+const treatments = [
   {
     title: "Porcelain Veneers",
-    description: "Custom-fabricated porcelain restorations designed to refine tooth shape, alignment, and shade. Each veneer is individually crafted to harmonize with the surrounding dentition and facial proportions.",
+    text: "Transform shape, color, symmetry, and smile harmony.",
     link: "/veneers-aesthetic-reconstruction",
   },
   {
-    title: "Smile Rehabilitation",
-    description: "Comprehensive aesthetic treatment planning addressing multiple concerns, including alignment, proportion, shade, and gingival symmetry, through a coordinated, phased approach to achieve a naturally harmonious result.",
+    title: "Smile Design",
+    text: "Comprehensive aesthetic planning driven by facial and functional analysis.",
   },
   {
-    title: "Ceramic Crowns & Bridges",
-    description: "Metal-free ceramic restorations that replicate the translucency, contour, and vitality of natural teeth. Designed for both anterior aesthetics and posterior durability.",
+    title: "Tooth Wear Rehabilitation",
+    text: "Restore lost tooth structure with biomechanical precision.",
   },
   {
-    title: "Functional & Aesthetic Harmony",
-    description: "Every aesthetic treatment is planned with equal consideration for occlusal function, biomechanical stability, and long-term material performance, ensuring beauty that endures.",
+    title: "Whitening & Enhancement",
+    text: "Conservative refinements for brighter, natural aesthetics.",
   },
 ];
 
-const principles = [
-  {
-    title: "Facial Integration",
-    description: "Aesthetic outcomes are designed relative to facial proportions, lip dynamics, and smile architecture, not isolated tooth appearance.",
-  },
-  {
-    title: "Material Excellence",
-    description: "Advanced ceramic systems selected for optical properties that replicate natural enamel translucency, depth, and surface texture.",
-  },
-  {
-    title: "Conservative Approach",
-    description: "Preservation of natural tooth structure wherever possible, utilizing minimally invasive preparation techniques and bonded restorations.",
-  },
-  {
-    title: "Predictable Outcomes",
-    description: "Digital smile design, diagnostic wax-ups, and provisional restorations ensure the final result is visualized and approved before definitive treatment.",
-  },
+const trustPoints = [
+  "Prosthodontic precision and structural planning",
+  "Facially driven smile design principles",
+  "Long-term material performance considerations",
+  "Biological preservation and functional stability",
 ];
 
-const fadeUp = {
-  initial: { opacity: 0, y: 30 },
+const fade = {
+  initial: { opacity: 0, y: 28 },
   whileInView: { opacity: 1, y: 0 },
-  viewport: { once: true, margin: "-100px" },
+  viewport: { once: true, margin: "-80px" },
 };
 
 const AestheticDentistry = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
-    document.title = "Aesthetic & Cosmetic Dentistry | Dr. Akshay Parmar";
+    document.title = "Aesthetic Dentistry | Dr. Akshay Parmar";
     return () => {
       document.title = "Dr. Akshay Parmar | Board-Certified Prosthodontist in New Jersey";
     };
@@ -64,46 +50,101 @@ const AestheticDentistry = () => {
     <main className="bg-background">
       <PageNavigation />
 
-      <PageHero
-        subtitle="Board-Certified Prosthodontist · New Jersey"
-        title="Aesthetic &amp; Cosmetic"
-        titleItalic="Dentistry"
-        paragraphs={[
-          "Aesthetic dentistry is the intersection of clinical precision and artistic vision.",
-          "Dr. Akshay Parmar approaches every cosmetic case with the rigor of prosthodontic training, ensuring that visual beauty is always supported by functional integrity and long-term material performance.",
-          "The result is refined, natural, and enduring.",
-        ]}
-      />
+      {/* ── Hero ── */}
+      <section className="pt-44 pb-24 md:pt-52 md:pb-32 lg:pb-36 bg-background">
+        <div className="luxury-container px-6 md:px-8">
+          <motion.div
+            {...fade}
+            transition={{ duration: 1 }}
+            className="max-w-3xl mx-auto text-center"
+          >
+            <p className="font-body text-[10px] tracking-[0.3em] uppercase text-charcoal-light mb-8">
+              Aesthetic Dentistry
+            </p>
+            <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-light text-navy leading-[1.15] mb-6">
+              Refined Aesthetics.{" "}
+              <em className="italic">Engineered Longevity.</em>
+            </h1>
+            <p className="font-display text-lg md:text-xl font-light text-charcoal leading-relaxed mb-6">
+              Aesthetic dentistry is where artistic vision meets biomechanical precision.
+            </p>
+            <p className="font-body text-sm md:text-[15px] text-charcoal-light font-light leading-relaxed max-w-2xl mx-auto mb-12">
+              Dr. Akshay Parmar approaches aesthetic treatment through the lens of prosthodontic engineering, ensuring beauty is always supported by structural integrity, functional harmony, and long-term biological stability.
+            </p>
 
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+              <Link
+                to="/contact"
+                className="px-8 py-3.5 bg-navy text-primary-foreground font-body text-[11px] tracking-[0.2em] uppercase hover:opacity-90 transition-opacity duration-300"
+              >
+                Schedule a Consultation
+              </Link>
+              <a
+                href="#treatments"
+                className="px-8 py-3.5 border border-navy text-navy font-body text-[11px] tracking-[0.2em] uppercase hover:bg-navy hover:text-primary-foreground transition-all duration-300"
+              >
+                Explore Treatments
+              </a>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* ── Divider ── */}
       <div className="luxury-container px-6 md:px-8">
         <div className="w-12 h-px bg-navy mx-auto" />
       </div>
 
-      {/* Services */}
+      {/* ── Philosophy / Authority ── */}
       <section className="section-padding bg-background">
         <div className="luxury-container">
-          <motion.div {...fadeUp} transition={{ duration: 0.8 }} className="text-center mb-20">
-            <p className="font-body text-xs tracking-[0.3em] uppercase text-charcoal-light mb-6">
-              Aesthetic Services
+          <motion.div
+            {...fade}
+            transition={{ duration: 0.9 }}
+            className="max-w-2xl mx-auto text-center"
+          >
+            <p className="font-body text-[10px] tracking-[0.3em] uppercase text-charcoal-light mb-8">
+              Philosophy
             </p>
-            <h2 className="font-display text-4xl md:text-5xl font-light text-navy">
-              Treatment Scope
+            <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-light text-navy leading-[1.15] mb-10">
+              A Specialist Approach to{" "}
+              <em className="italic">Aesthetic Dentistry</em>
+            </h2>
+            <p className="font-body text-sm md:text-[15px] text-charcoal-light font-light leading-relaxed mb-6">
+              True aesthetic dentistry is not simply about creating whiter teeth. It is about designing proportion, balance, function, and longevity. Every treatment is guided by facial analysis, occlusal principles, material science, and biological preservation.
+            </p>
+            <p className="font-display text-lg md:text-xl font-light text-charcoal italic leading-relaxed">
+              The goal is not artificial perfection. The goal is refined, natural, enduring results.
+            </p>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* ── Treatment Pathways ── */}
+      <section id="treatments" className="section-padding bg-warm-gray">
+        <div className="luxury-container">
+          <motion.div {...fade} transition={{ duration: 0.8 }} className="text-center mb-20">
+            <p className="font-body text-[10px] tracking-[0.3em] uppercase text-charcoal-light mb-6">
+              Services
+            </p>
+            <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-light text-navy">
+              Treatment Pathways
             </h2>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-divider max-w-4xl mx-auto">
-            {services.map((item, i) => (
+            {treatments.map((item, i) => (
               <motion.div
                 key={i}
-                {...fadeUp}
-                transition={{ duration: 0.6, delay: i * 0.1 }}
-                className="bg-background p-10 md:p-12"
+                {...fade}
+                transition={{ duration: 0.6, delay: i * 0.08 }}
+                className="bg-background p-10 md:p-14 group"
               >
-                <h3 className="font-display text-xl md:text-2xl font-medium text-charcoal mb-4">
+                <h3 className="font-display text-xl md:text-2xl font-medium text-navy mb-4 group-hover:opacity-80 transition-opacity duration-300">
                   {item.title}
                 </h3>
                 <p className="font-body text-sm text-charcoal-light font-light leading-relaxed">
-                  {item.description}
+                  {item.text}
                 </p>
                 {item.link && (
                   <Link
@@ -119,62 +160,74 @@ const AestheticDentistry = () => {
         </div>
       </section>
 
-      {/* Philosophy */}
-      <section className="section-padding bg-warm-gray">
-        <div className="luxury-container">
-          <motion.div {...fadeUp} transition={{ duration: 1 }} className="max-w-3xl mx-auto text-center">
-            <p className="font-body text-xs tracking-[0.3em] uppercase text-charcoal-light mb-6">
-              Aesthetic Philosophy
-            </p>
-            <h2 className="font-display text-4xl md:text-5xl font-light text-navy mb-12">
-              Beyond Appearance
-            </h2>
-            <div className="w-12 h-px bg-navy mx-auto mb-12" />
-            <p className="font-display text-xl md:text-2xl font-light text-charcoal leading-relaxed mb-8">
-              True aesthetic excellence is invisible, it looks natural, feels effortless, and functions without compromise.
-            </p>
-            <p className="font-body text-sm md:text-base text-charcoal-light font-light leading-relaxed max-w-2xl mx-auto">
-              Every treatment is designed to honor the natural beauty of the smile while correcting imperfections with precision and restraint.
-            </p>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Principles */}
+      {/* ── Trust / Differentiation ── */}
       <section className="section-padding bg-background">
         <div className="luxury-container">
-          <motion.div {...fadeUp} transition={{ duration: 0.8 }} className="text-center mb-20">
-            <p className="font-body text-xs tracking-[0.3em] uppercase text-charcoal-light mb-6">
-              Clinical Standards
-            </p>
-            <h2 className="font-display text-4xl md:text-5xl font-light text-navy">
-              Guiding Principles
-            </h2>
-          </motion.div>
+          <motion.div
+            {...fade}
+            transition={{ duration: 0.9 }}
+            className="max-w-2xl mx-auto"
+          >
+            <div className="text-center mb-14">
+              <p className="font-body text-[10px] tracking-[0.3em] uppercase text-charcoal-light mb-6">
+                Differentiation
+              </p>
+              <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-light text-navy">
+                Why Specialist-Led Aesthetic Dentistry Matters
+              </h2>
+            </div>
 
-          <div className="max-w-3xl mx-auto space-y-0">
-            {principles.map((item, i) => (
-              <motion.div
-                key={i}
-                {...fadeUp}
-                transition={{ duration: 0.6, delay: i * 0.1 }}
-                className="border-b border-divider py-10 md:py-12"
-              >
-                <h3 className="font-display text-xl md:text-2xl font-medium text-charcoal mb-4">
-                  {item.title}
-                </h3>
-                <p className="font-body text-sm text-charcoal-light font-light leading-relaxed">
-                  {item.description}
-                </p>
-              </motion.div>
-            ))}
-          </div>
+            <div className="space-y-6 mb-14">
+              {trustPoints.map((point, i) => (
+                <motion.div
+                  key={i}
+                  {...fade}
+                  transition={{ duration: 0.5, delay: i * 0.08 }}
+                  className="flex items-start gap-4 py-2"
+                >
+                  <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-navy shrink-0" />
+                  <p className="font-body text-sm md:text-[15px] text-charcoal font-light leading-relaxed">
+                    {point}
+                  </p>
+                </motion.div>
+              ))}
+            </div>
+
+            <motion.p
+              {...fade}
+              transition={{ duration: 0.8, delay: 0.3 }}
+              className="font-display text-lg md:text-xl font-light text-charcoal italic text-center leading-relaxed"
+            >
+              Aesthetic dentistry, when engineered correctly, is not cosmetic. It is restorative architecture.
+            </motion.p>
+          </motion.div>
         </div>
       </section>
 
-      <PageCTA
-        description="Begin with a personalized aesthetic consultation to explore the possibilities for your smile."
-      />
+      {/* ── Footer Transition ── */}
+      <section className="py-20 md:py-28 bg-warm-gray">
+        <div className="luxury-container px-6 md:px-8">
+          <motion.div
+            {...fade}
+            transition={{ duration: 1 }}
+            className="text-center"
+          >
+            <div className="w-12 h-px bg-navy mx-auto mb-10" />
+            <p className="font-display text-xl md:text-2xl font-light text-navy italic">
+              Because lasting beauty is never accidental.
+            </p>
+            <div className="mt-10">
+              <Link
+                to="/contact"
+                className="px-8 py-3.5 bg-navy text-primary-foreground font-body text-[11px] tracking-[0.2em] uppercase hover:opacity-90 transition-opacity duration-300"
+              >
+                Schedule a Consultation
+              </Link>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
       <PageFooter />
     </main>
   );
