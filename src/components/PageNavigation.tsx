@@ -78,81 +78,84 @@ const PageNavigation = () => {
   }, [menuOpen]);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/90 backdrop-blur-md border-b border-divider">
-      <div className="luxury-container flex items-center justify-between py-5 px-6 md:px-8">
-        {/* Logo */}
-        <Link to="/" className="hover:opacity-70 transition-opacity duration-300 shrink-0">
-          <img src={logoAP} alt="Dr. Akshay Parmar" className="h-20 md:h-24" />
-        </Link>
+    <>
+      {/* Fixed header — constant height, never changes */}
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-background/90 backdrop-blur-md border-b border-divider">
+        <div className="luxury-container flex items-center justify-between h-[88px] md:h-[104px] px-6 md:px-8">
+          {/* Logo */}
+          <Link to="/" className="hover:opacity-70 transition-opacity duration-300 shrink-0">
+            <img src={logoAP} alt="Dr. Akshay Parmar" className="h-20 md:h-24" />
+          </Link>
 
-        {/* Desktop nav */}
-        <div className="hidden lg:flex items-center gap-10">
-          {navItems.map((item) =>
-            item.children ? (
-              <div
-                key={item.label}
-                className="relative"
-                onMouseEnter={() => handleEnter(item.label)}
-                onMouseLeave={handleLeave}
-              >
-                <button className={`${linkStyle} py-2`}>
+          {/* Desktop nav */}
+          <div className="hidden lg:flex items-center gap-10">
+            {navItems.map((item) =>
+              item.children ? (
+                <div
+                  key={item.label}
+                  className="relative"
+                  onMouseEnter={() => handleEnter(item.label)}
+                  onMouseLeave={handleLeave}
+                >
+                  <button className={`${linkStyle} py-2`}>
+                    {item.label}
+                  </button>
+
+                  <AnimatePresence>
+                    {openDropdown === item.label && (
+                      <motion.div
+                        initial={{ opacity: 0, y: 6 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: 6 }}
+                        transition={{ duration: 0.2, ease: "easeOut" }}
+                        className="absolute top-full left-1/2 -translate-x-1/2 pt-3 z-[100]"
+                      >
+                        <div className="min-w-[220px] bg-background border border-divider shadow-lg py-3">
+                          {item.children.map((child) => (
+                            <Link
+                              key={child.label}
+                              to={child.to}
+                              onClick={() => setOpenDropdown(null)}
+                              className="block px-6 py-2.5 font-body text-[11px] tracking-[0.1em] uppercase text-charcoal-light hover:text-navy hover:bg-muted/40 transition-all duration-200"
+                            >
+                              {child.label}
+                            </Link>
+                          ))}
+                        </div>
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+                </div>
+              ) : (
+                <Link key={item.label} to={item.to!} className={linkStyle}>
                   {item.label}
-                </button>
+                </Link>
+              )
+            )}
+          </div>
 
-                <AnimatePresence>
-                  {openDropdown === item.label && (
-                    <motion.div
-                      initial={{ opacity: 0, y: 6 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      exit={{ opacity: 0, y: 6 }}
-                      transition={{ duration: 0.2, ease: "easeOut" }}
-                      className="absolute top-full left-1/2 -translate-x-1/2 pt-3 z-[100]"
-                    >
-                      <div className="min-w-[220px] bg-background border border-divider shadow-lg py-3">
-                        {item.children.map((child) => (
-                          <Link
-                            key={child.label}
-                            to={child.to}
-                            onClick={() => setOpenDropdown(null)}
-                            className="block px-6 py-2.5 font-body text-[11px] tracking-[0.1em] uppercase text-charcoal-light hover:text-navy hover:bg-muted/40 transition-all duration-200"
-                          >
-                            {child.label}
-                          </Link>
-                        ))}
-                      </div>
-                    </motion.div>
-                  )}
-                </AnimatePresence>
-              </div>
-            ) : (
-              <Link key={item.label} to={item.to!} className={linkStyle}>
-                {item.label}
-              </Link>
-            )
-          )}
+          {/* Mobile toggle */}
+          <button
+            onClick={() => setMenuOpen(!menuOpen)}
+            className="lg:hidden text-charcoal-light hover:text-navy transition-colors p-2 -mr-2"
+            aria-label="Toggle menu"
+          >
+            {menuOpen ? <X size={22} strokeWidth={1.3} /> : <Menu size={22} strokeWidth={1.3} />}
+          </button>
         </div>
+      </nav>
 
-        {/* Mobile toggle */}
-        <button
-          onClick={() => setMenuOpen(!menuOpen)}
-          className="lg:hidden text-charcoal-light hover:text-navy transition-colors p-2 -mr-2"
-          aria-label="Toggle menu"
-        >
-          {menuOpen ? <X size={22} strokeWidth={1.3} /> : <Menu size={22} strokeWidth={1.3} />}
-        </button>
-      </div>
-
-      {/* Mobile menu */}
+      {/* Mobile menu — fixed overlay, completely outside nav flow */}
       <AnimatePresence>
         {menuOpen && (
           <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: "auto" }}
-            exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.3, ease: "easeInOut" }}
-            className="lg:hidden bg-background border-t border-divider overflow-hidden"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.25, ease: "easeInOut" }}
+            className="fixed inset-0 top-[88px] md:top-[104px] z-[90] bg-background lg:hidden"
           >
-            <div className="px-6 py-8 space-y-2 max-h-[80vh] overflow-y-auto">
+            <div className="px-6 py-8 space-y-2 max-h-full overflow-y-auto">
               {navItems.map((item) =>
                 item.children ? (
                   <div key={item.label}>
@@ -204,7 +207,7 @@ const PageNavigation = () => {
           </motion.div>
         )}
       </AnimatePresence>
-    </nav>
+    </>
   );
 };
 
