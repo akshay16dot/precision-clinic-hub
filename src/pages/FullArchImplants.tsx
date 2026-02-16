@@ -649,9 +649,37 @@ const FullArchImplants = () => {
         </div>
       </section>
 
-      <PageCTA
-        description="Begin with a comprehensive evaluation to determine the most appropriate full-arch rehabilitation pathway for your clinical needs."
-      />
+      {/* Editorial – Consultation CTA */}
+      <section className="py-28 md:py-40" style={{ background: 'linear-gradient(180deg, hsl(40 18% 97%) 0%, hsl(40 12% 95%) 100%)' }}>
+        <div className="luxury-container">
+          <motion.div {...fadeUp} transition={{ duration: 1 }} className="max-w-2xl mx-auto text-center">
+            <p className="font-body text-xs tracking-[0.3em] uppercase text-charcoal-light/60 mb-6">
+              Next Step
+            </p>
+            <h2 className="font-display text-3xl md:text-5xl font-light text-navy leading-tight mb-10">
+              Begin With a Comprehensive <span className="italic">Evaluation</span>
+            </h2>
+            <div className="space-y-6 mb-12">
+              <p className="font-body text-sm md:text-base text-charcoal-light font-light leading-relaxed">
+                Full-arch implant rehabilitation begins with a detailed clinical assessment designed to evaluate biological, functional, and structural factors unique to each patient.
+              </p>
+              <p className="font-body text-sm md:text-base text-charcoal-light font-light leading-relaxed">
+                This diagnostic phase allows treatment options to be discussed with clarity, precision, and clinical discretion.
+              </p>
+            </div>
+            <div className="w-12 h-px bg-navy/20 mx-auto mb-8" />
+            <p className="font-body text-xs tracking-[0.3em] uppercase text-charcoal-light/60 mb-12">
+              Every recommendation is diagnosis-driven.
+            </p>
+            <a
+              href="/contact"
+              className="inline-block font-body text-xs tracking-[0.3em] uppercase border border-navy/30 text-navy px-10 py-4 hover:bg-navy hover:text-warm-white transition-all duration-500"
+            >
+              Request a Private Consultation
+            </a>
+          </motion.div>
+        </div>
+      </section>
       <PageFooter />
     </main>
   );
