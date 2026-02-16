@@ -270,23 +270,23 @@ const FullArchImplants = () => {
               Clinical Transformation
             </p>
           </motion.div>
-          <motion.div {...fadeUp} transition={{ duration: 0.8, delay: 0.1 }} className="max-w-5xl mx-auto grid grid-cols-2 gap-3 md:gap-5 mb-16 md:mb-20">
-            <div className="overflow-hidden">
+          <motion.div {...fadeUp} transition={{ duration: 0.8, delay: 0.1 }} className="max-w-5xl mx-auto grid grid-cols-2 gap-3 md:gap-5 items-start mb-16 md:mb-20">
+            <div className="overflow-hidden" style={{ aspectRatio: '1 / 1' }}>
               <img
                 src={outcome1Before}
                 alt="Pre-treatment smile condition"
-                className="w-full h-auto object-cover"
+                className="w-full h-full object-cover"
                 style={{
                   maskImage: 'radial-gradient(ellipse 95% 90% at 50% 50%, black 60%, transparent 90%)',
                   WebkitMaskImage: 'radial-gradient(ellipse 95% 90% at 50% 50%, black 60%, transparent 90%)',
                 }}
               />
             </div>
-            <div className="overflow-hidden">
+            <div className="overflow-hidden" style={{ aspectRatio: '1 / 1' }}>
               <img
                 src={outcome1After}
                 alt="Final rehabilitation outcome"
-                className="w-full h-auto object-cover"
+                className="w-full h-full object-cover"
                 style={{
                   maskImage: 'radial-gradient(ellipse 95% 90% at 50% 50%, black 60%, transparent 90%)',
                   WebkitMaskImage: 'radial-gradient(ellipse 95% 90% at 50% 50%, black 60%, transparent 90%)',
@@ -296,23 +296,23 @@ const FullArchImplants = () => {
           </motion.div>
 
           {/* Row 2 – Second transformation */}
-          <motion.div {...fadeUp} transition={{ duration: 0.8, delay: 0.15 }} className="max-w-5xl mx-auto grid grid-cols-2 gap-3 md:gap-5 mb-16 md:mb-20">
-            <div className="overflow-hidden">
+          <motion.div {...fadeUp} transition={{ duration: 0.8, delay: 0.15 }} className="max-w-5xl mx-auto grid grid-cols-2 gap-3 md:gap-5 items-start mb-16 md:mb-20">
+            <div className="overflow-hidden" style={{ aspectRatio: '1 / 1' }}>
               <img
                 src={outcome2Before}
                 alt="Pre-treatment smile condition"
-                className="w-full h-auto object-cover"
+                className="w-full h-full object-cover"
                 style={{
                   maskImage: 'radial-gradient(ellipse 95% 90% at 50% 50%, black 60%, transparent 90%)',
                   WebkitMaskImage: 'radial-gradient(ellipse 95% 90% at 50% 50%, black 60%, transparent 90%)',
                 }}
               />
             </div>
-            <div className="overflow-hidden">
+            <div className="overflow-hidden" style={{ aspectRatio: '1 / 1' }}>
               <img
                 src={outcome2After}
                 alt="Final rehabilitation outcome"
-                className="w-full h-auto object-cover"
+                className="w-full h-full object-cover"
                 style={{
                   maskImage: 'radial-gradient(ellipse 95% 90% at 50% 50%, black 60%, transparent 90%)',
                   WebkitMaskImage: 'radial-gradient(ellipse 95% 90% at 50% 50%, black 60%, transparent 90%)',
@@ -327,23 +327,23 @@ const FullArchImplants = () => {
               Precision Rehabilitation
             </p>
           </motion.div>
-          <motion.div {...fadeUp} transition={{ duration: 0.8, delay: 0.25 }} className="max-w-5xl mx-auto grid grid-cols-2 gap-3 md:gap-5">
-            <div className="overflow-hidden">
+          <motion.div {...fadeUp} transition={{ duration: 0.8, delay: 0.25 }} className="max-w-5xl mx-auto grid grid-cols-2 gap-3 md:gap-5 items-start">
+            <div className="overflow-hidden" style={{ aspectRatio: '1 / 1' }}>
               <img
                 src={outcome3Before}
                 alt="Pre-treatment clinical detail"
-                className="w-full h-auto object-cover"
+                className="w-full h-full object-cover"
                 style={{
                   maskImage: 'radial-gradient(ellipse 95% 90% at 50% 50%, black 60%, transparent 90%)',
                   WebkitMaskImage: 'radial-gradient(ellipse 95% 90% at 50% 50%, black 60%, transparent 90%)',
                 }}
               />
             </div>
-            <div className="overflow-hidden">
+            <div className="overflow-hidden" style={{ aspectRatio: '1 / 1' }}>
               <img
                 src={outcome3After}
                 alt="Final prosthetic detail"
-                className="w-full h-auto object-cover"
+                className="w-full h-full object-cover"
                 style={{
                   maskImage: 'radial-gradient(ellipse 95% 90% at 50% 50%, black 60%, transparent 90%)',
                   WebkitMaskImage: 'radial-gradient(ellipse 95% 90% at 50% 50%, black 60%, transparent 90%)',
