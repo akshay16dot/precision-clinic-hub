@@ -6,6 +6,12 @@ import PageCTA from "@/components/PageCTA";
 import PageFooter from "@/components/PageFooter";
 import fullArchLeft from "@/assets/full-arch-left.png";
 import fullArchLower from "@/assets/full-arch-lower.png";
+import outcome1Before from "@/assets/outcome-1-before.png";
+import outcome1After from "@/assets/outcome-1-after.png";
+import outcome2Before from "@/assets/outcome-2-before.png";
+import outcome2After from "@/assets/outcome-2-after.png";
+import outcome3Before from "@/assets/outcome-3-before.png";
+import outcome3After from "@/assets/outcome-3-after.png";
 
 const beneficiaries = [
   {
@@ -249,6 +255,104 @@ const FullArchImplants = () => {
         </div>
       </section>
 
+      {/* Outcomes – Restoration. Stability. Confidence. */}
+      <section className="py-24 md:py-36 bg-background">
+        <div className="luxury-container">
+          <motion.div {...fadeUp} transition={{ duration: 0.8 }} className="text-center mb-20 md:mb-24">
+            <h2 className="font-display text-3xl md:text-5xl font-light text-navy leading-tight">
+              Restoration. Stability. <span className="italic">Confidence.</span>
+            </h2>
+          </motion.div>
+
+          {/* Row 1 – Clinical Transformation */}
+          <motion.div {...fadeUp} transition={{ duration: 0.6 }} className="max-w-5xl mx-auto mb-6">
+            <p className="font-body text-xs tracking-[0.3em] uppercase text-charcoal-light/60 mb-6">
+              Clinical Transformation
+            </p>
+          </motion.div>
+          <motion.div {...fadeUp} transition={{ duration: 0.8, delay: 0.1 }} className="max-w-5xl mx-auto grid grid-cols-2 gap-3 md:gap-5 mb-16 md:mb-20">
+            <div className="overflow-hidden">
+              <img
+                src={outcome1Before}
+                alt="Pre-treatment smile condition"
+                className="w-full h-auto object-cover"
+                style={{
+                  maskImage: 'radial-gradient(ellipse 95% 90% at 50% 50%, black 60%, transparent 90%)',
+                  WebkitMaskImage: 'radial-gradient(ellipse 95% 90% at 50% 50%, black 60%, transparent 90%)',
+                }}
+              />
+            </div>
+            <div className="overflow-hidden">
+              <img
+                src={outcome1After}
+                alt="Final rehabilitation outcome"
+                className="w-full h-auto object-cover"
+                style={{
+                  maskImage: 'radial-gradient(ellipse 95% 90% at 50% 50%, black 60%, transparent 90%)',
+                  WebkitMaskImage: 'radial-gradient(ellipse 95% 90% at 50% 50%, black 60%, transparent 90%)',
+                }}
+              />
+            </div>
+          </motion.div>
+
+          {/* Row 2 – Second transformation */}
+          <motion.div {...fadeUp} transition={{ duration: 0.8, delay: 0.15 }} className="max-w-5xl mx-auto grid grid-cols-2 gap-3 md:gap-5 mb-16 md:mb-20">
+            <div className="overflow-hidden">
+              <img
+                src={outcome2Before}
+                alt="Pre-treatment smile condition"
+                className="w-full h-auto object-cover"
+                style={{
+                  maskImage: 'radial-gradient(ellipse 95% 90% at 50% 50%, black 60%, transparent 90%)',
+                  WebkitMaskImage: 'radial-gradient(ellipse 95% 90% at 50% 50%, black 60%, transparent 90%)',
+                }}
+              />
+            </div>
+            <div className="overflow-hidden">
+              <img
+                src={outcome2After}
+                alt="Final rehabilitation outcome"
+                className="w-full h-auto object-cover"
+                style={{
+                  maskImage: 'radial-gradient(ellipse 95% 90% at 50% 50%, black 60%, transparent 90%)',
+                  WebkitMaskImage: 'radial-gradient(ellipse 95% 90% at 50% 50%, black 60%, transparent 90%)',
+                }}
+              />
+            </div>
+          </motion.div>
+
+          {/* Row 3 – Precision Rehabilitation */}
+          <motion.div {...fadeUp} transition={{ duration: 0.6, delay: 0.2 }} className="max-w-5xl mx-auto mb-6">
+            <p className="font-body text-xs tracking-[0.3em] uppercase text-charcoal-light/60 mb-6">
+              Precision Rehabilitation
+            </p>
+          </motion.div>
+          <motion.div {...fadeUp} transition={{ duration: 0.8, delay: 0.25 }} className="max-w-5xl mx-auto grid grid-cols-2 gap-3 md:gap-5">
+            <div className="overflow-hidden">
+              <img
+                src={outcome3Before}
+                alt="Pre-treatment clinical detail"
+                className="w-full h-auto object-cover"
+                style={{
+                  maskImage: 'radial-gradient(ellipse 95% 90% at 50% 50%, black 60%, transparent 90%)',
+                  WebkitMaskImage: 'radial-gradient(ellipse 95% 90% at 50% 50%, black 60%, transparent 90%)',
+                }}
+              />
+            </div>
+            <div className="overflow-hidden">
+              <img
+                src={outcome3After}
+                alt="Final prosthetic detail"
+                className="w-full h-auto object-cover"
+                style={{
+                  maskImage: 'radial-gradient(ellipse 95% 90% at 50% 50%, black 60%, transparent 90%)',
+                  WebkitMaskImage: 'radial-gradient(ellipse 95% 90% at 50% 50%, black 60%, transparent 90%)',
+                }}
+              />
+            </div>
+          </motion.div>
+        </div>
+      </section>
 
       <section className="section-padding" style={{ background: 'linear-gradient(180deg, hsl(40 15% 96%) 0%, hsl(40 20% 98%) 100%)' }}>
         <div className="luxury-container">
