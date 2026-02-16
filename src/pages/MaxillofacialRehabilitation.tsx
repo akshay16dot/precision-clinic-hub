@@ -1,9 +1,16 @@
 import { motion } from "framer-motion";
 import { useEffect } from "react";
 import PageNavigation from "@/components/PageNavigation";
-import PageHero from "@/components/PageHero";
 import PageCTA from "@/components/PageCTA";
 import PageFooter from "@/components/PageFooter";
+import drParmarMSK from "@/assets/dr-parmar-msk.png";
+import obturatorProsthesis from "@/assets/obturator-prosthesis.png";
+
+const fadeUp = {
+  initial: { opacity: 0, y: 30 },
+  whileInView: { opacity: 1, y: 0 },
+  viewport: { once: true, margin: "-100px" },
+};
 
 const specialties = [
   {
@@ -39,12 +46,6 @@ const approach = [
   },
 ];
 
-const fadeUp = {
-  initial: { opacity: 0, y: 30 },
-  whileInView: { opacity: 1, y: 0 },
-  viewport: { once: true, margin: "-100px" },
-};
-
 const MaxillofacialRehabilitation = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -58,40 +59,282 @@ const MaxillofacialRehabilitation = () => {
     <main className="bg-background">
       <PageNavigation />
 
-      <PageHero
-        subtitle="Board-Certified Prosthodontist · New Jersey"
-        title="Maxillofacial &amp; Oncology"
-        titleItalic="Rehabilitation"
-        paragraphs={[
-          "Maxillofacial prosthetic rehabilitation addresses some of the most complex and deeply personal clinical challenges in dentistry.",
-          "Dr. Akshay Parmar provides specialized care for patients who have experienced tissue loss or functional compromise due to cancer treatment, congenital conditions, or trauma.",
-          "Every case is approached with clinical precision, human compassion, and a commitment to restoring dignity and quality of life.",
-        ]}
-      />
+      {/* ═══════ CINEMATIC HERO ═══════ */}
+      <section
+        className="relative min-h-[95vh] overflow-hidden"
+        style={{
+          background: "linear-gradient(160deg, hsl(220 20% 7%) 0%, hsl(220 18% 10%) 40%, hsl(220 15% 12%) 70%, hsl(220 20% 8%) 100%)",
+        }}
+      >
+        {/* Split imagery */}
+        <div className="absolute inset-0 grid grid-cols-1 lg:grid-cols-2">
+          {/* Left: Portrait */}
+          <div className="relative hidden lg:block">
+            <img
+              src={drParmarMSK}
+              alt=""
+              aria-hidden="true"
+              className="absolute inset-0 w-full h-full object-cover object-top"
+              style={{
+                filter: "brightness(0.4) contrast(1.1) saturate(0.15) sepia(0.08)",
+                maskImage: "linear-gradient(to right, transparent 0%, black 15%, black 70%, transparent 100%), linear-gradient(to bottom, transparent 0%, black 10%, black 85%, transparent 100%)",
+                maskComposite: "intersect",
+                WebkitMaskImage: "linear-gradient(to right, transparent 0%, black 15%, black 70%, transparent 100%)",
+              }}
+            />
+          </div>
 
-      <div className="luxury-container px-6 md:px-8">
-        <div className="w-12 h-px bg-navy mx-auto" />
-      </div>
+          {/* Right: Obturator prosthesis */}
+          <div className="relative hidden lg:flex items-center justify-center">
+            <img
+              src={obturatorProsthesis}
+              alt=""
+              aria-hidden="true"
+              className="w-[75%] max-w-md object-contain"
+              style={{
+                filter: "brightness(0.55) contrast(1.15) saturate(0.3) sepia(0.05)",
+                maskImage: "radial-gradient(ellipse 85% 85% at center, black 40%, transparent 100%)",
+                WebkitMaskImage: "radial-gradient(ellipse 85% 85% at center, black 40%, transparent 100%)",
+                mixBlendMode: "lighten",
+              }}
+            />
+          </div>
+        </div>
 
-      {/* Specialties */}
-      <section className="section-padding bg-background">
+        {/* Dark overlay for text readability */}
+        <div
+          className="absolute inset-0"
+          style={{
+            background: "linear-gradient(180deg, hsl(220 20% 7% / 0.3) 0%, hsl(220 20% 7% / 0.65) 50%, hsl(220 20% 7% / 0.95) 100%)",
+          }}
+        />
+
+        {/* Content */}
+        <div className="relative z-10 min-h-[95vh] flex flex-col justify-end px-6 md:px-12 lg:px-24 pb-16 md:pb-24">
+          <div className="max-w-3xl">
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="font-body text-[10px] md:text-xs tracking-[0.35em] uppercase mb-8"
+              style={{ color: "hsl(40 15% 90% / 0.35)" }}
+            >
+              Board-Certified Prosthodontist · Fellow, AAMP
+            </motion.p>
+
+            <motion.h1
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1, delay: 0.4 }}
+              className="font-display text-4xl md:text-6xl lg:text-7xl font-light tracking-tight leading-[0.93] mb-8"
+              style={{ color: "hsl(40 15% 92%)" }}
+            >
+              Maxillofacial &amp; Oncology
+              <br />
+              <span className="italic font-light">Rehabilitation</span>
+            </motion.h1>
+
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.6 }}
+              className="font-display text-lg md:text-xl font-light leading-relaxed mb-12 max-w-2xl"
+              style={{ color: "hsl(40 15% 90% / 0.6)" }}
+            >
+              Restoring function, comfort, and quality of life following cancer treatment.
+            </motion.p>
+
+            <motion.a
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.8 }}
+              href="/contact"
+              className="inline-block px-10 py-4 border font-body text-[11px] tracking-[0.25em] uppercase transition-all duration-300 hover:bg-transparent"
+              style={{
+                borderColor: "hsl(40 15% 90% / 0.25)",
+                backgroundColor: "hsl(40 15% 92%)",
+                color: "hsl(220 20% 10%)",
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.backgroundColor = "transparent";
+                e.currentTarget.style.color = "hsl(40 15% 92%)";
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.backgroundColor = "hsl(40 15% 92%)";
+                e.currentTarget.style.color = "hsl(220 20% 10%)";
+              }}
+            >
+              Request a Consultation
+            </motion.a>
+          </div>
+        </div>
+      </section>
+
+      {/* ═══════ TREATMENT EXPLANATION ═══════ */}
+      <section
+        className="py-28 md:py-36 px-6 md:px-8"
+        style={{ background: "linear-gradient(180deg, hsl(40 15% 97%) 0%, hsl(40 12% 95%) 100%)" }}
+      >
+        <div className="max-w-2xl mx-auto">
+          <motion.div {...fadeUp} transition={{ duration: 1 }}>
+            <p className="font-body text-[10px] tracking-[0.35em] uppercase text-charcoal-light mb-8 text-center">
+              Understanding Rehabilitation
+            </p>
+            <h2 className="font-display text-3xl md:text-5xl font-light text-navy text-center mb-14 leading-[0.95]">
+              Beyond Teeth Alone
+            </h2>
+            <div className="w-12 h-px bg-navy mx-auto mb-14" />
+
+            <div className="space-y-6">
+              <p className="font-body text-sm md:text-base text-charcoal-light font-light leading-relaxed">
+                Cancer treatment often creates complex oral and facial challenges that extend far beyond teeth alone.
+              </p>
+              <p className="font-body text-sm md:text-base text-charcoal-light font-light leading-relaxed">
+                Surgical resection, radiation therapy, and chemotherapy may affect speech, chewing, swallowing, comfort, facial support, and long-term oral stability.
+              </p>
+              <p className="font-body text-sm md:text-base text-charcoal-light font-light leading-relaxed">
+                Rehabilitation requires a highly individualized, medically informed approach designed around biology, function, and structural integrity.
+              </p>
+              <p className="font-display text-lg md:text-xl font-light text-charcoal leading-relaxed mt-10">
+                Care is never standardized. It is engineered.
+              </p>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* ═══════ SPECIALIST AUTHORITY ═══════ */}
+      <section
+        className="py-28 md:py-36 px-6 md:px-8"
+        style={{ background: "linear-gradient(180deg, hsl(220 18% 9%) 0%, hsl(220 15% 11%) 100%)" }}
+      >
+        <div className="max-w-2xl mx-auto">
+          <motion.div {...fadeUp} transition={{ duration: 1 }}>
+            <p
+              className="font-body text-[10px] tracking-[0.35em] uppercase mb-8 text-center"
+              style={{ color: "hsl(40 15% 90% / 0.35)" }}
+            >
+              Fellowship-Trained Expertise
+            </p>
+            <h2
+              className="font-display text-3xl md:text-5xl font-light text-center mb-14 leading-[0.95]"
+              style={{ color: "hsl(40 15% 92%)" }}
+            >
+              Specialist Authority
+            </h2>
+            <div className="w-12 h-px mx-auto mb-14" style={{ backgroundColor: "hsl(40 15% 90% / 0.2)" }} />
+
+            <div className="space-y-6">
+              <p className="font-body text-sm md:text-base font-light leading-relaxed" style={{ color: "hsl(40 15% 90% / 0.55)" }}>
+                This care is directed by fellowship-trained expertise in maxillofacial prosthetics and complex oral rehabilitation.
+              </p>
+              <p className="font-body text-sm md:text-base font-light leading-relaxed" style={{ color: "hsl(40 15% 90% / 0.55)" }}>
+                Clinical training includes advanced fellowship experience at Memorial Sloan Kettering Cancer Center, working closely with surgeons, oncologists, and multidisciplinary medical teams.
+              </p>
+              <p
+                className="font-display text-lg md:text-xl font-light leading-relaxed mt-10"
+                style={{ color: "hsl(40 15% 90% / 0.75)" }}
+              >
+                Fellow of the American Academy of Maxillofacial Prosthetics (FAAMP)
+              </p>
+              <p className="font-body text-sm md:text-base font-light leading-relaxed" style={{ color: "hsl(40 15% 90% / 0.55)" }}>
+                Treatment scope includes rehabilitation using precision prosthetic designs, implant-supported restorations, and biologically guided restorative strategies.
+              </p>
+            </div>
+
+            <p
+              className="font-body text-[10px] tracking-[0.3em] uppercase mt-16 text-center"
+              style={{ color: "hsl(40 15% 90% / 0.2)" }}
+            >
+              Patients referred by hospitals, specialists, and surgeons throughout New Jersey and neighboring states
+            </p>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* ═══════ REASSURANCE NARRATIVE ═══════ */}
+      <section
+        className="py-28 md:py-36 px-6 md:px-8"
+        style={{ background: "linear-gradient(180deg, hsl(40 12% 95%) 0%, hsl(40 15% 97%) 100%)" }}
+      >
+        <div className="max-w-2xl mx-auto text-center">
+          <motion.div {...fadeUp} transition={{ duration: 1 }}>
+            <p className="font-body text-[10px] tracking-[0.35em] uppercase text-charcoal-light mb-8">
+              Your Journey
+            </p>
+            <h2 className="font-display text-3xl md:text-5xl font-light text-navy mb-14 leading-[0.95]">
+              Every Journey Is Different
+            </h2>
+            <div className="w-12 h-px bg-navy mx-auto mb-14" />
+
+            <p className="font-body text-sm md:text-base text-charcoal-light font-light leading-relaxed mb-6">
+              Treatment decisions are guided by diagnosis, biology, structural needs, and long-term functional goals, never speed or templates.
+            </p>
+
+            <p className="font-display text-lg md:text-xl font-light text-charcoal leading-relaxed mt-10 mb-10">
+              Precision rehabilitation. Individualized design. Long-term stability.
+            </p>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* ═══════ COLLABORATIVE CARE ═══════ */}
+      <section
+        className="py-28 md:py-36 px-6 md:px-8"
+        style={{ background: "linear-gradient(180deg, hsl(220 18% 9%) 0%, hsl(220 15% 12%) 100%)" }}
+      >
+        <div className="max-w-2xl mx-auto text-center">
+          <motion.div {...fadeUp} transition={{ duration: 1 }}>
+            <p
+              className="font-body text-[10px] tracking-[0.35em] uppercase mb-8"
+              style={{ color: "hsl(40 15% 90% / 0.35)" }}
+            >
+              Coordinated Rehabilitation
+            </p>
+            <h2
+              className="font-display text-3xl md:text-5xl font-light mb-14 leading-[0.95]"
+              style={{ color: "hsl(40 15% 92%)" }}
+            >
+              Your Clinical Partner
+            </h2>
+            <div className="w-12 h-px mx-auto mb-14" style={{ backgroundColor: "hsl(40 15% 90% / 0.2)" }} />
+
+            <p className="font-body text-sm md:text-base font-light leading-relaxed mb-6" style={{ color: "hsl(40 15% 90% / 0.55)" }}>
+              We work closely with your restorative dentist and medical team to ensure continuity of care and long-term stability.
+            </p>
+            <p className="font-body text-sm md:text-base font-light leading-relaxed mb-6" style={{ color: "hsl(40 15% 90% / 0.55)" }}>
+              This role functions as both specialist and clinical partner, guiding design, function, maintenance, and outcomes.
+            </p>
+            <p
+              className="font-display text-lg md:text-xl font-light leading-relaxed mt-10"
+              style={{ color: "hsl(40 15% 90% / 0.7)" }}
+            >
+              Think of this as expert-directed rehabilitation, supported by a coordinated care team.
+            </p>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* ═══════ AREAS OF EXPERTISE ═══════ */}
+      <section className="section-padding" style={{ background: "linear-gradient(180deg, hsl(40 15% 97%) 0%, hsl(40 12% 95%) 100%)" }}>
         <div className="luxury-container">
           <motion.div {...fadeUp} transition={{ duration: 0.8 }} className="text-center mb-20">
-            <p className="font-body text-xs tracking-[0.3em] uppercase text-charcoal-light mb-6">
+            <p className="font-body text-[10px] tracking-[0.35em] uppercase text-charcoal-light mb-6">
               Specialized Care
             </p>
-            <h2 className="font-display text-4xl md:text-5xl font-light text-navy">
+            <h2 className="font-display text-3xl md:text-5xl font-light text-navy">
               Areas of Expertise
             </h2>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-divider max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-px max-w-4xl mx-auto" style={{ backgroundColor: "hsl(220 15% 90%)" }}>
             {specialties.map((item, i) => (
               <motion.div
                 key={i}
                 {...fadeUp}
                 transition={{ duration: 0.6, delay: i * 0.1 }}
-                className="bg-background p-10 md:p-12"
+                className="p-10 md:p-12"
+                style={{ backgroundColor: "hsl(40 15% 97%)" }}
               >
                 <h3 className="font-display text-xl md:text-2xl font-medium text-charcoal mb-4">
                   {item.title}
@@ -105,14 +348,14 @@ const MaxillofacialRehabilitation = () => {
         </div>
       </section>
 
-      {/* Philosophy */}
+      {/* ═══════ PHILOSOPHY ═══════ */}
       <section className="section-padding bg-warm-gray">
         <div className="luxury-container">
           <motion.div {...fadeUp} transition={{ duration: 1 }} className="max-w-3xl mx-auto text-center">
-            <p className="font-body text-xs tracking-[0.3em] uppercase text-charcoal-light mb-6">
+            <p className="font-body text-[10px] tracking-[0.35em] uppercase text-charcoal-light mb-6">
               Rehabilitation Philosophy
             </p>
-            <h2 className="font-display text-4xl md:text-5xl font-light text-navy mb-12">
+            <h2 className="font-display text-3xl md:text-5xl font-light text-navy mb-12 leading-[0.95]">
               Restoring More Than Function
             </h2>
             <div className="w-12 h-px bg-navy mx-auto mb-12" />
@@ -126,14 +369,14 @@ const MaxillofacialRehabilitation = () => {
         </div>
       </section>
 
-      {/* Approach */}
-      <section className="section-padding bg-background">
+      {/* ═══════ APPROACH ═══════ */}
+      <section className="section-padding" style={{ background: "linear-gradient(180deg, hsl(40 12% 95%) 0%, hsl(40 15% 97%) 100%)" }}>
         <div className="luxury-container">
           <motion.div {...fadeUp} transition={{ duration: 0.8 }} className="text-center mb-20">
-            <p className="font-body text-xs tracking-[0.3em] uppercase text-charcoal-light mb-6">
+            <p className="font-body text-[10px] tracking-[0.35em] uppercase text-charcoal-light mb-6">
               Clinical Standards
             </p>
-            <h2 className="font-display text-4xl md:text-5xl font-light text-navy">
+            <h2 className="font-display text-3xl md:text-5xl font-light text-navy">
               Our Approach
             </h2>
           </motion.div>
@@ -160,8 +403,8 @@ const MaxillofacialRehabilitation = () => {
 
       <PageCTA
         title="Begin the Conversation"
-        description="If you or a loved one requires maxillofacial or oncologic rehabilitation, we welcome the opportunity to discuss how we can help."
-        buttonText="Schedule a Consultation"
+        description="If you or a loved one requires maxillofacial or oncologic rehabilitation, we welcome the opportunity to discuss how we can help. Every recommendation is diagnosis-driven."
+        buttonText="Request a Consultation"
       />
       <PageFooter />
     </main>
