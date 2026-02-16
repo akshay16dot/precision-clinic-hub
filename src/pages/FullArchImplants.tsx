@@ -360,6 +360,38 @@ const FullArchImplants = () => {
         </div>
       </section>
 
+      {/* Editorial – Structured Process Reassurance */}
+      <section className="py-24 md:py-36" style={{ background: 'linear-gradient(180deg, hsl(40 20% 98%) 0%, hsl(40 15% 96%) 100%)' }}>
+        <div className="luxury-container">
+          <motion.div {...fadeUp} transition={{ duration: 1 }} className="max-w-2xl mx-auto text-center">
+            <p className="font-body text-xs tracking-[0.3em] uppercase text-charcoal-light/60 mb-6">
+              Your Treatment Journey
+            </p>
+            <h2 className="font-display text-3xl md:text-5xl font-light text-navy leading-tight mb-10">
+              A Structured, <span className="italic">Predictable</span> Process
+            </h2>
+            <div className="space-y-6 mb-12">
+              <p className="font-body text-sm md:text-base text-charcoal-light font-light leading-relaxed">
+                Full-arch implant rehabilitation follows a carefully sequenced clinical protocol.
+              </p>
+              <p className="font-body text-sm md:text-base text-charcoal-light font-light leading-relaxed">
+                Each phase is designed to ensure biological stability, functional comfort, and long-term mechanical integrity.
+              </p>
+              <p className="font-body text-sm md:text-base text-charcoal-light font-light leading-relaxed">
+                Treatment is performed in clearly defined stages, allowing healing, adaptation, and refinement at every step.
+              </p>
+              <p className="font-body text-sm md:text-base text-charcoal-light font-light leading-relaxed">
+                For most patients, the process is far more controlled and comfortable than anticipated.
+              </p>
+            </div>
+            <div className="w-12 h-px bg-navy/20 mx-auto mb-8" />
+            <p className="font-body text-xs tracking-[0.3em] uppercase text-charcoal-light/60">
+              Precision replaces uncertainty.
+            </p>
+          </motion.div>
+        </div>
+      </section>
+
       <section className="section-padding" style={{ background: 'linear-gradient(180deg, hsl(40 15% 96%) 0%, hsl(40 20% 98%) 100%)' }}>
         <div className="luxury-container">
           <motion.div {...fadeUp} transition={{ duration: 0.8 }} className="max-w-3xl mx-auto text-center mb-16 md:mb-20">
