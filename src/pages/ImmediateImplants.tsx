@@ -2,6 +2,10 @@ import { motion } from "framer-motion";
 import { useEffect } from "react";
 import PageNavigation from "@/components/PageNavigation";
 import PageFooter from "@/components/PageFooter";
+import immediateCase1Before from "@/assets/immediate-case1-before.png";
+import immediateCase1After from "@/assets/immediate-case1-after.png";
+import immediateCase2Before from "@/assets/immediate-case2-before.png";
+import immediateCase2After from "@/assets/immediate-case2-after.png";
 
 const fadeUp = {
   initial: { opacity: 0, y: 30 },
@@ -190,6 +194,154 @@ const ImmediateImplants = () => {
             <p className="font-body text-xs tracking-[0.3em] uppercase text-charcoal-light/60">
               Stability is engineered, not assumed.
             </p>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Same-Day Clinical Outcomes */}
+      <section
+        className="py-24 md:py-36"
+        style={{
+          background: "linear-gradient(180deg, hsl(30 8% 8%) 0%, hsl(28 6% 12%) 40%, hsl(30 8% 10%) 100%)",
+        }}
+      >
+        <div className="luxury-container">
+          <motion.div {...fadeUp} transition={{ duration: 1 }} className="max-w-2xl mx-auto text-center mb-16 md:mb-20">
+            <p
+              className="font-body text-xs tracking-[0.3em] uppercase mb-6"
+              style={{ color: "hsl(30 6% 45%)" }}
+            >
+              Clinical Outcomes
+            </p>
+            <h2
+              className="font-display text-3xl md:text-5xl font-light leading-tight mb-10"
+              style={{ color: "hsl(40 15% 92%)" }}
+            >
+              Immediate Restoration. <br />
+              <span className="italic">Immediate Confidence.</span>
+            </h2>
+            <div className="space-y-6 mb-12">
+              <p
+                className="font-body text-sm md:text-base font-light leading-relaxed"
+                style={{ color: "hsl(30 8% 55%)" }}
+              >
+                In carefully selected cases, implant placement and provisional restoration may be performed on the same day.
+              </p>
+              <p
+                className="font-body text-sm md:text-base font-light leading-relaxed"
+                style={{ color: "hsl(30 8% 55%)" }}
+              >
+                This approach is guided by diagnosis, bone stability, and precise surgical planning.
+              </p>
+              <p
+                className="font-body text-sm md:text-base font-light leading-relaxed"
+                style={{ color: "hsl(30 8% 55%)" }}
+              >
+                The objective is to preserve biology, restore function, and maintain natural aesthetics from the very beginning of treatment.
+              </p>
+            </div>
+            <div
+              className="w-12 h-px mx-auto mb-8"
+              style={{ backgroundColor: "hsl(40 15% 92% / 0.15)" }}
+            />
+            <p
+              className="font-body text-xs tracking-[0.3em] uppercase"
+              style={{ color: "hsl(30 6% 40%)" }}
+            >
+              Diagnosis determines timing. Stability determines success.
+            </p>
+          </motion.div>
+
+          {/* Case 1 */}
+          <motion.div {...fadeUp} transition={{ duration: 1, delay: 0.2 }} className="max-w-4xl mx-auto mb-20 md:mb-28">
+            <div className="grid grid-cols-2 gap-4 md:gap-8 items-start">
+              <div>
+                <div className="aspect-[4/3] overflow-hidden">
+                  <img
+                    src={immediateCase1Before}
+                    alt="Case 1 — Before immediate implant placement"
+                    className="w-full h-full object-cover object-center"
+                    style={{
+                      filter: "saturate(0.85) contrast(1.05)",
+                      maskImage: "radial-gradient(ellipse 90% 85% at center, black 60%, transparent 100%)",
+                      WebkitMaskImage: "radial-gradient(ellipse 90% 85% at center, black 60%, transparent 100%)",
+                    }}
+                  />
+                </div>
+                <p
+                  className="font-body text-[10px] tracking-[0.3em] uppercase text-center mt-4"
+                  style={{ color: "hsl(30 6% 40%)" }}
+                >
+                  Before
+                </p>
+              </div>
+              <div>
+                <div className="aspect-[4/3] overflow-hidden">
+                  <img
+                    src={immediateCase1After}
+                    alt="Case 1 — Same-day implant restoration result"
+                    className="w-full h-full object-cover object-center"
+                    style={{
+                      filter: "saturate(0.85) contrast(1.05)",
+                      maskImage: "radial-gradient(ellipse 90% 85% at center, black 60%, transparent 100%)",
+                      WebkitMaskImage: "radial-gradient(ellipse 90% 85% at center, black 60%, transparent 100%)",
+                    }}
+                  />
+                </div>
+                <p
+                  className="font-body text-[10px] tracking-[0.3em] uppercase text-center mt-4"
+                  style={{ color: "hsl(30 6% 40%)" }}
+                >
+                  After — Same-Day Result
+                </p>
+              </div>
+            </div>
+          </motion.div>
+
+          {/* Case 2 */}
+          <motion.div {...fadeUp} transition={{ duration: 1, delay: 0.4 }} className="max-w-4xl mx-auto">
+            <div className="grid grid-cols-2 gap-4 md:gap-8 items-start">
+              <div>
+                <div className="aspect-[4/3] overflow-hidden">
+                  <img
+                    src={immediateCase2Before}
+                    alt="Case 2 — Before immediate implant placement"
+                    className="w-full h-full object-cover object-center"
+                    style={{
+                      filter: "saturate(0.85) contrast(1.05)",
+                      maskImage: "radial-gradient(ellipse 90% 85% at center, black 60%, transparent 100%)",
+                      WebkitMaskImage: "radial-gradient(ellipse 90% 85% at center, black 60%, transparent 100%)",
+                    }}
+                  />
+                </div>
+                <p
+                  className="font-body text-[10px] tracking-[0.3em] uppercase text-center mt-4"
+                  style={{ color: "hsl(30 6% 40%)" }}
+                >
+                  Before
+                </p>
+              </div>
+              <div>
+                <div className="aspect-[4/3] overflow-hidden">
+                  <img
+                    src={immediateCase2After}
+                    alt="Case 2 — Same-day implant restoration result"
+                    className="w-full h-full object-cover object-center"
+                    style={{
+                      filter: "saturate(0.85) contrast(1.05)",
+                      maskImage: "radial-gradient(ellipse 90% 85% at center, black 60%, transparent 100%)",
+                      WebkitMaskImage: "radial-gradient(ellipse 90% 85% at center, black 60%, transparent 100%)",
+                    }}
+                  />
+                </div>
+                <p
+                  className="font-body text-[10px] tracking-[0.3em] uppercase text-center mt-4"
+                  style={{ color: "hsl(30 6% 40%)" }}
+                >
+                  After — Same-Day Result
+                </p>
+              </div>
+            </div>
           </motion.div>
         </div>
       </section>
