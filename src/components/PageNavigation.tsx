@@ -84,7 +84,7 @@ const PageNavigation = () => {
         <div className="luxury-container flex items-center justify-between h-[88px] md:h-[104px] px-6 md:px-8">
           {/* Logo */}
           <Link to="/" className="hover:opacity-70 transition-opacity duration-300 shrink-0">
-            <img src={logoAP} alt="Dr. Akshay Parmar" className="h-20 md:h-24" />
+            <img src={logoAP} alt="Dr. Akshay Parmar" className="h-24 md:h-28" />
           </Link>
 
           {/* Desktop nav */}

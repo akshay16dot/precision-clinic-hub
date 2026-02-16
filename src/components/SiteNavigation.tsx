@@ -105,7 +105,7 @@ const SiteNavigation = () => {
               src={logoAP}
               alt="Dr. Akshay Parmar"
               className={`transition-all duration-500 ${
-                scrolled ? "h-20 md:h-24" : "h-24 md:h-28"
+                scrolled ? "h-24 md:h-28" : "h-28 md:h-36"
               }`}
               style={{ filter: scrolled ? "none" : "invert(1)" }}
             />
