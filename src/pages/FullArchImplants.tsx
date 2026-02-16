@@ -86,18 +86,16 @@ const FullArchImplants = () => {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 1, delay: 0.2 }}
-              className="relative hidden md:block"
+              className="hidden md:block"
             >
-              <div
-                className="absolute inset-0 pointer-events-none z-10"
-                style={{
-                  background: 'radial-gradient(ellipse 80% 75% at 55% 50%, transparent 40%, hsl(30 8% 10%) 80%)',
-                }}
-              />
               <img
                 src={fullArchUpper}
                 alt="Full arch upper implant prosthesis showcasing precision craftsmanship"
-                className="w-full h-auto object-contain scale-110 origin-left relative z-0"
+                className="w-full h-auto object-contain scale-110 origin-left"
+                style={{
+                  maskImage: 'radial-gradient(ellipse 75% 70% at 55% 50%, black 40%, transparent 80%)',
+                  WebkitMaskImage: 'radial-gradient(ellipse 75% 70% at 55% 50%, black 40%, transparent 80%)',
+                }}
               />
             </motion.div>
 
@@ -128,18 +126,16 @@ const FullArchImplants = () => {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 1, delay: 0.3 }}
-              className="relative hidden md:block"
+              className="hidden md:block"
             >
-              <div
-                className="absolute inset-0 pointer-events-none z-10"
-                style={{
-                  background: 'radial-gradient(ellipse 80% 75% at 45% 50%, transparent 40%, hsl(30 8% 10%) 80%)',
-                }}
-              />
               <img
                 src={fullArchLower}
                 alt="Full arch lower implant prosthesis with natural tissue detail"
-                className="w-full h-auto object-contain scale-110 origin-right relative z-0"
+                className="w-full h-auto object-contain scale-110 origin-right"
+                style={{
+                  maskImage: 'radial-gradient(ellipse 75% 70% at 45% 50%, black 40%, transparent 80%)',
+                  WebkitMaskImage: 'radial-gradient(ellipse 75% 70% at 45% 50%, black 40%, transparent 80%)',
+                }}
               />
             </motion.div>
           </div>
@@ -151,20 +147,32 @@ const FullArchImplants = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
-              className="relative"
             >
-              <div className="absolute inset-0 pointer-events-none z-10" style={{ background: 'radial-gradient(ellipse 100% 100% at center, transparent 45%, hsl(30 8% 10%) 80%)' }} />
-              <img src={fullArchUpper} alt="Upper arch prosthesis" className="w-full h-auto object-contain" />
+              <img
+                src={fullArchUpper}
+                alt="Upper arch prosthesis"
+                className="w-full h-auto object-contain"
+                style={{
+                  maskImage: 'radial-gradient(ellipse 90% 85% at center, black 40%, transparent 80%)',
+                  WebkitMaskImage: 'radial-gradient(ellipse 90% 85% at center, black 40%, transparent 80%)',
+                }}
+              />
             </motion.div>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.1 }}
-              className="relative"
             >
-              <div className="absolute inset-0 pointer-events-none z-10" style={{ background: 'radial-gradient(ellipse 100% 100% at center, transparent 45%, hsl(30 8% 10%) 80%)' }} />
-              <img src={fullArchLower} alt="Lower arch prosthesis" className="w-full h-auto object-contain" />
+              <img
+                src={fullArchLower}
+                alt="Lower arch prosthesis"
+                className="w-full h-auto object-contain"
+                style={{
+                  maskImage: 'radial-gradient(ellipse 90% 85% at center, black 40%, transparent 80%)',
+                  WebkitMaskImage: 'radial-gradient(ellipse 90% 85% at center, black 40%, transparent 80%)',
+                }}
+              />
             </motion.div>
           </div>
         </div>
