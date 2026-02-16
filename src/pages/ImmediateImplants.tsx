@@ -566,6 +566,20 @@ const ImmediateImplants = () => {
         </div>
       </section>
 
+      {/* Patient Guide Link */}
+      <section className="py-12 md:py-16 px-6 md:px-8" style={{ background: "linear-gradient(180deg, hsl(40 15% 96%) 0%, hsl(40 18% 97%) 100%)" }}>
+        <div className="luxury-container text-center">
+          <motion.div {...fadeUp} transition={{ duration: 0.8 }}>
+            <Link
+              to="/guide/immediate-implants"
+              className="inline-block font-body text-[10px] tracking-[0.25em] uppercase text-navy border-b border-navy/30 pb-0.5 hover:border-navy transition-colors"
+            >
+              Learn About the Process
+            </Link>
+          </motion.div>
+        </div>
+      </section>
+
       {/* ─── SECTION 8: FINAL CTA ─── */}
       <section
         className="py-28 md:py-40 px-6 md:px-8"
