@@ -28,9 +28,9 @@ const navItems: NavItem[] = [
     label: "Aesthetics",
     children: [
       { to: "/veneers-aesthetic-reconstruction", label: "Veneers" },
-      { to: "/aesthetic-dentistry", label: "Smile Design" },
-      { to: "/aesthetic-dentistry", label: "Tooth Wear Rehabilitation" },
-      { to: "/aesthetic-dentistry", label: "Whitening" },
+      { to: "/smile-design", label: "Smile Design" },
+      { to: "/tooth-wear-rehabilitation", label: "Tooth Wear Rehabilitation" },
+      { to: "/teeth-whitening", label: "Whitening" },
     ],
   },
   {
