@@ -4,7 +4,7 @@ import PageNavigation from "@/components/PageNavigation";
 import PageHero from "@/components/PageHero";
 import PageCTA from "@/components/PageCTA";
 import PageFooter from "@/components/PageFooter";
-import fullArchUpper from "@/assets/full-arch-upper.png";
+import fullArchLeft from "@/assets/full-arch-left.png";
 import fullArchLower from "@/assets/full-arch-lower.png";
 
 const beneficiaries = [
@@ -89,12 +89,11 @@ const FullArchImplants = () => {
               className="hidden md:block mix-blend-lighten"
             >
               <img
-                src={fullArchUpper}
-                alt="Full arch upper implant prosthesis showcasing precision craftsmanship"
-                className="w-full h-auto object-contain scale-110 origin-left"
+                src={fullArchLeft}
+                alt="Full arch implant prosthesis showcasing precision craftsmanship"
+                className="w-full h-auto object-contain origin-left"
                 style={{
                   filter: 'sepia(0.08) saturate(1.05) brightness(0.95) contrast(1.02)',
-                  transform: 'scaleX(-1) scale(1.1)',
                   maskImage: 'radial-gradient(ellipse 90% 85% at 50% 50%, black 40%, transparent 75%)',
                   WebkitMaskImage: 'radial-gradient(ellipse 90% 85% at 50% 50%, black 40%, transparent 75%)',
                 }}
@@ -152,7 +151,7 @@ const FullArchImplants = () => {
               transition={{ duration: 0.8 }}
               className="mix-blend-lighten"
             >
-              <img src={fullArchUpper} alt="Upper arch prosthesis" className="w-full h-auto object-contain" style={{ filter: 'sepia(0.08) saturate(1.05) brightness(0.95) contrast(1.02)', maskImage: 'radial-gradient(ellipse 90% 85% at center, black 35%, transparent 70%)', WebkitMaskImage: 'radial-gradient(ellipse 90% 85% at center, black 35%, transparent 70%)' }} />
+              <img src={fullArchLeft} alt="Upper arch prosthesis" className="w-full h-auto object-contain" style={{ filter: 'sepia(0.08) saturate(1.05) brightness(0.95) contrast(1.02)', maskImage: 'radial-gradient(ellipse 90% 85% at center, black 35%, transparent 70%)', WebkitMaskImage: 'radial-gradient(ellipse 90% 85% at center, black 35%, transparent 70%)' }} />
             </motion.div>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
