@@ -289,7 +289,7 @@ const FullArchImplants = () => {
                 alt="Final rehabilitation outcome"
                 className="w-full h-full object-cover"
                 style={{
-                  objectPosition: '50% 45%',
+                  objectPosition: '50% 42%',
                   maskImage: 'radial-gradient(ellipse 95% 90% at 50% 50%, black 60%, transparent 90%)',
                   WebkitMaskImage: 'radial-gradient(ellipse 95% 90% at 50% 50%, black 60%, transparent 90%)',
                 }}
