@@ -75,66 +75,98 @@ const FullArchImplants = () => {
         ]}
       />
 
-      {/* Clinical Prosthesis Showcase */}
-      <section className="relative py-20 md:py-28 overflow-hidden" style={{ background: 'linear-gradient(180deg, hsl(220 20% 10%) 0%, hsl(220 18% 14%) 50%, hsl(220 20% 10%) 100%)' }}>
-        <div className="luxury-container px-6 md:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
-            <p className="font-body text-xs tracking-[0.35em] uppercase mb-6" style={{ color: 'hsl(220 15% 55%)' }}>
-              Precision Prosthetics
-            </p>
-            <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-light tracking-tight leading-[0.95]" style={{ color: 'hsl(40 15% 92%)' }}>
-              Full Arch Implant
-              <br />
-              <span className="italic">Rehabilitation</span>
-            </h2>
-            <p className="font-body text-sm md:text-base font-light leading-relaxed mt-8 max-w-xl mx-auto" style={{ color: 'hsl(220 10% 55%)' }}>
-              Restoring function, stability, and aesthetics through precision-engineered implant reconstruction.
-            </p>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, scale: 0.97 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 1.2, delay: 0.2 }}
-            className="relative max-w-3xl mx-auto"
-          >
-            {/* Upper arch */}
-            <div className="relative mb-6 md:mb-8">
+      {/* Clinical Prosthesis Showcase – Three Column Editorial */}
+      <section className="relative py-16 md:py-24 overflow-hidden" style={{ background: 'linear-gradient(180deg, hsl(220 20% 10%) 0%, hsl(220 18% 13%) 50%, hsl(220 20% 10%) 100%)' }}>
+        <div className="relative max-w-[90rem] mx-auto px-0">
+          <div className="grid grid-cols-1 md:grid-cols-[1fr_auto_1fr] items-center gap-0">
+            
+            {/* Left image – edge anchored */}
+            <motion.div
+              initial={{ opacity: 0, x: -40 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 1, delay: 0.2 }}
+              className="relative hidden md:block"
+            >
               <div
                 className="absolute inset-0 pointer-events-none z-10"
                 style={{
-                  background: 'radial-gradient(ellipse 100% 100% at center, transparent 55%, hsl(220 20% 10%) 90%)',
+                  background: 'linear-gradient(to left, hsl(220 20% 11% / 0.8) 0%, transparent 30%), linear-gradient(to right, hsl(220 20% 10%) 0%, transparent 15%)',
                 }}
               />
               <img
                 src={fullArchUpper}
                 alt="Full arch upper implant prosthesis showcasing precision craftsmanship"
-                className="w-full h-auto object-contain relative z-0"
+                className="w-full h-auto object-contain scale-110 origin-left relative z-0"
               />
-            </div>
+            </motion.div>
 
-            {/* Lower arch */}
-            <div className="relative">
+            {/* Center text */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.8 }}
+              className="text-center px-6 md:px-10 lg:px-14 py-8 md:py-0 max-w-lg mx-auto"
+            >
+              <p className="font-body text-xs tracking-[0.35em] uppercase mb-6" style={{ color: 'hsl(220 15% 55%)' }}>
+                Precision Prosthetics
+              </p>
+              <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-light tracking-tight leading-[0.95]" style={{ color: 'hsl(40 15% 92%)' }}>
+                Full Arch Implant
+                <br />
+                <span className="italic">Rehabilitation</span>
+              </h2>
+              <p className="font-body text-sm md:text-base font-light leading-relaxed mt-8" style={{ color: 'hsl(220 10% 55%)' }}>
+                Restoring function, stability, and aesthetics through precision-engineered implant reconstruction.
+              </p>
+            </motion.div>
+
+            {/* Right image – edge anchored */}
+            <motion.div
+              initial={{ opacity: 0, x: 40 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 1, delay: 0.3 }}
+              className="relative hidden md:block"
+            >
               <div
                 className="absolute inset-0 pointer-events-none z-10"
                 style={{
-                  background: 'radial-gradient(ellipse 100% 100% at center, transparent 55%, hsl(220 20% 10%) 90%)',
+                  background: 'linear-gradient(to right, hsl(220 20% 11% / 0.8) 0%, transparent 30%), linear-gradient(to left, hsl(220 20% 10%) 0%, transparent 15%)',
                 }}
               />
               <img
                 src={fullArchLower}
                 alt="Full arch lower implant prosthesis with natural tissue detail"
-                className="w-full h-auto object-contain relative z-0"
+                className="w-full h-auto object-contain scale-110 origin-right relative z-0"
               />
-            </div>
-          </motion.div>
+            </motion.div>
+          </div>
+
+          {/* Mobile: stacked images */}
+          <div className="md:hidden px-6 mt-8 space-y-4">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+              className="relative"
+            >
+              <div className="absolute inset-0 pointer-events-none z-10" style={{ background: 'radial-gradient(ellipse 100% 100% at center, transparent 55%, hsl(220 20% 10%) 90%)' }} />
+              <img src={fullArchUpper} alt="Upper arch prosthesis" className="w-full h-auto object-contain" />
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.1 }}
+              className="relative"
+            >
+              <div className="absolute inset-0 pointer-events-none z-10" style={{ background: 'radial-gradient(ellipse 100% 100% at center, transparent 55%, hsl(220 20% 10%) 90%)' }} />
+              <img src={fullArchLower} alt="Lower arch prosthesis" className="w-full h-auto object-contain" />
+            </motion.div>
+          </div>
         </div>
       </section>
 
