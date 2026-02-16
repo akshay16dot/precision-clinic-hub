@@ -3,6 +3,8 @@ import { useEffect } from "react";
 import PageNavigation from "@/components/PageNavigation";
 import PageCTA from "@/components/PageCTA";
 import PageFooter from "@/components/PageFooter";
+import PracticeAffiliations from "@/components/PracticeAffiliations";
+import TestimonialsSection from "@/components/TestimonialsSection";
 import drParmar from "@/assets/dr-parmar-color-headshot.jpg";
 
 const fadeUp = {
@@ -71,10 +73,10 @@ const About = () => {
               <div className="w-10 h-px bg-navy mb-8" />
 
               <p className="font-body text-sm md:text-[15px] text-charcoal-light font-light leading-[1.85] mb-4">
-                Dr. Akshay Parmar is a board-certified prosthodontist specializing in advanced implant dentistry, full-arch rehabilitation, aesthetic reconstruction, and maxillofacial prosthodontics.
+                Dr. Akshay Parmar is a board-certified prosthodontist whose practice is defined by the intersection of advanced implant dentistry, full-arch rehabilitation, aesthetic reconstruction, and maxillofacial prosthodontics.
               </p>
               <p className="font-body text-sm md:text-[15px] text-charcoal-light font-light leading-[1.85] mb-10">
-                His work centers on precision-driven, biologically respectful dentistry, restoring function, aesthetics, and long-term stability through carefully engineered treatment planning.
+                His clinical work reflects a philosophy grounded in biological respect, structural precision, and long-term predictability. Every treatment is approached as an engineering challenge, restoring function, aesthetics, and stability through carefully sequenced, individualized planning.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4">
@@ -97,9 +99,36 @@ const About = () => {
         </div>
       </section>
 
+      {/* ═══════ SPECIALIST BIO ═══════ */}
+      <section className="section-padding px-6 md:px-8">
+        <div className="luxury-container max-w-3xl">
+          <motion.div {...fadeUp} transition={{ duration: 0.8 }} className="text-center mb-16">
+            <p className="font-body text-[10px] tracking-[0.35em] uppercase text-charcoal-light mb-6">
+              Specialist Profile
+            </p>
+            <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-light text-navy leading-[0.95]">
+              Clinical Identity &amp;{" "}
+              <span className="italic">Philosophy</span>
+            </h2>
+          </motion.div>
+
+          <motion.div {...fadeUp} transition={{ duration: 0.6 }} className="max-w-2xl mx-auto space-y-5">
+            <p className="font-body text-sm md:text-[15px] text-charcoal-light font-light leading-[1.85]">
+              Dr. Parmar's expertise spans the full scope of prosthodontic care, from single-tooth implant restorations and veneer-based smile reconstruction to complex full-arch rehabilitation and maxillofacial prosthetics for oncology patients. His training across multiple institutions, including UCSF, the University of Connecticut, and Memorial Sloan Kettering Cancer Center, has shaped an approach that prioritizes biological outcomes over cosmetic shortcuts.
+            </p>
+            <p className="font-body text-sm md:text-[15px] text-charcoal-light font-light leading-[1.85]">
+              He founded the STABLE IMPLANT Protocol to bring structure and predictability to implant treatment planning, emphasizing tissue preservation, prosthetic-driven positioning, and occlusal stability. His work with the Floxient digital dentistry platform reflects a commitment to advancing collaborative, 3D-guided workflows that improve clinical precision and patient outcomes.
+            </p>
+            <p className="font-body text-sm md:text-[15px] text-charcoal-light font-light leading-[1.85]">
+              As a Fellow of both the American College of Prosthodontists and the American Academy of Maxillofacial Prosthetics, Dr. Parmar holds dual board-level distinctions that reflect depth across restorative, implant, and oncological disciplines. His clinical philosophy is direct: understand the biology, respect the structure, and plan for longevity.
+            </p>
+          </motion.div>
+        </div>
+      </section>
+
       {/* ═══════ PROFESSIONAL AUTHORITY ═══════ */}
       <section
-        className="py-24 md:py-32 px-6 md:px-8"
+        className="section-padding px-6 md:px-8"
         style={{ background: "linear-gradient(180deg, hsl(40 10% 95%) 0%, hsl(40 12% 93%) 100%)" }}
       >
         <div className="luxury-container max-w-3xl">
@@ -142,7 +171,7 @@ const About = () => {
       </section>
 
       {/* ═══════ ACADEMIC & INSTITUTIONAL FOUNDATION ═══════ */}
-      <section className="py-24 md:py-32 px-6 md:px-8">
+      <section className="section-padding px-6 md:px-8">
         <div className="luxury-container max-w-3xl">
           <motion.div {...fadeUp} transition={{ duration: 0.8 }} className="text-center mb-16">
             <p className="font-body text-[10px] tracking-[0.35em] uppercase text-charcoal-light mb-6">
@@ -182,7 +211,7 @@ const About = () => {
 
       {/* ═══════ LEADERSHIP & PROFESSIONAL SERVICE ═══════ */}
       <section
-        className="py-24 md:py-32 px-6 md:px-8"
+        className="section-padding px-6 md:px-8"
         style={{ background: "linear-gradient(180deg, hsl(40 10% 95%) 0%, hsl(40 12% 93%) 100%)" }}
       >
         <div className="luxury-container max-w-3xl">
@@ -223,7 +252,7 @@ const About = () => {
       </section>
 
       {/* ═══════ RESEARCH & SCHOLARLY CONTRIBUTION ═══════ */}
-      <section className="py-24 md:py-32 px-6 md:px-8">
+      <section className="section-padding px-6 md:px-8">
         <div className="luxury-container max-w-3xl">
           <motion.div {...fadeUp} transition={{ duration: 0.8 }} className="text-center">
             <p className="font-body text-[10px] tracking-[0.35em] uppercase text-charcoal-light mb-6">
@@ -241,7 +270,7 @@ const About = () => {
 
       {/* ═══════ INNOVATION & TECHNOLOGY ═══════ */}
       <section
-        className="py-24 md:py-32 px-6 md:px-8"
+        className="section-padding px-6 md:px-8"
         style={{ background: "linear-gradient(180deg, hsl(40 10% 95%) 0%, hsl(40 12% 93%) 100%)" }}
       >
         <div className="luxury-container max-w-3xl">
@@ -264,8 +293,11 @@ const About = () => {
         </div>
       </section>
 
+      {/* ═══════ PRACTICE & AFFILIATIONS ═══════ */}
+      <PracticeAffiliations />
+
       {/* ═══════ CLINICAL PHILOSOPHY ═══════ */}
-      <section className="py-24 md:py-32 px-6 md:px-8">
+      <section className="section-padding px-6 md:px-8">
         <div className="luxury-container max-w-3xl">
           <motion.div {...fadeUp} transition={{ duration: 0.8 }} className="text-center">
             <p className="font-body text-[10px] tracking-[0.35em] uppercase text-charcoal-light mb-6">
@@ -275,7 +307,7 @@ const About = () => {
               Clinical <span className="italic">Philosophy</span>
             </h2>
             <p className="font-body text-sm md:text-[15px] text-charcoal-light font-light leading-[1.85] mb-4">
-              Modern dentistry is not simply about replacing teeth, it is about rebuilding biology, mechanics, and aesthetics in harmony.
+              Modern dentistry is not simply about replacing teeth. It is about rebuilding biology, mechanics, and aesthetics in harmony.
             </p>
             <p className="font-body text-sm md:text-[15px] text-charcoal-light font-light leading-[1.85]">
               Every treatment decision is guided by structural integrity, tissue preservation, and long-term predictability.
@@ -283,6 +315,9 @@ const About = () => {
           </motion.div>
         </div>
       </section>
+
+      {/* ═══════ TESTIMONIALS ═══════ */}
+      <TestimonialsSection />
 
       <PageCTA
         title="Schedule a Consultation"
