@@ -4,6 +4,8 @@ import PageNavigation from "@/components/PageNavigation";
 import PageHero from "@/components/PageHero";
 import PageCTA from "@/components/PageCTA";
 import PageFooter from "@/components/PageFooter";
+import fullArchUpper from "@/assets/full-arch-upper.png";
+import fullArchLower from "@/assets/full-arch-lower.png";
 
 const beneficiaries = [
   {
@@ -73,9 +75,68 @@ const FullArchImplants = () => {
         ]}
       />
 
-      <div className="luxury-container px-6 md:px-8">
-        <div className="w-12 h-px bg-navy mx-auto" />
-      </div>
+      {/* Clinical Prosthesis Showcase */}
+      <section className="relative py-20 md:py-28 overflow-hidden" style={{ background: 'linear-gradient(180deg, hsl(220 20% 10%) 0%, hsl(220 18% 14%) 50%, hsl(220 20% 10%) 100%)' }}>
+        <div className="luxury-container px-6 md:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <p className="font-body text-xs tracking-[0.35em] uppercase mb-6" style={{ color: 'hsl(220 15% 55%)' }}>
+              Precision Prosthetics
+            </p>
+            <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-light tracking-tight leading-[0.95]" style={{ color: 'hsl(40 15% 92%)' }}>
+              Full Arch Implant
+              <br />
+              <span className="italic">Rehabilitation</span>
+            </h2>
+            <p className="font-body text-sm md:text-base font-light leading-relaxed mt-8 max-w-xl mx-auto" style={{ color: 'hsl(220 10% 55%)' }}>
+              Restoring function, stability, and aesthetics through precision-engineered implant reconstruction.
+            </p>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, scale: 0.97 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 1.2, delay: 0.2 }}
+            className="relative max-w-3xl mx-auto"
+          >
+            {/* Upper arch */}
+            <div className="relative mb-6 md:mb-8">
+              <div
+                className="absolute inset-0 pointer-events-none z-10"
+                style={{
+                  background: 'radial-gradient(ellipse 100% 100% at center, transparent 55%, hsl(220 20% 10%) 90%)',
+                }}
+              />
+              <img
+                src={fullArchUpper}
+                alt="Full arch upper implant prosthesis showcasing precision craftsmanship"
+                className="w-full h-auto object-contain relative z-0"
+              />
+            </div>
+
+            {/* Lower arch */}
+            <div className="relative">
+              <div
+                className="absolute inset-0 pointer-events-none z-10"
+                style={{
+                  background: 'radial-gradient(ellipse 100% 100% at center, transparent 55%, hsl(220 20% 10%) 90%)',
+                }}
+              />
+              <img
+                src={fullArchLower}
+                alt="Full arch lower implant prosthesis with natural tissue detail"
+                className="w-full h-auto object-contain relative z-0"
+              />
+            </div>
+          </motion.div>
+        </div>
+      </section>
 
       {/* Who Benefits */}
       <section className="section-padding bg-background">
