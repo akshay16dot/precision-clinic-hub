@@ -392,6 +392,70 @@ const FullArchImplants = () => {
         </div>
       </section>
 
+      {/* Editorial – Common Patient Questions */}
+      <section className="py-24 md:py-36" style={{ background: 'linear-gradient(180deg, hsl(40 15% 96%) 0%, hsl(40 18% 97%) 100%)' }}>
+        <div className="luxury-container">
+          <motion.div {...fadeUp} transition={{ duration: 1 }} className="max-w-2xl mx-auto">
+            <div className="text-center mb-16 md:mb-20">
+              <p className="font-body text-xs tracking-[0.3em] uppercase text-charcoal-light/60 mb-6">
+                Patient Guidance
+              </p>
+              <h2 className="font-display text-3xl md:text-5xl font-light text-navy leading-tight">
+                Common Patient <span className="italic">Questions</span>
+              </h2>
+            </div>
+
+            <div className="space-y-16 md:space-y-20">
+              <div>
+                <h3 className="font-display text-xl md:text-2xl font-light text-navy mb-5">
+                  Is full-arch implant treatment painful?
+                </h3>
+                <div className="space-y-4">
+                  <p className="font-body text-sm md:text-base text-charcoal-light font-light leading-relaxed">
+                    Full-arch rehabilitation is performed using modern surgical protocols designed for precision and patient comfort.
+                  </p>
+                  <p className="font-body text-sm md:text-base text-charcoal-light font-light leading-relaxed">
+                    Most patients report significantly less discomfort than anticipated, particularly when treatment is carefully planned and executed in controlled stages.
+                  </p>
+                </div>
+              </div>
+
+              <div className="w-12 h-px bg-navy/10 mx-auto" />
+
+              <div>
+                <h3 className="font-display text-xl md:text-2xl font-light text-navy mb-5">
+                  How long does the process take?
+                </h3>
+                <div className="space-y-4">
+                  <p className="font-body text-sm md:text-base text-charcoal-light font-light leading-relaxed">
+                    Treatment duration varies depending on healing response, biological factors, and case complexity.
+                  </p>
+                  <p className="font-body text-sm md:text-base text-charcoal-light font-light leading-relaxed">
+                    A structured clinical sequence allows each phase to be completed methodically, ensuring stability, adaptation, and refinement at every stage.
+                  </p>
+                </div>
+              </div>
+
+              <div className="w-12 h-px bg-navy/10 mx-auto" />
+
+              <div>
+                <h3 className="font-display text-xl md:text-2xl font-light text-navy mb-5">
+                  Am I too old for this treatment?
+                </h3>
+                <div className="space-y-4">
+                  <p className="font-body text-sm md:text-base text-charcoal-light font-light leading-relaxed">
+                    Full-arch rehabilitation is not defined by age, but by overall health, bone support, and functional needs.
+                  </p>
+                  <p className="font-body text-sm md:text-base text-charcoal-light font-light leading-relaxed">
+                    Many patients across a wide age range successfully undergo treatment following proper clinical evaluation.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
       <section className="section-padding" style={{ background: 'linear-gradient(180deg, hsl(40 15% 96%) 0%, hsl(40 20% 98%) 100%)' }}>
         <div className="luxury-container">
           <motion.div {...fadeUp} transition={{ duration: 0.8 }} className="max-w-3xl mx-auto text-center mb-16 md:mb-20">
