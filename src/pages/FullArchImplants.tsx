@@ -270,7 +270,7 @@ const FullArchImplants = () => {
               Clinical Transformation
             </p>
           </motion.div>
-          <motion.div {...fadeUp} transition={{ duration: 0.8, delay: 0.1 }} className="max-w-5xl mx-auto grid grid-cols-2 gap-3 md:gap-5 items-start mb-16 md:mb-20">
+          <motion.div {...fadeUp} transition={{ duration: 0.8, delay: 0.1 }} className="max-w-5xl mx-auto grid grid-cols-2 gap-3 md:gap-5 items-stretch mb-16 md:mb-20">
             <div className="overflow-hidden" style={{ aspectRatio: '4 / 3' }}>
               <img
                 src={outcome1Before}
@@ -298,7 +298,7 @@ const FullArchImplants = () => {
           </motion.div>
 
           {/* Row 2 – Second transformation */}
-          <motion.div {...fadeUp} transition={{ duration: 0.8, delay: 0.15 }} className="max-w-5xl mx-auto grid grid-cols-2 gap-3 md:gap-5 items-start mb-16 md:mb-20">
+          <motion.div {...fadeUp} transition={{ duration: 0.8, delay: 0.15 }} className="max-w-5xl mx-auto grid grid-cols-2 gap-3 md:gap-5 items-stretch mb-16 md:mb-20">
             <div className="overflow-hidden" style={{ aspectRatio: '4 / 3' }}>
               <img
                 src={outcome2Before}
@@ -331,7 +331,7 @@ const FullArchImplants = () => {
               Precision Rehabilitation
             </p>
           </motion.div>
-          <motion.div {...fadeUp} transition={{ duration: 0.8, delay: 0.25 }} className="max-w-5xl mx-auto grid grid-cols-2 gap-3 md:gap-5 items-start">
+          <motion.div {...fadeUp} transition={{ duration: 0.8, delay: 0.25 }} className="max-w-5xl mx-auto grid grid-cols-2 gap-3 md:gap-5 items-stretch">
             <div className="overflow-hidden" style={{ aspectRatio: '4 / 3' }}>
               <img
                 src={outcome3Before}
