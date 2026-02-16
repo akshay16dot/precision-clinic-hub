@@ -21,18 +21,18 @@ const PageCTA = ({
   buttonLink = "/contact",
 }: PageCTAProps) => {
   return (
-    <section className="section-padding bg-navy">
+    <section className="section-padding-lg bg-navy">
       <div className="luxury-container text-center">
         <motion.div {...fadeUp} transition={{ duration: 1 }}>
           <h2 className="font-display text-4xl md:text-5xl font-light text-primary-foreground mb-6">
             {title}
           </h2>
-          <p className="font-body text-sm md:text-base text-primary-foreground/70 font-light max-w-xl mx-auto mb-12">
+          <p className="font-body text-sm md:text-base text-primary-foreground/70 font-light max-w-xl mx-auto mb-14">
             {description}
           </p>
           <Link
             to={buttonLink}
-            className="inline-block px-12 py-4 border border-primary-foreground/30 text-primary-foreground font-body text-xs tracking-[0.2em] uppercase transition-all duration-300 hover:bg-primary-foreground hover:text-navy"
+            className="inline-block px-14 py-[18px] border border-primary-foreground/30 text-primary-foreground font-body text-[11px] tracking-[0.25em] uppercase transition-all duration-300 hover:bg-primary-foreground hover:text-navy"
           >
             {buttonText}
           </Link>

@@ -9,13 +9,13 @@ interface PageHeroProps {
 
 const PageHero = ({ subtitle, title, titleItalic, paragraphs }: PageHeroProps) => {
   return (
-    <section className="pt-32 pb-20 md:pt-40 md:pb-28 px-6 md:px-8 bg-background">
+    <section className="pt-36 pb-24 md:pt-44 md:pb-32 px-6 md:px-8 bg-background">
       <div className="luxury-container text-center">
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="font-body text-xs tracking-[0.35em] uppercase text-charcoal-light mb-8"
+          className="font-body text-xs tracking-[0.35em] uppercase text-charcoal-light mb-10"
         >
           {subtitle}
         </motion.p>
@@ -24,7 +24,7 @@ const PageHero = ({ subtitle, title, titleItalic, paragraphs }: PageHeroProps) =
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.4 }}
-          className="font-display text-4xl md:text-6xl lg:text-7xl font-light tracking-tight text-navy leading-[0.95] mb-10"
+          className="font-display text-4xl md:text-6xl lg:text-7xl font-light tracking-tight text-navy leading-[0.95] mb-12"
         >
           {title}
           <br />

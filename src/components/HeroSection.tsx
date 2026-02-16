@@ -81,7 +81,7 @@ const HeroSection = () => {
                   Board-Certified Prosthodontist
                 </p>
 
-                <p className="font-body text-[11px] md:text-xs tracking-[0.2em] uppercase text-primary-foreground/40 leading-relaxed mb-10 max-w-lg">
+                <p className="font-body text-[11px] md:text-xs tracking-[0.2em] uppercase text-primary-foreground/40 leading-relaxed mb-12 max-w-lg">
                   Dental Implants &nbsp;·&nbsp; Immediate Implants &nbsp;·&nbsp; Veneers &nbsp;·&nbsp; Full-Arch Rehabilitation
                 </p>
 
@@ -100,7 +100,7 @@ const HeroSection = () => {
                   </a>
                 </div>
 
-                <p className="font-body text-[10px] tracking-[0.2em] uppercase text-primary-foreground/22 mt-10 text-center lg:text-left">
+                <p className="font-body text-[10px] tracking-[0.2em] uppercase text-primary-foreground/22 mt-12 text-center lg:text-left">
                   Serving patients across New Jersey
                 </p>
               </motion.div>

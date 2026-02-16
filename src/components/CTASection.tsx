@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const CTASection = () => {
   return (
     <section
-      className="section-padding"
+      className="section-padding-lg"
       style={{
         background: "linear-gradient(180deg, hsl(40 10% 94%) 0%, hsl(40 12% 93%) 100%)",
       }}
@@ -17,21 +17,21 @@ const CTASection = () => {
           transition={{ duration: 1 }}
           className="max-w-2xl mx-auto"
         >
-          <div className="w-12 h-px bg-navy mx-auto mb-10" />
+          <div className="w-12 h-px bg-navy mx-auto mb-12" />
 
-          <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-light text-navy mb-6">
+          <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-light text-navy mb-8">
             Begin Your
             <br />
             <span className="italic">Rehabilitation Journey</span>
           </h2>
 
-          <p className="font-body text-sm text-charcoal-light font-light mb-12 max-w-md mx-auto leading-relaxed">
+          <p className="font-body text-sm text-charcoal-light font-light mb-14 max-w-md mx-auto leading-relaxed">
             Every case begins with a thorough evaluation and a commitment to clinical excellence.
           </p>
 
           <Link
             to="/contact"
-            className="inline-block px-12 py-4 bg-navy text-primary-foreground font-body text-xs tracking-[0.2em] uppercase transition-all duration-300 hover:opacity-90"
+            className="inline-block px-14 py-[18px] bg-navy text-primary-foreground font-body text-[11px] tracking-[0.25em] uppercase transition-all duration-300 hover:opacity-90"
           >
             Schedule Consultation
           </Link>

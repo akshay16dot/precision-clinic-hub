@@ -21,14 +21,14 @@ const philosophies = [
 
 const PhilosophySection = () => {
   return (
-    <section className="section-padding bg-navy">
+    <section className="section-padding-lg bg-navy">
       <div className="luxury-container">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.8 }}
-          className="text-center mb-14"
+          className="text-center mb-16"
         >
           <p className="font-body text-xs tracking-[0.3em] uppercase text-primary-foreground/50 mb-6">
             Treatment Philosophy
@@ -38,7 +38,7 @@ const PhilosophySection = () => {
           </h2>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-16 max-w-4xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 lg:gap-20 max-w-4xl mx-auto">
           {philosophies.map((item, i) => (
             <motion.div
               key={i}
