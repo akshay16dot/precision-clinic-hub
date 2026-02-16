@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { useEffect } from "react";
+import { Link } from "react-router-dom";
 import PageNavigation from "@/components/PageNavigation";
 import PageHero from "@/components/PageHero";
 import PageCTA from "@/components/PageCTA";
@@ -9,6 +10,7 @@ const services = [
   {
     title: "Porcelain Veneers",
     description: "Custom-fabricated porcelain restorations designed to refine tooth shape, alignment, and shade. Each veneer is individually crafted to harmonize with the surrounding dentition and facial proportions.",
+    link: "/veneers-aesthetic-reconstruction",
   },
   {
     title: "Smile Rehabilitation",
@@ -103,6 +105,14 @@ const AestheticDentistry = () => {
                 <p className="font-body text-sm text-charcoal-light font-light leading-relaxed">
                   {item.description}
                 </p>
+                {item.link && (
+                  <Link
+                    to={item.link}
+                    className="inline-block mt-6 font-body text-[11px] tracking-[0.2em] uppercase text-navy hover:opacity-70 transition-opacity duration-300"
+                  >
+                    Learn More →
+                  </Link>
+                )}
               </motion.div>
             ))}
           </div>
