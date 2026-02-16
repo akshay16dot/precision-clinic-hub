@@ -33,17 +33,18 @@ const About = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 1.4, delay: 0.1 }}
-              className="absolute inset-0"
+              className="absolute inset-0 flex items-center justify-center"
             >
               <img
                 src={drParmar}
                 alt="Dr. Akshay Parmar, Board-Certified Prosthodontist"
-                className="w-full h-full object-cover"
+                className="w-full h-full object-contain"
                 style={{
-                  objectPosition: "center 18%",
-                  filter: "contrast(1.02) brightness(1.0) saturate(0.92)",
-                  maskImage: "linear-gradient(to right, black 0%, black 90%, transparent 100%)",
-                  WebkitMaskImage: "linear-gradient(to right, black 0%, black 90%, transparent 100%)",
+                  objectPosition: "center 22%",
+                  transform: "scale(0.82)",
+                  filter: "contrast(1.03) brightness(0.99) saturate(0.9)",
+                  maskImage: "linear-gradient(to right, black 0%, black 93%, transparent 100%)",
+                  WebkitMaskImage: "linear-gradient(to right, black 0%, black 93%, transparent 100%)",
                 }}
               />
             </motion.div>
