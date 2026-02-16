@@ -23,8 +23,8 @@ const TeethWhitening = () => {
       <PageNavigation />
 
       {/* ═══════ HERO ═══════ */}
-      <section className="relative pt-24 md:pt-0 min-h-[85vh] overflow-hidden">
-        <div className="grid grid-cols-1 lg:grid-cols-12 min-h-[85vh]">
+      <section className="relative pt-24 md:pt-0 min-h-[90vh] overflow-hidden">
+        <div className="grid grid-cols-1 lg:grid-cols-12 min-h-[90vh]">
           <div className="relative lg:col-span-5 min-h-[50vh] lg:min-h-full overflow-hidden">
             <motion.img
               src={heroImage}
