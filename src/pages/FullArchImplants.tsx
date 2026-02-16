@@ -76,7 +76,7 @@ const FullArchImplants = () => {
       />
 
       {/* Clinical Prosthesis Showcase – Three Column Editorial */}
-      <section className="relative py-16 md:py-24 overflow-hidden" style={{ background: 'linear-gradient(180deg, hsl(220 20% 10%) 0%, hsl(220 18% 13%) 50%, hsl(220 20% 10%) 100%)' }}>
+      <section className="relative py-16 md:py-24 overflow-hidden" style={{ background: 'linear-gradient(180deg, hsl(30 8% 10%) 0%, hsl(28 6% 12%) 50%, hsl(30 8% 10%) 100%)' }}>
         <div className="relative max-w-[90rem] mx-auto px-0">
           <div className="grid grid-cols-1 md:grid-cols-[1fr_auto_1fr] items-center gap-0">
             
@@ -91,7 +91,7 @@ const FullArchImplants = () => {
               <div
                 className="absolute inset-0 pointer-events-none z-10"
                 style={{
-                  background: 'linear-gradient(to left, hsl(220 20% 11% / 0.8) 0%, transparent 30%), linear-gradient(to right, hsl(220 20% 10%) 0%, transparent 15%)',
+                  background: 'radial-gradient(ellipse 90% 85% at 60% 50%, transparent 40%, hsl(30 8% 10%) 85%), linear-gradient(to right, hsl(30 8% 10%) 0%, transparent 12%), linear-gradient(to top, hsl(30 8% 10%) 0%, transparent 15%), linear-gradient(to bottom, hsl(30 8% 10%) 0%, transparent 15%)',
                 }}
               />
               <img
@@ -133,7 +133,7 @@ const FullArchImplants = () => {
               <div
                 className="absolute inset-0 pointer-events-none z-10"
                 style={{
-                  background: 'linear-gradient(to right, hsl(220 20% 11% / 0.8) 0%, transparent 30%), linear-gradient(to left, hsl(220 20% 10%) 0%, transparent 15%)',
+                  background: 'radial-gradient(ellipse 90% 85% at 40% 50%, transparent 40%, hsl(30 8% 10%) 85%), linear-gradient(to left, hsl(30 8% 10%) 0%, transparent 12%), linear-gradient(to top, hsl(30 8% 10%) 0%, transparent 15%), linear-gradient(to bottom, hsl(30 8% 10%) 0%, transparent 15%)',
                 }}
               />
               <img
@@ -153,7 +153,7 @@ const FullArchImplants = () => {
               transition={{ duration: 0.8 }}
               className="relative"
             >
-              <div className="absolute inset-0 pointer-events-none z-10" style={{ background: 'radial-gradient(ellipse 100% 100% at center, transparent 55%, hsl(220 20% 10%) 90%)' }} />
+              <div className="absolute inset-0 pointer-events-none z-10" style={{ background: 'radial-gradient(ellipse 100% 100% at center, transparent 50%, hsl(30 8% 10%) 85%)' }} />
               <img src={fullArchUpper} alt="Upper arch prosthesis" className="w-full h-auto object-contain" />
             </motion.div>
             <motion.div
@@ -163,7 +163,7 @@ const FullArchImplants = () => {
               transition={{ duration: 0.8, delay: 0.1 }}
               className="relative"
             >
-              <div className="absolute inset-0 pointer-events-none z-10" style={{ background: 'radial-gradient(ellipse 100% 100% at center, transparent 55%, hsl(220 20% 10%) 90%)' }} />
+              <div className="absolute inset-0 pointer-events-none z-10" style={{ background: 'radial-gradient(ellipse 100% 100% at center, transparent 50%, hsl(30 8% 10%) 85%)' }} />
               <img src={fullArchLower} alt="Lower arch prosthesis" className="w-full h-auto object-contain" />
             </motion.div>
           </div>
