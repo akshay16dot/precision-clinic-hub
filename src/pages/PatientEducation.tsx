@@ -109,7 +109,7 @@ const PatientEducation = () => {
               artificial roots. Once healed, they support crowns, bridges, or
               full-arch restorations.
             </p>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-8">
               {["Natural function", "Long-term stability", "Bone preservation", "Improved comfort"].map(
                 (b, i) => (
                   <div key={i} className="border-t border-divider pt-3">
@@ -120,6 +120,12 @@ const PatientEducation = () => {
                 )
               )}
             </div>
+            <Link
+              to="/guide/dental-implants"
+              className="inline-block px-8 py-3 border border-navy/20 text-navy font-body text-[10px] tracking-[0.25em] uppercase transition-all duration-300 hover:border-navy/50 hover:bg-navy hover:text-primary-foreground"
+            >
+              Learn More
+            </Link>
           </motion.div>
         </div>
       </section>
@@ -139,11 +145,17 @@ const PatientEducation = () => {
               tooth removal. This approach may reduce treatment time and preserve
               natural tissue architecture.
             </p>
-            <p className="font-body text-sm md:text-base text-charcoal-light font-light leading-relaxed">
+            <p className="font-body text-sm md:text-base text-charcoal-light font-light leading-relaxed mb-8">
               Not every patient is a candidate. Treatment decisions depend on
               bone quality, infection status, and structural factors. Your
               specialist will guide you through the evaluation process.
             </p>
+            <Link
+              to="/guide/immediate-implants"
+              className="inline-block px-8 py-3 border border-navy/20 text-navy font-body text-[10px] tracking-[0.25em] uppercase transition-all duration-300 hover:border-navy/50 hover:bg-navy hover:text-primary-foreground"
+            >
+              Learn More
+            </Link>
           </motion.div>
         </div>
       </section>
@@ -211,6 +223,14 @@ const PatientEducation = () => {
                 </ul>
               </div>
             </div>
+            <div className="mt-8">
+              <Link
+                to="/guide/full-arch-implants"
+                className="inline-block px-8 py-3 border border-navy/20 text-navy font-body text-[10px] tracking-[0.25em] uppercase transition-all duration-300 hover:border-navy/50 hover:bg-navy hover:text-primary-foreground"
+              >
+                Learn More
+              </Link>
+            </div>
           </motion.div>
         </div>
       </section>
@@ -230,16 +250,80 @@ const PatientEducation = () => {
               Veneers are precision-crafted restorations designed to enhance the
               shape, color, and harmony of teeth.
             </p>
-            <p className="font-body text-sm md:text-base text-charcoal-light font-light leading-relaxed">
+            <p className="font-body text-sm md:text-base text-charcoal-light font-light leading-relaxed mb-8">
               Treatment planning prioritizes structural integrity and long-term
               stability. Each case is individually designed based on facial
               proportions, dental anatomy, and functional requirements.
             </p>
+            <Link
+              to="/guide/veneers"
+              className="inline-block px-8 py-3 border border-navy/20 text-navy font-body text-[10px] tracking-[0.25em] uppercase transition-all duration-300 hover:border-navy/50 hover:bg-navy hover:text-primary-foreground"
+            >
+              Learn More
+            </Link>
           </motion.div>
         </div>
       </section>
 
-      {/* Section 5: Candidacy */}
+      {/* Section 5: Teeth Whitening */}
+      <section
+        className="py-12 md:py-16 px-6 md:px-8"
+        style={{
+          background:
+            "linear-gradient(180deg, hsl(40 10% 95%) 0%, hsl(40 12% 93%) 100%)",
+        }}
+      >
+        <div className="luxury-container max-w-3xl">
+          <motion.div {...fadeUp} transition={{ duration: 0.7 }}>
+            <p className="font-body text-[10px] tracking-[0.35em] uppercase text-charcoal-light mb-4">
+              Treatment Guide
+            </p>
+            <h2 className="font-display text-3xl md:text-4xl font-light text-navy mb-5">
+              Professional <span className="italic">Teeth Whitening</span>
+            </h2>
+            <p className="font-body text-sm md:text-base text-charcoal-light font-light leading-relaxed mb-4">
+              Professional whitening uses precisely calibrated concentrations and custom-fitted trays to achieve even, predictable brightening under clinical supervision.
+            </p>
+            <p className="font-body text-sm md:text-base text-charcoal-light font-light leading-relaxed mb-8">
+              Results are tailored to your natural tooth composition and aesthetic goals. Safety and comfort are prioritized throughout.
+            </p>
+            <Link
+              to="/guide/teeth-whitening"
+              className="inline-block px-8 py-3 border border-navy/20 text-navy font-body text-[10px] tracking-[0.25em] uppercase transition-all duration-300 hover:border-navy/50 hover:bg-navy hover:text-primary-foreground"
+            >
+              Learn More
+            </Link>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Section 6: Maxillofacial */}
+      <section className="py-12 md:py-16 px-6 md:px-8">
+        <div className="luxury-container max-w-3xl">
+          <motion.div {...fadeUp} transition={{ duration: 0.7 }}>
+            <p className="font-body text-[10px] tracking-[0.35em] uppercase text-charcoal-light mb-4">
+              Treatment Guide
+            </p>
+            <h2 className="font-display text-3xl md:text-4xl font-light text-navy mb-5">
+              Maxillofacial & Oral <span className="italic">Reconstruction</span>
+            </h2>
+            <p className="font-body text-sm md:text-base text-charcoal-light font-light leading-relaxed mb-4">
+              Rehabilitation of structures affected by surgery, trauma, or cancer treatment. Custom prostheses restore function, comfort, and confidence.
+            </p>
+            <p className="font-body text-sm md:text-base text-charcoal-light font-light leading-relaxed mb-8">
+              Treatment is coordinated with your surgical and oncology teams for comprehensive, individualized care.
+            </p>
+            <Link
+              to="/guide/maxillofacial-rehabilitation"
+              className="inline-block px-8 py-3 border border-navy/20 text-navy font-body text-[10px] tracking-[0.25em] uppercase transition-all duration-300 hover:border-navy/50 hover:bg-navy hover:text-primary-foreground"
+            >
+              Learn More
+            </Link>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Section 7: Candidacy */}
       <section
         className="py-12 md:py-16 px-6 md:px-8"
         style={{

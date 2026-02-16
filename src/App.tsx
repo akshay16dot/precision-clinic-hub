@@ -20,6 +20,12 @@ import SmileDesign from "./pages/SmileDesign";
 import ToothWearRehabilitation from "./pages/ToothWearRehabilitation";
 import TeethWhitening from "./pages/TeethWhitening";
 import NotFound from "./pages/NotFound";
+import DentalImplantsGuide from "./pages/guides/DentalImplantsGuide";
+import ImmediateImplantsGuide from "./pages/guides/ImmediateImplantsGuide";
+import FullArchGuide from "./pages/guides/FullArchGuide";
+import TeethWhiteningGuide from "./pages/guides/TeethWhiteningGuide";
+import VeneersGuide from "./pages/guides/VeneersGuide";
+import MaxillofacialGuide from "./pages/guides/MaxillofacialGuide";
 
 const queryClient = new QueryClient();
 
@@ -46,6 +52,12 @@ const App = () => (
           <Route path="/education" element={<Education />} />
           <Route path="/professional-education" element={<ProfessionalEducation />} />
           <Route path="/patient-education" element={<PatientEducation />} />
+          <Route path="/guide/dental-implants" element={<DentalImplantsGuide />} />
+          <Route path="/guide/immediate-implants" element={<ImmediateImplantsGuide />} />
+          <Route path="/guide/full-arch-implants" element={<FullArchGuide />} />
+          <Route path="/guide/teeth-whitening" element={<TeethWhiteningGuide />} />
+          <Route path="/guide/veneers" element={<VeneersGuide />} />
+          <Route path="/guide/maxillofacial-rehabilitation" element={<MaxillofacialGuide />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
