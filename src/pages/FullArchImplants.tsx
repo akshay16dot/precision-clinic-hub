@@ -218,7 +218,38 @@ const FullArchImplants = () => {
         </div>
       </section>
 
-      {/* Philosophy & Differentiators */}
+      {/* Editorial – Stability & Longevity */}
+      <section className="py-24 md:py-36" style={{ background: 'linear-gradient(180deg, hsl(40 18% 97%) 0%, hsl(40 12% 95%) 100%)' }}>
+        <div className="luxury-container">
+          <motion.div {...fadeUp} transition={{ duration: 1 }} className="max-w-2xl mx-auto text-center">
+            <h2 className="font-display text-3xl md:text-5xl font-light text-navy leading-tight mb-10">
+              Designed for Stability.
+              <br />
+              <span className="italic">Planned for Longevity.</span>
+            </h2>
+            <div className="space-y-6 mb-12">
+              <p className="font-body text-sm md:text-base text-charcoal-light font-light leading-relaxed">
+                Full-arch rehabilitation is a highly structured process.
+              </p>
+              <p className="font-body text-sm md:text-base text-charcoal-light font-light leading-relaxed">
+                Every case is designed around bone biology, facial support, function, and long-term mechanical stability.
+              </p>
+              <p className="font-body text-sm md:text-base text-charcoal-light font-light leading-relaxed">
+                Treatment decisions are guided by diagnosis and planning, never speed.
+              </p>
+              <p className="font-body text-sm md:text-base text-charcoal-light font-light leading-relaxed">
+                The objective is not simply to place implants, but to create a restoration that remains stable, comfortable, and biologically harmonious for years to come.
+              </p>
+            </div>
+            <div className="w-12 h-px bg-navy/20 mx-auto mb-8" />
+            <p className="font-body text-xs tracking-[0.3em] uppercase text-charcoal-light/60">
+              No templates. No shortcuts. Individualized design.
+            </p>
+          </motion.div>
+        </div>
+      </section>
+
+
       <section className="section-padding" style={{ background: 'linear-gradient(180deg, hsl(40 15% 96%) 0%, hsl(40 20% 98%) 100%)' }}>
         <div className="luxury-container">
           <motion.div {...fadeUp} transition={{ duration: 0.8 }} className="max-w-3xl mx-auto text-center mb-16 md:mb-20">
