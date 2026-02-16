@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { useEffect } from "react";
+import { Link } from "react-router-dom";
 import PageNavigation from "@/components/PageNavigation";
 import PageFooter from "@/components/PageFooter";
 import immediateCase1Before from "@/assets/immediate-case1-before.png";
@@ -13,12 +14,31 @@ const fadeUp = {
   viewport: { once: true, margin: "-100px" },
 };
 
+const faqItems = [
+  {
+    question: "Is same-day treatment painful?",
+    answer:
+      "Most patients report less discomfort than expected. Modern protocols are designed around precision and comfort, and recovery is typically manageable with clear instructions and structured follow-up.",
+  },
+  {
+    question: "Will it look natural right away?",
+    answer:
+      "The temporary restoration is designed to look natural and protect the site while tissues heal. The final restoration is refined after adaptation, so the end result looks balanced and stable.",
+  },
+  {
+    question: "How long does the full process take?",
+    answer:
+      "Timelines vary, but immediate rehabilitation often reduces the overall journey by minimizing separate stages. The final schedule is confirmed after evaluation and planning.",
+  },
+];
+
 const ImmediateImplants = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
     document.title = "Immediate Implant Rehabilitation | Dr. Akshay Parmar";
     return () => {
-      document.title = "Dr. Akshay Parmar | Board-Certified Prosthodontist in New Jersey";
+      document.title =
+        "Dr. Akshay Parmar | Board-Certified Prosthodontist in New Jersey";
     };
   }, []);
 
@@ -26,11 +46,12 @@ const ImmediateImplants = () => {
     <main className="bg-background">
       <PageNavigation />
 
-      {/* Hero — Dark cinematic */}
+      {/* ─── HERO ─── */}
       <section
-        className="relative min-h-[85vh] flex items-center justify-center px-6 md:px-8"
+        className="relative min-h-[90vh] flex items-center justify-center px-6 md:px-8"
         style={{
-          background: "linear-gradient(180deg, hsl(30 8% 8%) 0%, hsl(28 6% 12%) 40%, hsl(30 8% 10%) 100%)",
+          background:
+            "linear-gradient(180deg, hsl(30 8% 8%) 0%, hsl(28 6% 12%) 40%, hsl(30 8% 10%) 100%)",
         }}
       >
         <motion.div
@@ -57,156 +78,199 @@ const ImmediateImplants = () => {
             className="font-body text-sm md:text-base font-light leading-relaxed max-w-xl mx-auto mb-10"
             style={{ color: "hsl(30 8% 55%)" }}
           >
-            Precision-driven tooth replacement designed for stability, aesthetics, and biological harmony.
+            A modern, stability-first approach to replacing teeth with natural
+            aesthetics and long-term simplicity.
           </p>
           <div
             className="w-12 h-px mx-auto mb-8"
             style={{ backgroundColor: "hsl(40 15% 92% / 0.15)" }}
           />
           <p
-            className="font-body text-xs tracking-[0.3em] uppercase mb-12"
+            className="font-body text-xs tracking-[0.3em] uppercase mb-14"
             style={{ color: "hsl(30 6% 40%)" }}
           >
-            Planning determines predictability.
+            Stability is engineered, not assumed.
           </p>
-          <a
-            href="/contact"
-            className="inline-block font-body text-xs tracking-[0.3em] uppercase px-10 py-4 border transition-all duration-500"
-            style={{
-              color: "hsl(40 15% 85%)",
-              borderColor: "hsl(40 15% 85% / 0.25)",
-            }}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.backgroundColor = "hsl(40 15% 92%)";
-              e.currentTarget.style.color = "hsl(30 8% 10%)";
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.backgroundColor = "transparent";
-              e.currentTarget.style.color = "hsl(40 15% 85%)";
-            }}
-          >
-            Request a Consultation
-          </a>
+
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
+            <Link
+              to="/contact"
+              className="inline-block font-body text-xs tracking-[0.3em] uppercase px-10 py-4 border transition-all duration-500 hover:bg-[hsl(40_15%_92%)] hover:text-[hsl(30_8%_10%)]"
+              style={{
+                color: "hsl(40 15% 85%)",
+                borderColor: "hsl(40 15% 85% / 0.25)",
+              }}
+            >
+              Request a Private Consultation
+            </Link>
+            <a
+              href="#same-day-outcomes"
+              className="font-body text-xs tracking-[0.2em] uppercase transition-all duration-300 hover:opacity-70"
+              style={{
+                color: "hsl(30 8% 55%)",
+                borderBottom: "1px solid hsl(30 8% 55% / 0.3)",
+                paddingBottom: "2px",
+              }}
+            >
+              See Same-Day Transformations
+            </a>
+          </div>
         </motion.div>
       </section>
 
-      {/* Treatment Explanation */}
+      {/* ─── SECTION 1: WHAT IT IS ─── */}
       <section
         className="py-24 md:py-36"
         style={{
-          background: "linear-gradient(180deg, hsl(40 20% 98%) 0%, hsl(40 15% 96%) 100%)",
+          background:
+            "linear-gradient(180deg, hsl(40 20% 98%) 0%, hsl(40 15% 96%) 100%)",
         }}
       >
         <div className="luxury-container">
-          <motion.div {...fadeUp} transition={{ duration: 1 }} className="max-w-2xl mx-auto text-center">
+          <motion.div
+            {...fadeUp}
+            transition={{ duration: 1 }}
+            className="max-w-2xl mx-auto text-center"
+          >
             <p className="font-body text-xs tracking-[0.3em] uppercase text-charcoal-light/60 mb-6">
               Treatment Overview
             </p>
             <h2 className="font-display text-3xl md:text-5xl font-light text-navy leading-tight mb-10">
-              What Is Immediate Implant <span className="italic">Rehabilitation?</span>
+              What This Means,{" "}
+              <span className="italic">in Plain Language</span>
             </h2>
             <div className="space-y-6 mb-12">
               <p className="font-body text-sm md:text-base text-charcoal-light font-light leading-relaxed">
-                Immediate implant rehabilitation refers to the placement of a dental implant at the time of tooth removal, allowing structured replacement while preserving bone architecture and soft tissue contours.
+                Immediate implant rehabilitation means replacing a tooth at the
+                same appointment it is removed, when stability can be
+                predictably achieved.
               </p>
               <p className="font-body text-sm md:text-base text-charcoal-light font-light leading-relaxed">
-                When appropriate clinical conditions are present, this approach supports stability, aesthetic integration, and biological preservation.
+                Instead of leaving a space and returning months later to restart
+                the process, treatment can often begin immediately with a
+                carefully designed temporary restoration.
               </p>
               <p className="font-body text-sm md:text-base text-charcoal-light font-light leading-relaxed">
-                Successful outcomes depend on careful diagnosis, atraumatic technique, and precision-driven planning.
+                The objective is simple: preserve biology, restore function, and
+                maintain a natural appearance from day one.
               </p>
             </div>
             <div className="w-12 h-px bg-navy/20 mx-auto mb-8" />
             <p className="font-body text-xs tracking-[0.3em] uppercase text-charcoal-light/60">
-              Suitability is diagnosis-dependent.
+              Modern planning makes the process more controlled than most
+              patients expect.
             </p>
           </motion.div>
         </div>
       </section>
 
-      {/* Benefits / Patient Perspective */}
+      {/* ─── SECTION 2: WHY PREFERRED ─── */}
       <section
         className="py-24 md:py-36"
         style={{
-          background: "linear-gradient(180deg, hsl(40 12% 95%) 0%, hsl(40 18% 97%) 100%)",
+          background:
+            "linear-gradient(180deg, hsl(40 12% 95%) 0%, hsl(40 18% 97%) 100%)",
         }}
       >
         <div className="luxury-container">
-          <motion.div {...fadeUp} transition={{ duration: 1 }} className="max-w-2xl mx-auto text-center">
+          <motion.div
+            {...fadeUp}
+            transition={{ duration: 1 }}
+            className="max-w-2xl mx-auto text-center"
+          >
             <p className="font-body text-xs tracking-[0.3em] uppercase text-charcoal-light/60 mb-6">
               Patient Perspective
             </p>
             <h2 className="font-display text-3xl md:text-5xl font-light text-navy leading-tight mb-10">
-              Why Patients Consider <span className="italic">This Approach</span>
+              Why Many Patients Prefer{" "}
+              <span className="italic">Immediate Treatment</span>
             </h2>
             <div className="space-y-6 mb-12">
               <p className="font-body text-sm md:text-base text-charcoal-light font-light leading-relaxed">
-                When clinical conditions are appropriate, immediate implant rehabilitation offers several potential advantages.
+                When performed with a stability-first plan, immediate
+                rehabilitation can make the overall journey feel simpler and
+                more efficient.
               </p>
               <p className="font-body text-sm md:text-base text-charcoal-light font-light leading-relaxed">
-                This approach may help preserve natural bone structure, maintain gum contours, and reduce the number of surgical interventions required.
+                It can reduce the number of separate surgical phases, shorten
+                the total timeline, and help preserve existing bone and gum
+                contours.
               </p>
               <p className="font-body text-sm md:text-base text-charcoal-light font-light leading-relaxed">
-                By stabilizing the replacement process early, functional comfort and aesthetic integration can often be achieved in a highly controlled manner.
-              </p>
-              <p className="font-body text-sm md:text-base text-charcoal-light font-light leading-relaxed">
-                Suitability and outcomes depend entirely on individualized diagnosis and structured planning.
+                Just as importantly, starting with a well-designed provisional
+                restoration often makes the final result easier to refine and
+                less complex later.
               </p>
             </div>
             <div className="w-12 h-px bg-navy/20 mx-auto mb-8" />
             <p className="font-body text-xs tracking-[0.3em] uppercase text-charcoal-light/60">
-              Predictability begins with evaluation.
+              Less interruption. More continuity. Better long-term control.
             </p>
           </motion.div>
         </div>
       </section>
 
-      {/* Clinical Philosophy / Authority */}
+      {/* ─── SECTION 3: DO YOU QUALIFY ─── */}
       <section
         className="py-24 md:py-36"
         style={{
-          background: "linear-gradient(180deg, hsl(40 15% 96%) 0%, hsl(40 20% 98%) 100%)",
+          background:
+            "linear-gradient(180deg, hsl(40 15% 96%) 0%, hsl(40 20% 98%) 100%)",
         }}
       >
         <div className="luxury-container">
-          <motion.div {...fadeUp} transition={{ duration: 1 }} className="max-w-2xl mx-auto text-center">
+          <motion.div
+            {...fadeUp}
+            transition={{ duration: 1 }}
+            className="max-w-2xl mx-auto text-center"
+          >
             <p className="font-body text-xs tracking-[0.3em] uppercase text-charcoal-light/60 mb-6">
-              Clinical Framework
+              Patient Candidacy
             </p>
             <h2 className="font-display text-3xl md:text-5xl font-light text-navy leading-tight mb-10">
-              A Structured Approach <span className="italic">to Stability</span>
+              Do You Likely <span className="italic">Qualify?</span>
             </h2>
             <div className="space-y-6 mb-12">
               <p className="font-body text-sm md:text-base text-charcoal-light font-light leading-relaxed">
-                Immediate implant rehabilitation requires far more than procedural execution.
+                In the majority of situations, immediate rehabilitation is
+                possible with proper diagnosis, planning, and surgical
+                execution.
               </p>
               <p className="font-body text-sm md:text-base text-charcoal-light font-light leading-relaxed">
-                Treatment decisions are guided by a structured clinical framework designed to ensure biological compatibility, mechanical stability, and long-term functional integration.
+                The key is not where the tooth is located, but whether stable
+                support and healthy tissue conditions can be created and
+                maintained.
               </p>
               <p className="font-body text-sm md:text-base text-charcoal-light font-light leading-relaxed">
-                Care is performed following the principles of the STABLE Protocol™, a precision-driven methodology emphasizing diagnosis, tissue preservation, implant stability, and prosthetic harmony.
-              </p>
-              <p className="font-body text-sm md:text-base text-charcoal-light font-light leading-relaxed">
-                This protocol-based approach is taught internationally to clinicians seeking predictable, evidence-aligned outcomes.
+                A comprehensive evaluation confirms the safest path, but most
+                patients are surprised to learn how often immediate treatment
+                can be done predictably.
               </p>
             </div>
             <div className="w-12 h-px bg-navy/20 mx-auto mb-8" />
             <p className="font-body text-xs tracking-[0.3em] uppercase text-charcoal-light/60">
-              Stability is engineered, not assumed.
+              If stability can be achieved, immediate treatment is usually the
+              preferred strategy.
             </p>
           </motion.div>
         </div>
       </section>
 
-      {/* Same-Day Clinical Outcomes */}
+      {/* ─── SECTION 4: SAME-DAY OUTCOMES ─── */}
       <section
+        id="same-day-outcomes"
         className="py-24 md:py-36"
         style={{
-          background: "linear-gradient(180deg, hsl(30 8% 8%) 0%, hsl(28 6% 12%) 40%, hsl(30 8% 10%) 100%)",
+          background:
+            "linear-gradient(180deg, hsl(30 8% 8%) 0%, hsl(28 6% 12%) 40%, hsl(30 8% 10%) 100%)",
         }}
       >
         <div className="luxury-container">
-          <motion.div {...fadeUp} transition={{ duration: 1 }} className="max-w-2xl mx-auto text-center mb-16 md:mb-20">
+          <motion.div
+            {...fadeUp}
+            transition={{ duration: 1 }}
+            className="max-w-2xl mx-auto text-center mb-16 md:mb-20"
+          >
             <p
               className="font-body text-xs tracking-[0.3em] uppercase mb-6"
               style={{ color: "hsl(30 6% 45%)" }}
@@ -217,27 +281,22 @@ const ImmediateImplants = () => {
               className="font-display text-3xl md:text-5xl font-light leading-tight mb-10"
               style={{ color: "hsl(40 15% 92%)" }}
             >
-              Immediate Restoration. <br />
-              <span className="italic">Immediate Confidence.</span>
+              Same-Day <span className="italic">Transformations</span>
             </h2>
             <div className="space-y-6 mb-12">
               <p
                 className="font-body text-sm md:text-base font-light leading-relaxed"
                 style={{ color: "hsl(30 8% 55%)" }}
               >
-                In carefully selected cases, implant placement and provisional restoration may be performed on the same day.
+                In many cases, a stable implant and a carefully designed
+                temporary restoration can be completed the same day.
               </p>
               <p
                 className="font-body text-sm md:text-base font-light leading-relaxed"
                 style={{ color: "hsl(30 8% 55%)" }}
               >
-                This approach is guided by diagnosis, bone stability, and precise surgical planning.
-              </p>
-              <p
-                className="font-body text-sm md:text-base font-light leading-relaxed"
-                style={{ color: "hsl(30 8% 55%)" }}
-              >
-                The objective is to preserve biology, restore function, and maintain natural aesthetics from the very beginning of treatment.
+                The purpose is not speed. The purpose is stability, tissue
+                preservation, and a natural-looking result from the beginning.
               </p>
             </div>
             <div
@@ -248,23 +307,35 @@ const ImmediateImplants = () => {
               className="font-body text-xs tracking-[0.3em] uppercase"
               style={{ color: "hsl(30 6% 40%)" }}
             >
-              Diagnosis determines timing. Stability determines success.
+              Immediate does not mean rushed. It means precisely planned.
             </p>
           </motion.div>
 
           {/* Case 1 */}
-          <motion.div {...fadeUp} transition={{ duration: 1, delay: 0.2 }} className="max-w-4xl mx-auto mb-20 md:mb-28">
+          <motion.div
+            {...fadeUp}
+            transition={{ duration: 1, delay: 0.2 }}
+            className="max-w-4xl mx-auto mb-20 md:mb-28"
+          >
+            <p
+              className="font-body text-[10px] tracking-[0.35em] uppercase mb-5"
+              style={{ color: "hsl(30 6% 35%)" }}
+            >
+              Clinical Transformation
+            </p>
             <div className="grid grid-cols-2 gap-4 md:gap-8 items-start">
               <div>
                 <div className="aspect-[4/3] overflow-hidden">
                   <img
                     src={immediateCase1Before}
-                    alt="Case 1 — Before immediate implant placement"
+                    alt="Case 1, before immediate implant placement"
                     className="w-full h-full object-cover object-center"
                     style={{
                       filter: "saturate(0.85) contrast(1.05)",
-                      maskImage: "radial-gradient(ellipse 90% 85% at center, black 60%, transparent 100%)",
-                      WebkitMaskImage: "radial-gradient(ellipse 90% 85% at center, black 60%, transparent 100%)",
+                      maskImage:
+                        "radial-gradient(ellipse 90% 85% at center, black 60%, transparent 100%)",
+                      WebkitMaskImage:
+                        "radial-gradient(ellipse 90% 85% at center, black 60%, transparent 100%)",
                     }}
                   />
                 </div>
@@ -279,12 +350,14 @@ const ImmediateImplants = () => {
                 <div className="aspect-[4/3] overflow-hidden">
                   <img
                     src={immediateCase1After}
-                    alt="Case 1 — Same-day implant restoration result"
+                    alt="Case 1, same-day implant restoration result"
                     className="w-full h-full object-cover object-center"
                     style={{
                       filter: "saturate(0.85) contrast(1.05)",
-                      maskImage: "radial-gradient(ellipse 90% 85% at center, black 60%, transparent 100%)",
-                      WebkitMaskImage: "radial-gradient(ellipse 90% 85% at center, black 60%, transparent 100%)",
+                      maskImage:
+                        "radial-gradient(ellipse 90% 85% at center, black 60%, transparent 100%)",
+                      WebkitMaskImage:
+                        "radial-gradient(ellipse 90% 85% at center, black 60%, transparent 100%)",
                     }}
                   />
                 </div>
@@ -292,25 +365,37 @@ const ImmediateImplants = () => {
                   className="font-body text-[10px] tracking-[0.3em] uppercase text-center mt-4"
                   style={{ color: "hsl(30 6% 40%)" }}
                 >
-                  After — Same-Day Result
+                  After
                 </p>
               </div>
             </div>
           </motion.div>
 
           {/* Case 2 */}
-          <motion.div {...fadeUp} transition={{ duration: 1, delay: 0.4 }} className="max-w-4xl mx-auto">
+          <motion.div
+            {...fadeUp}
+            transition={{ duration: 1, delay: 0.4 }}
+            className="max-w-4xl mx-auto"
+          >
+            <p
+              className="font-body text-[10px] tracking-[0.35em] uppercase mb-5"
+              style={{ color: "hsl(30 6% 35%)" }}
+            >
+              Clinical Transformation
+            </p>
             <div className="grid grid-cols-2 gap-4 md:gap-8 items-start">
               <div>
                 <div className="aspect-[4/3] overflow-hidden">
                   <img
                     src={immediateCase2Before}
-                    alt="Case 2 — Before immediate implant placement"
+                    alt="Case 2, before immediate implant placement"
                     className="w-full h-full object-cover object-center"
                     style={{
                       filter: "saturate(0.85) contrast(1.05)",
-                      maskImage: "radial-gradient(ellipse 90% 85% at center, black 60%, transparent 100%)",
-                      WebkitMaskImage: "radial-gradient(ellipse 90% 85% at center, black 60%, transparent 100%)",
+                      maskImage:
+                        "radial-gradient(ellipse 90% 85% at center, black 60%, transparent 100%)",
+                      WebkitMaskImage:
+                        "radial-gradient(ellipse 90% 85% at center, black 60%, transparent 100%)",
                     }}
                   />
                 </div>
@@ -325,12 +410,14 @@ const ImmediateImplants = () => {
                 <div className="aspect-[4/3] overflow-hidden">
                   <img
                     src={immediateCase2After}
-                    alt="Case 2 — Same-day implant restoration result"
+                    alt="Case 2, same-day implant restoration result"
                     className="w-full h-full object-cover object-center"
                     style={{
                       filter: "saturate(0.85) contrast(1.05)",
-                      maskImage: "radial-gradient(ellipse 90% 85% at center, black 60%, transparent 100%)",
-                      WebkitMaskImage: "radial-gradient(ellipse 90% 85% at center, black 60%, transparent 100%)",
+                      maskImage:
+                        "radial-gradient(ellipse 90% 85% at center, black 60%, transparent 100%)",
+                      WebkitMaskImage:
+                        "radial-gradient(ellipse 90% 85% at center, black 60%, transparent 100%)",
                     }}
                   />
                 </div>
@@ -338,7 +425,7 @@ const ImmediateImplants = () => {
                   className="font-body text-[10px] tracking-[0.3em] uppercase text-center mt-4"
                   style={{ color: "hsl(30 6% 40%)" }}
                 >
-                  After — Same-Day Result
+                  After
                 </p>
               </div>
             </div>
@@ -346,73 +433,182 @@ const ImmediateImplants = () => {
         </div>
       </section>
 
-      {/* Candidate Identification */}
+      {/* ─── SECTION 5: STABLE PROTOCOL ─── */}
       <section
         className="py-24 md:py-36"
         style={{
-          background: "linear-gradient(180deg, hsl(40 18% 97%) 0%, hsl(40 12% 95%) 100%)",
+          background:
+            "linear-gradient(180deg, hsl(40 20% 98%) 0%, hsl(40 12% 95%) 100%)",
         }}
       >
         <div className="luxury-container">
-          <motion.div {...fadeUp} transition={{ duration: 1 }} className="max-w-2xl mx-auto text-center">
+          <motion.div
+            {...fadeUp}
+            transition={{ duration: 1 }}
+            className="max-w-2xl mx-auto text-center"
+          >
             <p className="font-body text-xs tracking-[0.3em] uppercase text-charcoal-light/60 mb-6">
-              Patient Candidacy
+              Clinical Framework
             </p>
             <h2 className="font-display text-3xl md:text-5xl font-light text-navy leading-tight mb-10">
-              When Is This Approach <span className="italic">Appropriate?</span>
+              A Protocol, <span className="italic">Not a Shortcut</span>
             </h2>
             <div className="space-y-6 mb-12">
               <p className="font-body text-sm md:text-base text-charcoal-light font-light leading-relaxed">
-                Immediate implant rehabilitation is considered when teeth require removal and surrounding biological conditions support stable replacement.
+                Immediate implant rehabilitation succeeds when it is guided by a
+                structured framework, not a quick technique.
               </p>
               <p className="font-body text-sm md:text-base text-charcoal-light font-light leading-relaxed">
-                Candidacy depends on bone support, gum health, bite dynamics, and overall systemic health factors.
+                This approach follows the principles of the STABLE Protocol,
+                emphasizing diagnosis, tissue preservation, implant stability,
+                and prosthetic harmony from the start.
               </p>
               <p className="font-body text-sm md:text-base text-charcoal-light font-light leading-relaxed">
-                A comprehensive clinical evaluation determines whether this approach provides the safest and most predictable solution.
+                The same protocol-driven method is used to teach clinicians
+                internationally, because predictable outcomes come from
+                repeatable planning and disciplined execution.
               </p>
             </div>
             <div className="w-12 h-px bg-navy/20 mx-auto mb-8" />
             <p className="font-body text-xs tracking-[0.3em] uppercase text-charcoal-light/60">
-              Every recommendation is diagnosis-driven.
+              Predictability comes from structure.
             </p>
           </motion.div>
         </div>
       </section>
 
-      {/* Consultation CTA */}
+      {/* ─── SECTION 6: WHAT TO EXPECT ─── */}
       <section
-        className="py-28 md:py-40"
+        className="py-24 md:py-36"
         style={{
-          background: "linear-gradient(180deg, hsl(40 12% 95%) 0%, hsl(40 15% 96%) 100%)",
+          background:
+            "linear-gradient(180deg, hsl(40 15% 96%) 0%, hsl(40 18% 97%) 100%)",
         }}
       >
         <div className="luxury-container">
-          <motion.div {...fadeUp} transition={{ duration: 1 }} className="max-w-2xl mx-auto text-center">
+          <motion.div
+            {...fadeUp}
+            transition={{ duration: 1 }}
+            className="max-w-2xl mx-auto text-center"
+          >
             <p className="font-body text-xs tracking-[0.3em] uppercase text-charcoal-light/60 mb-6">
-              Next Step
+              Patient Journey
             </p>
             <h2 className="font-display text-3xl md:text-5xl font-light text-navy leading-tight mb-10">
-              Begin With a Comprehensive <span className="italic">Evaluation</span>
+              What to <span className="italic">Expect</span>
             </h2>
             <div className="space-y-6 mb-12">
               <p className="font-body text-sm md:text-base text-charcoal-light font-light leading-relaxed">
-                Immediate implant rehabilitation begins with a detailed clinical assessment designed to evaluate biological, functional, and structural factors unique to each patient.
+                Treatment begins with a comprehensive evaluation, including
+                digital imaging, bite assessment, and a stability-driven plan.
               </p>
               <p className="font-body text-sm md:text-base text-charcoal-light font-light leading-relaxed">
-                This diagnostic phase allows treatment options to be discussed with clarity, precision, and clinical discretion.
+                If immediate rehabilitation is appropriate, the implant and
+                temporary restoration can often be completed in a controlled,
+                methodical sequence.
+              </p>
+              <p className="font-body text-sm md:text-base text-charcoal-light font-light leading-relaxed">
+                A refinement phase follows, allowing tissues to adapt and
+                details to be perfected before the final restoration is
+                delivered.
+              </p>
+              <p className="font-body text-sm md:text-base text-charcoal-light font-light leading-relaxed">
+                The process is designed to feel clear, calm, and predictable.
               </p>
             </div>
             <div className="w-12 h-px bg-navy/20 mx-auto mb-8" />
-            <p className="font-body text-xs tracking-[0.3em] uppercase text-charcoal-light/60 mb-12">
+            <p className="font-body text-xs tracking-[0.3em] uppercase text-charcoal-light/60">
+              Clarity replaces uncertainty.
+            </p>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* ─── SECTION 7: FAQ ─── */}
+      <section
+        className="py-24 md:py-36"
+        style={{
+          background:
+            "linear-gradient(180deg, hsl(40 12% 95%) 0%, hsl(40 15% 96%) 100%)",
+        }}
+      >
+        <div className="luxury-container">
+          <motion.div
+            {...fadeUp}
+            transition={{ duration: 1 }}
+            className="max-w-2xl mx-auto text-center mb-16 md:mb-20"
+          >
+            <p className="font-body text-xs tracking-[0.3em] uppercase text-charcoal-light/60 mb-6">
+              Patient Questions
+            </p>
+            <h2 className="font-display text-3xl md:text-5xl font-light text-navy leading-tight">
+              Common Patient <span className="italic">Questions</span>
+            </h2>
+          </motion.div>
+
+          <div className="max-w-2xl mx-auto space-y-16 md:space-y-20">
+            {faqItems.map((item, i) => (
+              <motion.div
+                key={i}
+                {...fadeUp}
+                transition={{ duration: 0.8, delay: i * 0.1 }}
+                className="text-center"
+              >
+                <h3 className="font-display text-xl md:text-2xl font-light text-navy mb-5">
+                  {item.question}
+                </h3>
+                <p className="font-body text-sm md:text-base text-charcoal-light font-light leading-relaxed">
+                  {item.answer}
+                </p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ─── SECTION 8: FINAL CTA ─── */}
+      <section
+        className="py-28 md:py-40 px-6 md:px-8"
+        style={{
+          background:
+            "linear-gradient(180deg, hsl(40 18% 97%) 0%, hsl(40 12% 95%) 100%)",
+        }}
+      >
+        <div className="luxury-container">
+          <motion.div
+            {...fadeUp}
+            transition={{ duration: 1 }}
+            className="max-w-2xl mx-auto text-center"
+          >
+            <div className="w-12 h-px bg-navy/20 mx-auto mb-12" />
+            <h2 className="font-display text-3xl md:text-5xl lg:text-6xl font-light text-navy leading-tight mb-8">
+              Begin With a Comprehensive
+              <br />
+              <span className="italic">Evaluation</span>
+            </h2>
+            <div className="space-y-5 mb-10">
+              <p className="font-body text-sm md:text-base text-charcoal-light font-light leading-relaxed">
+                The first step is a stability-focused assessment to confirm the
+                safest and most predictable plan for your case.
+              </p>
+              <p className="font-body text-sm md:text-base text-charcoal-light font-light leading-relaxed">
+                Most patients are candidates for immediate rehabilitation, and
+                the evaluation makes the path forward clear.
+              </p>
+            </div>
+            <div className="w-12 h-px bg-navy/20 mx-auto mb-8" />
+            <p className="font-body text-xs tracking-[0.3em] uppercase text-charcoal-light/60 mb-14">
               Every recommendation is diagnosis-driven.
             </p>
-            <a
-              href="/contact"
-              className="inline-block font-body text-xs tracking-[0.3em] uppercase border border-navy/30 text-navy px-10 py-4 hover:bg-navy hover:text-warm-white transition-all duration-500"
+            <Link
+              to="/contact"
+              className="inline-block px-12 py-4 bg-navy text-primary-foreground font-body text-xs tracking-[0.2em] uppercase transition-all duration-300 hover:opacity-90 mb-6"
             >
               Request a Private Consultation
-            </a>
+            </Link>
+            <p className="font-body text-[11px] text-charcoal-light/50 font-light tracking-wide">
+              Private, structured, and focused on long-term outcomes.
+            </p>
           </motion.div>
         </div>
       </section>
