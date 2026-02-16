@@ -94,8 +94,9 @@ const FullArchImplants = () => {
                 className="w-full h-auto object-contain scale-110 origin-left"
                 style={{
                   filter: 'sepia(0.08) saturate(1.05) brightness(0.95) contrast(1.02)',
-                  maskImage: 'radial-gradient(ellipse 80% 75% at 55% 50%, black 30%, transparent 70%)',
-                  WebkitMaskImage: 'radial-gradient(ellipse 80% 75% at 55% 50%, black 30%, transparent 70%)',
+                  transform: 'scaleX(-1) scale(1.1)',
+                  maskImage: 'radial-gradient(ellipse 90% 85% at 50% 50%, black 40%, transparent 75%)',
+                  WebkitMaskImage: 'radial-gradient(ellipse 90% 85% at 50% 50%, black 40%, transparent 75%)',
                 }}
               />
             </motion.div>
