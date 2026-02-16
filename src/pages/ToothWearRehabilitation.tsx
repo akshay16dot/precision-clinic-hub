@@ -37,7 +37,7 @@ const ToothWearRehabilitation = () => {
             <div className="absolute inset-0 bg-gradient-to-r from-transparent to-background/20 lg:to-background/40" />
           </div>
 
-          <div className="lg:col-span-7 flex items-center px-8 md:px-12 lg:px-20 xl:px-28 py-14 lg:py-0">
+          <div className="lg:col-span-7 flex items-center px-8 md:px-12 lg:px-20 xl:px-28 py-20 lg:py-0 lg:pt-16">
             <motion.div
               initial={{ opacity: 0, y: 25 }}
               animate={{ opacity: 1, y: 0 }}
