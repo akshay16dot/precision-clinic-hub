@@ -350,7 +350,7 @@ const FullArchImplants = () => {
                 alt="Final prosthetic detail"
                 className="w-full h-full object-cover"
                 style={{
-                  objectPosition: '50% 42%',
+                  objectPosition: '50% 38%',
                   maskImage: 'radial-gradient(ellipse 95% 90% at 50% 50%, black 60%, transparent 90%)',
                   WebkitMaskImage: 'radial-gradient(ellipse 95% 90% at 50% 50%, black 60%, transparent 90%)',
                 }}
