@@ -77,11 +77,11 @@ const HeroSection = () => {
                   <span className="italic">Implant Reconstruction</span>
                 </p>
 
-                <p className="font-body text-[10px] md:text-xs tracking-[0.3em] uppercase text-primary-foreground/35 leading-relaxed mb-4 max-w-md">
+                <p className="font-body text-[10px] md:text-xs tracking-[0.3em] uppercase text-primary-foreground/55 leading-relaxed mb-4 max-w-md">
                   Board-Certified Prosthodontist
                 </p>
 
-                <p className="font-body text-[11px] md:text-xs tracking-[0.2em] uppercase text-primary-foreground/40 leading-relaxed mb-12 max-w-lg">
+                <p className="font-body text-[11px] md:text-xs tracking-[0.2em] uppercase text-primary-foreground/50 leading-relaxed mb-12 max-w-lg">
                   Dental Implants &nbsp;·&nbsp; Immediate Implants &nbsp;·&nbsp; Veneers &nbsp;·&nbsp; Full-Arch Rehabilitation
                 </p>
 
@@ -100,7 +100,7 @@ const HeroSection = () => {
                   </a>
                 </div>
 
-                <p className="font-body text-[10px] tracking-[0.2em] uppercase text-primary-foreground/22 mt-12 text-center lg:text-left">
+                <p className="font-body text-[10px] tracking-[0.2em] uppercase text-primary-foreground/40 mt-12 text-center lg:text-left">
                   Serving patients across New Jersey
                 </p>
               </motion.div>
@@ -110,13 +110,13 @@ const HeroSection = () => {
 
         {/* Bottom bar */}
         <div className="pb-5 md:pb-6 flex items-end justify-between">
-          <p className="font-body text-[10px] tracking-[0.3em] uppercase text-primary-foreground/20">
+          <p className="font-body text-[10px] tracking-[0.3em] uppercase text-primary-foreground/35">
             © {new Date().getFullYear()}
           </p>
           <motion.div
             animate={{ y: [0, 5, 0] }}
             transition={{ repeat: Infinity, duration: 2.5, ease: "easeInOut" }}
-            className="w-px h-7 bg-primary-foreground/15"
+            className="w-px h-7 bg-primary-foreground/25"
           />
         </div>
       </div>
