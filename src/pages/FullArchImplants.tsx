@@ -4,8 +4,8 @@ import PageNavigation from "@/components/PageNavigation";
 import PageHero from "@/components/PageHero";
 import PageCTA from "@/components/PageCTA";
 import PageFooter from "@/components/PageFooter";
-import fullArchUpper from "@/assets/full-arch-upper.png";
-import fullArchLower from "@/assets/full-arch-lower.png";
+import fullArchUpper from "@/assets/full-arch-upper-dark.png";
+import fullArchLower from "@/assets/full-arch-lower-dark.png";
 
 const beneficiaries = [
   {
@@ -86,19 +86,18 @@ const FullArchImplants = () => {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 1, delay: 0.2 }}
-              className="relative hidden md:block mix-blend-lighten"
+              className="relative hidden md:block"
             >
               <div
                 className="absolute inset-0 pointer-events-none z-10"
                 style={{
-                  background: 'radial-gradient(ellipse 85% 80% at 60% 50%, transparent 35%, hsl(30 8% 10%) 75%), linear-gradient(to right, hsl(30 8% 10%) 0%, transparent 10%), linear-gradient(to top, hsl(30 8% 10%) 0%, transparent 12%), linear-gradient(to bottom, hsl(30 8% 10%) 0%, transparent 12%)',
+                  background: 'radial-gradient(ellipse 80% 75% at 55% 50%, transparent 40%, hsl(30 8% 10%) 80%)',
                 }}
               />
               <img
                 src={fullArchUpper}
                 alt="Full arch upper implant prosthesis showcasing precision craftsmanship"
                 className="w-full h-auto object-contain scale-110 origin-left relative z-0"
-                style={{ filter: 'sepia(0.08) saturate(1.05) brightness(0.95) contrast(1.02)' }}
               />
             </motion.div>
 
@@ -129,19 +128,18 @@ const FullArchImplants = () => {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 1, delay: 0.3 }}
-              className="relative hidden md:block mix-blend-lighten"
+              className="relative hidden md:block"
             >
               <div
                 className="absolute inset-0 pointer-events-none z-10"
                 style={{
-                  background: 'radial-gradient(ellipse 85% 80% at 40% 50%, transparent 35%, hsl(30 8% 10%) 75%), linear-gradient(to left, hsl(30 8% 10%) 0%, transparent 10%), linear-gradient(to top, hsl(30 8% 10%) 0%, transparent 12%), linear-gradient(to bottom, hsl(30 8% 10%) 0%, transparent 12%)',
+                  background: 'radial-gradient(ellipse 80% 75% at 45% 50%, transparent 40%, hsl(30 8% 10%) 80%)',
                 }}
               />
               <img
                 src={fullArchLower}
                 alt="Full arch lower implant prosthesis with natural tissue detail"
                 className="w-full h-auto object-contain scale-110 origin-right relative z-0"
-                style={{ filter: 'sepia(0.08) saturate(1.05) brightness(0.95) contrast(1.02)' }}
               />
             </motion.div>
           </div>
@@ -153,20 +151,20 @@ const FullArchImplants = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
-              className="relative mix-blend-lighten"
+              className="relative"
             >
               <div className="absolute inset-0 pointer-events-none z-10" style={{ background: 'radial-gradient(ellipse 100% 100% at center, transparent 45%, hsl(30 8% 10%) 80%)' }} />
-              <img src={fullArchUpper} alt="Upper arch prosthesis" className="w-full h-auto object-contain" style={{ filter: 'sepia(0.08) saturate(1.05) brightness(0.95) contrast(1.02)' }} />
+              <img src={fullArchUpper} alt="Upper arch prosthesis" className="w-full h-auto object-contain" />
             </motion.div>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.1 }}
-              className="relative mix-blend-lighten"
+              className="relative"
             >
               <div className="absolute inset-0 pointer-events-none z-10" style={{ background: 'radial-gradient(ellipse 100% 100% at center, transparent 45%, hsl(30 8% 10%) 80%)' }} />
-              <img src={fullArchLower} alt="Lower arch prosthesis" className="w-full h-auto object-contain" style={{ filter: 'sepia(0.08) saturate(1.05) brightness(0.95) contrast(1.02)' }} />
+              <img src={fullArchLower} alt="Lower arch prosthesis" className="w-full h-auto object-contain" />
             </motion.div>
           </div>
         </div>
