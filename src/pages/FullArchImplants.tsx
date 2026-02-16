@@ -170,6 +170,58 @@ const FullArchImplants = () => {
         </div>
       </section>
 
+      {/* Patient Education – What Is Full Arch */}
+      <section className="section-padding bg-background">
+        <div className="luxury-container">
+          <motion.div {...fadeUp} transition={{ duration: 0.8 }} className="max-w-3xl mx-auto text-center mb-14 md:mb-18">
+            <p className="font-body text-xs tracking-[0.3em] uppercase text-charcoal-light mb-6">
+              Patient Guide
+            </p>
+            <h2 className="font-display text-3xl md:text-5xl font-light text-navy mb-8">
+              What Is Full Arch Implant Rehabilitation?
+            </h2>
+            <p className="font-body text-sm md:text-base text-charcoal-light font-light leading-relaxed">
+              Full arch implant rehabilitation is a fixed, non-removable solution designed to replace an entire set of missing or failing teeth. Using a small number of strategically placed dental implants, a complete set of teeth is securely anchored to the jaw, restoring natural chewing function, speech clarity, and confident aesthetics.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-px max-w-4xl mx-auto" style={{ backgroundColor: 'hsl(220 15% 90%)' }}>
+            {[
+              {
+                title: "Who Is This Treatment For?",
+                text: "Patients experiencing multiple missing teeth, failing dental work, loose or uncomfortable dentures, or difficulty chewing. This treatment is designed for those seeking a permanent, stable solution.",
+              },
+              {
+                title: "How Does It Work?",
+                text: "A small number of implants are placed into the jawbone to support a full set of fixed teeth. The result is a restoration that looks, feels, and functions like natural teeth, without the need for removal or adhesives.",
+              },
+              {
+                title: "What Are the Benefits?",
+                text: "Restored chewing strength and comfort. Improved speech clarity. Preserved jawbone health. A natural, confident appearance. Long-term stability designed to last.",
+              },
+              {
+                title: "Is It Right for Me?",
+                text: "Candidacy depends on bone support, gum health, and overall medical condition. A comprehensive clinical evaluation will determine the most appropriate treatment pathway for your individual needs.",
+              },
+            ].map((block, i) => (
+              <motion.div
+                key={i}
+                {...fadeUp}
+                transition={{ duration: 0.6, delay: i * 0.1 }}
+                className="bg-background p-8 md:p-10"
+              >
+                <h3 className="font-display text-lg md:text-xl font-medium text-navy mb-3">
+                  {block.title}
+                </h3>
+                <p className="font-body text-sm text-charcoal-light font-light leading-relaxed">
+                  {block.text}
+                </p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Philosophy & Differentiators */}
       <section className="section-padding" style={{ background: 'linear-gradient(180deg, hsl(40 15% 96%) 0%, hsl(40 20% 98%) 100%)' }}>
         <div className="luxury-container">
