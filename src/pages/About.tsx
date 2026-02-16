@@ -39,52 +39,59 @@ const About = () => {
     <main className="bg-background">
       <PageNavigation />
 
-      {/* Hero */}
-      <section className="pt-32 pb-16 md:pt-40 md:pb-20 px-6 md:px-8">
-        <div className="luxury-container">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-            {/* Portrait — blended into background */}
+      {/* ═══════ EDITORIAL HERO ═══════ */}
+      <section className="relative pt-24 md:pt-0 min-h-[85vh] overflow-hidden">
+        <div className="grid grid-cols-1 lg:grid-cols-12 min-h-[85vh]">
+          {/* Left: Dominant portrait */}
+          <div className="relative lg:col-span-6 xl:col-span-7 min-h-[50vh] lg:min-h-full">
             <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 1, delay: 0.2 }}
-              className="flex items-center justify-center lg:justify-end"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 1.4, delay: 0.1 }}
+              className="absolute inset-0"
             >
-              <div className="relative">
-                <img
-                  src={drParmar}
-                  alt="Dr. Akshay Parmar, Board-Certified Prosthodontist"
-                  className="w-72 md:w-80 lg:w-[24rem] object-cover"
-                  style={{
-                    filter: "contrast(1.04) brightness(0.95) saturate(0.35) sepia(0.1)",
-                    maskImage:
-                      "radial-gradient(ellipse 85% 90% at 50% 35%, black 45%, transparent 82%)",
-                    WebkitMaskImage:
-                      "radial-gradient(ellipse 85% 90% at 50% 35%, black 45%, transparent 82%)",
-                  }}
-                />
-              </div>
+              <img
+                src={drParmar}
+                alt="Dr. Akshay Parmar, Board-Certified Prosthodontist"
+                className="w-full h-full object-cover object-top"
+                style={{
+                  filter: "contrast(1.06) brightness(0.92) saturate(0.4) sepia(0.08)",
+                  maskImage: "linear-gradient(to right, black 0%, black 75%, transparent 100%), linear-gradient(to bottom, transparent 0%, black 8%, black 90%, transparent 100%)",
+                  maskComposite: "intersect",
+                  WebkitMaskImage: "linear-gradient(to right, black 0%, black 75%, transparent 100%)",
+                }}
+              />
             </motion.div>
+          </div>
 
-            {/* Intro */}
+          {/* Right: Editorial text */}
+          <div className="lg:col-span-6 xl:col-span-5 flex items-center px-8 md:px-12 lg:px-16 xl:px-20 py-16 lg:py-0">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 25 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1, delay: 0.4 }}
+              transition={{ duration: 1, delay: 0.5 }}
+              className="max-w-lg"
             >
-              <p className="font-body text-[10px] tracking-[0.35em] uppercase text-charcoal-light mb-6">
+              <p className="font-body text-[10px] tracking-[0.4em] uppercase text-charcoal-light mb-10">
                 About the Specialist
               </p>
-              <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-light tracking-tight text-navy leading-[0.95] mb-8">
+
+              <h1 className="font-display text-4xl md:text-5xl lg:text-[3.5rem] xl:text-6xl font-light tracking-tight text-navy leading-[0.93] mb-12">
                 Precision. Biology.
                 <br />
-                <span className="italic">Longevity.</span>
+                <span className="italic font-light">Longevity.</span>
               </h1>
-              <p className="font-body text-sm md:text-base text-charcoal-light font-light leading-relaxed mb-4">
-                Dr. Akshay Parmar is a board-certified prosthodontist specializing in advanced implant, full-arch, and complex oral rehabilitation.
+
+              <div className="w-10 h-px bg-navy mb-12" />
+
+              <p className="font-body text-sm md:text-[15px] text-charcoal-light font-light leading-[1.85] mb-6">
+                Dr. Akshay Parmar is a board-certified prosthodontist specializing in advanced implant rehabilitation, full-arch reconstruction, and maxillofacial prosthodontics.
               </p>
-              <p className="font-body text-sm md:text-base text-charcoal-light font-light leading-relaxed">
-                His work centers on precision-driven, biologically respectful dentistry, restoring function, aesthetics, and long-term stability through carefully engineered treatment planning.
+              <p className="font-body text-sm md:text-[15px] text-charcoal-light font-light leading-[1.85] mb-6">
+                He completed advanced specialty training at UConn and fellowship training at Memorial Sloan Kettering Cancer Center (MSKCC), focusing on complex oral rehabilitation and oncology-related reconstruction.
+              </p>
+              <p className="font-body text-sm md:text-[15px] text-charcoal-light font-light leading-[1.85]">
+                His work centers on precision-driven, biologically respectful dentistry designed for long-term stability, function, and facial support.
               </p>
             </motion.div>
           </div>
