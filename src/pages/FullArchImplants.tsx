@@ -503,6 +503,35 @@ const FullArchImplants = () => {
         </div>
       </section>
 
+      {/* Editorial – Specialized Expertise */}
+      <section className="py-24 md:py-36" style={{ background: 'linear-gradient(180deg, hsl(40 12% 95%) 0%, hsl(40 15% 96%) 100%)' }}>
+        <div className="luxury-container">
+          <motion.div {...fadeUp} transition={{ duration: 1 }} className="max-w-2xl mx-auto text-center">
+            <p className="font-body text-xs tracking-[0.3em] uppercase text-charcoal-light/60 mb-6">
+              Clinical Expertise
+            </p>
+            <h2 className="font-display text-3xl md:text-5xl font-light text-navy leading-tight mb-10">
+              Specialized Expertise <span className="italic">Matters</span>
+            </h2>
+            <div className="space-y-6 mb-12">
+              <p className="font-body text-sm md:text-base text-charcoal-light font-light leading-relaxed">
+                Full-arch implant rehabilitation is a highly specialized form of dental reconstruction requiring advanced training in prosthetics, bite dynamics, facial support, and long-term functional stability.
+              </p>
+              <p className="font-body text-sm md:text-base text-charcoal-light font-light leading-relaxed">
+                Successful outcomes depend not only on surgical precision, but on comprehensive prosthetic planning, biological considerations, and structural design.
+              </p>
+              <p className="font-body text-sm md:text-base text-charcoal-light font-light leading-relaxed">
+                Treatment is guided by principles of predictability, stability, and anatomical harmony.
+              </p>
+            </div>
+            <div className="w-12 h-px bg-navy/20 mx-auto mb-8" />
+            <p className="font-body text-xs tracking-[0.3em] uppercase text-charcoal-light/60">
+              Diagnosis precedes intervention.
+            </p>
+          </motion.div>
+        </div>
+      </section>
+
       {/* Clinical Approach */}
       <section className="section-padding bg-warm-gray">
         <div className="luxury-container">
