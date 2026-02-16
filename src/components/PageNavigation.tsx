@@ -106,9 +106,9 @@ const PageNavigation = () => {
                       animate={{ opacity: 1, y: 0 }}
                       exit={{ opacity: 0, y: 6 }}
                       transition={{ duration: 0.2, ease: "easeOut" }}
-                      className="absolute top-full left-1/2 -translate-x-1/2 pt-3"
+                      className="absolute top-full left-1/2 -translate-x-1/2 pt-3 z-[100]"
                     >
-                      <div className="min-w-[220px] bg-background border border-divider shadow-lg py-3 z-[60]">
+                      <div className="min-w-[220px] bg-background border border-divider shadow-lg py-3">
                         {item.children.map((child) => (
                           <Link
                             key={child.label}
