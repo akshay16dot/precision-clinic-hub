@@ -265,7 +265,7 @@ const FullArchImplants = () => {
           </motion.div>
 
           {/* Row 1 – Clinical Transformation */}
-          <motion.div {...fadeUp} transition={{ duration: 0.6 }} className="max-w-5xl mx-auto mb-6">
+          <motion.div {...fadeUp} transition={{ duration: 0.6 }} className="max-w-5xl mx-auto">
             <p className="font-body text-xs tracking-[0.3em] uppercase text-charcoal-light/60 mb-6">
               Clinical Transformation
             </p>
@@ -326,7 +326,7 @@ const FullArchImplants = () => {
           </motion.div>
 
           {/* Row 3 – Precision Rehabilitation */}
-          <motion.div {...fadeUp} transition={{ duration: 0.6, delay: 0.2 }} className="max-w-5xl mx-auto mb-6">
+          <motion.div {...fadeUp} transition={{ duration: 0.6, delay: 0.2 }} className="max-w-5xl mx-auto">
             <p className="font-body text-xs tracking-[0.3em] uppercase text-charcoal-light/60 mb-6">
               Precision Rehabilitation
             </p>
