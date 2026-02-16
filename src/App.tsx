@@ -8,6 +8,7 @@ import DentalImplants from "./pages/DentalImplants";
 import FullArchImplants from "./pages/FullArchImplants";
 import AestheticDentistry from "./pages/AestheticDentistry";
 import MaxillofacialRehabilitation from "./pages/MaxillofacialRehabilitation";
+import ImmediateImplants from "./pages/ImmediateImplants";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import ClinicalCases from "./pages/ClinicalCases";
@@ -27,6 +28,7 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/dental-implants-new-jersey" element={<DentalImplants />} />
           <Route path="/full-arch-implants-new-jersey" element={<FullArchImplants />} />
+          <Route path="/immediate-implant-rehabilitation" element={<ImmediateImplants />} />
           <Route path="/aesthetic-dentistry" element={<AestheticDentistry />} />
           <Route path="/maxillofacial-rehabilitation" element={<MaxillofacialRehabilitation />} />
           <Route path="/about" element={<About />} />

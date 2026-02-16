@@ -15,7 +15,7 @@ const menuSections = [
     title: "Clinical",
     links: [
       { to: "/dental-implants-new-jersey", label: "Dental Implants" },
-      { to: "/dental-implants-new-jersey", label: "Immediate Implants", hash: "#immediate" },
+      { to: "/immediate-implant-rehabilitation", label: "Immediate Implants" },
       { to: "/full-arch-implants-new-jersey", label: "Full-Arch Rehabilitation" },
       { to: "/aesthetic-dentistry", label: "Veneers & Aesthetic Reconstruction" },
       { to: "/maxillofacial-rehabilitation", label: "Maxillofacial Prosthodontics" },
