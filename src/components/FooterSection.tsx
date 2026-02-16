@@ -21,7 +21,7 @@ const professionalLinks = [
 
 const FooterSection = () => {
   return (
-    <footer id="contact" className="py-12 md:py-16 px-6 md:px-8 bg-navy">
+    <footer id="contact" className="py-16 md:py-20 px-6 md:px-8 bg-navy">
       <div className="luxury-container">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-10 items-start">
           {/* Logo & Contact */}

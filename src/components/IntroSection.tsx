@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 const IntroSection = () => {
   return (
     <section
-      className="py-16 md:py-20 lg:py-24 px-6 md:px-8"
+      className="section-padding-lg"
       style={{
         background: "linear-gradient(180deg, hsl(40 18% 97%) 0%, hsl(40 15% 95.5%) 100%)",
       }}
@@ -16,9 +16,9 @@ const IntroSection = () => {
           transition={{ duration: 1 }}
           className="max-w-3xl mx-auto text-center"
         >
-          <div className="w-12 h-px bg-navy mx-auto mb-10" />
+          <div className="w-12 h-px bg-navy mx-auto mb-12" />
 
-          <h2 className="font-display text-2xl md:text-3xl lg:text-4xl font-light text-charcoal leading-relaxed mb-6">
+          <h2 className="font-display text-2xl md:text-3xl lg:text-4xl font-light text-charcoal leading-relaxed mb-8">
             Dr. Akshay Parmar is a Board-Certified Prosthodontist providing advanced dental implant and prosthodontic rehabilitation across New Jersey.
           </h2>
 

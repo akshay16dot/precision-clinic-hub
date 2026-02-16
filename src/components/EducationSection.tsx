@@ -30,7 +30,7 @@ const EducationSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.8 }}
-          className="max-w-3xl mx-auto text-center mb-14"
+          className="max-w-3xl mx-auto text-center mb-16"
         >
           <p className="font-body text-[10px] tracking-[0.4em] uppercase text-charcoal-light mb-5">
             For Dental Professionals
@@ -45,7 +45,7 @@ const EducationSection = () => {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-6 lg:gap-7 max-w-4xl mx-auto">
           {courses.map((course, i) => (
             <motion.div
               key={i}

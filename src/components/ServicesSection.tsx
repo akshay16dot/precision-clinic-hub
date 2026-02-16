@@ -56,7 +56,7 @@ const ServicesSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.8 }}
-          className="text-center mb-16"
+          className="text-center mb-20"
         >
           <p className="font-body text-[10px] tracking-[0.4em] uppercase text-charcoal-light mb-5">
             Specialist Treatment
@@ -67,7 +67,7 @@ const ServicesSection = () => {
           <div className="w-12 h-px bg-navy/20 mx-auto" />
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6 lg:gap-7 max-w-5xl mx-auto">
           {coreServices.map((service, i) => (
             <motion.div
               key={i}
