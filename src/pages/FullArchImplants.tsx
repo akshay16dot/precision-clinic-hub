@@ -109,7 +109,7 @@ const FullArchImplants = () => {
               transition={{ duration: 0.8 }}
               className="text-center px-6 md:px-10 lg:px-14 py-8 md:py-0 max-w-lg mx-auto"
             >
-              <p className="font-body text-xs tracking-[0.35em] uppercase mb-6" style={{ color: 'hsl(220 15% 55%)' }}>
+              <p className="font-body text-xs tracking-[0.35em] uppercase mb-6" style={{ color: 'hsl(30 6% 50%)' }}>
                 Precision Prosthetics
               </p>
               <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-light tracking-tight leading-[0.95]" style={{ color: 'hsl(40 15% 92%)' }}>
@@ -117,7 +117,7 @@ const FullArchImplants = () => {
                 <br />
                 <span className="italic">Rehabilitation</span>
               </h2>
-              <p className="font-body text-sm md:text-base font-light leading-relaxed mt-8" style={{ color: 'hsl(220 10% 55%)' }}>
+              <p className="font-body text-sm md:text-base font-light leading-relaxed mt-8" style={{ color: 'hsl(30 6% 50%)' }}>
                 Restoring function, stability, and aesthetics through precision-engineered implant reconstruction.
               </p>
             </motion.div>
