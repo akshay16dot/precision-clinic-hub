@@ -155,14 +155,14 @@ const ClinicalCases = () => {
       <SiteNavigation />
 
       {/* ═══════ SECTION 1 — HERO ═══════ */}
-      <section className="relative min-h-[70vh] md:min-h-[80vh] flex items-center justify-center overflow-hidden">
+      <section className="relative hero-min-h hero-navy-fallback flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <img
             src={case1After}
             alt="Clinical outcome, Full Mouth Rehabilitation"
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover object-[center_top] sm:object-center"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/70" />
+          <div className="absolute inset-0" style={{ background: "linear-gradient(180deg, hsl(220 25% 10% / 0.7) 0%, hsl(220 25% 10% / 0.5) 50%, hsl(220 25% 10% / 0.8) 100%)" }} />
         </div>
         <div className="relative z-10 text-center px-6 md:px-8 max-w-3xl mx-auto">
           <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1.2 }}>

@@ -92,13 +92,13 @@ const ProfessionalEducation = () => {
       <SiteNavigation />
 
       {/* ═══════ SECTION 1: HERO ═══════ */}
-      <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden">
+      <section className="relative hero-min-h hero-navy-fallback flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <img
             src={eduLiveSurgery}
             alt=""
             aria-hidden="true"
-            className="absolute inset-0 w-full h-full object-cover"
+            className="absolute inset-0 w-full h-full object-cover object-[center_top] sm:object-center"
             style={{
               filter: "brightness(0.2) contrast(1.1) saturate(0.1)",
               transform: "scale(1.05)",
