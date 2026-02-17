@@ -65,7 +65,7 @@ const ClinicalCaseCard = ({ c, index }: { c: ClinicalCase; index: number }) => {
           <div className="col-span-2 relative aspect-[4/3] overflow-hidden rounded-sm">
             <img
               src={pairs[0]?.afterImg}
-              alt={`${c.title} — After`}
+              alt={`${c.title}, After`}
               className="w-full h-full object-cover"
               loading="lazy"
             />
@@ -79,7 +79,7 @@ const ClinicalCaseCard = ({ c, index }: { c: ClinicalCase; index: number }) => {
           <div className="col-span-1 relative aspect-[4/3] overflow-hidden rounded-sm">
             <img
               src={pairs[0]?.beforeImg}
-              alt={`${c.title} — Before`}
+              alt={`${c.title}, Before`}
               className="w-full h-full object-cover"
               loading="lazy"
             />
@@ -100,7 +100,7 @@ const ClinicalCaseCard = ({ c, index }: { c: ClinicalCase; index: number }) => {
               <div className="relative aspect-[4/3] overflow-hidden rounded-sm">
                 <img
                   src={pair.beforeImg}
-                  alt={`${c.title} — ${pair.beforeLabel || "Before"}`}
+                  alt={`${c.title}, ${pair.beforeLabel || "Before"}`}
                   className="w-full h-full object-cover"
                   loading="lazy"
                 />
@@ -115,7 +115,7 @@ const ClinicalCaseCard = ({ c, index }: { c: ClinicalCase; index: number }) => {
               <div className="relative aspect-[4/3] overflow-hidden rounded-sm shadow-[0_4px_20px_-8px_hsl(220_40%_15%/0.12)]">
                 <img
                   src={pair.afterImg}
-                  alt={`${c.title} — ${pair.afterLabel || "After"}`}
+                  alt={`${c.title}, ${pair.afterLabel || "After"}`}
                   className="w-full h-full object-cover"
                   loading="lazy"
                 />

@@ -12,7 +12,7 @@ const fadeUp = {
 const testimonials = [
   {
     quote:
-      "Dr. Parmar's approach to implant education is rooted in biology and systematic thinking. His courses reshaped how I plan full-arch cases — from diagnostics through prosthetic delivery.",
+      "Dr. Parmar's approach to implant education is rooted in biology and systematic thinking. His courses reshaped how I plan full-arch cases, from diagnostics through prosthetic delivery.",
     name: "Dr. R. Mehta",
     credential: "Prosthodontist, New York",
   },
@@ -24,7 +24,7 @@ const testimonials = [
   },
   {
     quote:
-      "What sets this program apart is the philosophy. It is not about memorizing protocols — it is about understanding why each decision is made. That depth of reasoning has made me a more confident clinician.",
+      "What sets this program apart is the philosophy. It is not about memorizing protocols. It is about understanding why each decision is made. That depth of reasoning has made me a more confident clinician.",
     name: "Dr. A. Chen",
     credential: "Periodontist, Connecticut",
   },
