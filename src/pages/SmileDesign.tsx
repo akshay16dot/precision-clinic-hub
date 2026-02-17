@@ -5,6 +5,9 @@ import PageNavigation from "@/components/PageNavigation";
 import PageCTA from "@/components/PageCTA";
 import PageFooter from "@/components/PageFooter";
 import heroImage from "@/assets/hero-smile-design.png";
+import clinicalStart from "@/assets/smile-clinical-start.png";
+import digitalAnalysis from "@/assets/smile-digital-analysis.png";
+import digitalDesign from "@/assets/smile-digital-design.png";
 
 const fadeUp = {
   initial: { opacity: 0, y: 20 },
@@ -82,6 +85,67 @@ const SmileDesign = () => {
               </div>
             </motion.div>
           </div>
+        </div>
+      </section>
+
+      {/* ═══════ DIGITAL SMILE DESIGN SEQUENCE ═══════ */}
+      <section className="py-24 md:py-32 px-6 md:px-8 bg-background">
+        <div className="luxury-container max-w-5xl">
+          <motion.div {...fadeUp} transition={{ duration: 0.8 }} className="text-center mb-16 md:mb-20">
+            <p className="font-body text-[10px] tracking-[0.4em] uppercase text-charcoal-light mb-6">
+              Digital Smile Design
+            </p>
+            <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-light text-navy leading-[0.95] mb-8">
+              Analyzed. Simulated. <span className="italic">Engineered.</span>
+            </h2>
+            <div className="w-10 h-px bg-navy mx-auto mb-8" />
+            <p className="font-body text-sm md:text-[15px] text-charcoal-light font-light leading-[1.85] max-w-xl mx-auto">
+              Using advanced digital planning software, we evaluate facial proportions, tooth form, symmetry, and functional dynamics before treatment begins. This allows patients to visualize outcomes with exceptional accuracy.
+            </p>
+          </motion.div>
+
+          {/* Three-Panel Sequence */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 mb-16">
+            {[
+              { img: clinicalStart, label: "Clinical Starting Point" },
+              { img: digitalAnalysis, label: "Digital Facial & Tooth Analysis" },
+              { img: digitalDesign, label: "Digitally Engineered Outcome" },
+            ].map((panel, i) => (
+              <motion.div
+                key={i}
+                {...fadeUp}
+                transition={{ duration: 0.7, delay: i * 0.15 }}
+                className="relative group"
+              >
+                <div className="relative aspect-[4/3] overflow-hidden rounded-sm shadow-[0_8px_30px_-12px_hsl(var(--navy)/0.12)]">
+                  <img
+                    src={panel.img}
+                    alt={panel.label}
+                    className="w-full h-full object-cover"
+                  />
+                  {/* Subtle gradient overlay at bottom */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
+                  {/* Label */}
+                  <div className="absolute bottom-0 left-0 right-0 p-4 md:p-5">
+                    <p className="font-body text-[10px] md:text-[11px] tracking-[0.25em] uppercase text-white/90 font-light">
+                      {panel.label}
+                    </p>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+
+          {/* CTA */}
+          <motion.div {...fadeUp} transition={{ duration: 0.8 }} className="text-center">
+            <Link
+              to="/guide/veneers"
+              className="inline-block px-9 py-4 bg-navy font-body text-[11px] tracking-[0.25em] uppercase transition-all duration-300 hover:opacity-90"
+              style={{ color: "hsl(40 20% 98%)" }}
+            >
+              Explore Smile Design Process
+            </Link>
+          </motion.div>
         </div>
       </section>
 
