@@ -120,7 +120,7 @@ const About = () => {
               He founded the STABLE IMPLANT Protocol to bring structure and predictability to implant treatment planning, emphasizing tissue preservation, prosthetic-driven positioning, and occlusal stability. His work with the Floxient digital dentistry platform reflects a commitment to advancing collaborative, 3D-guided workflows that improve clinical precision and patient outcomes.
             </p>
             <p className="font-body text-sm md:text-[15px] text-charcoal-light font-light leading-[1.85]">
-              As a Fellow of both the American College of Prosthodontists and the American Academy of Maxillofacial Prosthetics, Dr. Parmar holds dual board-level distinctions that reflect depth across restorative, implant, and oncological disciplines. His clinical philosophy is direct: understand the biology, respect the structure, and plan for longevity.
+              As a Fellow of both the American College of Prosthodontists and the American Academy of Maxillofacial Prosthetics, Dr. Parmar holds board-level distinctions that reflect depth across restorative, implant, and oncological disciplines. His clinical philosophy is direct: understand the biology, respect the structure, and plan for longevity.
             </p>
           </motion.div>
         </div>
