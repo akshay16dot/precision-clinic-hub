@@ -152,4 +152,17 @@
   .luxury-container {
     @apply max-w-[1280px] mx-auto;
   }
+
+  /* Reusable hero utilities */
+  .hero-min-h {
+    min-height: clamp(520px, 75vh, 820px);
+  }
+
+  .hero-navy-fallback {
+    background-color: hsl(220 20% 7%);
+  }
+
+  .hero-dark-overlay {
+    background: linear-gradient(180deg, hsl(220 30% 10% / 0.7) 0%, hsl(220 30% 10% / 0.85) 50%, hsl(220 30% 10% / 0.95) 100%);
+  }
 }

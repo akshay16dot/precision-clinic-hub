@@ -24,10 +24,10 @@ const About = () => {
       <SiteNavigation />
 
       {/* ═══════ EDITORIAL HERO ═══════ */}
-      <section className="relative pt-24 md:pt-0 min-h-[85vh] overflow-hidden">
-        <div className="grid grid-cols-1 lg:grid-cols-12 min-h-[85vh]">
+      <section className="relative pt-24 md:pt-0 hero-min-h overflow-hidden">
+        <div className="grid grid-cols-1 lg:grid-cols-12 hero-min-h">
           {/* Left: Portrait */}
-          <div className="relative lg:col-span-5 min-h-[50vh] lg:min-h-full">
+          <div className="relative lg:col-span-5 min-h-[300px] sm:min-h-[400px] lg:min-h-full">
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}

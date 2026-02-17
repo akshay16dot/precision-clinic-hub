@@ -59,15 +59,29 @@ const MaxillofacialRehabilitation = () => {
 
       {/* ═══════ CINEMATIC HERO ═══════ */}
       <section
-        className="relative min-h-[95vh] overflow-hidden"
+        className="relative hero-min-h hero-navy-fallback overflow-hidden"
         style={{
           background: "linear-gradient(160deg, hsl(220 20% 7%) 0%, hsl(220 18% 10%) 40%, hsl(220 15% 12%) 70%, hsl(220 20% 8%) 100%)",
         }}
       >
-        {/* Split imagery */}
-        <div className="absolute inset-0 grid grid-cols-1 lg:grid-cols-2">
+        {/* Mobile background portrait (visible only on small screens) */}
+        <div className="absolute inset-0 lg:hidden">
+          <img
+            src={drParmarMSK}
+            alt=""
+            aria-hidden="true"
+            className="absolute inset-0 w-full h-full object-cover object-[center_20%]"
+            style={{
+              filter: "brightness(0.25) contrast(1.1) saturate(0.1)",
+            }}
+          />
+          <div className="absolute inset-0 hero-dark-overlay" />
+        </div>
+
+        {/* Split imagery (desktop only) */}
+        <div className="absolute inset-0 hidden lg:grid grid-cols-2">
           {/* Left: Portrait */}
-          <div className="relative hidden lg:block">
+          <div className="relative">
             <img
               src={drParmarMSK}
               alt=""
@@ -83,7 +97,7 @@ const MaxillofacialRehabilitation = () => {
           </div>
 
           {/* Right: Obturator prosthesis */}
-          <div className="relative hidden lg:flex items-center justify-center">
+          <div className="relative flex items-center justify-center">
             <img
               src={obturatorProsthesis}
               alt=""
@@ -108,7 +122,7 @@ const MaxillofacialRehabilitation = () => {
         />
 
         {/* Content */}
-        <div className="relative z-10 min-h-[95vh] flex flex-col justify-end px-6 md:px-12 lg:px-24 pb-16 md:pb-24">
+        <div className="relative z-10 hero-min-h flex flex-col justify-end px-6 md:px-12 lg:px-24 pb-16 md:pb-24">
           <div className="max-w-3xl">
             <motion.p
               initial={{ opacity: 0, y: 20 }}

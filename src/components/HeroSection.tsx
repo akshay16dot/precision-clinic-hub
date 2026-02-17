@@ -23,7 +23,7 @@ const HeroSection = () => {
 
   return (
     <section
-      className="relative min-h-[90vh] overflow-hidden cursor-pointer group"
+      className="relative hero-min-h hero-navy-fallback overflow-hidden cursor-pointer group"
       onClick={() => navigate("/clinical-cases")}
       role="link"
       aria-label="View Selected Clinical Work"
@@ -34,7 +34,7 @@ const HeroSection = () => {
           src={heroPortrait}
           alt=""
           aria-hidden="true"
-          className="absolute inset-0 w-full h-full object-cover object-[8%_top]"
+          className="absolute inset-0 w-full h-full object-cover object-[center_top] sm:object-[8%_top]"
           style={{
             filter: "brightness(0.25) contrast(1.08) saturate(0.05) hue-rotate(-5deg) blur(1px)",
             transform: "scale(1.08)",
@@ -57,7 +57,7 @@ const HeroSection = () => {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 min-h-[90vh] flex flex-col justify-between px-5 sm:px-6 md:px-12 lg:px-24">
+      <div className="relative z-10 hero-min-h flex flex-col justify-between px-5 sm:px-6 md:px-12 lg:px-24">
         <div className="pt-20 md:pt-28" />
 
         {/* Main composition */}

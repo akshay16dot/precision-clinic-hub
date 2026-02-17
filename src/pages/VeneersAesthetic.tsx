@@ -87,8 +87,8 @@ const VeneersAesthetic = () => {
       <SiteNavigation />
 
       {/* ═══════ HERO ═══════ */}
-      <section className="relative pt-24 md:pt-0 min-h-[85vh] overflow-hidden">
-        <div className="grid grid-cols-1 lg:grid-cols-12 min-h-[85vh]">
+      <section className="relative pt-24 md:pt-0 hero-min-h overflow-hidden">
+        <div className="grid grid-cols-1 lg:grid-cols-12 hero-min-h">
           {/* Left: Compare slider */}
           <div className="relative lg:col-span-5 min-h-[50vh] lg:min-h-full flex items-center justify-center p-8 lg:p-12">
             <motion.div
