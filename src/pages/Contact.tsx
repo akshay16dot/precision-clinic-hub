@@ -21,8 +21,8 @@ const Contact = () => {
   const [honeypot, setHoneypot] = useState("");
 
   usePageSEO({
-    title: "Contact | Schedule a Consultation with Dr. Akshay Parmar",
-    description: "Request a consultation with Board-Certified Prosthodontist Dr. Akshay Parmar. Advanced implant, prosthetic, and maxillofacial rehabilitation in New Jersey.",
+    title: "Contact | Prosthodontist Consultation New Jersey",
+    description: "Schedule a specialist consultation with a Board-Certified Prosthodontist in New Jersey. Implant rehabilitation, full-arch reconstruction, failed implant correction, and complex dental care evaluation.",
   });
 
   const handleSubmit = async (e: React.FormEvent) => {

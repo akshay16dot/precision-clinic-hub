@@ -1,8 +1,8 @@
 import PatientGuideLayout from "@/components/PatientGuideLayout";
 
 const data = {
-  pageTitle: "Maxillofacial Rehabilitation Guide | Oncology & Reconstruction",
-  pageDescription: "Patient guide to maxillofacial prosthetic rehabilitation. Learn about post-oncologic reconstruction, obturator prostheses, and coordinated multidisciplinary care.",
+  pageTitle: "Maxillofacial Rehabilitation Guide | Oncology Prosthetics",
+  pageDescription: "Patient guide to maxillofacial prosthetic rehabilitation. Post-oncologic reconstruction, obturator prostheses, and multidisciplinary care explained by a fellowship-trained maxillofacial prosthodontist.",
   subtitle: "Patient Guide · Maxillofacial & Oral Reconstruction",
   title: "Maxillofacial",
   titleItalic: "Rehabilitation Guide",

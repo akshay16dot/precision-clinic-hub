@@ -42,8 +42,8 @@ const fade = {
 
 const AestheticDentistry = () => {
   usePageSEO({
-    title: "Aesthetic Dentistry | Veneers, Smile Design & Rehabilitation NJ",
-    description: "Aesthetic dental rehabilitation by a Board-Certified Prosthodontist. Porcelain veneers, smile design, tooth wear restoration, and whitening rooted in precision and biomechanical integrity.",
+    title: "Aesthetic Dentistry NJ | Veneers & Smile Reconstruction",
+    description: "Aesthetic dental rehabilitation by a Board-Certified Prosthodontist in New Jersey. Porcelain veneers, smile design, bite reconstruction, and tooth wear restoration guided by structural precision.",
   });
 
   return (

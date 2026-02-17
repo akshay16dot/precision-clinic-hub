@@ -15,8 +15,8 @@ const fadeUp = {
 
 const About = () => {
   usePageSEO({
-    title: "About Dr. Akshay Parmar | Prosthodontist & Implant Specialist, NJ",
-    description: "Board-Certified Prosthodontist and Fellow of the American College of Prosthodontists. Advanced training in implant rehabilitation, maxillofacial prosthetics, and oncology reconstruction at Memorial Sloan Kettering.",
+    title: "About Dr. Akshay Parmar | Prosthodontist NJ | FACP, FAAMP",
+    description: "Board-Certified Prosthodontist and Fellow of the American College of Prosthodontists. Dual fellowship-trained in implant rehabilitation and maxillofacial prosthetics. Memorial Sloan Kettering Cancer Center.",
   });
 
   return (

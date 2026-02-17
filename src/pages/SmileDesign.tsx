@@ -17,8 +17,8 @@ const fadeUp = {
 
 const SmileDesign = () => {
   usePageSEO({
-    title: "Smile Design | Facial-Driven Aesthetic Planning NJ",
-    description: "Comprehensive smile design by a Board-Certified Prosthodontist. Digital analysis, facial proportions, and functional aesthetics guide every case toward natural, lasting results.",
+    title: "Smile Design NJ | Prosthodontist-Led Aesthetic Planning",
+    description: "Comprehensive smile design by a Board-Certified Prosthodontist in New Jersey. Facial-driven digital analysis, functional aesthetics, and precision restorative architecture for lasting results.",
   });
 
   return (

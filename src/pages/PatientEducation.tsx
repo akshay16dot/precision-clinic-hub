@@ -45,8 +45,8 @@ const faqs = [
 
 const PatientEducation = () => {
   usePageSEO({
-    title: "Patient Education | Dental Implant & Treatment Guides",
-    description: "Comprehensive patient treatment guides covering dental implants, full-arch rehabilitation, veneers, whitening, and maxillofacial care. Understand your options with confidence.",
+    title: "Patient Treatment Guides | Dental Implants & Rehabilitation",
+    description: "Specialist-authored patient guides covering dental implants, full-arch rehabilitation, immediate implants, veneers, whitening, and maxillofacial care. Understand every step of your treatment.",
   });
 
   return (

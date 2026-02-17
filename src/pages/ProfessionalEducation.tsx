@@ -84,8 +84,8 @@ const peerTestimonials = [
 
 const ProfessionalEducation = () => {
   usePageSEO({
-    title: "Implant Education for Dentists | Clinical Training & Mentorship",
-    description: "Advanced implant and prosthetic training for dental professionals. Live surgery mentorship, evidence-based protocols, and the STABLE IMPLANT Protocol by Dr. Akshay Parmar.",
+    title: "Implant Training for Dentists | Prosthodontist-Led Education",
+    description: "Clinical implant education and live surgery mentorship for dental professionals. Evidence-based protocols, full-arch training, and the STABLE IMPLANT Protocol. Board-Certified Prosthodontist instructor.",
   });
 
   return (

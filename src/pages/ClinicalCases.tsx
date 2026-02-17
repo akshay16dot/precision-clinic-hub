@@ -146,8 +146,8 @@ const reassurancePoints = [
 
 const ClinicalCases = () => {
   usePageSEO({
-    title: "Clinical Cases | Implant & Prosthetic Rehabilitation Results",
-    description: "Selected clinical cases demonstrating advanced implant reconstruction, full-arch rehabilitation, corrective prosthetics, and aesthetic restoration by Board-Certified Prosthodontist Dr. Akshay Parmar.",
+    title: "Clinical Cases | Implant & Prosthetic Results | Prosthodontist NJ",
+    description: "Documented clinical outcomes in implant reconstruction, full-arch rehabilitation, failed implant correction, and complex aesthetic restoration by a Board-Certified Prosthodontist.",
   });
 
   return (

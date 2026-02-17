@@ -78,8 +78,8 @@ const SectionTitle = ({ children }: { children: React.ReactNode }) => (
 
 const VeneersAesthetic = () => {
   usePageSEO({
-    title: "Porcelain Veneers in New Jersey | Prosthodontist Dr. Parmar",
-    description: "Custom porcelain veneers and aesthetic reconstruction by a Board-Certified Prosthodontist. Natural-looking results through precision diagnostics, material science, and restorative architecture.",
+    title: "Porcelain Veneers New Jersey | Prosthodontist Specialist",
+    description: "Custom porcelain veneers by a Board-Certified Prosthodontist in NJ. Precision-bonded aesthetic reconstruction for natural symmetry, shade, and long-term structural integrity.",
   });
 
   return (

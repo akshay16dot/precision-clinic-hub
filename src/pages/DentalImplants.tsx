@@ -56,8 +56,8 @@ const fadeUp = {
 
 const DentalImplants = () => {
   usePageSEO({
-    title: "Dental Implants in New Jersey | Prosthodontist Dr. Akshay Parmar",
-    description: "Advanced dental implant rehabilitation by a Board-Certified Prosthodontist in New Jersey. Single-tooth, multi-unit, and complex implant reconstruction with precision planning and long-term stability.",
+    title: "Dental Implants New Jersey | Board-Certified Prosthodontist",
+    description: "Dental implant placement and reconstruction by a Board-Certified Prosthodontist in NJ. Single-tooth, multi-unit, and complex implant rehabilitation. Correction of failed implants and prostheses.",
   });
 
   return (

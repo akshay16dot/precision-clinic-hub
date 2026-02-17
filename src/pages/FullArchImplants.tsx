@@ -60,8 +60,8 @@ const fadeUp = {
 
 const FullArchImplants = () => {
   usePageSEO({
-    title: "Full-Arch Implant Rehabilitation in NJ | Dr. Akshay Parmar",
-    description: "Full-arch implant reconstruction by a Board-Certified Prosthodontist. Comprehensive rehabilitation for patients with extensive tooth loss, failing dentition, or unstable prosthetics in New Jersey.",
+    title: "Full Arch Dental Implants NJ | Prosthodontist Specialist",
+    description: "Full-arch implant rehabilitation and All-on-X reconstruction by a Board-Certified Prosthodontist in New Jersey. Complete oral reconstruction for failing dentition, bone loss, and unstable prosthetics.",
   });
 
   return (
