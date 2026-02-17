@@ -233,14 +233,14 @@ const SiteNavigation = () => {
                       animate={{ opacity: 1, y: 0 }}
                       exit={{ opacity: 0, y: 4 }}
                       transition={{ duration: 0.2 }}
-                      className="absolute top-full left-0 mt-1 min-w-[240px] bg-background/98 backdrop-blur-lg border border-border rounded-sm shadow-lg z-[70] py-3"
+                      className="absolute top-full left-0 mt-1 min-w-[260px] bg-background border border-border/60 rounded-sm shadow-[0_8px_30px_-8px_rgba(0,0,0,0.12)] z-[70] py-4 px-1"
                     >
                       {item.links.map((link) =>
                         link.isAnchor ? (
                           <button
                             key={link.label}
                             onClick={() => handleAnchorClick(link.to.replace("/", ""))}
-                            className="block w-full text-left px-5 py-2.5 font-body text-[11px] tracking-[0.05em] text-muted-foreground hover:text-navy hover:bg-muted/50 transition-colors duration-200"
+                            className="block w-full text-left px-5 py-3 font-body text-[11px] tracking-[0.15em] uppercase text-navy/70 hover:text-navy hover:bg-muted/40 transition-colors duration-200"
                           >
                             {link.label}
                           </button>
@@ -248,7 +248,7 @@ const SiteNavigation = () => {
                           <Link
                             key={link.label}
                             to={link.to + (link.hash || "")}
-                            className="block px-5 py-2.5 font-body text-[11px] tracking-[0.05em] text-muted-foreground hover:text-navy hover:bg-muted/50 transition-colors duration-200"
+                            className="block px-5 py-3 font-body text-[11px] tracking-[0.15em] uppercase text-navy/70 hover:text-navy hover:bg-muted/40 transition-colors duration-200"
                           >
                             {link.label}
                           </Link>
@@ -285,7 +285,7 @@ const SiteNavigation = () => {
             exit={{ opacity: 0 }}
             transition={{ duration: 0.35, ease: "easeInOut" }}
             className="fixed inset-0 z-[60]"
-            style={{ backgroundColor: "hsl(220 38% 22% / 0.98)" }}
+            style={{ backgroundColor: "hsl(220 36% 26% / 0.98)" }}
           >
             {/* Close button */}
             <div className="luxury-container flex justify-end pt-5 px-6 md:px-10">
@@ -308,7 +308,7 @@ const SiteNavigation = () => {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.12 + si * 0.06, duration: 0.5, ease: "easeOut" }}
                   >
-                    <p className="font-body text-[10px] tracking-[0.25em] uppercase text-primary-foreground/35 mb-7">
+                    <p className="font-body text-[10px] tracking-[0.25em] uppercase text-primary-foreground/45 mb-7">
                       {section.title}
                     </p>
                     <div className="space-y-5">
@@ -317,7 +317,7 @@ const SiteNavigation = () => {
                           <button
                             key={link.label}
                             onClick={() => handleAnchorClick(link.to.replace("/", ""))}
-                            className="block font-body text-[13px] tracking-[0.02em] text-primary-foreground/60 hover:text-primary-foreground transition-colors duration-300"
+                            className="block font-body text-[13px] tracking-[0.02em] text-primary-foreground/75 hover:text-primary-foreground transition-colors duration-300"
                           >
                             {link.label}
                           </button>
@@ -326,7 +326,7 @@ const SiteNavigation = () => {
                             key={link.label}
                             to={link.to + (link.hash || "")}
                             onClick={() => setMenuOpen(false)}
-                            className="block font-body text-[13px] tracking-[0.02em] text-primary-foreground/60 hover:text-primary-foreground transition-colors duration-300"
+                            className="block font-body text-[13px] tracking-[0.02em] text-primary-foreground/75 hover:text-primary-foreground transition-colors duration-300"
                           >
                             {link.label}
                           </Link>
