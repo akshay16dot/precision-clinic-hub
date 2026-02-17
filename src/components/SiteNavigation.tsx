@@ -1,50 +1,133 @@
 import { Link, useLocation } from "react-router-dom";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import logoAP from "@/assets/logo-ap.png";
 
-const headerLinks = [
-  { to: "/dental-implants-new-jersey", label: "Treatments" },
-  { to: "/about", label: "About" },
-  { to: "/contact", label: "Contact" },
-];
+interface NavLink {
+  to: string;
+  label: string;
+  isAnchor?: boolean;
+  hash?: string;
+}
 
-const menuSections = [
+interface NavItem {
+  label: string;
+  to?: string;
+  links?: NavLink[];
+}
+
+const navItems: NavItem[] = [
   {
-    title: "Clinical",
+    label: "Implants",
     links: [
       { to: "/dental-implants-new-jersey", label: "Dental Implants" },
       { to: "/immediate-implant-rehabilitation", label: "Immediate Implants" },
       { to: "/full-arch-implants-new-jersey", label: "Full-Arch Rehabilitation" },
-      { to: "/aesthetic-dentistry", label: "Aesthetic Dentistry" },
+      { to: "/clinical-cases", label: "Failed Implant Correction" },
+    ],
+  },
+  {
+    label: "Aesthetics",
+    links: [
       { to: "/veneers-aesthetic-reconstruction", label: "Veneers & Smile Reconstruction" },
+      { to: "/tooth-wear-rehabilitation", label: "Full Mouth Rehabilitation" },
+      { to: "/aesthetic-dentistry", label: "Gum & Soft Tissue Enhancement" },
+    ],
+  },
+  {
+    label: "Specialized Care",
+    links: [
       { to: "/maxillofacial-rehabilitation", label: "Maxillofacial Prosthodontics" },
+      { to: "/maxillofacial-rehabilitation", label: "Oncology & Reconstruction" },
+      { to: "/maxillofacial-rehabilitation", label: "Medically Complex Patients" },
+    ],
+  },
+  {
+    label: "Patients",
+    links: [
+      { to: "/#services", label: "For Patients", isAnchor: true },
+      { to: "/contact", label: "Consultations" },
+      { to: "/patient-education", label: "Patient Education" },
+      { to: "/clinical-cases", label: "Clinical Cases" },
+      { to: "/testimonials", label: "Testimonials (Curated)" },
+      { to: "/leave-review", label: "Leave a Review" },
+    ],
+  },
+  {
+    label: "Education",
+    links: [
+      { to: "/#education", label: "For Dentists", isAnchor: true },
+      { to: "/education", label: "Education & Courses" },
+      { to: "/education", label: "STABLE IMPLANT Protocol™", hash: "#stable" },
+      { to: "/clinical-cases", label: "Clinical Training Gallery" },
+    ],
+  },
+  {
+    label: "About",
+    links: [
+      { to: "/about", label: "About Dr. Parmar" },
+      { to: "/about", label: "Treatment Philosophy", hash: "#philosophy" },
+      { to: "/about", label: "Credentials & Affiliations", hash: "#credentials" },
+    ],
+  },
+  {
+    label: "Contact",
+    to: "/contact",
+  },
+];
+
+const megaMenuSections = [
+  {
+    title: "Implants",
+    links: [
+      { to: "/dental-implants-new-jersey", label: "Dental Implants" },
+      { to: "/immediate-implant-rehabilitation", label: "Immediate Implants" },
+      { to: "/full-arch-implants-new-jersey", label: "Full-Arch Rehabilitation" },
+      { to: "/clinical-cases", label: "Failed Implant Correction" },
+    ],
+  },
+  {
+    title: "Aesthetics",
+    links: [
+      { to: "/veneers-aesthetic-reconstruction", label: "Veneers & Smile Reconstruction" },
+      { to: "/tooth-wear-rehabilitation", label: "Full Mouth Rehabilitation" },
+      { to: "/aesthetic-dentistry", label: "Gum & Soft Tissue Enhancement" },
+    ],
+  },
+  {
+    title: "Specialized Care",
+    links: [
+      { to: "/maxillofacial-rehabilitation", label: "Maxillofacial Prosthodontics" },
+      { to: "/maxillofacial-rehabilitation", label: "Oncology & Reconstruction" },
+      { to: "/maxillofacial-rehabilitation", label: "Medically Complex Patients" },
     ],
   },
   {
     title: "Patients",
     links: [
       { to: "/#services", label: "For Patients", isAnchor: true },
-      { to: "/patient-education", label: "Patient Education" },
       { to: "/contact", label: "Consultations" },
-      { to: "/about", label: "About Dr. Parmar" },
-      { to: "/about", label: "Treatment Philosophy", hash: "#philosophy" },
+      { to: "/patient-education", label: "Patient Education" },
+      { to: "/clinical-cases", label: "Clinical Cases" },
+      { to: "/testimonials", label: "Testimonials (Curated)" },
+      { to: "/leave-review", label: "Leave a Review" },
     ],
   },
   {
-    title: "Professional",
+    title: "Education",
     links: [
       { to: "/#education", label: "For Dentists", isAnchor: true },
       { to: "/education", label: "Education & Courses" },
       { to: "/education", label: "STABLE IMPLANT Protocol™", hash: "#stable" },
+      { to: "/clinical-cases", label: "Clinical Training Gallery" },
     ],
   },
   {
-    title: "Location",
+    title: "About & Contact",
     links: [
-      { to: "/about", label: "New Jersey Practice" },
-      { to: "/clinical-cases", label: "Clinical Cases" },
+      { to: "/about", label: "About Dr. Parmar" },
+      { to: "/about", label: "Treatment Philosophy", hash: "#philosophy" },
       { to: "/contact", label: "Contact" },
     ],
   },
@@ -53,6 +136,8 @@ const menuSections = [
 const SiteNavigation = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const dropdownTimeout = useRef<NodeJS.Timeout | null>(null);
   const location = useLocation();
 
   useEffect(() => {
@@ -63,9 +148,9 @@ const SiteNavigation = () => {
 
   useEffect(() => {
     setMenuOpen(false);
+    setActiveDropdown(null);
   }, [location.pathname]);
 
-  // Lock body scroll when menu open
   useEffect(() => {
     if (menuOpen) {
       document.body.style.overflow = "hidden";
@@ -77,6 +162,7 @@ const SiteNavigation = () => {
 
   const handleAnchorClick = (anchor: string) => {
     setMenuOpen(false);
+    setActiveDropdown(null);
     if (location.pathname === "/") {
       const el = document.querySelector(anchor);
       el?.scrollIntoView({ behavior: "smooth" });
@@ -85,52 +171,121 @@ const SiteNavigation = () => {
     }
   };
 
-  const headerLinkClass = scrolled
-    ? "text-muted-foreground hover:text-navy"
-    : "text-primary-foreground/50 hover:text-primary-foreground";
+  const handleDropdownEnter = (label: string) => {
+    if (dropdownTimeout.current) clearTimeout(dropdownTimeout.current);
+    setActiveDropdown(label);
+  };
+
+  const handleDropdownLeave = () => {
+    dropdownTimeout.current = setTimeout(() => setActiveDropdown(null), 150);
+  };
 
   return (
     <>
       <nav
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
           scrolled
-            ? "bg-background/90 backdrop-blur-md shadow-[0_1px_0_0_hsl(var(--divider)/0.4)]"
+            ? "bg-background/95 backdrop-blur-md shadow-[0_1px_0_0_hsl(var(--divider)/0.4)]"
             : "bg-transparent"
         }`}
       >
-        <div className="luxury-container flex items-center justify-between py-5 px-6 md:px-10">
+        <div className="luxury-container flex items-center justify-between py-4 px-6 md:px-10">
           {/* Logo */}
           <Link to="/" className="hover:opacity-80 transition-opacity duration-300 shrink-0">
             <img
               src={logoAP}
               alt="Dr. Akshay Parmar"
               className={`transition-all duration-500 ${
-                scrolled ? "h-24 md:h-28" : "h-28 md:h-36"
+                scrolled ? "h-16 md:h-20" : "h-20 md:h-24"
               }`}
               style={{ filter: scrolled ? "none" : "invert(1)" }}
             />
           </Link>
 
-          {/* Menu toggle */}
+          {/* Desktop nav items */}
+          <div className="hidden lg:flex items-center gap-1">
+            {navItems.map((item) => (
+              <div
+                key={item.label}
+                className="relative"
+                onMouseEnter={() => item.links && handleDropdownEnter(item.label)}
+                onMouseLeave={handleDropdownLeave}
+              >
+                {item.to && !item.links ? (
+                  <Link
+                    to={item.to}
+                    className={`px-3 xl:px-4 py-2 font-body text-[10px] xl:text-[11px] tracking-[0.2em] uppercase transition-colors duration-300 ${
+                      scrolled
+                        ? "text-muted-foreground hover:text-navy"
+                        : "text-primary-foreground/50 hover:text-primary-foreground"
+                    }`}
+                  >
+                    {item.label}
+                  </Link>
+                ) : (
+                  <button
+                    className={`px-3 xl:px-4 py-2 font-body text-[10px] xl:text-[11px] tracking-[0.2em] uppercase transition-colors duration-300 ${
+                      scrolled
+                        ? "text-muted-foreground hover:text-navy"
+                        : "text-primary-foreground/50 hover:text-primary-foreground"
+                    }`}
+                  >
+                    {item.label}
+                  </button>
+                )}
+
+                {/* Dropdown */}
+                <AnimatePresence>
+                  {item.links && activeDropdown === item.label && (
+                    <motion.div
+                      initial={{ opacity: 0, y: 4 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: 4 }}
+                      transition={{ duration: 0.2 }}
+                      className="absolute top-full left-0 mt-1 min-w-[240px] bg-background/98 backdrop-blur-lg border border-border rounded-sm shadow-lg z-[70] py-3"
+                    >
+                      {item.links.map((link) =>
+                        link.isAnchor ? (
+                          <button
+                            key={link.label}
+                            onClick={() => handleAnchorClick(link.to.replace("/", ""))}
+                            className="block w-full text-left px-5 py-2.5 font-body text-[11px] tracking-[0.05em] text-muted-foreground hover:text-navy hover:bg-muted/50 transition-colors duration-200"
+                          >
+                            {link.label}
+                          </button>
+                        ) : (
+                          <Link
+                            key={link.label}
+                            to={link.to + (link.hash || "")}
+                            className="block px-5 py-2.5 font-body text-[11px] tracking-[0.05em] text-muted-foreground hover:text-navy hover:bg-muted/50 transition-colors duration-200"
+                          >
+                            {link.label}
+                          </Link>
+                        )
+                      )}
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </div>
+            ))}
+          </div>
+
+          {/* Mobile menu toggle */}
           <button
             onClick={() => setMenuOpen(!menuOpen)}
-            className={`p-3 -mr-3 rounded-sm transition-all duration-300 ${
+            className={`lg:hidden p-3 -mr-3 rounded-sm transition-all duration-300 ${
               scrolled
                 ? "text-muted-foreground hover:text-navy hover:bg-muted/50"
                 : "text-primary-foreground/70 hover:text-primary-foreground hover:bg-primary-foreground/5"
             }`}
             aria-label="Toggle menu"
           >
-            {menuOpen ? (
-              <X size={24} strokeWidth={1.2} />
-            ) : (
-              <Menu size={24} strokeWidth={1.2} />
-            )}
+            {menuOpen ? <X size={24} strokeWidth={1.2} /> : <Menu size={24} strokeWidth={1.2} />}
           </button>
         </div>
       </nav>
 
-      {/* Full overlay menu */}
+      {/* Full overlay mega menu */}
       <AnimatePresence>
         {menuOpen && (
           <motion.div
@@ -151,35 +306,35 @@ const SiteNavigation = () => {
               </button>
             </div>
 
-            {/* Menu content */}
-            <div className="luxury-container px-6 md:px-10 pt-12 md:pt-20 pb-12 overflow-y-auto max-h-[calc(100vh-70px)]">
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 md:gap-16">
-                {menuSections.map((section, si) => (
+            {/* Menu content — improved spacing */}
+            <div className="luxury-container px-6 md:px-10 pt-12 md:pt-16 pb-12 overflow-y-auto max-h-[calc(100vh-70px)]">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-14 md:gap-16 lg:gap-20">
+                {megaMenuSections.map((section, si) => (
                   <motion.div
                     key={section.title}
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.12 + si * 0.07, duration: 0.5, ease: "easeOut" }}
+                    transition={{ delay: 0.12 + si * 0.06, duration: 0.5, ease: "easeOut" }}
                   >
-                    <p className="font-body text-[10px] tracking-[0.2em] uppercase text-primary-foreground/25 mb-6">
+                    <p className="font-body text-[10px] tracking-[0.25em] uppercase text-primary-foreground/25 mb-7">
                       {section.title}
                     </p>
-                    <div className="space-y-4">
+                    <div className="space-y-5">
                       {section.links.map((link) =>
                         link.isAnchor ? (
                           <button
                             key={link.label}
                             onClick={() => handleAnchorClick(link.to.replace("/", ""))}
-                            className="block font-body text-[13px] tracking-[0.02em] text-primary-foreground/55 hover:text-primary-foreground transition-colors duration-300"
+                            className="block font-body text-[13px] tracking-[0.02em] text-primary-foreground/50 hover:text-primary-foreground transition-colors duration-300"
                           >
                             {link.label}
                           </button>
                         ) : (
                           <Link
                             key={link.label}
-                            to={link.to}
+                            to={link.to + (link.hash || "")}
                             onClick={() => setMenuOpen(false)}
-                            className="block font-body text-[13px] tracking-[0.02em] text-primary-foreground/55 hover:text-primary-foreground transition-colors duration-300"
+                            className="block font-body text-[13px] tracking-[0.02em] text-primary-foreground/50 hover:text-primary-foreground transition-colors duration-300"
                           >
                             {link.label}
                           </Link>
@@ -190,12 +345,12 @@ const SiteNavigation = () => {
                 ))}
               </div>
 
-              {/* Bottom subtle line */}
+              {/* Bottom line */}
               <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.55, duration: 0.4 }}
-                className="mt-20 pt-6 border-t border-primary-foreground/8"
+                className="mt-24 pt-6 border-t border-primary-foreground/8"
               >
                 <p className="font-body text-[10px] tracking-[0.15em] uppercase text-primary-foreground/20">
                   Board-Certified Prosthodontist · New Jersey

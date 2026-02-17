@@ -1,14 +1,34 @@
-import { motion } from "framer-motion";
-import { useNavigate } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { useNavigate, Link } from "react-router-dom";
 import logoAP from "@/assets/logo-ap.png";
 import heroPortrait from "@/assets/dr-parmar-hero.jpg";
 
+const rotatingQuotes = [
+  { text: "The implants feel completely natural — I can eat and speak with confidence again.", label: "Full-Arch Patient" },
+  { text: "The veneers are so natural that even close friends assumed nothing had changed.", label: "Aesthetic Patient" },
+  { text: "The result exceeded what I thought was possible. I finally trust my teeth again.", label: "Reconstructive Patient" },
+];
+
 const HeroSection = () => {
   const navigate = useNavigate();
+  const [quoteIndex, setQuoteIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setQuoteIndex((prev) => (prev + 1) % rotatingQuotes.length);
+    }, 6000);
+    return () => clearInterval(interval);
+  }, []);
 
   return (
-    <section className="relative min-h-[90vh] overflow-hidden cursor-pointer group" onClick={() => navigate('/clinical-cases')} role="link" aria-label="View Selected Clinical Work">
-      {/* Background portrait — pushed left, subdued atmospheric element */}
+    <section
+      className="relative min-h-[90vh] overflow-hidden cursor-pointer group"
+      onClick={() => navigate("/clinical-cases")}
+      role="link"
+      aria-label="View Selected Clinical Work"
+    >
+      {/* Background portrait */}
       <div className="absolute inset-0">
         <img
           src={heroPortrait}
@@ -20,7 +40,6 @@ const HeroSection = () => {
             transform: "scale(1.08)",
           }}
         />
-        {/* Cold navy overlay */}
         <div
           className="absolute inset-0"
           style={{
@@ -28,7 +47,6 @@ const HeroSection = () => {
               "linear-gradient(145deg, hsl(220 30% 10% / 0.94) 0%, hsl(220 22% 14% / 0.85) 45%, hsl(218 20% 16% / 0.86) 75%, hsl(220 30% 10% / 0.96) 100%)",
           }}
         />
-        {/* Bottom fade */}
         <div
           className="absolute inset-0"
           style={{
@@ -40,7 +58,6 @@ const HeroSection = () => {
 
       {/* Content */}
       <div className="relative z-10 min-h-[90vh] flex flex-col justify-between px-6 md:px-12 lg:px-24">
-        {/* Top spacer for nav */}
         <div className="pt-20 md:pt-28" />
 
         {/* Main composition */}
@@ -52,13 +69,10 @@ const HeroSection = () => {
                 src={logoAP}
                 alt="Dr. Akshay Parmar, Board-Certified Prosthodontist"
                 className="w-[65%] md:w-[55%] lg:w-[75%] lg:scale-[2.5] object-contain"
-                style={{
-                  filter: "invert(1)",
-                }}
+                style={{ filter: "invert(1)" }}
               />
             </div>
 
-            {/* Spacer */}
             <div className="hidden lg:block lg:col-span-1" />
 
             {/* Right — Typography */}
@@ -84,30 +98,56 @@ const HeroSection = () => {
                   Board-Certified Prosthodontist
                 </p>
 
-                <p className="font-body text-[11px] md:text-xs tracking-[0.2em] uppercase text-primary-foreground/50 leading-relaxed mb-12 max-w-lg">
+                <p className="font-body text-[11px] md:text-xs tracking-[0.2em] uppercase text-primary-foreground/50 leading-relaxed mb-10 max-w-lg">
                   Dental Implants &nbsp;·&nbsp; Immediate Implants &nbsp;·&nbsp; Veneers &nbsp;·&nbsp; Full-Arch Rehabilitation
                 </p>
 
-                <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                  <a
-                    href="#services"
+                {/* Dual CTAs */}
+                <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-10">
+                  <Link
+                    to="/clinical-cases"
                     onClick={(e) => e.stopPropagation()}
-                    className="inline-block px-10 py-4 border border-primary-foreground/25 bg-primary-foreground text-navy font-body text-[11px] tracking-[0.25em] uppercase transition-all duration-300 hover:bg-transparent hover:text-primary-foreground"
+                    className="inline-block px-10 py-4 border border-primary-foreground/25 bg-primary-foreground text-navy font-body text-[11px] tracking-[0.25em] uppercase transition-all duration-300 hover:bg-transparent hover:text-primary-foreground text-center"
                   >
-                    For Patients
-                  </a>
-                  <a
-                    href="#education"
+                    View Clinical Cases
+                  </Link>
+                  <Link
+                    to="/testimonials"
                     onClick={(e) => e.stopPropagation()}
-                    className="inline-block px-10 py-4 border border-primary-foreground/25 text-primary-foreground/70 font-body text-[11px] tracking-[0.25em] uppercase transition-all duration-300 hover:border-primary-foreground/50 hover:text-primary-foreground"
+                    className="inline-block px-10 py-4 border border-primary-foreground/25 text-primary-foreground/70 font-body text-[11px] tracking-[0.25em] uppercase transition-all duration-300 hover:border-primary-foreground/50 hover:text-primary-foreground text-center"
                   >
-                    For Dentists
-                  </a>
+                    Read Patient Testimonials
+                  </Link>
                 </div>
 
-                <p className="font-body text-[10px] tracking-[0.2em] uppercase text-primary-foreground/40 mt-12 text-center lg:text-left">
-                  Serving patients across New Jersey
-                </p>
+                {/* Rotating testimonial */}
+                <div className="max-w-lg">
+                  <p className="font-body text-[9px] tracking-[0.3em] uppercase text-primary-foreground/25 mb-3">
+                    Patient Feedback
+                  </p>
+                  <div className="h-12 relative overflow-hidden">
+                    <AnimatePresence mode="wait">
+                      <motion.div
+                        key={quoteIndex}
+                        initial={{ opacity: 0, y: 8 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: -8 }}
+                        transition={{ duration: 0.5 }}
+                      >
+                        <p className="font-body text-[11px] md:text-xs text-primary-foreground/40 font-light italic leading-relaxed">
+                          "{rotatingQuotes[quoteIndex].text}"
+                        </p>
+                      </motion.div>
+                    </AnimatePresence>
+                  </div>
+                  <Link
+                    to="/testimonials"
+                    onClick={(e) => e.stopPropagation()}
+                    className="font-body text-[9px] tracking-[0.2em] uppercase text-primary-foreground/30 hover:text-primary-foreground/50 transition-colors duration-300 mt-1 inline-block"
+                  >
+                    More Testimonials →
+                  </Link>
+                </div>
               </motion.div>
             </div>
           </div>
