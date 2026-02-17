@@ -2,7 +2,7 @@ import PatientGuideLayout from "@/components/PatientGuideLayout";
 
 const data = {
   pageTitle: "Teeth Whitening Guide | Professional Whitening NJ",
-  pageDescription: "Patient guide to professional teeth whitening. Understand the process, expected results, sensitivity management, and maintenance for lasting brightness.",
+  pageDescription: "Patient guide to professional teeth whitening. Specialist-supervised protocols, expected results, sensitivity management, and maintenance for lasting brightness.",
   subtitle: "Patient Guide · Teeth Whitening",
   title: "Teeth Whitening",
   titleItalic: "Treatment Guide",

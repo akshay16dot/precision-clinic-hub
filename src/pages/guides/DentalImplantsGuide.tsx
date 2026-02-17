@@ -1,8 +1,8 @@
 import PatientGuideLayout from "@/components/PatientGuideLayout";
 
 const data = {
-  pageTitle: "Dental Implant Guide | What to Expect | Dr. Akshay Parmar",
-  pageDescription: "Complete patient guide to dental implant treatment. Understand the procedure, healing timeline, recovery expectations, and frequently asked questions.",
+  pageTitle: "Dental Implant Guide | What to Expect | Prosthodontist NJ",
+  pageDescription: "Specialist-authored guide to dental implant treatment. Understand the procedure, healing phases, recovery timeline, and outcomes from a Board-Certified Prosthodontist in New Jersey.",
   subtitle: "Patient Guide · Dental Implants",
   title: "Dental Implant",
   titleItalic: "Treatment Guide",

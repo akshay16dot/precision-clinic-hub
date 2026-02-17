@@ -12,8 +12,8 @@ import { usePageSEO } from "@/hooks/usePageSEO";
 
 const Index = () => {
   usePageSEO({
-    title: "Dr. Akshay Parmar | Board-Certified Prosthodontist in New Jersey",
-    description: "Board-Certified Prosthodontist offering advanced implant rehabilitation, full-arch reconstruction, and maxillofacial prosthetics in New Jersey. Precision-driven care for complex dental and surgical cases.",
+    title: "Prosthodontist in New Jersey | Implant & Reconstruction Specialist",
+    description: "Board-Certified Prosthodontist providing dental implant rehabilitation, full-arch reconstruction, maxillofacial prosthetics, and complex bite restoration in New Jersey. Fellowship-trained specialist care.",
   });
 
   return (

@@ -34,8 +34,8 @@ const faqItems = [
 
 const ImmediateImplants = () => {
   usePageSEO({
-    title: "Immediate Implant Rehabilitation | Same-Day Implants NJ",
-    description: "Immediate implant placement and same-day provisional restoration by a Board-Certified Prosthodontist. Precision-planned protocols for predictable outcomes and accelerated recovery in New Jersey.",
+    title: "Immediate Dental Implants NJ | Same-Day Implant Specialist",
+    description: "Immediate implant placement with same-day provisional restoration. Board-Certified Prosthodontist specializing in single-visit extraction and implant protocols in New Jersey.",
   });
 
   return (

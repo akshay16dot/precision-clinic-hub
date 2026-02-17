@@ -13,8 +13,8 @@ const fadeUp = {
 
 const Education = () => {
   usePageSEO({
-    title: "Education | Patient Guides & Clinical Training Programs",
-    description: "Educational resources for patients and dental professionals. Treatment guides, clinical protocols, and advanced implant training from Board-Certified Prosthodontist Dr. Akshay Parmar.",
+    title: "Education | Patient Guides & Dentist Training Programs",
+    description: "Specialist-authored educational resources for patients and dental professionals. Treatment guides, clinical implant training, and evidence-based protocols from a Board-Certified Prosthodontist.",
   });
 
   return (

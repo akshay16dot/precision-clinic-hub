@@ -14,8 +14,8 @@ const fadeUp = {
 
 const ToothWearRehabilitation = () => {
   usePageSEO({
-    title: "Tooth Wear & Bite Rehabilitation | Prosthodontist NJ",
-    description: "Specialist-led rehabilitation for tooth wear, erosion, and bite collapse. Biomechanically precise restorations that recover lost structure, function, and aesthetics.",
+    title: "Bite Reconstruction & Tooth Wear | Prosthodontist NJ",
+    description: "Specialist-led bite reconstruction and tooth wear rehabilitation in New Jersey. Biomechanically precise restorations that recover lost vertical dimension, function, and structural integrity.",
   });
 
   return (

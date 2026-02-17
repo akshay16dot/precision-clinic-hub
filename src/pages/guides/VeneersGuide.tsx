@@ -1,8 +1,8 @@
 import PatientGuideLayout from "@/components/PatientGuideLayout";
 
 const data = {
-  pageTitle: "Porcelain Veneers Guide | Aesthetic Reconstruction",
-  pageDescription: "Patient guide to porcelain veneers and aesthetic reconstruction. Learn about treatment planning, preparation, bonding, and long-term care.",
+  pageTitle: "Porcelain Veneers Guide | Aesthetic Reconstruction NJ",
+  pageDescription: "Specialist-authored guide to porcelain veneers and aesthetic reconstruction. Treatment planning, preparation, bonding process, and long-term care from a Board-Certified Prosthodontist.",
   subtitle: "Patient Guide · Veneers & Aesthetic Reconstruction",
   title: "Veneers & Aesthetic",
   titleItalic: "Reconstruction Guide",

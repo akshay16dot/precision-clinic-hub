@@ -14,8 +14,8 @@ const fadeUp = {
 
 const TeethWhitening = () => {
   usePageSEO({
-    title: "Professional Teeth Whitening | Prosthodontist in New Jersey",
-    description: "Safe, specialist-supervised teeth whitening for natural brightness. Conservative enhancement guided by clinical expertise and aesthetic analysis.",
+    title: "Teeth Whitening NJ | Specialist-Supervised Whitening",
+    description: "Professional teeth whitening supervised by a Board-Certified Prosthodontist in New Jersey. Safe, controlled protocols for natural brightness with clinical precision and shade analysis.",
   });
 
   return (

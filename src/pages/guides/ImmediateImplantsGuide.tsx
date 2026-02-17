@@ -1,8 +1,8 @@
 import PatientGuideLayout from "@/components/PatientGuideLayout";
 
 const data = {
-  pageTitle: "Immediate Implant Guide | Same-Day Tooth Replacement",
-  pageDescription: "Patient guide to immediate implant placement. Understand same-day tooth replacement, candidacy, healing timeline, and expected outcomes.",
+  pageTitle: "Immediate Implant Guide | Same-Day Tooth Replacement NJ",
+  pageDescription: "Patient guide to immediate implant placement and same-day tooth replacement. Candidacy, procedure, healing, and outcomes explained by a Board-Certified Prosthodontist in New Jersey.",
   subtitle: "Patient Guide · Immediate Implants",
   title: "Immediate Implant",
   titleItalic: "Treatment Guide",

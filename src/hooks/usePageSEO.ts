@@ -6,7 +6,7 @@ interface PageSEO {
   canonical?: string;
 }
 
-const DEFAULT_TITLE = "Dr. Akshay Parmar | Board-Certified Prosthodontist in New Jersey";
+const DEFAULT_TITLE = "Prosthodontist in New Jersey | Implant & Reconstruction Specialist";
 
 /**
  * Sets document title and meta description for each page.

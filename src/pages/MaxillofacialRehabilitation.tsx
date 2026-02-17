@@ -49,8 +49,8 @@ const approach = [
 
 const MaxillofacialRehabilitation = () => {
   usePageSEO({
-    title: "Maxillofacial Prosthetics & Oncology Rehabilitation | NJ Specialist",
-    description: "Fellowship-trained maxillofacial prosthodontist providing oncology reconstruction, obturator prostheses, and craniofacial rehabilitation. Advanced care for post-surgical and congenital conditions in New Jersey.",
+    title: "Maxillofacial Prosthodontist NJ | Oncology Reconstruction",
+    description: "Fellowship-trained maxillofacial prosthodontist in New Jersey. Post-oncologic rehabilitation, obturator prostheses, craniofacial reconstruction, and complex surgical prosthetics. Memorial Sloan Kettering trained.",
   });
 
   return (

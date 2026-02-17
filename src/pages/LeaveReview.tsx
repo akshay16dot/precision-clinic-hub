@@ -6,8 +6,8 @@ import { usePageSEO } from "@/hooks/usePageSEO";
 
 const LeaveReview = () => {
   usePageSEO({
-    title: "Leave a Review | Dr. Akshay Parmar, Prosthodontist",
-    description: "Share your experience with Dr. Akshay Parmar. Your feedback helps others seeking specialist prosthodontic and implant care in New Jersey.",
+    title: "Leave a Review | Prosthodontist Dr. Akshay Parmar NJ",
+    description: "Share your experience with Board-Certified Prosthodontist Dr. Akshay Parmar. Patient feedback supports others seeking specialist implant and prosthetic care in New Jersey.",
   });
 
   return (

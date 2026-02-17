@@ -39,8 +39,8 @@ const testimonials = [
 
 const ProfessionalTestimonials = () => {
   usePageSEO({
-    title: "Professional Testimonials | Clinician Feedback on Training",
-    description: "Reflections from dentists and specialists on clinical education, implant training, and mentorship programs led by Board-Certified Prosthodontist Dr. Akshay Parmar.",
+    title: "Clinician Testimonials | Implant Training Reviews",
+    description: "Peer reflections from dentists and specialists on clinical implant education, live surgery mentorship, and prosthodontic training programs.",
   });
 
   return (

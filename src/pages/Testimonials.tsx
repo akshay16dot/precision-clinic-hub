@@ -45,8 +45,8 @@ const testimonials = [
 
 const Testimonials = () => {
   usePageSEO({
-    title: "Patient Testimonials | Dr. Akshay Parmar, Prosthodontist NJ",
-    description: "Patient experiences with advanced implant rehabilitation, aesthetic reconstruction, and complex prosthetic care. Real reflections on comfort, function, and clinical transformation.",
+    title: "Patient Reviews | Prosthodontist in New Jersey",
+    description: "Patient experiences with dental implant rehabilitation, full-arch reconstruction, veneers, and complex prosthetic care. Verified outcomes from a Board-Certified Prosthodontist practice in NJ.",
   });
 
   return (
