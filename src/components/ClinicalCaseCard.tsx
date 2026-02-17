@@ -8,15 +8,17 @@ export interface ImagePair {
   afterLabel?: string;
 }
 
+export interface DetailSection {
+  label: string;
+  text: string;
+}
+
 export interface ClinicalCase {
   title: string;
   subtitle: string;
   descriptor: string;
   imagePairs: ImagePair[];
-  challenge: string;
-  strategy: string;
-  functional: string;
-  aesthetic: string;
+  details: DetailSection[];
 }
 
 const fadeUp = {
@@ -148,12 +150,7 @@ const ClinicalCaseCard = ({ c, index }: { c: ClinicalCase; index: number }) => {
               className="overflow-hidden"
             >
               <div className="pt-6 pb-2 space-y-5">
-                {[
-                  { label: "Clinical Challenge", text: c.challenge },
-                  { label: "Treatment Strategy", text: c.strategy },
-                  { label: "Functional Objectives", text: c.functional },
-                  { label: "Aesthetic Outcome", text: c.aesthetic },
-                ].map((item, j) => (
+                {(c.details || []).map((item, j) => (
                   <div key={j}>
                     <p className="font-body text-[10px] tracking-[0.3em] uppercase text-charcoal-light/60 mb-2">
                       {item.label}
