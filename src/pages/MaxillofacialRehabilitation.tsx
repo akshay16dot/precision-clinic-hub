@@ -73,7 +73,7 @@ const MaxillofacialRehabilitation = () => {
             aria-hidden="true"
             className="absolute inset-0 w-full h-full object-cover object-[center_20%]"
             style={{
-              filter: "brightness(0.45) contrast(1.05) saturate(0.15)",
+              filter: "brightness(0.55) contrast(1.05) saturate(0.15)",
             }}
           />
           <div className="absolute inset-0 hero-dark-overlay" />
@@ -218,10 +218,25 @@ const MaxillofacialRehabilitation = () => {
 
       {/* ═══════ SPECIALIST AUTHORITY ═══════ */}
       <section
-        className="py-28 md:py-36 px-6 md:px-8"
+        className="relative py-28 md:py-36 px-6 md:px-8 overflow-hidden"
         style={{ background: "linear-gradient(180deg, hsl(220 18% 9%) 0%, hsl(220 15% 11%) 100%)" }}
       >
-        <div className="max-w-2xl mx-auto">
+        {/* Background prosthesis image — mobile/tablet only */}
+        <div className="absolute inset-0 lg:hidden">
+          <img
+            src={obturatorProsthesis2}
+            alt=""
+            aria-hidden="true"
+            className="absolute inset-0 w-full h-full object-contain object-center"
+            style={{
+              filter: "brightness(0.25) contrast(1.1) saturate(0.3)",
+              mixBlendMode: "lighten",
+              opacity: 0.5,
+            }}
+          />
+        </div>
+
+        <div className="relative z-10 max-w-2xl mx-auto">
           <motion.div {...fadeUp} transition={{ duration: 1 }}>
             <p
               className="font-body text-[10px] tracking-[0.35em] uppercase mb-8 text-center"
@@ -255,18 +270,6 @@ const MaxillofacialRehabilitation = () => {
               </p>
             </div>
 
-            {/* Clinical prosthesis image — mobile/tablet only */}
-            <div className="lg:hidden flex justify-center my-12">
-              <img
-                src={obturatorProsthesis2}
-                alt="Obturator prosthesis examples"
-                className="w-[75%] max-w-sm object-contain"
-                style={{
-                  filter: "brightness(0.85) contrast(1.05) saturate(0.4) sepia(0.05)",
-                  mixBlendMode: "lighten",
-                }}
-              />
-            </div>
 
             <p
               className="font-body text-[10px] tracking-[0.3em] uppercase mt-16 text-center"
