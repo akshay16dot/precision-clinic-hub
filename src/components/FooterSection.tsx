@@ -29,12 +29,12 @@ const FooterSection = () => {
             <Link to="/">
               <img src={logoAP} alt="Dr. Akshay Parmar" className="h-44 md:h-56 mb-6" style={{ filter: "invert(1)" }} />
             </Link>
-            <p className="font-body text-[10px] tracking-[0.3em] uppercase text-primary-foreground/30 mb-3">
+            <p className="font-body text-[10px] tracking-[0.3em] uppercase text-primary-foreground/45 mb-3">
               Board-Certified Prosthodontist
             </p>
             <a
               href="mailto:akshaytheparmar@gmail.com"
-              className="block font-body text-sm text-primary-foreground/50 font-light hover:text-primary-foreground/70 transition-colors"
+              className="block font-body text-sm text-primary-foreground/60 font-light hover:text-primary-foreground/80 transition-colors"
             >
               akshaytheparmar@gmail.com
             </a>
@@ -42,35 +42,35 @@ const FooterSection = () => {
 
           {/* Navigation */}
           <div className="space-y-2.5">
-            <p className="font-body text-[10px] tracking-[0.3em] uppercase text-primary-foreground/30 mb-4">
+            <p className="font-body text-[10px] tracking-[0.3em] uppercase text-primary-foreground/45 mb-4">
               Practice
             </p>
-            <Link to="/dental-implants-new-jersey" className="block font-body text-xs text-primary-foreground/40 hover:text-primary-foreground/70 tracking-wide transition-colors">
+            <Link to="/dental-implants-new-jersey" className="block font-body text-xs text-primary-foreground/55 hover:text-primary-foreground/80 tracking-wide transition-colors">
               Dental Implants
             </Link>
-            <Link to="/full-arch-implants-new-jersey" className="block font-body text-xs text-primary-foreground/40 hover:text-primary-foreground/70 tracking-wide transition-colors">
+            <Link to="/full-arch-implants-new-jersey" className="block font-body text-xs text-primary-foreground/55 hover:text-primary-foreground/80 tracking-wide transition-colors">
               Full-Arch Rehabilitation
             </Link>
-            <Link to="/aesthetic-dentistry" className="block font-body text-xs text-primary-foreground/40 hover:text-primary-foreground/70 tracking-wide transition-colors">
+            <Link to="/aesthetic-dentistry" className="block font-body text-xs text-primary-foreground/55 hover:text-primary-foreground/80 tracking-wide transition-colors">
               Aesthetic Dentistry
             </Link>
-            <Link to="/maxillofacial-rehabilitation" className="block font-body text-xs text-primary-foreground/40 hover:text-primary-foreground/70 tracking-wide transition-colors">
+            <Link to="/maxillofacial-rehabilitation" className="block font-body text-xs text-primary-foreground/55 hover:text-primary-foreground/80 tracking-wide transition-colors">
               Maxillofacial Rehabilitation
             </Link>
-            <Link to="/education" className="block font-body text-xs text-primary-foreground/40 hover:text-primary-foreground/70 tracking-wide transition-colors">
+            <Link to="/education" className="block font-body text-xs text-primary-foreground/55 hover:text-primary-foreground/80 tracking-wide transition-colors">
               Education & Courses
             </Link>
-            <Link to="/about" className="block font-body text-xs text-primary-foreground/40 hover:text-primary-foreground/70 tracking-wide transition-colors">
+            <Link to="/about" className="block font-body text-xs text-primary-foreground/55 hover:text-primary-foreground/80 tracking-wide transition-colors">
               About
             </Link>
-            <Link to="/contact" className="block font-body text-xs text-primary-foreground/40 hover:text-primary-foreground/70 tracking-wide transition-colors">
+            <Link to="/contact" className="block font-body text-xs text-primary-foreground/55 hover:text-primary-foreground/80 tracking-wide transition-colors">
               Contact
             </Link>
           </div>
 
           {/* Professional Links */}
           <div>
-            <p className="font-body text-[10px] tracking-[0.3em] uppercase text-primary-foreground/30 mb-4">
+            <p className="font-body text-[10px] tracking-[0.3em] uppercase text-primary-foreground/45 mb-4">
               Professional Platforms
             </p>
             <div className="space-y-4">
@@ -82,10 +82,10 @@ const FooterSection = () => {
                   rel="noopener noreferrer"
                   className="block group"
                 >
-                  <p className="font-body text-xs text-primary-foreground/50 group-hover:text-primary-foreground/70 tracking-wide transition-colors">
+                  <p className="font-body text-xs text-primary-foreground/60 group-hover:text-primary-foreground/80 tracking-wide transition-colors">
                     {link.name}
                   </p>
-                  <p className="font-body text-[10px] text-primary-foreground/25 mt-0.5">
+                  <p className="font-body text-[10px] text-primary-foreground/40 mt-0.5">
                     {link.description}
                   </p>
                 </a>
@@ -95,12 +95,12 @@ const FooterSection = () => {
         </div>
 
         {/* Bottom bar */}
-        <div className="mt-12 pt-6 border-t border-primary-foreground/10">
+        <div className="mt-12 pt-6 border-t border-primary-foreground/15">
           <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-2">
-            <p className="font-body text-xs text-primary-foreground/25 tracking-wide">
+            <p className="font-body text-xs text-primary-foreground/40 tracking-wide">
               © {new Date().getFullYear()} Dr. Akshay Parmar
             </p>
-            <p className="font-body text-xs text-primary-foreground/15">
+            <p className="font-body text-xs text-primary-foreground/30">
               All rights reserved.
             </p>
           </div>

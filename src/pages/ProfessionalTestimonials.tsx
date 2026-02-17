@@ -48,7 +48,7 @@ const ProfessionalTestimonials = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.6 }}
-            className="font-body text-[10px] tracking-[0.35em] uppercase text-primary-foreground/30 mb-6"
+            className="font-body text-[10px] tracking-[0.35em] uppercase text-primary-foreground/45 mb-6"
           >
             Professional Education
           </motion.p>
@@ -64,7 +64,7 @@ const ProfessionalTestimonials = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="font-body text-xs md:text-sm text-primary-foreground/40 font-light tracking-wide"
+            className="font-body text-xs md:text-sm text-primary-foreground/55 font-light tracking-wide"
           >
             Perspectives from clinicians and course participants.
           </motion.p>

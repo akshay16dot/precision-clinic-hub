@@ -344,7 +344,7 @@ const SiteNavigation = () => {
                 transition={{ delay: 0.55, duration: 0.4 }}
                 className="mt-24 pt-6 border-t border-primary-foreground/12"
               >
-                <p className="font-body text-[10px] tracking-[0.15em] uppercase text-primary-foreground/30">
+                <p className="font-body text-[10px] tracking-[0.15em] uppercase text-primary-foreground/45">
                   Board-Certified Prosthodontist · New Jersey
                 </p>
               </motion.div>

@@ -94,11 +94,11 @@ const HeroSection = () => {
                   <span className="italic">Implant Reconstruction</span>
                 </p>
 
-                <p className="font-body text-[10px] md:text-xs tracking-[0.3em] uppercase text-primary-foreground/55 leading-relaxed mb-4 max-w-md">
+                <p className="font-body text-[10px] md:text-xs tracking-[0.3em] uppercase text-primary-foreground/60 leading-relaxed mb-4 max-w-md">
                   Board-Certified Prosthodontist
                 </p>
 
-                <p className="font-body text-[11px] md:text-xs tracking-[0.2em] uppercase text-primary-foreground/50 leading-relaxed mb-10 max-w-lg">
+                <p className="font-body text-[11px] md:text-xs tracking-[0.2em] uppercase text-primary-foreground/55 leading-relaxed mb-10 max-w-lg">
                   Dental Implants &nbsp;·&nbsp; Immediate Implants &nbsp;·&nbsp; Veneers &nbsp;·&nbsp; Full-Arch Rehabilitation
                 </p>
 
@@ -122,7 +122,7 @@ const HeroSection = () => {
 
                 {/* Rotating testimonial */}
                 <div className="max-w-lg">
-                  <p className="font-body text-[9px] tracking-[0.3em] uppercase text-primary-foreground/25 mb-3">
+                  <p className="font-body text-[9px] tracking-[0.3em] uppercase text-primary-foreground/45 mb-3">
                     Patient Feedback
                   </p>
                   <div className="h-12 relative overflow-hidden">
@@ -134,7 +134,7 @@ const HeroSection = () => {
                         exit={{ opacity: 0, y: -8 }}
                         transition={{ duration: 0.5 }}
                       >
-                        <p className="font-body text-[11px] md:text-xs text-primary-foreground/40 font-light italic leading-relaxed">
+                        <p className="font-body text-[11px] md:text-xs text-primary-foreground/60 font-light italic leading-relaxed">
                           "{rotatingQuotes[quoteIndex].text}"
                         </p>
                       </motion.div>
@@ -143,7 +143,7 @@ const HeroSection = () => {
                   <Link
                     to="/testimonials"
                     onClick={(e) => e.stopPropagation()}
-                    className="font-body text-[9px] tracking-[0.2em] uppercase text-primary-foreground/30 hover:text-primary-foreground/50 transition-colors duration-300 mt-1 inline-block"
+                    className="font-body text-[9px] tracking-[0.2em] uppercase text-primary-foreground/45 hover:text-primary-foreground/70 transition-colors duration-300 mt-1 inline-block"
                   >
                     More Testimonials →
                   </Link>
@@ -155,10 +155,10 @@ const HeroSection = () => {
 
         {/* Bottom bar */}
         <div className="pb-5 md:pb-6 flex items-end justify-between">
-          <p className="font-body text-[10px] tracking-[0.3em] uppercase text-primary-foreground/35">
+          <p className="font-body text-[10px] tracking-[0.3em] uppercase text-primary-foreground/45">
             © {new Date().getFullYear()}
           </p>
-          <span className="font-body text-[10px] tracking-[0.25em] uppercase text-primary-foreground/40 group-hover:text-primary-foreground/65 transition-all duration-500 relative after:content-[''] after:absolute after:bottom-[-2px] after:left-0 after:w-full after:h-px after:bg-primary-foreground/30 after:scale-x-0 after:origin-right after:transition-transform after:duration-500 group-hover:after:scale-x-100 group-hover:after:origin-left">
+          <span className="font-body text-[10px] tracking-[0.25em] uppercase text-primary-foreground/50 group-hover:text-primary-foreground/70 transition-all duration-500 relative after:content-[''] after:absolute after:bottom-[-2px] after:left-0 after:w-full after:h-px after:bg-primary-foreground/40 after:scale-x-0 after:origin-right after:transition-transform after:duration-500 group-hover:after:scale-x-100 group-hover:after:origin-left">
             Explore Clinical Cases
           </span>
           <motion.div
