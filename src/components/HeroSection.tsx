@@ -57,26 +57,26 @@ const HeroSection = () => {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 min-h-[90vh] flex flex-col justify-between px-6 md:px-12 lg:px-24">
+      <div className="relative z-10 min-h-[90vh] flex flex-col justify-between px-5 sm:px-6 md:px-12 lg:px-24">
         <div className="pt-20 md:pt-28" />
 
         {/* Main composition */}
         <div className="flex-1 flex items-center py-6">
-          <div className="w-full flex flex-col lg:flex-row items-center gap-8 lg:gap-0">
-            {/* Left — Logo */}
-            <div className="lg:w-[33%] flex-shrink-0 flex items-center justify-center">
+          <div className="w-full flex flex-col lg:flex-row items-center gap-6 lg:gap-0">
+            {/* Left — Logo (hidden on mobile/tablet, shown only on desktop) */}
+            <div className="hidden lg:flex lg:w-[33%] flex-shrink-0 items-center justify-center">
               <img
                 src={logoAP}
                 alt="Dr. Akshay Parmar, Board-Certified Prosthodontist"
-                className="w-[65%] md:w-[55%] lg:w-[75%] lg:scale-[2.5] object-contain"
+                className="w-[75%] lg:scale-[2.5] object-contain"
                 style={{ filter: "invert(1)" }}
               />
             </div>
 
             <div className="hidden lg:block lg:w-[8%]" />
 
-            {/* Right — Typography */}
-            <div className="lg:w-[59%] text-center lg:text-left lg:pl-6">
+            {/* Right — Typography (full width on mobile/tablet) */}
+            <div className="w-full lg:w-[59%] text-center lg:text-left lg:pl-6">
               <h1 className="sr-only">
                 Board-Certified Prosthodontist &amp; Implant Specialist in New Jersey
               </h1>
@@ -86,7 +86,7 @@ const HeroSection = () => {
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.9, delay: 0.3 }}
               >
-                <p className="font-display text-4xl md:text-5xl lg:text-[3.8rem] xl:text-[4.5rem] font-light text-primary-foreground leading-[0.93] tracking-tight mb-7">
+                <p className="font-display text-[34px] sm:text-[44px] md:text-[52px] lg:text-[3.8rem] xl:text-[4.5rem] font-light text-primary-foreground leading-[0.93] tracking-tight mb-6 lg:mb-7">
                   Advanced
                   <br />
                   Prosthodontics &amp;
@@ -94,38 +94,38 @@ const HeroSection = () => {
                   <span className="italic">Implant Reconstruction</span>
                 </p>
 
-                <p className="font-body text-[10px] md:text-xs tracking-[0.3em] uppercase text-primary-foreground/60 leading-relaxed mb-4 max-w-md">
+                <p className="font-body text-[10px] md:text-xs tracking-[0.3em] uppercase text-primary-foreground/60 leading-relaxed mb-3 lg:mb-4 max-w-md mx-auto lg:mx-0">
                   Board-Certified Prosthodontist
                 </p>
 
-                <p className="font-body text-[11px] md:text-xs tracking-[0.2em] uppercase text-primary-foreground/55 leading-relaxed mb-10 max-w-lg">
+                <p className="font-body text-[10px] sm:text-[11px] md:text-xs tracking-[0.15em] sm:tracking-[0.2em] uppercase text-primary-foreground/55 leading-relaxed mb-8 lg:mb-10 max-w-lg mx-auto lg:mx-0">
                   Dental Implants &nbsp;·&nbsp; Immediate Implants &nbsp;·&nbsp; Veneers &nbsp;·&nbsp; Full-Arch Rehabilitation
                 </p>
 
                 {/* Dual CTAs */}
-                <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-10">
+                <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start mb-8 lg:mb-10">
                   <Link
                     to="/clinical-cases"
                     onClick={(e) => e.stopPropagation()}
-                    className="inline-block px-10 py-4 border border-primary-foreground/25 bg-primary-foreground text-navy font-body text-[11px] tracking-[0.25em] uppercase transition-all duration-300 hover:bg-transparent hover:text-primary-foreground text-center"
+                    className="inline-block px-8 sm:px-10 py-4 border border-primary-foreground/25 bg-primary-foreground text-navy font-body text-[11px] tracking-[0.25em] uppercase transition-all duration-300 hover:bg-transparent hover:text-primary-foreground text-center"
                   >
                     View Clinical Cases
                   </Link>
                   <Link
                     to="/testimonials"
                     onClick={(e) => e.stopPropagation()}
-                    className="inline-block px-10 py-4 border border-primary-foreground/25 text-primary-foreground/70 font-body text-[11px] tracking-[0.25em] uppercase transition-all duration-300 hover:border-primary-foreground/50 hover:text-primary-foreground text-center"
+                    className="inline-block px-8 sm:px-10 py-4 border border-primary-foreground/25 text-primary-foreground/70 font-body text-[11px] tracking-[0.25em] uppercase transition-all duration-300 hover:border-primary-foreground/50 hover:text-primary-foreground text-center"
                   >
                     Read Patient Testimonials
                   </Link>
                 </div>
 
                 {/* Rotating testimonial */}
-                <div className="max-w-lg">
+                <div className="max-w-lg mx-auto lg:mx-0">
                   <p className="font-body text-[9px] tracking-[0.3em] uppercase text-primary-foreground/45 mb-3">
                     Patient Feedback
                   </p>
-                  <div className="h-12 relative overflow-hidden">
+                  <div className="h-14 sm:h-12 relative overflow-hidden">
                     <AnimatePresence mode="wait">
                       <motion.div
                         key={quoteIndex}
