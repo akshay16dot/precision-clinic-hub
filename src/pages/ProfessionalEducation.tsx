@@ -1,7 +1,8 @@
 import { motion } from "framer-motion";
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
-import PageNavigation from "@/components/PageNavigation";
+import { ExternalLink } from "lucide-react";
+import SiteNavigation from "@/components/SiteNavigation";
 import PageFooter from "@/components/PageFooter";
 
 import eduLecture1 from "@/assets/edu-lecture-1.jpg";
@@ -20,62 +21,49 @@ const fadeUp = {
   viewport: { once: true, margin: "-80px" },
 };
 
-const curriculum = [
+const GOOGLE_REVIEWS_READ = "GOOGLE_REVIEWS_READ_LINK_PLACEHOLDER";
+const GOOGLE_REVIEWS_WRITE = "GOOGLE_REVIEW_LINK_PLACEHOLDER";
+
+const educationalScope = [
   {
-    title: "Single Tooth Implant Foundations",
-    description: "Biological principles of osseointegration, site assessment, implant selection, and prosthetic-driven placement for predictable single-unit outcomes.",
+    title: "Single Tooth & Conventional Implants",
+    description: "Diagnosis, planning, surgical execution, prosthetic integration",
   },
   {
-    title: "Immediate Implant Protocols",
-    description: "Stability-driven workflows for same-day placement and provisionalization. Emphasis on primary stability, soft tissue management, and loading criteria.",
+    title: "Immediate Implant Therapy",
+    description: "Extraction protocols, grafting, temporization, tissue preservation",
   },
   {
-    title: "Full Arch Diagnosis and Treatment Planning",
-    description: "Comprehensive planning for complete-arch rehabilitation including implant positioning strategy, prosthetic sequencing, and biomechanical load distribution.",
+    title: "Full-Arch Rehabilitation",
+    description: "Prosthetic space, occlusion, biomechanics, long-term stability",
   },
   {
-    title: "Surgical Execution and Biologic Management",
-    description: "Guided flap design, bone management, grafting protocols, and biologic healing principles for optimal hard and soft tissue outcomes.",
+    title: "Soft Tissue & Biologic Management",
+    description: "Grafting strategies, emergence profile control, stability protocols",
   },
   {
-    title: "Prosthetic Workflows and Occlusal Strategy",
-    description: "From provisionalization to definitive restoration. Occlusal design, material selection, and functional analysis for implant-supported prosthetics.",
-  },
-  {
-    title: "Soft Tissue Grafting and Emergence Profile Design",
-    description: "Clinical techniques for optimizing peri-implant soft tissue architecture, connective tissue grafting, and natural emergence profile development.",
-  },
-  {
-    title: "Digital Dentistry: Intraoral Scanning",
-    description: "Practical integration of intraoral scanning into clinical workflows. Accuracy protocols, scan strategy, and digital impression techniques.",
-  },
-  {
-    title: "Photogrammetry and Full Arch Digital Workflows",
-    description: "Advanced digital capture for full-arch cases. Photogrammetric verification, CAD/CAM fabrication, and digitally guided prosthetic delivery.",
-  },
-  {
-    title: "Clinical Photography and Documentation",
-    description: "Systematic photographic documentation for treatment planning, patient communication, case presentation, and professional portfolio development.",
+    title: "Digital Workflows",
+    description: "Intraoral scanning, photogrammetry, prosthetic accuracy systems",
   },
 ];
 
 const galleryItems = [
-  { src: eduLecture1, label: "Lecture Moment" },
-  { src: eduLecture2, label: "Workshop Photo" },
-  { src: eduDigitalWorkflow, label: "Digital Workflow" },
-  { src: eduHandsOn, label: "Hands-On Session" },
-  { src: eduLecture3, label: "Lecture Moment" },
-  { src: eduMentorship1, label: "Mentorship" },
-  { src: eduLiveSurgery, label: "Live Surgery" },
-  { src: eduMentorship2, label: "Mentorship" },
-  { src: eduSurgeryTeam, label: "Live Surgery" },
+  { src: eduLecture1, caption: "Mumbai" },
+  { src: eduLecture2, caption: "Hands-On Training" },
+  { src: eduDigitalWorkflow, caption: "New Jersey" },
+  { src: eduHandsOn, caption: "Live Surgery" },
+  { src: eduLecture3, caption: "Mentorship" },
+  { src: eduMentorship1, caption: "Mumbai" },
+  { src: eduLiveSurgery, caption: "Live Surgery" },
+  { src: eduMentorship2, caption: "Hands-On Training" },
+  { src: eduSurgeryTeam, caption: "New Jersey" },
 ];
 
 const peerTestimonials = [
   {
-    quote: "Dr. Parmar's approach to implant education is rooted in biology and systematic thinking. His courses reshaped how I plan full-arch cases, from diagnostics through prosthetic delivery.",
+    quote: "Exceptionally structured program. The integration of biology, prosthetics, and surgical decision-making was unlike conventional implant courses.",
     name: "Dr. R. Mehta",
-    credential: "Prosthodontist, New York",
+    credential: "Prosthodontist",
   },
   {
     quote: "The live surgical training was unlike any other program I have attended. The emphasis on tissue management and prosthetic-driven implant placement gave me a framework I apply daily.",
@@ -87,12 +75,17 @@ const peerTestimonials = [
     name: "Dr. A. Chen",
     credential: "Periodontist, Connecticut",
   },
+  {
+    quote: "Dr. Parmar's approach to implant education is rooted in biology and systematic thinking. His courses reshaped how I plan full-arch cases, from diagnostics through prosthetic delivery.",
+    name: "Dr. N. Patel",
+    credential: "General Dentist, Pennsylvania",
+  },
 ];
 
 const ProfessionalEducation = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
-    document.title = "Clinical Education & Mentorship | Dr. Akshay Parmar";
+    document.title = "Education for Dentists | Dr. Akshay Parmar";
     return () => {
       document.title = "Dr. Akshay Parmar | Board-Certified Prosthodontist in New Jersey";
     };
@@ -100,55 +93,57 @@ const ProfessionalEducation = () => {
 
   return (
     <main className="bg-background">
-      <PageNavigation />
+      <SiteNavigation />
 
       {/* ═══════ SECTION 1: HERO ═══════ */}
-      <section className="pt-36 pb-16 md:pt-44 md:pb-20 px-6 md:px-8 bg-navy">
-        <div className="luxury-container max-w-3xl text-center">
+      <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden">
+        <div className="absolute inset-0">
+          <img
+            src={eduLiveSurgery}
+            alt=""
+            aria-hidden="true"
+            className="absolute inset-0 w-full h-full object-cover"
+            style={{
+              filter: "brightness(0.2) contrast(1.1) saturate(0.1)",
+              transform: "scale(1.05)",
+            }}
+          />
+          <div
+            className="absolute inset-0"
+            style={{
+              background:
+                "linear-gradient(180deg, hsl(220 30% 10% / 0.7) 0%, hsl(220 30% 10% / 0.85) 50%, hsl(220 30% 10% / 0.95) 100%)",
+            }}
+          />
+        </div>
+
+        <div className="relative z-10 text-center px-6 md:px-8 max-w-3xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 25 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
           >
-            <p className="font-body text-[10px] tracking-[0.35em] uppercase text-primary-foreground/30 mb-6">
-              The Dental Project
-            </p>
-            <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-light tracking-tight text-primary-foreground leading-[0.95] mb-8">
-              Clinical Education{" "}
-              <span className="italic">&amp; Mentorship</span>
+            <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-light tracking-tight text-primary-foreground leading-[0.95] mb-6">
+              Education for <span className="italic">Dentists</span>
             </h1>
-            <p className="font-body text-xs md:text-sm text-primary-foreground/45 font-light leading-relaxed max-w-2xl mx-auto mb-4">
-              Biologically driven implant and rehabilitation training, taught through structured diagnosis, prosthetic planning, surgical execution, and long-term stability principles.
+            <p className="font-body text-xs md:text-sm text-primary-foreground/50 font-light leading-relaxed max-w-2xl mx-auto mb-4">
+              Advanced Implant, Prosthetic, and Biologic Rehabilitation Training
             </p>
-            <p className="font-body text-[10px] tracking-[0.2em] text-primary-foreground/25 mb-12">
-              Courses delivered across Mumbai and New Jersey, with live mentorship and real clinical workflows.
+            <p className="font-body text-[10px] tracking-[0.25em] uppercase text-primary-foreground/30 mb-14">
+              Global Programs &nbsp;·&nbsp; Surgical Precision &nbsp;·&nbsp; Prosthetic Intelligence
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-              <Link
-                to="/contact"
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-10">
+              <a
+                href="#programs"
                 className="inline-block px-14 py-[18px] bg-primary-foreground text-navy font-body text-[11px] tracking-[0.25em] uppercase transition-all duration-300 hover:bg-transparent hover:text-primary-foreground border border-primary-foreground/25"
               >
-                Request Course Details
-              </Link>
-              <a
-                href="#gallery"
+                View Programs
+              </a>
+              <Link
+                to="/professional-testimonials"
                 className="inline-block px-14 py-[18px] border border-primary-foreground/25 text-primary-foreground/70 font-body text-[11px] tracking-[0.25em] uppercase transition-all duration-300 hover:border-primary-foreground/50 hover:text-primary-foreground"
               >
-                View Training Gallery
-              </a>
-            </div>
-
-            <div className="flex items-center justify-center gap-6">
-              <a href="#programs" className="font-body text-[10px] tracking-[0.15em] text-primary-foreground/30 hover:text-primary-foreground/50 transition-colors duration-300">
-                Upcoming Programs
-              </a>
-              <span className="w-px h-3 bg-primary-foreground/15" />
-              <a href="#gallery" className="font-body text-[10px] tracking-[0.15em] text-primary-foreground/30 hover:text-primary-foreground/50 transition-colors duration-300">
-                Past Programs
-              </a>
-              <span className="w-px h-3 bg-primary-foreground/15" />
-              <Link to="/professional-testimonials" className="font-body text-[10px] tracking-[0.15em] text-primary-foreground/30 hover:text-primary-foreground/50 transition-colors duration-300">
                 Peer Feedback
               </Link>
             </div>
@@ -156,29 +151,87 @@ const ProfessionalEducation = () => {
         </div>
       </section>
 
-      {/* ═══════ SECTION 2: WHAT WE TEACH ═══════ */}
-      <section className="section-padding px-6 md:px-8">
+      {/* ═══════ SECTION 2: STABLE IMPLANT PROTOCOL ═══════ */}
+      <section id="stable" className="section-padding px-6 md:px-8">
+        <div className="luxury-container max-w-3xl">
+          <motion.div {...fadeUp} transition={{ duration: 0.8 }} className="text-center mb-14">
+            <p className="font-body text-[10px] tracking-[0.35em] uppercase text-charcoal-light mb-6">
+              Signature Framework
+            </p>
+            <h2 className="font-display text-3xl md:text-4xl font-light text-navy mb-3">
+              STABLE IMPLANT <span className="italic">Protocol™</span>
+            </h2>
+            <p className="font-body text-xs tracking-[0.15em] uppercase text-charcoal-light/50 mb-0">
+              Soft Tissue And Bone Level Esthetics
+            </p>
+          </motion.div>
+
+          <motion.div {...fadeUp} transition={{ duration: 0.7 }} className="max-w-2xl mx-auto">
+            <p className="font-body text-sm md:text-[15px] text-charcoal font-light leading-[2] mb-6">
+              The STABLE IMPLANT Protocol™ is a biologically driven treatment philosophy centered on long-term tissue stability, structural preservation, and prosthetic predictability.
+            </p>
+            <p className="font-body text-sm md:text-[15px] text-charcoal font-light leading-[2] mb-6">
+              This protocol is not limited to implants.
+            </p>
+            <p className="font-body text-sm md:text-[15px] text-charcoal font-light leading-[2] mb-3">
+              It is a comprehensive framework applicable across:
+            </p>
+            <ul className="font-body text-sm md:text-[15px] text-charcoal-light font-light leading-[2] mb-8 pl-5 space-y-1">
+              <li>Natural teeth rehabilitation</li>
+              <li>Conventional implant therapy</li>
+              <li>Immediate implant placement</li>
+              <li>Full-arch reconstruction</li>
+            </ul>
+
+            <p className="font-body text-[10px] tracking-[0.3em] uppercase text-charcoal-light mb-5">
+              Core Principles
+            </p>
+            <ul className="font-body text-sm md:text-[15px] text-charcoal-light font-light leading-[2] mb-8 pl-5 space-y-1">
+              <li>Soft tissue architecture first</li>
+              <li>Bone preservation and stability</li>
+              <li>Prosthetically driven planning</li>
+              <li>Biologic-mechanical harmony</li>
+              <li>Long-term risk mitigation</li>
+            </ul>
+
+            <p className="font-body text-sm md:text-[15px] text-charcoal font-light leading-[2] mb-10">
+              The protocol integrates surgical execution, prosthetic design, digital workflows, and tissue management into a unified clinical system.
+            </p>
+
+            <div className="text-center">
+              <div className="w-10 h-px bg-navy/15 mx-auto mb-5" />
+              <p className="font-body text-[10px] tracking-[0.3em] uppercase text-charcoal-light/40">
+                Precision &nbsp;·&nbsp; Biology &nbsp;·&nbsp; Stability
+              </p>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* ═══════ SECTION 3: EDUCATIONAL SCOPE ═══════ */}
+      <section className="section-padding px-6 md:px-8" style={{ background: "linear-gradient(180deg, hsl(40 10% 96%) 0%, hsl(40 20% 98%) 100%)" }}>
         <div className="luxury-container">
           <motion.div {...fadeUp} transition={{ duration: 0.8 }} className="text-center mb-20">
             <p className="font-body text-[10px] tracking-[0.35em] uppercase text-charcoal-light mb-6">
-              Structured Curriculum
+              Curriculum
             </p>
             <h2 className="font-display text-3xl md:text-4xl font-light text-navy">
-              What We <span className="italic">Teach</span>
+              Educational <span className="italic">Scope</span>
             </h2>
           </motion.div>
 
-          <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-x-12 gap-y-14">
-            {curriculum.map((item, i) => (
+          <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-14 gap-y-16">
+            {educationalScope.map((item, i) => (
               <motion.div
                 key={i}
                 {...fadeUp}
-                transition={{ duration: 0.5, delay: i * 0.05 }}
+                transition={{ duration: 0.5, delay: i * 0.06 }}
+                className={i === educationalScope.length - 1 && educationalScope.length % 3 !== 0 ? "lg:col-start-2" : ""}
               >
-                <h3 className="font-display text-lg md:text-xl font-medium text-navy mb-3 leading-snug">
+                <h3 className="font-display text-lg md:text-xl font-medium text-navy mb-4 leading-snug">
                   {item.title}
                 </h3>
-                <p className="font-body text-xs text-charcoal-light font-light leading-[1.8]">
+                <p className="font-body text-xs text-charcoal-light font-light leading-[1.85] tracking-wide">
                   {item.description}
                 </p>
               </motion.div>
@@ -187,73 +240,15 @@ const ProfessionalEducation = () => {
         </div>
       </section>
 
-      {/* ═══════ SECTION 3: STABLE IMPLANT PROTOCOL ═══════ */}
-      <section id="stable" className="py-20 md:py-28 px-6 md:px-8 bg-navy">
-        <div className="luxury-container max-w-3xl text-center">
-          <motion.div {...fadeUp} transition={{ duration: 0.8 }}>
-            <p className="font-body text-[10px] tracking-[0.35em] uppercase text-primary-foreground/25 mb-6">
-              Signature Framework
-            </p>
-            <h2 className="font-display text-3xl md:text-4xl font-light text-primary-foreground mb-10">
-              STABLE IMPLANT <span className="italic">Protocol™</span>
-            </h2>
-            <p className="font-body text-sm md:text-[15px] text-primary-foreground/50 font-light leading-[2] mb-6 max-w-2xl mx-auto">
-              A biologic-first system integrating soft tissue and bone level esthetics with prosthetically driven planning. Built to reduce complications, improve predictability, and create long-term stability in immediate and full arch rehabilitation.
-            </p>
-            <div className="w-10 h-px bg-primary-foreground/15 mx-auto mb-6" />
-            <p className="font-body text-[10px] tracking-[0.2em] uppercase text-primary-foreground/25">
-              Taught through lectures, hands-on sessions, and guided live case mentorship.
-            </p>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* ═══════ SECTION 4: PROGRAM FORMAT ═══════ */}
-      <section className="section-padding px-6 md:px-8">
-        <div className="luxury-container max-w-4xl">
-          <motion.div {...fadeUp} transition={{ duration: 0.8 }} className="text-center mb-20">
-            <p className="font-body text-[10px] tracking-[0.35em] uppercase text-charcoal-light mb-6">
-              Program Structure
-            </p>
-            <h2 className="font-display text-3xl md:text-4xl font-light text-navy">
-              How the Programs <span className="italic">Run</span>
-            </h2>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-20">
-            <motion.div {...fadeUp} transition={{ duration: 0.6 }}>
-              <h3 className="font-display text-xl font-medium text-navy mb-4">Lectures</h3>
-              <p className="font-body text-sm text-charcoal-light font-light leading-[1.9]">
-                Diagnosis, planning, biology, and decision-making frameworks. Each session is built around clinical reasoning rather than isolated technique demonstration.
-              </p>
-            </motion.div>
-
-            <motion.div {...fadeUp} transition={{ duration: 0.6, delay: 0.08 }}>
-              <h3 className="font-display text-xl font-medium text-navy mb-4">Hands-On Training</h3>
-              <p className="font-body text-sm text-charcoal-light font-light leading-[1.9]">
-                Guided surgical and restorative workflows, including grafting, temporization, intraoral scanning, and photogrammetry. Every participant works through structured clinical exercises.
-              </p>
-            </motion.div>
-
-            <motion.div {...fadeUp} transition={{ duration: 0.6, delay: 0.16 }} className="md:col-span-2">
-              <h3 className="font-display text-xl font-medium text-navy mb-4">Live Case Mentorship</h3>
-              <p className="font-body text-sm text-charcoal-light font-light leading-[1.9] max-w-2xl">
-                Real patient cases with step-by-step mentoring led by Dr. Akshay Parmar and Dr. Vinita Ved Shah under The Dental Project. From diagnosis through surgical execution and prosthetic delivery.
-              </p>
-            </motion.div>
-          </div>
-        </div>
-      </section>
-
-      {/* ═══════ SECTION 5: TRAINING GALLERY ═══════ */}
-      <section id="gallery" className="section-padding px-6 md:px-8 bg-warm-gray">
+      {/* ═══════ SECTION 4: GALLERY ═══════ */}
+      <section id="gallery" className="section-padding px-6 md:px-8">
         <div className="luxury-container">
           <motion.div {...fadeUp} transition={{ duration: 0.8 }} className="text-center mb-6">
             <p className="font-body text-[10px] tracking-[0.35em] uppercase text-charcoal-light mb-6">
-              Training Documentation
+              Programs & Training
             </p>
-            <h2 className="font-display text-3xl md:text-4xl font-light text-navy mb-8">
-              Training <span className="italic">Gallery</span>
+            <h2 className="font-display text-3xl md:text-4xl font-light text-navy mb-4">
+              Clinical & Educational <span className="italic">Programs</span>
             </h2>
           </motion.div>
 
@@ -262,26 +257,26 @@ const ProfessionalEducation = () => {
             transition={{ duration: 0.5 }}
             className="font-body text-[10px] tracking-[0.2em] uppercase text-charcoal-light/50 text-center mb-14"
           >
-            Selected moments from Mumbai and New Jersey programs. Additional case and course documentation added continuously.
+            Selected Highlights from Global Courses & Live Surgical Programs
           </motion.p>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 max-w-5xl mx-auto">
             {galleryItems.map((item, i) => (
               <motion.div
                 key={i}
                 {...fadeUp}
-                transition={{ duration: 0.5, delay: i * 0.05 }}
+                transition={{ duration: 0.5, delay: i * 0.04 }}
                 className="relative aspect-[4/3] overflow-hidden group"
               >
                 <img
                   src={item.src}
-                  alt={item.label}
+                  alt={item.caption}
                   className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-navy/0 group-hover:bg-navy/40 transition-colors duration-500" />
+                <div className="absolute inset-0 bg-navy/0 group-hover:bg-navy/35 transition-colors duration-500" />
                 <div className="absolute bottom-0 left-0 right-0 p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                   <p className="font-body text-[10px] tracking-[0.2em] uppercase text-primary-foreground/80">
-                    {item.label}
+                    {item.caption}
                   </p>
                 </div>
               </motion.div>
@@ -290,8 +285,8 @@ const ProfessionalEducation = () => {
         </div>
       </section>
 
-      {/* ═══════ SECTION 6: UPCOMING PROGRAMS ═══════ */}
-      <section id="programs" className="section-padding px-6 md:px-8">
+      {/* ═══════ SECTION 5: UPCOMING PROGRAMS ═══════ */}
+      <section id="programs" className="section-padding px-6 md:px-8" style={{ background: "linear-gradient(180deg, hsl(40 10% 96%) 0%, hsl(40 20% 98%) 100%)" }}>
         <div className="luxury-container max-w-3xl">
           <motion.div {...fadeUp} transition={{ duration: 0.8 }} className="text-center mb-16">
             <p className="font-body text-[10px] tracking-[0.35em] uppercase text-charcoal-light mb-6">
@@ -302,49 +297,62 @@ const ProfessionalEducation = () => {
             </h2>
           </motion.div>
 
-          <div className="space-y-0">
-            <motion.div {...fadeUp} transition={{ duration: 0.6 }} className="border-b border-divider py-10">
-              <div className="flex flex-col md:flex-row md:items-baseline md:justify-between gap-2 mb-3">
-                <h3 className="font-display text-xl font-medium text-navy">Mumbai, India</h3>
-                <span className="font-body text-[10px] tracking-[0.2em] uppercase text-charcoal-light/50">Upcoming</span>
-              </div>
-              <p className="font-body text-xs text-charcoal-light font-light leading-[1.8] mb-1">
-                Partner: Osstem
-              </p>
-              <p className="font-body text-xs text-charcoal-light font-light leading-[1.8]">
-                Format: Live cases + mentoring + full workflow training
-              </p>
-            </motion.div>
+          {/* Mumbai */}
+          <motion.div {...fadeUp} transition={{ duration: 0.6 }} className="border-b border-divider pb-12 mb-12">
+            <h3 className="font-display text-xl md:text-2xl font-medium text-navy mb-2">
+              Mumbai, India
+            </h3>
+            <p className="font-body text-[10px] tracking-[0.2em] uppercase text-charcoal-light/50 mb-5">
+              Live Clinical Program
+            </p>
+            <p className="font-body text-xs text-charcoal-light font-light leading-[1.9] mb-1">
+              Immediate Implants · Full-Arch Reconstruction · STABLE Protocol™
+            </p>
+            <p className="font-body text-xs text-charcoal-light/50 font-light leading-[1.9] mb-6">
+              Mentorship · Live Cases · Surgical & Prosthetic Integration
+            </p>
+            <Link
+              to="/contact"
+              className="inline-block px-10 py-4 border border-navy/15 text-navy font-body text-[11px] tracking-[0.25em] uppercase transition-all duration-300 hover:bg-navy hover:text-primary-foreground"
+            >
+              Request Program Details
+            </Link>
+          </motion.div>
 
-            <motion.div {...fadeUp} transition={{ duration: 0.6, delay: 0.08 }} className="border-b border-divider py-10">
-              <div className="flex flex-col md:flex-row md:items-baseline md:justify-between gap-2 mb-3">
-                <h3 className="font-display text-xl font-medium text-navy">New Jersey, USA</h3>
-                <span className="font-body text-[10px] tracking-[0.2em] uppercase text-charcoal-light/50">Recurring</span>
-              </div>
-              <p className="font-body text-xs text-charcoal-light font-light leading-[1.8] mb-1">
-                Partner: Megagen
-              </p>
-              <p className="font-body text-xs text-charcoal-light font-light leading-[1.8]">
-                Format: Hands-on + live mentorship + digital workflows
-              </p>
-            </motion.div>
-          </div>
+          {/* New Jersey */}
+          <motion.div {...fadeUp} transition={{ duration: 0.6, delay: 0.08 }}>
+            <h3 className="font-display text-xl md:text-2xl font-medium text-navy mb-2">
+              New Jersey, USA
+            </h3>
+            <p className="font-body text-[10px] tracking-[0.2em] uppercase text-charcoal-light/50 mb-5">
+              Recurring Program
+            </p>
+            <p className="font-body text-xs text-charcoal-light font-light leading-[1.9] mb-1">
+              Hands-On Training · Live Mentorship · Digital Workflows
+            </p>
+            <p className="font-body text-xs text-charcoal-light/50 font-light leading-[1.9] mb-6">
+              Mentorship · Live Cases · Surgical & Prosthetic Integration
+            </p>
+            <Link
+              to="/contact"
+              className="inline-block px-10 py-4 border border-navy/15 text-navy font-body text-[11px] tracking-[0.25em] uppercase transition-all duration-300 hover:bg-navy hover:text-primary-foreground"
+            >
+              Request Program Details
+            </Link>
+          </motion.div>
         </div>
       </section>
 
-      {/* ═══════ SECTION 7: PEER FEEDBACK ═══════ */}
-      <section className="section-padding px-6 md:px-8 bg-warm-gray">
+      {/* ═══════ SECTION 6: PEER FEEDBACK ═══════ */}
+      <section className="section-padding px-6 md:px-8">
         <div className="luxury-container max-w-3xl">
           <motion.div {...fadeUp} transition={{ duration: 0.8 }} className="text-center mb-16">
             <p className="font-body text-[10px] tracking-[0.35em] uppercase text-charcoal-light mb-6">
-              Clinician Perspectives
+              Professional Perspectives
             </p>
-            <h2 className="font-display text-3xl md:text-4xl font-light text-navy mb-4">
-              Professional <span className="italic">Reflections</span>
+            <h2 className="font-display text-3xl md:text-4xl font-light text-navy">
+              Dentist Peer <span className="italic">Feedback</span>
             </h2>
-            <p className="font-body text-xs text-charcoal-light/60 font-light tracking-wide">
-              Perspectives from clinicians and course participants.
-            </p>
           </motion.div>
 
           <div className="space-y-14">
@@ -370,50 +378,39 @@ const ProfessionalEducation = () => {
               </motion.blockquote>
             ))}
           </div>
-
-          <motion.div {...fadeUp} transition={{ duration: 0.5 }} className="text-center mt-14">
-            <Link
-              to="/professional-testimonials"
-              className="inline-block px-14 py-[18px] border border-navy/15 text-navy font-body text-[11px] tracking-[0.25em] uppercase transition-all duration-300 hover:bg-navy hover:text-primary-foreground"
-            >
-              Read More Peer Feedback
-            </Link>
-          </motion.div>
         </div>
       </section>
 
-      {/* ═══════ SECTION 8: FINAL CTA ═══════ */}
-      <section className="section-padding px-6 md:px-8 bg-navy">
-        <div className="luxury-container max-w-2xl text-center">
-          <motion.div {...fadeUp} transition={{ duration: 0.8 }}>
-            <p className="font-body text-[10px] tracking-[0.35em] uppercase text-primary-foreground/25 mb-6">
-              Collaborate
-            </p>
-            <h2 className="font-display text-3xl md:text-4xl font-light text-primary-foreground mb-6">
-              Bring This Training{" "}
-              <span className="italic">to Your Team</span>
-            </h2>
-            <p className="font-body text-sm text-primary-foreground/45 font-light leading-[1.9] mb-12 max-w-lg mx-auto">
-              For clinicians seeking structured, biologically driven training with real workflow mentorship.
-            </p>
-
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-              <Link
-                to="/contact"
-                className="inline-block px-14 py-[18px] bg-primary-foreground text-navy font-body text-[11px] tracking-[0.25em] uppercase transition-all duration-300 hover:bg-transparent hover:text-primary-foreground border border-primary-foreground/25"
+      {/* ═══════ SECTION 7: REVIEW CTA ═══════ */}
+      <section className="pb-20 md:pb-28 px-6 md:px-8">
+        <div className="luxury-container max-w-3xl">
+          <motion.div
+            {...fadeUp}
+            transition={{ duration: 0.6 }}
+            className="text-center pt-12 border-t border-divider"
+          >
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6">
+              <a
+                href={GOOGLE_REVIEWS_READ}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-3 px-10 md:px-14 py-[18px] border border-navy/15 text-navy font-body text-[11px] tracking-[0.25em] uppercase transition-all duration-300 hover:bg-navy hover:text-primary-foreground"
               >
-                Request Course Details
-              </Link>
-              <Link
-                to="/contact"
-                className="inline-block px-14 py-[18px] border border-primary-foreground/25 text-primary-foreground/70 font-body text-[11px] tracking-[0.25em] uppercase transition-all duration-300 hover:border-primary-foreground/50 hover:text-primary-foreground"
+                Read Verified Google Reviews
+                <ExternalLink size={13} strokeWidth={1.5} />
+              </a>
+              <a
+                href={GOOGLE_REVIEWS_WRITE}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-3 px-10 md:px-14 py-[18px] border border-navy/15 text-navy font-body text-[11px] tracking-[0.25em] uppercase transition-all duration-300 hover:bg-navy hover:text-primary-foreground"
               >
-                Partner With Us
-              </Link>
+                Share Professional Feedback
+                <ExternalLink size={13} strokeWidth={1.5} />
+              </a>
             </div>
-
-            <p className="font-body text-[10px] tracking-[0.2em] uppercase text-primary-foreground/20">
-              Limited cohorts to preserve mentorship quality.
+            <p className="font-body text-[10px] tracking-[0.15em] text-charcoal-light/40">
+              Peer feedback reflects professional educational experiences. Verified public reviews available on Google.
             </p>
           </motion.div>
         </div>
