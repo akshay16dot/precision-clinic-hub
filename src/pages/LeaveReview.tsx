@@ -1,12 +1,12 @@
 import { motion } from "framer-motion";
-import PageNavigation from "@/components/PageNavigation";
+import SiteNavigation from "@/components/SiteNavigation";
 import PageFooter from "@/components/PageFooter";
 import { ExternalLink } from "lucide-react";
 
 const LeaveReview = () => {
   return (
     <main className="bg-background">
-      <PageNavigation />
+      <SiteNavigation />
 
       <section className="pt-32 md:pt-40 pb-24 md:pb-32 px-6 md:px-8">
         <div className="luxury-container max-w-2xl text-center">

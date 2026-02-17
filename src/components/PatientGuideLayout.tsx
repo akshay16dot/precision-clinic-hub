@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
-import PageNavigation from "@/components/PageNavigation";
+import SiteNavigation from "@/components/SiteNavigation";
 import PageFooter from "@/components/PageFooter";
 
 const fadeUp = {
@@ -61,7 +61,7 @@ const PatientGuideLayout = ({ data }: { data: PatientGuideData }) => {
 
   return (
     <main className="bg-background">
-      <PageNavigation />
+      <SiteNavigation />
 
       {/* Hero */}
       <section className="pt-36 pb-14 md:pt-44 md:pb-18 px-6 md:px-8">
