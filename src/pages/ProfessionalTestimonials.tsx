@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import PageNavigation from "@/components/PageNavigation";
 import PageFooter from "@/components/PageFooter";
-import { ExternalLink } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const fadeUp = {
   initial: { opacity: 0, y: 20 },
@@ -12,37 +12,31 @@ const fadeUp = {
 const testimonials = [
   {
     quote:
-      "After years of struggling with failing teeth, I finally found a specialist who took the time to explain every option. The implants feel completely natural, and I can eat and speak with confidence again.",
-    name: "M.R.",
-    tag: "Full-Arch Rehabilitation",
+      "Dr. Parmar's approach to implant education is rooted in biology and systematic thinking. His courses reshaped how I plan full-arch cases — from diagnostics through prosthetic delivery.",
+    name: "Dr. R. Mehta",
+    credential: "Prosthodontist, New York",
   },
   {
     quote:
-      "I wanted my smile to look better but still look like me. Dr. Parmar understood that immediately. The veneers are so natural that even close friends assumed nothing had changed — just that I looked healthier.",
-    name: "Sarah",
-    tag: "Veneers & Aesthetics",
+      "The live surgical training was unlike any other program I have attended. The emphasis on tissue management and prosthetic-driven implant placement gave me a framework I apply daily in my practice.",
+    name: "Dr. K. Santos",
+    credential: "General Dentist, New Jersey",
   },
   {
     quote:
-      "My case was complicated, and other offices were not sure how to approach it. Dr. Parmar walked me through every step of the reconstruction clearly and honestly. I never felt rushed, and the result exceeded what I thought was possible.",
-    name: "J.L.",
-    tag: "Complex Reconstruction",
+      "What sets this program apart is the philosophy. It is not about memorizing protocols — it is about understanding why each decision is made. That depth of reasoning has made me a more confident clinician.",
+    name: "Dr. A. Chen",
+    credential: "Periodontist, Connecticut",
   },
   {
     quote:
-      "From the first consultation, I knew I was in the right hands. The attention to detail in my implant treatment was remarkable. Everything was planned precisely, and the recovery was smoother than I expected.",
-    name: "A.T.",
-    tag: "Dental Implants",
-  },
-  {
-    quote:
-      "I had been told by multiple dentists that my case was too complex. Dr. Parmar not only took it on, but delivered a result that changed my quality of life. I can smile without thinking about it now.",
-    name: "Diana",
-    tag: "Aesthetic Rehabilitation",
+      "As a young practitioner, having access to a mentor who balances clinical excellence with genuine educational generosity has been invaluable. The STABLE IMPLANT Protocol training was a turning point in my career.",
+    name: "Dr. N. Patel",
+    credential: "General Dentist, Pennsylvania",
   },
 ];
 
-const Testimonials = () => {
+const ProfessionalTestimonials = () => {
   return (
     <main className="bg-background">
       <PageNavigation />
@@ -56,7 +50,7 @@ const Testimonials = () => {
             transition={{ duration: 0.6 }}
             className="font-body text-[10px] tracking-[0.35em] uppercase text-primary-foreground/30 mb-6"
           >
-            Patient Experience
+            Professional Education
           </motion.p>
           <motion.h1
             initial={{ opacity: 0, y: 15 }}
@@ -64,7 +58,7 @@ const Testimonials = () => {
             transition={{ duration: 0.7, delay: 0.1 }}
             className="font-display text-3xl md:text-5xl font-light text-primary-foreground mb-5"
           >
-            Patient <span className="italic">Experiences</span>
+            Professional <span className="italic">Reflections</span>
           </motion.h1>
           <motion.p
             initial={{ opacity: 0 }}
@@ -72,7 +66,7 @@ const Testimonials = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="font-body text-xs md:text-sm text-primary-foreground/40 font-light tracking-wide"
           >
-            Reflections on care, comfort, and clinical transformation.
+            Perspectives from clinicians and course participants.
           </motion.p>
         </div>
       </section>
@@ -82,10 +76,10 @@ const Testimonials = () => {
         <div className="luxury-container max-w-2xl text-center">
           <motion.div {...fadeUp} transition={{ duration: 0.7 }}>
             <p className="font-body text-sm md:text-[15px] text-charcoal-light font-light leading-[2] mb-2">
-              Every rehabilitation journey is unique.
+              Education, mentorship, and clinical philosophy extend beyond treatment.
             </p>
             <p className="font-body text-sm md:text-[15px] text-charcoal-light font-light leading-[2]">
-              Beyond clinical outcomes, these experiences reflect comfort, function, confidence, and quality of life.
+              These reflections represent experiences from colleagues and clinicians across programs and live surgical training.
             </p>
           </motion.div>
         </div>
@@ -109,11 +103,11 @@ const Testimonials = () => {
                   <span className="font-body text-[11px] tracking-[0.1em] text-charcoal font-medium">
                     {t.name}
                   </span>
-                  {t.tag && (
+                  {t.credential && (
                     <>
                       <span className="w-px h-3 bg-border" />
-                      <span className="font-body text-[10px] tracking-[0.2em] uppercase text-charcoal-light/50">
-                        {t.tag}
+                      <span className="font-body text-[10px] tracking-[0.15em] text-charcoal-light/50">
+                        {t.credential}
                       </span>
                     </>
                   )}
@@ -122,21 +116,21 @@ const Testimonials = () => {
             ))}
           </div>
 
-          {/* Google Reviews CTA */}
+          {/* CTA */}
           <motion.div
             {...fadeUp}
             transition={{ duration: 0.6 }}
             className="text-center mt-24 pt-12 border-t border-divider"
           >
-            <a
-              href="https://g.page/review"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-3 px-14 py-[18px] border border-navy/15 text-navy font-body text-[11px] tracking-[0.25em] uppercase transition-all duration-300 hover:bg-navy hover:text-primary-foreground"
+            <p className="font-body text-[10px] tracking-[0.3em] uppercase text-charcoal-light/50 mb-6">
+              Your perspective matters
+            </p>
+            <Link
+              to="/leave-review"
+              className="inline-block px-14 py-[18px] border border-navy/15 text-navy font-body text-[11px] tracking-[0.25em] uppercase transition-all duration-300 hover:bg-navy hover:text-primary-foreground"
             >
-              Read Verified Google Reviews
-              <ExternalLink size={13} strokeWidth={1.5} />
-            </a>
+              Share Feedback
+            </Link>
           </motion.div>
         </div>
       </section>
@@ -146,4 +140,4 @@ const Testimonials = () => {
   );
 };
 
-export default Testimonials;
+export default ProfessionalTestimonials;

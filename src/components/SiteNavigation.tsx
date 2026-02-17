@@ -61,6 +61,8 @@ const navItems: NavItem[] = [
       { to: "/education", label: "Education & Courses" },
       { to: "/education", label: "STABLE IMPLANT Protocol™", hash: "#stable" },
       { to: "/clinical-cases", label: "Clinical Training Gallery" },
+      { to: "/professional-testimonials", label: "Peer Feedback" },
+      { to: "/leave-review", label: "Share Feedback" },
     ],
   },
   {
@@ -121,6 +123,8 @@ const megaMenuSections = [
       { to: "/education", label: "Education & Courses" },
       { to: "/education", label: "STABLE IMPLANT Protocol™", hash: "#stable" },
       { to: "/clinical-cases", label: "Clinical Training Gallery" },
+      { to: "/professional-testimonials", label: "Peer Feedback" },
+      { to: "/leave-review", label: "Share Feedback" },
     ],
   },
   {

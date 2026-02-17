@@ -28,6 +28,7 @@ import VeneersGuide from "./pages/guides/VeneersGuide";
 import MaxillofacialGuide from "./pages/guides/MaxillofacialGuide";
 import Testimonials from "./pages/Testimonials";
 import LeaveReview from "./pages/LeaveReview";
+import ProfessionalTestimonials from "./pages/ProfessionalTestimonials";
 
 const queryClient = new QueryClient();
 
@@ -62,6 +63,7 @@ const App = () => (
           <Route path="/guide/maxillofacial-rehabilitation" element={<MaxillofacialGuide />} />
           <Route path="/testimonials" element={<Testimonials />} />
           <Route path="/leave-review" element={<LeaveReview />} />
+          <Route path="/professional-testimonials" element={<ProfessionalTestimonials />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
