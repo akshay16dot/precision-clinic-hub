@@ -1,10 +1,11 @@
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import logoAP from "@/assets/logo-ap.png";
 import heroPortrait from "@/assets/dr-parmar-hero.jpg";
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-[90vh] overflow-hidden">
+    <Link to="/clinical-cases" className="block relative min-h-[90vh] overflow-hidden cursor-pointer group">
       {/* Background portrait — pushed left, subdued atmospheric element */}
       <div className="absolute inset-0">
         <img
@@ -85,15 +86,17 @@ const HeroSection = () => {
                   Dental Implants &nbsp;·&nbsp; Immediate Implants &nbsp;·&nbsp; Veneers &nbsp;·&nbsp; Full-Arch Rehabilitation
                 </p>
 
-                <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start" onClick={(e) => e.preventDefault()}>
                   <a
                     href="#services"
+                    onClick={(e) => { e.stopPropagation(); }}
                     className="inline-block px-10 py-4 border border-primary-foreground/25 bg-primary-foreground text-navy font-body text-[11px] tracking-[0.25em] uppercase transition-all duration-300 hover:bg-transparent hover:text-primary-foreground"
                   >
                     For Patients
                   </a>
                   <a
                     href="#education"
+                    onClick={(e) => { e.stopPropagation(); }}
                     className="inline-block px-10 py-4 border border-primary-foreground/25 text-primary-foreground/70 font-body text-[11px] tracking-[0.25em] uppercase transition-all duration-300 hover:border-primary-foreground/50 hover:text-primary-foreground"
                   >
                     For Dentists
@@ -113,6 +116,9 @@ const HeroSection = () => {
           <p className="font-body text-[10px] tracking-[0.3em] uppercase text-primary-foreground/35">
             © {new Date().getFullYear()}
           </p>
+          <span className="font-body text-[10px] tracking-[0.25em] uppercase text-primary-foreground/40 group-hover:text-primary-foreground/65 transition-all duration-500 relative after:content-[''] after:absolute after:bottom-[-2px] after:left-0 after:w-full after:h-px after:bg-primary-foreground/30 after:scale-x-0 after:origin-right after:transition-transform after:duration-500 group-hover:after:scale-x-100 group-hover:after:origin-left">
+            Explore Clinical Cases
+          </span>
           <motion.div
             animate={{ y: [0, 5, 0] }}
             transition={{ repeat: Infinity, duration: 2.5, ease: "easeInOut" }}
@@ -120,7 +126,7 @@ const HeroSection = () => {
           />
         </div>
       </div>
-    </section>
+    </Link>
   );
 };
 
