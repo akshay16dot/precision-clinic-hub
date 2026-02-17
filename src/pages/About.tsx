@@ -60,8 +60,11 @@ const About = () => {
               transition={{ duration: 1, delay: 0.5 }}
               className="max-w-lg"
             >
-              <p className="font-body text-[10px] tracking-[0.4em] uppercase text-charcoal-light mb-6">
-                About the Specialist
+              <p className="font-body text-[10px] tracking-[0.4em] uppercase text-charcoal-light mb-3">
+                Board-Certified Prosthodontist
+              </p>
+              <p className="font-body text-[11px] md:text-xs tracking-[0.12em] text-charcoal-light/55 font-light mb-8">
+                Including Maxillofacial &amp; Oncology Reconstruction
               </p>
 
               <h1 className="font-display text-4xl md:text-5xl lg:text-[3.5rem] xl:text-6xl font-light tracking-tight text-navy leading-[0.93] mb-8">
