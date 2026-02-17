@@ -1,10 +1,10 @@
 import { motion } from "framer-motion";
-import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import SiteNavigation from "@/components/SiteNavigation";
 import PageHero from "@/components/PageHero";
 import PageCTA from "@/components/PageCTA";
 import PageFooter from "@/components/PageFooter";
+import { usePageSEO } from "@/hooks/usePageSEO";
 import fullArchLeft from "@/assets/full-arch-left.png";
 import fullArchLower from "@/assets/full-arch-lower.png";
 import outcome1Before from "@/assets/outcome-1-before.png";
@@ -59,13 +59,10 @@ const fadeUp = {
 };
 
 const FullArchImplants = () => {
-  useEffect(() => {
-    window.scrollTo(0, 0);
-    document.title = "Full-Arch Implants in New Jersey | Dr. Akshay Parmar";
-    return () => {
-      document.title = "Dr. Akshay Parmar | Board-Certified Prosthodontist in New Jersey";
-    };
-  }, []);
+  usePageSEO({
+    title: "Full-Arch Implant Rehabilitation in NJ | Dr. Akshay Parmar",
+    description: "Full-arch implant reconstruction by a Board-Certified Prosthodontist. Comprehensive rehabilitation for patients with extensive tooth loss, failing dentition, or unstable prosthetics in New Jersey.",
+  });
 
   return (
     <main className="bg-background">

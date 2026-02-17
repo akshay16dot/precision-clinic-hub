@@ -2,8 +2,14 @@ import { motion } from "framer-motion";
 import SiteNavigation from "@/components/SiteNavigation";
 import PageFooter from "@/components/PageFooter";
 import { ExternalLink } from "lucide-react";
+import { usePageSEO } from "@/hooks/usePageSEO";
 
 const LeaveReview = () => {
+  usePageSEO({
+    title: "Leave a Review | Dr. Akshay Parmar, Prosthodontist",
+    description: "Share your experience with Dr. Akshay Parmar. Your feedback helps others seeking specialist prosthodontic and implant care in New Jersey.",
+  });
+
   return (
     <main className="bg-background">
       <SiteNavigation />

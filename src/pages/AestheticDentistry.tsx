@@ -1,8 +1,8 @@
 import { motion } from "framer-motion";
-import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import SiteNavigation from "@/components/SiteNavigation";
 import PageFooter from "@/components/PageFooter";
+import { usePageSEO } from "@/hooks/usePageSEO";
 
 const treatments = [
   {
@@ -41,13 +41,10 @@ const fade = {
 };
 
 const AestheticDentistry = () => {
-  useEffect(() => {
-    window.scrollTo(0, 0);
-    document.title = "Aesthetic Dentistry | Dr. Akshay Parmar";
-    return () => {
-      document.title = "Dr. Akshay Parmar | Board-Certified Prosthodontist in New Jersey";
-    };
-  }, []);
+  usePageSEO({
+    title: "Aesthetic Dentistry | Veneers, Smile Design & Rehabilitation NJ",
+    description: "Aesthetic dental rehabilitation by a Board-Certified Prosthodontist. Porcelain veneers, smile design, tooth wear restoration, and whitening rooted in precision and biomechanical integrity.",
+  });
 
   return (
     <main className="bg-background">

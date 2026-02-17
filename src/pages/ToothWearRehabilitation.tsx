@@ -1,9 +1,9 @@
 import { motion } from "framer-motion";
-import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import SiteNavigation from "@/components/SiteNavigation";
 import PageCTA from "@/components/PageCTA";
 import PageFooter from "@/components/PageFooter";
+import { usePageSEO } from "@/hooks/usePageSEO";
 import heroImage from "@/assets/hero-tooth-wear.png";
 
 const fadeUp = {
@@ -13,11 +13,10 @@ const fadeUp = {
 };
 
 const ToothWearRehabilitation = () => {
-  useEffect(() => {
-    window.scrollTo(0, 0);
-    document.title = "Tooth Wear & Bite Rehabilitation | Dr. Akshay Parmar";
-    return () => { document.title = "Dr. Akshay Parmar | Board-Certified Prosthodontist in New Jersey"; };
-  }, []);
+  usePageSEO({
+    title: "Tooth Wear & Bite Rehabilitation | Prosthodontist NJ",
+    description: "Specialist-led rehabilitation for tooth wear, erosion, and bite collapse. Biomechanically precise restorations that recover lost structure, function, and aesthetics.",
+  });
 
   return (
     <main className="bg-background">

@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import SiteNavigation from "@/components/SiteNavigation";
 import PageFooter from "@/components/PageFooter";
 import TestimonialReviewCTA from "@/components/TestimonialReviewCTA";
+import { usePageSEO } from "@/hooks/usePageSEO";
 
 const fadeUp = {
   initial: { opacity: 0, y: 20 },
@@ -37,6 +38,11 @@ const testimonials = [
 ];
 
 const ProfessionalTestimonials = () => {
+  usePageSEO({
+    title: "Professional Testimonials | Clinician Feedback on Training",
+    description: "Reflections from dentists and specialists on clinical education, implant training, and mentorship programs led by Board-Certified Prosthodontist Dr. Akshay Parmar.",
+  });
+
   return (
     <main className="bg-background">
       <SiteNavigation />

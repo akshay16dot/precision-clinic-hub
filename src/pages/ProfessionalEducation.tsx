@@ -1,9 +1,9 @@
 import { motion } from "framer-motion";
-import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { ExternalLink } from "lucide-react";
 import SiteNavigation from "@/components/SiteNavigation";
 import PageFooter from "@/components/PageFooter";
+import { usePageSEO } from "@/hooks/usePageSEO";
 
 import eduLecture1 from "@/assets/edu-lecture-1.jpg";
 import eduLecture2 from "@/assets/edu-lecture-2.jpg";
@@ -83,13 +83,10 @@ const peerTestimonials = [
 ];
 
 const ProfessionalEducation = () => {
-  useEffect(() => {
-    window.scrollTo(0, 0);
-    document.title = "Education for Dentists | Dr. Akshay Parmar";
-    return () => {
-      document.title = "Dr. Akshay Parmar | Board-Certified Prosthodontist in New Jersey";
-    };
-  }, []);
+  usePageSEO({
+    title: "Implant Education for Dentists | Clinical Training & Mentorship",
+    description: "Advanced implant and prosthetic training for dental professionals. Live surgery mentorship, evidence-based protocols, and the STABLE IMPLANT Protocol by Dr. Akshay Parmar.",
+  });
 
   return (
     <main className="bg-background">

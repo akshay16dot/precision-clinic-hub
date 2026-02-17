@@ -1,9 +1,9 @@
 import { motion } from "framer-motion";
-import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import SiteNavigation from "@/components/SiteNavigation";
 import PageCTA from "@/components/PageCTA";
 import PageFooter from "@/components/PageFooter";
+import { usePageSEO } from "@/hooks/usePageSEO";
 import heroImage from "@/assets/hero-smile-design.png";
 import clinicalStart from "@/assets/smile-clinical-start.png";
 import digitalAnalysis from "@/assets/smile-digital-analysis.png";
@@ -16,11 +16,10 @@ const fadeUp = {
 };
 
 const SmileDesign = () => {
-  useEffect(() => {
-    window.scrollTo(0, 0);
-    document.title = "Smile Design | Dr. Akshay Parmar";
-    return () => { document.title = "Dr. Akshay Parmar | Board-Certified Prosthodontist in New Jersey"; };
-  }, []);
+  usePageSEO({
+    title: "Smile Design | Facial-Driven Aesthetic Planning NJ",
+    description: "Comprehensive smile design by a Board-Certified Prosthodontist. Digital analysis, facial proportions, and functional aesthetics guide every case toward natural, lasting results.",
+  });
 
   return (
     <main className="bg-background">

@@ -1,7 +1,8 @@
 import PatientGuideLayout from "@/components/PatientGuideLayout";
 
 const data = {
-  pageTitle: "Veneers Guide | Dr. Akshay Parmar",
+  pageTitle: "Porcelain Veneers Guide | Aesthetic Reconstruction",
+  pageDescription: "Patient guide to porcelain veneers and aesthetic reconstruction. Learn about treatment planning, preparation, bonding, and long-term care.",
   subtitle: "Patient Guide · Veneers & Aesthetic Reconstruction",
   title: "Veneers & Aesthetic",
   titleItalic: "Reconstruction Guide",
