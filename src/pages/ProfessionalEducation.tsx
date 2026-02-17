@@ -126,10 +126,10 @@ const ProfessionalEducation = () => {
             <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-light tracking-tight text-primary-foreground leading-[0.95] mb-6">
               Education for <span className="italic">Dentists</span>
             </h1>
-            <p className="font-body text-xs md:text-sm text-primary-foreground/50 font-light leading-relaxed max-w-2xl mx-auto mb-4">
+            <p className="font-body text-xs md:text-sm text-primary-foreground/55 font-light leading-relaxed max-w-2xl mx-auto mb-4">
               Advanced Implant, Prosthetic, and Biologic Rehabilitation Training
             </p>
-            <p className="font-body text-[10px] tracking-[0.25em] uppercase text-primary-foreground/30 mb-14">
+            <p className="font-body text-[10px] tracking-[0.25em] uppercase text-primary-foreground/45 mb-14">
               Global Programs &nbsp;·&nbsp; Surgical Precision &nbsp;·&nbsp; Prosthetic Intelligence
             </p>
 
