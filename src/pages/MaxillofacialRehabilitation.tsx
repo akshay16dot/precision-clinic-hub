@@ -73,7 +73,7 @@ const MaxillofacialRehabilitation = () => {
             aria-hidden="true"
             className="absolute inset-0 w-full h-full object-cover object-[center_20%]"
             style={{
-              filter: "brightness(0.55) contrast(1.05) saturate(0.15)",
+              filter: "brightness(0.7) contrast(1.05) saturate(0.15)",
             }}
           />
           <div className="absolute inset-0 hero-dark-overlay" />
@@ -229,9 +229,9 @@ const MaxillofacialRehabilitation = () => {
             aria-hidden="true"
             className="absolute inset-0 w-full h-full object-contain object-center"
             style={{
-              filter: "brightness(0.25) contrast(1.1) saturate(0.3)",
+              filter: "brightness(0.4) contrast(1.1) saturate(0.3)",
               mixBlendMode: "lighten",
-              opacity: 0.5,
+              opacity: 0.65,
             }}
           />
         </div>
