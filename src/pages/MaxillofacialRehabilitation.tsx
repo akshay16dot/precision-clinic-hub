@@ -6,6 +6,7 @@ import PageFooter from "@/components/PageFooter";
 import { usePageSEO } from "@/hooks/usePageSEO";
 import drParmarMSK from "@/assets/dr-parmar-msk.png";
 import obturatorProsthesis from "@/assets/obturator-prosthesis.png";
+import obturatorProsthesis2 from "@/assets/obturator-prosthesis-2.png";
 
 const fadeUp = {
   initial: { opacity: 0, y: 30 },
@@ -252,6 +253,19 @@ const MaxillofacialRehabilitation = () => {
               <p className="font-body text-sm md:text-base font-light leading-relaxed" style={{ color: "hsl(40 15% 90% / 0.55)" }}>
                 Treatment scope includes rehabilitation using precision prosthetic designs, implant-supported restorations, and biologically guided restorative strategies.
               </p>
+            </div>
+
+            {/* Clinical prosthesis image — mobile/tablet only */}
+            <div className="lg:hidden flex justify-center my-12">
+              <img
+                src={obturatorProsthesis2}
+                alt="Obturator prosthesis examples"
+                className="w-[75%] max-w-sm object-contain"
+                style={{
+                  filter: "brightness(0.85) contrast(1.05) saturate(0.4) sepia(0.05)",
+                  mixBlendMode: "lighten",
+                }}
+              />
             </div>
 
             <p
