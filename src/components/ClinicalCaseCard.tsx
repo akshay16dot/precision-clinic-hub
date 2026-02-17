@@ -1,11 +1,18 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 
-interface ClinicalCase {
-  title: string;
-  descriptor: string;
-  afterImg: string;
+export interface ImagePair {
   beforeImg: string;
+  afterImg: string;
+  beforeLabel?: string;
+  afterLabel?: string;
+}
+
+export interface ClinicalCase {
+  title: string;
+  subtitle: string;
+  descriptor: string;
+  imagePairs: ImagePair[];
   challenge: string;
   strategy: string;
   functional: string;
@@ -20,6 +27,7 @@ const fadeUp = {
 
 const ClinicalCaseCard = ({ c, index }: { c: ClinicalCase; index: number }) => {
   const [expanded, setExpanded] = useState(false);
+  const isSinglePair = c.imagePairs.length === 1;
 
   return (
     <motion.div
@@ -27,52 +35,98 @@ const ClinicalCaseCard = ({ c, index }: { c: ClinicalCase; index: number }) => {
       transition={{ duration: 0.7, delay: index * 0.1 }}
       className="group"
     >
-      {/* Image Grid: AFTER dominant, BEFORE secondary */}
-      <div className="grid grid-cols-3 gap-3 md:gap-4 mb-6">
-        {/* AFTER — dominant (2 cols) */}
-        <div className="col-span-2 relative aspect-[4/3] overflow-hidden rounded-sm">
-          <img
-            src={c.afterImg}
-            alt={`${c.title} — After`}
-            className="w-full h-full object-cover"
-            loading="lazy"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
-          <div className="absolute bottom-0 left-0 right-0 p-4 md:p-5">
-            <p className="font-body text-[9px] md:text-[10px] tracking-[0.3em] uppercase text-white/80 font-light">
-              After
-            </p>
-          </div>
-        </div>
-        {/* BEFORE — secondary (1 col) */}
-        <div className="col-span-1 relative aspect-[4/3] overflow-hidden rounded-sm">
-          <img
-            src={c.beforeImg}
-            alt={`${c.title} — Before`}
-            className="w-full h-full object-cover"
-            loading="lazy"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
-          <div className="absolute bottom-0 left-0 right-0 p-3 md:p-4">
-            <p className="font-body text-[9px] md:text-[10px] tracking-[0.3em] uppercase text-white/70 font-light">
-              Before
-            </p>
-          </div>
-        </div>
-      </div>
-
-      {/* Title & Descriptor */}
+      {/* Title & Number */}
       <div className="flex items-baseline gap-4 mb-2">
         <span className="font-display text-base font-light text-navy/20">
           {String(index + 1).padStart(2, "0")}
         </span>
-        <h3 className="font-display text-xl md:text-2xl font-light text-navy">
-          {c.title}
-        </h3>
+        <div>
+          <h3 className="font-display text-xl md:text-2xl font-light text-navy">
+            {c.title}
+          </h3>
+          <p className="font-body text-[11px] tracking-[0.15em] text-charcoal-light/50 font-light mt-1">
+            {c.subtitle}
+          </p>
+        </div>
       </div>
-      <p className="font-body text-xs text-charcoal-light font-light tracking-wide mb-4 pl-10 md:pl-12">
+
+      {/* Descriptor */}
+      <p className="font-body text-xs text-charcoal-light font-light tracking-wide leading-relaxed mb-8 pl-10 md:pl-12 max-w-xl">
         {c.descriptor}
       </p>
+
+      {/* Image Grid */}
+      {isSinglePair ? (
+        /* Single pair: AFTER dominant (2 cols), BEFORE secondary (1 col) */
+        <div className="grid grid-cols-3 gap-3 md:gap-5 mb-8">
+          <div className="col-span-2 relative aspect-[4/3] overflow-hidden rounded-sm">
+            <img
+              src={c.imagePairs[0].afterImg}
+              alt={`${c.title} — After`}
+              className="w-full h-full object-cover"
+              loading="lazy"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/35 via-transparent to-transparent" />
+            <div className="absolute bottom-0 left-0 right-0 p-4 md:p-5">
+              <p className="font-body text-[9px] md:text-[10px] tracking-[0.3em] uppercase text-white/75 font-light">
+                After
+              </p>
+            </div>
+          </div>
+          <div className="col-span-1 relative aspect-[4/3] overflow-hidden rounded-sm">
+            <img
+              src={c.imagePairs[0].beforeImg}
+              alt={`${c.title} — Before`}
+              className="w-full h-full object-cover"
+              loading="lazy"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/35 via-transparent to-transparent" />
+            <div className="absolute bottom-0 left-0 right-0 p-3 md:p-4">
+              <p className="font-body text-[9px] md:text-[10px] tracking-[0.3em] uppercase text-white/65 font-light">
+                Before
+              </p>
+            </div>
+          </div>
+        </div>
+      ) : (
+        /* Multi-pair: symmetric rows of before/after */
+        <div className="space-y-4 md:space-y-5 mb-8">
+          {c.imagePairs.map((pair, pairIndex) => (
+            <div key={pairIndex} className="grid grid-cols-2 gap-3 md:gap-5">
+              {/* BEFORE */}
+              <div className="relative aspect-[4/3] overflow-hidden rounded-sm">
+                <img
+                  src={pair.beforeImg}
+                  alt={`${c.title} — ${pair.beforeLabel || "Before"}`}
+                  className="w-full h-full object-cover"
+                  loading="lazy"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/35 via-transparent to-transparent" />
+                <div className="absolute bottom-0 left-0 right-0 p-3 md:p-4">
+                  <p className="font-body text-[9px] md:text-[10px] tracking-[0.3em] uppercase text-white/65 font-light">
+                    {pair.beforeLabel || "Before"}
+                  </p>
+                </div>
+              </div>
+              {/* AFTER */}
+              <div className="relative aspect-[4/3] overflow-hidden rounded-sm shadow-[0_4px_20px_-8px_hsl(220_40%_15%/0.12)]">
+                <img
+                  src={pair.afterImg}
+                  alt={`${c.title} — ${pair.afterLabel || "After"}`}
+                  className="w-full h-full object-cover"
+                  loading="lazy"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent" />
+                <div className="absolute bottom-0 left-0 right-0 p-3 md:p-4">
+                  <p className="font-body text-[9px] md:text-[10px] tracking-[0.3em] uppercase text-white/80 font-light">
+                    {pair.afterLabel || "After"}
+                  </p>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      )}
 
       {/* Learn More Toggle */}
       <div className="pl-10 md:pl-12">
@@ -97,7 +151,7 @@ const ClinicalCaseCard = ({ c, index }: { c: ClinicalCase; index: number }) => {
                   { label: "Clinical Challenge", text: c.challenge },
                   { label: "Treatment Strategy", text: c.strategy },
                   { label: "Functional Objectives", text: c.functional },
-                  { label: "Aesthetic Goals", text: c.aesthetic },
+                  { label: "Aesthetic Outcome", text: c.aesthetic },
                 ].map((item, j) => (
                   <div key={j}>
                     <p className="font-body text-[10px] tracking-[0.3em] uppercase text-charcoal-light/60 mb-2">
