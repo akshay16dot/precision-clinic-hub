@@ -62,9 +62,9 @@ const HeroSection = () => {
 
         {/* Main composition */}
         <div className="flex-1 flex items-center py-6">
-          <div className="w-full grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-0 items-center">
+          <div className="w-full flex flex-col lg:flex-row items-center gap-8 lg:gap-0">
             {/* Left — Logo */}
-            <div className="lg:col-span-4 flex flex-col items-center justify-center">
+            <div className="lg:w-[33%] flex-shrink-0 flex items-center justify-center">
               <img
                 src={logoAP}
                 alt="Dr. Akshay Parmar, Board-Certified Prosthodontist"
@@ -73,10 +73,10 @@ const HeroSection = () => {
               />
             </div>
 
-            <div className="hidden lg:block lg:col-span-1" />
+            <div className="hidden lg:block lg:w-[8%]" />
 
             {/* Right — Typography */}
-            <div className="lg:col-span-7 text-center lg:text-left lg:pl-6">
+            <div className="lg:w-[59%] text-center lg:text-left lg:pl-6">
               <h1 className="sr-only">
                 Board-Certified Prosthodontist &amp; Implant Specialist in New Jersey
               </h1>
