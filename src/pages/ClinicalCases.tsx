@@ -4,15 +4,16 @@ import { useEffect } from "react";
 import SiteNavigation from "@/components/SiteNavigation";
 import FooterSection from "@/components/FooterSection";
 import ClinicalCaseCard from "@/components/ClinicalCaseCard";
+import type { ClinicalCase } from "@/components/ClinicalCaseCard";
 
 import case1After from "@/assets/case1-after.png";
 import case1Before from "@/assets/case1-before.png";
-import case2After from "@/assets/case2-after.png";
-import case2Before from "@/assets/case2-before.png";
+import case2BeforeLeft from "@/assets/case2-before-left.png";
+import case2AfterLeft from "@/assets/case2-after-left.png";
+import case2BeforeRight from "@/assets/case2-before-right.png";
+import case2AfterRight from "@/assets/case2-after-right.png";
 import case3After from "@/assets/case3-after.png";
 import case3Before from "@/assets/case3-before.png";
-import case4After from "@/assets/case4-after.png";
-import case4Before from "@/assets/case4-before.png";
 
 const fadeUp = {
   initial: { opacity: 0, y: 16 },
@@ -20,46 +21,43 @@ const fadeUp = {
   viewport: { once: true, margin: "-60px" },
 };
 
-const cases = [
+const cases: ClinicalCase[] = [
   {
     title: "Full Mouth Rehabilitation",
-    descriptor: "Comprehensive restorative reconstruction addressing advanced wear, structural compromise, and aesthetic deterioration across the full dentition.",
-    afterImg: case1After,
-    beforeImg: case1Before,
+    subtitle: "Implants, Crowns & Bridge Reconstruction",
+    descriptor: "Collapsed bite reconstruction caused by severe wear. Restoration of function, stability, and aesthetics.",
+    imagePairs: [
+      { beforeImg: case1Before, afterImg: case1After },
+    ],
     challenge: "The patient presented with extensive tooth wear, compromised restorations, and progressive bite instability affecting daily function and confidence. Multiple teeth required comprehensive evaluation for structural viability.",
     strategy: "A staged, digitally planned full-mouth reconstruction was implemented. Treatment sequenced implant placement, custom abutment design, and precision-milled restorations to rebuild occlusal stability from the foundation.",
     functional: "Restore balanced occlusion, eliminate jaw tension, and establish long-term structural integrity across all functional movements.",
-    aesthetic: "Achieve natural tooth proportions, harmonious gingival architecture, and a refined smile line consistent with the patient's facial anatomy.",
+    aesthetic: "Natural tooth proportions, harmonious gingival architecture, and a refined smile line consistent with the patient's facial anatomy.",
   },
   {
-    title: "Anterior Aesthetic & Soft Tissue Reconstruction",
-    descriptor: "Grey crown correction with gum grafting and precision-matched porcelain restorations for seamless anterior integration.",
-    afterImg: case2After,
-    beforeImg: case2Before,
-    challenge: "A failing anterior crown with visible grey discoloration at the gum line had created an unnatural appearance. Soft tissue recession exposed the underlying metal margin, compounding the aesthetic concern.",
-    strategy: "Connective tissue grafting was performed to restore gingival volume and coverage. The compromised restoration was replaced with a custom all-ceramic crown designed for optimal light transmission and tissue compatibility.",
-    functional: "Maintain anterior guidance integrity and ensure long-term soft tissue health around the restored margin.",
-    aesthetic: "Eliminate grey-line visibility, restore natural translucency at the gingival margin, and achieve chromatic continuity with adjacent teeth.",
-  },
-  {
-    title: "Maxillary Denture & Mandibular Fixed Implant Reconstruction",
-    descriptor: "All-on-4 mandibular rehabilitation with precision-engineered fixed prosthesis replacing a failing lower dentition.",
-    afterImg: case3After,
-    beforeImg: case3Before,
-    challenge: "Severe periodontal breakdown had rendered the remaining dentition non-restorable. The patient experienced significant functional limitations and progressive bone loss threatening future treatment options.",
-    strategy: "Strategic implant placement maximized available bone support. A fixed mandibular prosthesis was precision-engineered for immediate function, while the maxillary arch was restored with a high-retention removable prosthesis.",
-    functional: "Restore complete chewing capacity, speech clarity, and eliminate the instability associated with conventional removable solutions.",
-    aesthetic: "Engineer natural tooth proportions and gingival contours within the prosthetic framework to achieve a dignified, confident appearance.",
-  },
-  {
-    title: "Bite Collapse Reconstruction with Implants & Crowns",
-    descriptor: "Restoration of vertical dimension and functional stability through integrated implant and crown rehabilitation.",
-    afterImg: case4After,
-    beforeImg: case4Before,
-    challenge: "Progressive bite collapse had resulted in loss of vertical dimension, compromised posterior support, and chronic jaw discomfort. The existing dentition showed advanced wear patterns and structural failure.",
-    strategy: "A comprehensive approach combined strategic implant placement with full-coverage restorations to re-establish vertical dimension and distribute occlusal forces evenly across the arch.",
+    title: "Comprehensive Bite Reconstruction",
+    subtitle: "Implant-Supported Rehabilitation",
+    descriptor: "Severe occlusal wear with bite collapse. Precision-guided full mouth reconstruction.",
+    imagePairs: [
+      { beforeImg: case2BeforeLeft, afterImg: case2AfterLeft, beforeLabel: "Before — Left Lateral", afterLabel: "After — Left Lateral" },
+      { beforeImg: case2BeforeRight, afterImg: case2AfterRight, beforeLabel: "Before — Right Lateral", afterLabel: "After — Right Lateral" },
+    ],
+    challenge: "Progressive occlusal wear had resulted in significant loss of vertical dimension, posterior bite collapse, and chronic jaw discomfort. The existing dentition showed advanced structural failure across both arches.",
+    strategy: "A comprehensive approach combined strategic implant placement with full-coverage restorations to re-establish vertical dimension and distribute occlusal forces evenly across both arches.",
     functional: "Rebuild posterior support, restore vertical dimension of occlusion, and establish stable, comfortable jaw function for long-term durability.",
-    aesthetic: "Achieve proportional tooth display, balanced smile symmetry, and natural-appearing restorations that complement facial structure.",
+    aesthetic: "Achieve proportional tooth display, balanced smile symmetry, and natural-appearing restorations that complement facial structure from all lateral perspectives.",
+  },
+  {
+    title: "Full Arch Implant Reconstruction",
+    subtitle: "Advanced Restorative Rehabilitation",
+    descriptor: "Extensive caries and periodontal damage. Full arch implant-supported restoration.",
+    imagePairs: [
+      { beforeImg: case3Before, afterImg: case3After },
+    ],
+    challenge: "Severe periodontal breakdown and extensive caries had rendered the remaining dentition non-restorable. The patient experienced significant functional limitations and progressive bone loss threatening future treatment options.",
+    strategy: "Strategic implant placement maximized available bone support. A fixed full-arch prosthesis was precision-engineered for immediate function, restoring complete dental architecture from a compromised foundation.",
+    functional: "Restore complete chewing capacity, speech clarity, and eliminate the instability associated with the failing natural dentition.",
+    aesthetic: "Engineer natural tooth proportions and gingival contours within the prosthetic framework to achieve a dignified, confident appearance.",
   },
 ];
 
@@ -86,7 +84,6 @@ const ClinicalCases = () => {
 
       {/* ═══════ SECTION 1 — HERO ═══════ */}
       <section className="relative min-h-[70vh] md:min-h-[80vh] flex items-center justify-center overflow-hidden">
-        {/* Hero background — dominant AFTER image */}
         <div className="absolute inset-0">
           <img
             src={case1After}
@@ -136,10 +133,10 @@ const ClinicalCases = () => {
             </h2>
             <div className="w-10 h-px bg-navy/20 mx-auto mb-8" />
             <p className="font-body text-sm md:text-[15px] text-charcoal-light font-light leading-[1.85]">
-              Each case presented here reflects a structured clinical process — 
-              from comprehensive diagnosis and digital planning through 
-              biologically guided execution. These outcomes are the result of 
-              precision engineering, respect for biological principles, and a 
+              Each case presented here reflects a structured clinical process —
+              from comprehensive diagnosis and digital planning through
+              biologically guided execution. These outcomes are the result of
+              precision engineering, respect for biological principles, and a
               commitment to long-term functional and aesthetic stability.
             </p>
           </motion.div>
@@ -211,8 +208,8 @@ const ClinicalCases = () => {
               Considering <span className="italic">Treatment?</span>
             </h2>
             <p className="font-body text-sm md:text-[15px] text-charcoal-light font-light leading-[1.85] max-w-lg mx-auto mb-10">
-              Every reconstruction begins with structured evaluation, 
-              diagnosis, and digital planning. A comprehensive consultation 
+              Every reconstruction begins with structured evaluation,
+              diagnosis, and digital planning. A comprehensive consultation
               establishes the clinical foundation for predictable outcomes.
             </p>
             <Link
