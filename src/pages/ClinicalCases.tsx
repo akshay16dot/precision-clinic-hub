@@ -22,8 +22,8 @@ import case6Before from "@/assets/case6-before.png";
 import case6After from "@/assets/case6-after.png";
 import case7Before from "@/assets/case7-before.png";
 import case7After from "@/assets/case7-after.png";
-import outcome1Before from "@/assets/outcome-1-before.png";
-import outcome1After from "@/assets/outcome-1-after.png";
+import case8Before from "@/assets/case8-before.png";
+import case8After from "@/assets/case8-after.png";
 
 const fadeUp = {
   initial: { opacity: 0, y: 16 },
@@ -125,13 +125,13 @@ const correctiveCases: ClinicalCase[] = [
   {
     title: "Anterior Aesthetic Rehabilitation",
     subtitle: "Implant & Soft Tissue Reconstruction",
-    descriptor: "Correction of compromised anterior aesthetics. Bone grafting, soft tissue grafting, and crown redesign to eliminate grey shadowing and restore natural appearance.",
-    imagePairs: [{ beforeImg: outcome1Before, afterImg: outcome1After }],
+    descriptor: "Correction of grey shadowing caused by thin soft tissue and compromised underlying structures. Biologic correction and aesthetic refinement restoring natural shade integration and harmonized gingival architecture.",
+    imagePairs: [{ beforeImg: case8Before, afterImg: case8After }],
     details: [
-      { label: "Aesthetic Compromise", text: "Failing anterior implants and restorations had produced visible grey shadowing at the gingival margin, unnatural tooth proportions, and compromised soft tissue architecture. The aesthetic zone required comprehensive biologic and prosthetic intervention." },
-      { label: "Biologic & Prosthetic Strategy", text: "A staged approach combined bone augmentation and connective tissue grafting to rebuild the biologic foundation, followed by custom all-ceramic restorations designed for optimal light transmission and tissue harmony." },
-      { label: "Tissue Architecture Goals", text: "Restore adequate buccal bone volume, achieve symmetric gingival margins, and eliminate metal show-through by transitioning to biocompatible ceramic materials with natural translucency." },
-      { label: "Outcome", text: "Natural anterior aesthetics with healthy soft tissue architecture, eliminated grey-line visibility, and harmonious integration with adjacent teeth achieving a refined, confident smile." },
+      { label: "Aesthetic Compromise", text: "Existing restorations exhibited visible grey tonal show-through near gingival margins, caused by thin soft tissue overlying compromised underlying structures. The unnatural discoloration undermined the aesthetic zone despite otherwise intact tooth form." },
+      { label: "Biologic & Prosthetic Strategy", text: "A staged approach addressed the underlying tissue deficiency through connective tissue grafting to increase soft tissue volume, followed by custom all-ceramic restorations engineered for natural shade integration and optimal light transmission without grey translucency." },
+      { label: "Tissue Architecture Goals", text: "Restore adequate soft tissue thickness to mask underlying structures, achieve harmonized gingival contours, and deliver enhanced biological contours that support long-term aesthetic stability without grey shadowing." },
+      { label: "Outcome", text: "Correction of underlying structural and tissue deficiencies resulting in aesthetic normalization — natural shade integration, eliminated grey shadowing, improved soft tissue volume, and harmonized gingival architecture." },
     ],
   },
 ];
