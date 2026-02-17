@@ -13,6 +13,7 @@ interface ContactPayload {
   message: string;
   formType: string;
   pageSource: string;
+  pageUrl?: string;
   honeypot?: string;
 }
 
@@ -26,7 +27,7 @@ serve(async (req) => {
     if (!RESEND_API_KEY) {
       console.error("RESEND_API_KEY is not configured");
       return new Response(
-        JSON.stringify({ success: false, error: "Email service not configured" }),
+        JSON.stringify({ success: false, error: "Email service not configured. Please contact drparmardds@gmail.com directly." }),
         { status: 500, headers: { ...corsHeaders, "Content-Type": "application/json" } }
       );
     }
@@ -35,7 +36,6 @@ serve(async (req) => {
 
     // Bot protection: honeypot field should be empty
     if (payload.honeypot) {
-      // Silently accept but don't send (bot detected)
       return new Response(
         JSON.stringify({ success: true }),
         { status: 200, headers: { ...corsHeaders, "Content-Type": "application/json" } }
@@ -59,33 +59,54 @@ serve(async (req) => {
       );
     }
 
+    const timestamp = new Date().toLocaleString("en-US", {
+      dateStyle: "long",
+      timeStyle: "short",
+      timeZone: "America/New_York",
+    });
+
     const phoneLine = payload.phone?.trim()
       ? `<tr><td style="padding:8px 16px;font-weight:600;color:#1a2942;vertical-align:top;">Phone:</td><td style="padding:8px 16px;color:#444;">${escapeHtml(payload.phone.trim())}</td></tr>`
+      : "";
+
+    const pageUrlLine = payload.pageUrl
+      ? `<tr style="background:#fafafa;"><td style="padding:8px 16px;font-weight:600;color:#1a2942;vertical-align:top;">Page:</td><td style="padding:8px 16px;color:#444;"><a href="${escapeHtml(payload.pageUrl)}" style="color:#1a2942;">${escapeHtml(payload.pageUrl)}</a></td></tr>`
       : "";
 
     const htmlBody = `
       <div style="font-family: 'Helvetica Neue', Arial, sans-serif; max-width: 600px; margin: 0 auto;">
         <div style="background: #1a2942; padding: 32px; text-align: center;">
           <h1 style="color: #ffffff; font-size: 20px; font-weight: 300; letter-spacing: 0.1em; margin: 0;">
-            NEW INQUIRY
+            ${escapeHtml(payload.formType).toUpperCase()}
           </h1>
         </div>
         <div style="padding: 32px; background: #f9f8f6;">
           <p style="color: #666; font-size: 12px; text-transform: uppercase; letter-spacing: 0.15em; margin-bottom: 20px;">
-            ${escapeHtml(payload.formType)} · ${escapeHtml(payload.pageSource)}
+            ${escapeHtml(payload.formType)} · ${escapeHtml(payload.pageSource)} · ${escapeHtml(timestamp)}
           </p>
           <table style="width: 100%; border-collapse: collapse; background: #ffffff; border-radius: 4px; overflow: hidden;">
             <tr><td style="padding:8px 16px;font-weight:600;color:#1a2942;vertical-align:top;">Name:</td><td style="padding:8px 16px;color:#444;">${escapeHtml(payload.name.trim())}</td></tr>
             <tr style="background:#fafafa;"><td style="padding:8px 16px;font-weight:600;color:#1a2942;vertical-align:top;">Email:</td><td style="padding:8px 16px;color:#444;"><a href="mailto:${escapeHtml(payload.email.trim())}" style="color:#1a2942;">${escapeHtml(payload.email.trim())}</a></td></tr>
             ${phoneLine}
             <tr style="background:#fafafa;"><td style="padding:8px 16px;font-weight:600;color:#1a2942;vertical-align:top;">Message:</td><td style="padding:8px 16px;color:#444;white-space:pre-wrap;">${escapeHtml(payload.message.trim())}</td></tr>
+            ${pageUrlLine}
+            <tr><td style="padding:8px 16px;font-weight:600;color:#1a2942;vertical-align:top;">Submitted:</td><td style="padding:8px 16px;color:#444;">${escapeHtml(timestamp)}</td></tr>
           </table>
         </div>
         <div style="padding: 16px 32px; text-align: center; background: #eee;">
-          <p style="color: #999; font-size: 11px; margin: 0;">Sent from drparmar.com · ${new Date().toLocaleDateString("en-US", { dateStyle: "long" })}</p>
+          <p style="color: #999; font-size: 11px; margin: 0;">Sent from drparmar.com</p>
         </div>
       </div>
     `;
+
+    // Subject line includes form type for easy inbox filtering
+    const subjectMap: Record<string, string> = {
+      "Consultation Request": "Contact Enquiry",
+      "Patient Review": "Patient Review Submission",
+      "Peer Feedback": "Peer Feedback Submission",
+      "Education Enquiry": "Education Enquiry",
+    };
+    const subjectTag = subjectMap[payload.formType] || payload.formType;
 
     const resendRes = await fetch("https://api.resend.com/emails", {
       method: "POST",
@@ -96,7 +117,7 @@ serve(async (req) => {
       body: JSON.stringify({
         from: "Dr. Parmar Website <onboarding@resend.dev>",
         to: ["drparmardds@gmail.com"],
-        subject: `New ${payload.formType} from ${payload.name.trim()}`,
+        subject: `${subjectTag}: ${payload.name.trim()}`,
         html: htmlBody,
         reply_to: payload.email.trim(),
       }),

@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import SiteNavigation from "@/components/SiteNavigation";
 import PageFooter from "@/components/PageFooter";
-import TestimonialReviewCTA from "@/components/TestimonialReviewCTA";
+import InquiryForm from "@/components/InquiryForm";
 import { usePageSEO } from "@/hooks/usePageSEO";
 
 const fadeUp = {
@@ -121,8 +121,28 @@ const ProfessionalTestimonials = () => {
               </motion.blockquote>
             ))}
           </div>
+        </div>
+      </section>
 
-          <TestimonialReviewCTA />
+      {/* Peer Feedback Form */}
+      <section className="pb-24 md:pb-32 px-6 md:px-8">
+        <div className="luxury-container max-w-lg">
+          <div className="border-t border-divider pt-16">
+            <motion.div {...fadeUp} transition={{ duration: 0.6 }}>
+              <p className="font-body text-[10px] tracking-[0.35em] uppercase text-charcoal-light mb-8 text-center">
+                Share Your Professional Perspective
+              </p>
+              <InquiryForm
+                formType="Peer Feedback"
+                pageSource="Professional Testimonials"
+                heading=""
+                messageLabel="Your Feedback"
+                messagePlaceholder="Share your experience with the clinical training or mentorship program..."
+                submitLabel="Submit Feedback"
+                fields={["name", "email", "message"]}
+              />
+            </motion.div>
+          </div>
         </div>
       </section>
 
