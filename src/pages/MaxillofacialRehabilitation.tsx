@@ -1,9 +1,9 @@
 import { motion } from "framer-motion";
-import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import SiteNavigation from "@/components/SiteNavigation";
 import PageCTA from "@/components/PageCTA";
 import PageFooter from "@/components/PageFooter";
+import { usePageSEO } from "@/hooks/usePageSEO";
 import drParmarMSK from "@/assets/dr-parmar-msk.png";
 import obturatorProsthesis from "@/assets/obturator-prosthesis.png";
 
@@ -48,13 +48,10 @@ const approach = [
 ];
 
 const MaxillofacialRehabilitation = () => {
-  useEffect(() => {
-    window.scrollTo(0, 0);
-    document.title = "Maxillofacial & Oncology Rehabilitation | Dr. Akshay Parmar";
-    return () => {
-      document.title = "Dr. Akshay Parmar | Board-Certified Prosthodontist in New Jersey";
-    };
-  }, []);
+  usePageSEO({
+    title: "Maxillofacial Prosthetics & Oncology Rehabilitation | NJ Specialist",
+    description: "Fellowship-trained maxillofacial prosthodontist providing oncology reconstruction, obturator prostheses, and craniofacial rehabilitation. Advanced care for post-surgical and congenital conditions in New Jersey.",
+  });
 
   return (
     <main className="bg-background">

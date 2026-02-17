@@ -1,10 +1,10 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { useEffect } from "react";
 import SiteNavigation from "@/components/SiteNavigation";
 import FooterSection from "@/components/FooterSection";
 import ClinicalCaseCard from "@/components/ClinicalCaseCard";
 import type { ClinicalCase } from "@/components/ClinicalCaseCard";
+import { usePageSEO } from "@/hooks/usePageSEO";
 
 import case1After from "@/assets/case1-after.png";
 import case1Before from "@/assets/case1-before.png";
@@ -145,13 +145,10 @@ const reassurancePoints = [
 ];
 
 const ClinicalCases = () => {
-  useEffect(() => {
-    window.scrollTo(0, 0);
-    document.title = "Selected Clinical Work | Dr. Akshay Parmar";
-    return () => {
-      document.title = "Dr. Akshay Parmar | Board-Certified Prosthodontist in New Jersey";
-    };
-  }, []);
+  usePageSEO({
+    title: "Clinical Cases | Implant & Prosthetic Rehabilitation Results",
+    description: "Selected clinical cases demonstrating advanced implant reconstruction, full-arch rehabilitation, corrective prosthetics, and aesthetic restoration by Board-Certified Prosthodontist Dr. Akshay Parmar.",
+  });
 
   return (
     <main className="bg-background">

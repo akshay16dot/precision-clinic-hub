@@ -8,8 +8,14 @@ import GallerySection from "@/components/GallerySection";
 import CTASection from "@/components/CTASection";
 import EducationSection from "@/components/EducationSection";
 import FooterSection from "@/components/FooterSection";
+import { usePageSEO } from "@/hooks/usePageSEO";
 
 const Index = () => {
+  usePageSEO({
+    title: "Dr. Akshay Parmar | Board-Certified Prosthodontist in New Jersey",
+    description: "Board-Certified Prosthodontist offering advanced implant rehabilitation, full-arch reconstruction, and maxillofacial prosthetics in New Jersey. Precision-driven care for complex dental and surgical cases.",
+  });
+
   return (
     <main className="bg-background">
       <SiteNavigation />

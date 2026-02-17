@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
-import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
+import { usePageSEO } from "@/hooks/usePageSEO";
 import SiteNavigation from "@/components/SiteNavigation";
 import PageFooter from "@/components/PageFooter";
 
@@ -12,13 +12,10 @@ const fadeUp = {
 };
 
 const Education = () => {
-  useEffect(() => {
-    window.scrollTo(0, 0);
-    document.title = "Education | Dr. Akshay Parmar";
-    return () => {
-      document.title = "Dr. Akshay Parmar | Board-Certified Prosthodontist in New Jersey";
-    };
-  }, []);
+  usePageSEO({
+    title: "Education | Patient Guides & Clinical Training Programs",
+    description: "Educational resources for patients and dental professionals. Treatment guides, clinical protocols, and advanced implant training from Board-Certified Prosthodontist Dr. Akshay Parmar.",
+  });
 
   return (
     <main className="bg-background">

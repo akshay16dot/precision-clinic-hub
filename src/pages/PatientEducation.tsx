@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import SiteNavigation from "@/components/SiteNavigation";
 import FooterSection from "@/components/FooterSection";
@@ -9,6 +8,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { usePageSEO } from "@/hooks/usePageSEO";
 
 const fadeUp = {
   initial: { opacity: 0, y: 16 },
@@ -44,15 +44,10 @@ const faqs = [
 ];
 
 const PatientEducation = () => {
-  useEffect(() => {
-    window.scrollTo(0, 0);
-    document.title =
-      "Patient Education | Treatment Guide | Dr. Akshay Parmar";
-    return () => {
-      document.title =
-        "Dr. Akshay Parmar | Board-Certified Prosthodontist in New Jersey";
-    };
-  }, []);
+  usePageSEO({
+    title: "Patient Education | Dental Implant & Treatment Guides",
+    description: "Comprehensive patient treatment guides covering dental implants, full-arch rehabilitation, veneers, whitening, and maxillofacial care. Understand your options with confidence.",
+  });
 
   return (
     <main className="bg-background">

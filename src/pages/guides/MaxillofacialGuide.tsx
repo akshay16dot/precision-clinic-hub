@@ -1,7 +1,8 @@
 import PatientGuideLayout from "@/components/PatientGuideLayout";
 
 const data = {
-  pageTitle: "Maxillofacial Rehabilitation Guide | Dr. Akshay Parmar",
+  pageTitle: "Maxillofacial Rehabilitation Guide | Oncology & Reconstruction",
+  pageDescription: "Patient guide to maxillofacial prosthetic rehabilitation. Learn about post-oncologic reconstruction, obturator prostheses, and coordinated multidisciplinary care.",
   subtitle: "Patient Guide · Maxillofacial & Oral Reconstruction",
   title: "Maxillofacial",
   titleItalic: "Rehabilitation Guide",

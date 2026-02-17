@@ -1,9 +1,10 @@
 import { motion } from "framer-motion";
-import { useEffect, useState, useRef } from "react";
+import { useState, useRef } from "react";
 import { Link } from "react-router-dom";
 import SiteNavigation from "@/components/SiteNavigation";
 import PageCTA from "@/components/PageCTA";
 import PageFooter from "@/components/PageFooter";
+import { usePageSEO } from "@/hooks/usePageSEO";
 import case1Before from "@/assets/veneer-case1-before.png";
 import case1After from "@/assets/veneer-case1-after.png";
 import case2Before from "@/assets/veneer-case2-before.png";
@@ -76,11 +77,10 @@ const SectionTitle = ({ children }: { children: React.ReactNode }) => (
 );
 
 const VeneersAesthetic = () => {
-  useEffect(() => {
-    window.scrollTo(0, 0);
-    document.title = "Veneers & Aesthetic Reconstruction | Dr. Akshay Parmar";
-    return () => { document.title = "Dr. Akshay Parmar | Board-Certified Prosthodontist in New Jersey"; };
-  }, []);
+  usePageSEO({
+    title: "Porcelain Veneers in New Jersey | Prosthodontist Dr. Parmar",
+    description: "Custom porcelain veneers and aesthetic reconstruction by a Board-Certified Prosthodontist. Natural-looking results through precision diagnostics, material science, and restorative architecture.",
+  });
 
   return (
     <main className="bg-background">

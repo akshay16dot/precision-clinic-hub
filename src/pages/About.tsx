@@ -1,11 +1,11 @@
 import { motion } from "framer-motion";
-import { useEffect } from "react";
 import SiteNavigation from "@/components/SiteNavigation";
 import PageCTA from "@/components/PageCTA";
 import PageFooter from "@/components/PageFooter";
 import PracticeAffiliations from "@/components/PracticeAffiliations";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import drParmar from "@/assets/dr-parmar-color-headshot.jpg";
+import { usePageSEO } from "@/hooks/usePageSEO";
 
 const fadeUp = {
   initial: { opacity: 0, y: 20 },
@@ -14,13 +14,10 @@ const fadeUp = {
 };
 
 const About = () => {
-  useEffect(() => {
-    window.scrollTo(0, 0);
-    document.title = "About Dr. Akshay Parmar | Board-Certified Prosthodontist";
-    return () => {
-      document.title = "Dr. Akshay Parmar | Board-Certified Prosthodontist in New Jersey";
-    };
-  }, []);
+  usePageSEO({
+    title: "About Dr. Akshay Parmar | Prosthodontist & Implant Specialist, NJ",
+    description: "Board-Certified Prosthodontist and Fellow of the American College of Prosthodontists. Advanced training in implant rehabilitation, maxillofacial prosthetics, and oncology reconstruction at Memorial Sloan Kettering.",
+  });
 
   return (
     <main className="bg-background">

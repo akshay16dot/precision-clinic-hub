@@ -1,10 +1,10 @@
 import { motion } from "framer-motion";
-import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import SiteNavigation from "@/components/SiteNavigation";
 import PageHero from "@/components/PageHero";
 import PageCTA from "@/components/PageCTA";
 import PageFooter from "@/components/PageFooter";
+import { usePageSEO } from "@/hooks/usePageSEO";
 
 const benefits = [
   {
@@ -55,13 +55,10 @@ const fadeUp = {
 };
 
 const DentalImplants = () => {
-  useEffect(() => {
-    window.scrollTo(0, 0);
-    document.title = "Dental Implants in New Jersey | Dr. Akshay Parmar";
-    return () => {
-      document.title = "Dr. Akshay Parmar | Board-Certified Prosthodontist in New Jersey";
-    };
-  }, []);
+  usePageSEO({
+    title: "Dental Implants in New Jersey | Prosthodontist Dr. Akshay Parmar",
+    description: "Advanced dental implant rehabilitation by a Board-Certified Prosthodontist in New Jersey. Single-tooth, multi-unit, and complex implant reconstruction with precision planning and long-term stability.",
+  });
 
   return (
     <main className="bg-background">

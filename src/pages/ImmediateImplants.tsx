@@ -1,8 +1,8 @@
 import { motion } from "framer-motion";
-import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import SiteNavigation from "@/components/SiteNavigation";
 import PageFooter from "@/components/PageFooter";
+import { usePageSEO } from "@/hooks/usePageSEO";
 import immediateCase1Before from "@/assets/immediate-case1-before.png";
 import immediateCase1After from "@/assets/immediate-case1-after.png";
 import immediateCase2Before from "@/assets/immediate-case2-before.png";
@@ -33,14 +33,10 @@ const faqItems = [
 ];
 
 const ImmediateImplants = () => {
-  useEffect(() => {
-    window.scrollTo(0, 0);
-    document.title = "Immediate Implant Rehabilitation | Dr. Akshay Parmar";
-    return () => {
-      document.title =
-        "Dr. Akshay Parmar | Board-Certified Prosthodontist in New Jersey";
-    };
-  }, []);
+  usePageSEO({
+    title: "Immediate Implant Rehabilitation | Same-Day Implants NJ",
+    description: "Immediate implant placement and same-day provisional restoration by a Board-Certified Prosthodontist. Precision-planned protocols for predictable outcomes and accelerated recovery in New Jersey.",
+  });
 
   return (
     <main className="bg-background">

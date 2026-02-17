@@ -1,7 +1,8 @@
 import PatientGuideLayout from "@/components/PatientGuideLayout";
 
 const data = {
-  pageTitle: "Immediate Implant Guide | Dr. Akshay Parmar",
+  pageTitle: "Immediate Implant Guide | Same-Day Tooth Replacement",
+  pageDescription: "Patient guide to immediate implant placement. Understand same-day tooth replacement, candidacy, healing timeline, and expected outcomes.",
   subtitle: "Patient Guide · Immediate Implants",
   title: "Immediate Implant",
   titleItalic: "Treatment Guide",

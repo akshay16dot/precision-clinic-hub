@@ -1,7 +1,8 @@
 import PatientGuideLayout from "@/components/PatientGuideLayout";
 
 const data = {
-  pageTitle: "Full-Arch Implant Guide | Dr. Akshay Parmar",
+  pageTitle: "Full-Arch Implant Guide | All-on-X Rehabilitation",
+  pageDescription: "Patient guide to full-arch implant rehabilitation. Learn about the All-on-X concept, treatment timeline, recovery, and what to expect from complete arch restoration.",
   subtitle: "Patient Guide · Full-Arch Rehabilitation",
   title: "Full-Arch Implant",
   titleItalic: "Rehabilitation Guide",

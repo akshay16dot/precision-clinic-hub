@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import SiteNavigation from "@/components/SiteNavigation";
 import PageFooter from "@/components/PageFooter";
 import TestimonialReviewCTA from "@/components/TestimonialReviewCTA";
+import { usePageSEO } from "@/hooks/usePageSEO";
 
 const fadeUp = {
   initial: { opacity: 0, y: 20 },
@@ -43,6 +44,11 @@ const testimonials = [
 ];
 
 const Testimonials = () => {
+  usePageSEO({
+    title: "Patient Testimonials | Dr. Akshay Parmar, Prosthodontist NJ",
+    description: "Patient experiences with advanced implant rehabilitation, aesthetic reconstruction, and complex prosthetic care. Real reflections on comfort, function, and clinical transformation.",
+  });
+
   return (
     <main className="bg-background">
       <SiteNavigation />

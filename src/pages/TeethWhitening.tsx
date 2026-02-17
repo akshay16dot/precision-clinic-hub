@@ -1,9 +1,9 @@
 import { motion } from "framer-motion";
-import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import SiteNavigation from "@/components/SiteNavigation";
 import PageCTA from "@/components/PageCTA";
 import PageFooter from "@/components/PageFooter";
+import { usePageSEO } from "@/hooks/usePageSEO";
 import heroImage from "@/assets/hero-teeth-whitening.png";
 
 const fadeUp = {
@@ -13,11 +13,10 @@ const fadeUp = {
 };
 
 const TeethWhitening = () => {
-  useEffect(() => {
-    window.scrollTo(0, 0);
-    document.title = "Teeth Whitening | Dr. Akshay Parmar";
-    return () => { document.title = "Dr. Akshay Parmar | Board-Certified Prosthodontist in New Jersey"; };
-  }, []);
+  usePageSEO({
+    title: "Professional Teeth Whitening | Prosthodontist in New Jersey",
+    description: "Safe, specialist-supervised teeth whitening for natural brightness. Conservative enhancement guided by clinical expertise and aesthetic analysis.",
+  });
 
   return (
     <main className="bg-background">

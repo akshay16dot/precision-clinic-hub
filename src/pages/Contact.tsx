@@ -1,8 +1,9 @@
 import { motion } from "framer-motion";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import SiteNavigation from "@/components/SiteNavigation";
 import PageFooter from "@/components/PageFooter";
 import { supabase } from "@/integrations/supabase/client";
+import { usePageSEO } from "@/hooks/usePageSEO";
 
 const fadeUp = {
   initial: { opacity: 0, y: 30 },
@@ -19,13 +20,10 @@ const Contact = () => {
   const [message, setMessage] = useState("");
   const [honeypot, setHoneypot] = useState("");
 
-  useEffect(() => {
-    window.scrollTo(0, 0);
-    document.title = "Contact | Dr. Akshay Parmar";
-    return () => {
-      document.title = "Dr. Akshay Parmar | Board-Certified Prosthodontist in New Jersey";
-    };
-  }, []);
+  usePageSEO({
+    title: "Contact | Schedule a Consultation with Dr. Akshay Parmar",
+    description: "Request a consultation with Board-Certified Prosthodontist Dr. Akshay Parmar. Advanced implant, prosthetic, and maxillofacial rehabilitation in New Jersey.",
+  });
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();

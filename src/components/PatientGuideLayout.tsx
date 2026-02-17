@@ -1,8 +1,8 @@
 import { motion } from "framer-motion";
-import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import SiteNavigation from "@/components/SiteNavigation";
 import PageFooter from "@/components/PageFooter";
+import { usePageSEO } from "@/hooks/usePageSEO";
 
 const fadeUp = {
   initial: { opacity: 0, y: 16 },
@@ -27,6 +27,7 @@ interface PracticalItem {
 
 interface PatientGuideData {
   pageTitle: string;
+  pageDescription?: string;
   subtitle: string;
   title: string;
   titleItalic: string;
@@ -51,13 +52,10 @@ const warmBg = {
 };
 
 const PatientGuideLayout = ({ data }: { data: PatientGuideData }) => {
-  useEffect(() => {
-    window.scrollTo(0, 0);
-    document.title = data.pageTitle;
-    return () => {
-      document.title = "Dr. Akshay Parmar | Board-Certified Prosthodontist in New Jersey";
-    };
-  }, [data.pageTitle]);
+  usePageSEO({
+    title: data.pageTitle,
+    description: data.pageDescription || `Patient guide: ${data.title} ${data.titleItalic}. What to expect, recovery, and frequently asked questions.`,
+  });
 
   return (
     <main className="bg-background">
