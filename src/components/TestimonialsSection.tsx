@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import TestimonialReviewCTA from "@/components/TestimonialReviewCTA";
 
 const fadeUp = {
   initial: { opacity: 0, y: 20 },
@@ -55,6 +56,8 @@ const TestimonialsSection = () => {
             </motion.blockquote>
           ))}
         </div>
+
+        <TestimonialReviewCTA />
       </div>
     </section>
   );

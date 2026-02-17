@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import PageNavigation from "@/components/PageNavigation";
 import PageFooter from "@/components/PageFooter";
-import { ExternalLink } from "lucide-react";
+import TestimonialReviewCTA from "@/components/TestimonialReviewCTA";
 
 const fadeUp = {
   initial: { opacity: 0, y: 20 },
@@ -122,22 +122,7 @@ const Testimonials = () => {
             ))}
           </div>
 
-          {/* Google Reviews CTA */}
-          <motion.div
-            {...fadeUp}
-            transition={{ duration: 0.6 }}
-            className="text-center mt-24 pt-12 border-t border-divider"
-          >
-            <a
-              href="https://g.page/review"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-3 px-14 py-[18px] border border-navy/15 text-navy font-body text-[11px] tracking-[0.25em] uppercase transition-all duration-300 hover:bg-navy hover:text-primary-foreground"
-            >
-              Read Verified Google Reviews
-              <ExternalLink size={13} strokeWidth={1.5} />
-            </a>
-          </motion.div>
+          <TestimonialReviewCTA />
         </div>
       </section>
 

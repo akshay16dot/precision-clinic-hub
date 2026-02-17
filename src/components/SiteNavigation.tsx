@@ -24,7 +24,7 @@ const navItems: NavItem[] = [
       { to: "/dental-implants-new-jersey", label: "Dental Implants" },
       { to: "/immediate-implant-rehabilitation", label: "Immediate Implants" },
       { to: "/full-arch-implants-new-jersey", label: "Full-Arch Rehabilitation" },
-      { to: "/clinical-cases", label: "Failed Implant Correction" },
+      { to: "/clinical-cases", label: "Clinical Cases" },
     ],
   },
   {
@@ -39,39 +39,31 @@ const navItems: NavItem[] = [
     label: "Specialized Care",
     links: [
       { to: "/maxillofacial-rehabilitation", label: "Maxillofacial Prosthodontics" },
-      { to: "/maxillofacial-rehabilitation", label: "Oncology & Reconstruction" },
-      { to: "/maxillofacial-rehabilitation", label: "Medically Complex Patients" },
+      { to: "/maxillofacial-rehabilitation", label: "Oncology & Reconstruction", hash: "#oncology" },
+      { to: "/maxillofacial-rehabilitation", label: "Medically Complex Patients", hash: "#complex" },
     ],
   },
   {
     label: "Patients",
     links: [
-      { to: "/#services", label: "For Patients", isAnchor: true },
-      { to: "/contact", label: "Consultations" },
-      { to: "/patient-education", label: "Patient Education" },
-      { to: "/clinical-cases", label: "Clinical Cases" },
-      { to: "/testimonials", label: "Testimonials (Curated)" },
+      { to: "/testimonials", label: "Patient Testimonials" },
       { to: "/leave-review", label: "Leave a Review" },
+      { to: "/patient-education", label: "Patient Education" },
+      { to: "/contact", label: "Consultations" },
     ],
   },
   {
     label: "Education",
     links: [
       { to: "/#education", label: "For Dentists", isAnchor: true },
-      { to: "/education", label: "Education & Courses" },
+      { to: "/professional-education", label: "Courses & Live Programs" },
       { to: "/education", label: "STABLE IMPLANT Protocol™", hash: "#stable" },
-      { to: "/clinical-cases", label: "Clinical Training Gallery" },
       { to: "/professional-testimonials", label: "Peer Feedback" },
-      { to: "/leave-review", label: "Share Feedback" },
     ],
   },
   {
     label: "About",
-    links: [
-      { to: "/about", label: "About Dr. Parmar" },
-      { to: "/about", label: "Treatment Philosophy", hash: "#philosophy" },
-      { to: "/about", label: "Credentials & Affiliations", hash: "#credentials" },
-    ],
+    to: "/about",
   },
   {
     label: "Contact",
@@ -79,14 +71,14 @@ const navItems: NavItem[] = [
   },
 ];
 
-const megaMenuSections = [
+const megaMenuSections: { title: string; links: NavLink[] }[] = [
   {
     title: "Implants",
     links: [
       { to: "/dental-implants-new-jersey", label: "Dental Implants" },
       { to: "/immediate-implant-rehabilitation", label: "Immediate Implants" },
       { to: "/full-arch-implants-new-jersey", label: "Full-Arch Rehabilitation" },
-      { to: "/clinical-cases", label: "Failed Implant Correction" },
+      { to: "/clinical-cases", label: "Clinical Cases" },
     ],
   },
   {
@@ -101,30 +93,25 @@ const megaMenuSections = [
     title: "Specialized Care",
     links: [
       { to: "/maxillofacial-rehabilitation", label: "Maxillofacial Prosthodontics" },
-      { to: "/maxillofacial-rehabilitation", label: "Oncology & Reconstruction" },
-      { to: "/maxillofacial-rehabilitation", label: "Medically Complex Patients" },
+      { to: "/maxillofacial-rehabilitation", label: "Oncology & Reconstruction", hash: "#oncology" },
+      { to: "/maxillofacial-rehabilitation", label: "Medically Complex Patients", hash: "#complex" },
     ],
   },
   {
     title: "Patients",
     links: [
-      { to: "/#services", label: "For Patients", isAnchor: true },
-      { to: "/contact", label: "Consultations" },
-      { to: "/patient-education", label: "Patient Education" },
-      { to: "/clinical-cases", label: "Clinical Cases" },
-      { to: "/testimonials", label: "Testimonials (Curated)" },
+      { to: "/testimonials", label: "Patient Testimonials" },
       { to: "/leave-review", label: "Leave a Review" },
+      { to: "/patient-education", label: "Patient Education" },
+      { to: "/contact", label: "Consultations" },
     ],
   },
   {
     title: "Education",
     links: [
-      { to: "/#education", label: "For Dentists", isAnchor: true },
-      { to: "/education", label: "Education & Courses" },
+      { to: "/professional-education", label: "Courses & Live Programs" },
       { to: "/education", label: "STABLE IMPLANT Protocol™", hash: "#stable" },
-      { to: "/clinical-cases", label: "Clinical Training Gallery" },
       { to: "/professional-testimonials", label: "Peer Feedback" },
-      { to: "/leave-review", label: "Share Feedback" },
     ],
   },
   {
@@ -289,7 +276,7 @@ const SiteNavigation = () => {
         </div>
       </nav>
 
-      {/* Full overlay mega menu */}
+      {/* Full overlay mega menu — brighter navy */}
       <AnimatePresence>
         {menuOpen && (
           <motion.div
@@ -297,20 +284,21 @@ const SiteNavigation = () => {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.35, ease: "easeInOut" }}
-            className="fixed inset-0 z-[60] bg-navy/[0.97] backdrop-blur-sm"
+            className="fixed inset-0 z-[60]"
+            style={{ backgroundColor: "hsl(220 38% 22% / 0.98)" }}
           >
             {/* Close button */}
             <div className="luxury-container flex justify-end pt-5 px-6 md:px-10">
               <button
                 onClick={() => setMenuOpen(false)}
-                className="p-3 -mr-3 text-primary-foreground/50 hover:text-primary-foreground transition-all duration-300 hover:bg-primary-foreground/5 rounded-sm"
+                className="p-3 -mr-3 text-primary-foreground/60 hover:text-primary-foreground transition-all duration-300 hover:bg-primary-foreground/8 rounded-sm"
                 aria-label="Close menu"
               >
                 <X size={24} strokeWidth={1.2} />
               </button>
             </div>
 
-            {/* Menu content — improved spacing */}
+            {/* Menu content */}
             <div className="luxury-container px-6 md:px-10 pt-12 md:pt-16 pb-12 overflow-y-auto max-h-[calc(100vh-70px)]">
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-14 md:gap-16 lg:gap-20">
                 {megaMenuSections.map((section, si) => (
@@ -320,7 +308,7 @@ const SiteNavigation = () => {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.12 + si * 0.06, duration: 0.5, ease: "easeOut" }}
                   >
-                    <p className="font-body text-[10px] tracking-[0.25em] uppercase text-primary-foreground/25 mb-7">
+                    <p className="font-body text-[10px] tracking-[0.25em] uppercase text-primary-foreground/35 mb-7">
                       {section.title}
                     </p>
                     <div className="space-y-5">
@@ -329,7 +317,7 @@ const SiteNavigation = () => {
                           <button
                             key={link.label}
                             onClick={() => handleAnchorClick(link.to.replace("/", ""))}
-                            className="block font-body text-[13px] tracking-[0.02em] text-primary-foreground/50 hover:text-primary-foreground transition-colors duration-300"
+                            className="block font-body text-[13px] tracking-[0.02em] text-primary-foreground/60 hover:text-primary-foreground transition-colors duration-300"
                           >
                             {link.label}
                           </button>
@@ -338,7 +326,7 @@ const SiteNavigation = () => {
                             key={link.label}
                             to={link.to + (link.hash || "")}
                             onClick={() => setMenuOpen(false)}
-                            className="block font-body text-[13px] tracking-[0.02em] text-primary-foreground/50 hover:text-primary-foreground transition-colors duration-300"
+                            className="block font-body text-[13px] tracking-[0.02em] text-primary-foreground/60 hover:text-primary-foreground transition-colors duration-300"
                           >
                             {link.label}
                           </Link>
@@ -354,9 +342,9 @@ const SiteNavigation = () => {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.55, duration: 0.4 }}
-                className="mt-24 pt-6 border-t border-primary-foreground/8"
+                className="mt-24 pt-6 border-t border-primary-foreground/12"
               >
-                <p className="font-body text-[10px] tracking-[0.15em] uppercase text-primary-foreground/20">
+                <p className="font-body text-[10px] tracking-[0.15em] uppercase text-primary-foreground/30">
                   Board-Certified Prosthodontist · New Jersey
                 </p>
               </motion.div>

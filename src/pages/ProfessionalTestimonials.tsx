@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import PageNavigation from "@/components/PageNavigation";
 import PageFooter from "@/components/PageFooter";
-import { Link } from "react-router-dom";
+import TestimonialReviewCTA from "@/components/TestimonialReviewCTA";
 
 const fadeUp = {
   initial: { opacity: 0, y: 20 },
@@ -116,22 +116,7 @@ const ProfessionalTestimonials = () => {
             ))}
           </div>
 
-          {/* CTA */}
-          <motion.div
-            {...fadeUp}
-            transition={{ duration: 0.6 }}
-            className="text-center mt-24 pt-12 border-t border-divider"
-          >
-            <p className="font-body text-[10px] tracking-[0.3em] uppercase text-charcoal-light/50 mb-6">
-              Your perspective matters
-            </p>
-            <Link
-              to="/leave-review"
-              className="inline-block px-14 py-[18px] border border-navy/15 text-navy font-body text-[11px] tracking-[0.25em] uppercase transition-all duration-300 hover:bg-navy hover:text-primary-foreground"
-            >
-              Share Feedback
-            </Link>
-          </motion.div>
+          <TestimonialReviewCTA />
         </div>
       </section>
 
