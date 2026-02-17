@@ -1,8 +1,20 @@
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
+
+import case1After from "@/assets/case1-after.png";
+import case2AfterLeft from "@/assets/case2-after-left.png";
+import case3After from "@/assets/case3-after.png";
+import case4After from "@/assets/case4-after.png";
+import case5After from "@/assets/case5-after.png";
+import case6After from "@/assets/case6-after.png";
 
 const cases = [
-  "Case Study", "Case Study", "Case Study",
-  "Case Study", "Case Study", "Case Study",
+  { label: "Case 1", img: case1After, title: "Full Mouth Rehabilitation" },
+  { label: "Case 2", img: case2AfterLeft, title: "Bite Reconstruction" },
+  { label: "Case 3", img: case3After, title: "Full Arch Implants" },
+  { label: "Case 4", img: case4After, title: "Failed Implant Correction" },
+  { label: "Case 5", img: case5After, title: "Overdenture Rehabilitation" },
+  { label: "Case 6", img: case6After, title: "Maxillomandibular Rehab" },
 ];
 
 const GallerySection = () => {
@@ -31,26 +43,46 @@ const GallerySection = () => {
         </motion.div>
 
         <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-5 lg:gap-6 max-w-5xl mx-auto">
-          {cases.map((label, i) => (
-            <motion.div
-              key={i}
-              initial={{ opacity: 0, scale: 0.96 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: i * 0.08 }}
-              className="aspect-[4/3] flex items-center justify-center group cursor-pointer overflow-hidden transition-all duration-500 border border-divider hover:border-navy/15 hover:shadow-[0_6px_24px_-10px_hsl(220_20%_15%/0.1)]"
-              style={{
-                background: "linear-gradient(145deg, hsl(40 12% 95%) 0%, hsl(40 8% 92%) 100%)",
-              }}
-            >
-              <div className="text-center">
-                <p className="font-body text-[10px] tracking-[0.3em] uppercase text-charcoal-light/30 group-hover:text-charcoal-light/60 transition-colors duration-400">
-                  {label}
-                </p>
-              </div>
-            </motion.div>
+          {cases.map((c, i) => (
+            <Link to="/clinical-cases" key={i}>
+              <motion.div
+                initial={{ opacity: 0, scale: 0.96 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: i * 0.08 }}
+                className="relative aspect-[4/3] group cursor-pointer overflow-hidden rounded-sm border border-divider hover:border-navy/15 hover:shadow-[0_6px_24px_-10px_hsl(220_20%_15%/0.1)] transition-all duration-500"
+              >
+                <img
+                  src={c.img}
+                  alt={c.title}
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  loading="lazy"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                <div className="absolute bottom-0 left-0 right-0 p-3 md:p-4 translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
+                  <p className="font-body text-[9px] md:text-[10px] tracking-[0.3em] uppercase text-white/80 font-light">
+                    {c.title}
+                  </p>
+                </div>
+              </motion.div>
+            </Link>
           ))}
         </div>
+
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+          className="text-center mt-12"
+        >
+          <Link
+            to="/clinical-cases"
+            className="font-body text-[10px] tracking-[0.25em] uppercase text-navy/50 hover:text-navy transition-colors duration-300 border-b border-navy/15 hover:border-navy/35 pb-px"
+          >
+            View All Clinical Work
+          </Link>
+        </motion.div>
       </div>
     </section>
   );
