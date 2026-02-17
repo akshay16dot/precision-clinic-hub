@@ -18,7 +18,7 @@ const testimonials = [
   },
   {
     quote:
-      "I wanted my smile to look better but still look like me. Dr. Parmar understood that immediately. The veneers are so natural that even close friends assumed nothing had changed — just that I looked healthier.",
+      "I wanted my smile to look better but still look like me. Dr. Parmar understood that immediately. The veneers are so natural that even close friends assumed nothing had changed, just that I looked healthier.",
     name: "Sarah",
     tag: "Veneers & Aesthetics",
   },

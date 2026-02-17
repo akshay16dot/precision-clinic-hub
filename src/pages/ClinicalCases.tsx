@@ -49,8 +49,8 @@ const primaryCases: ClinicalCase[] = [
     subtitle: "Implant-Supported Rehabilitation",
     descriptor: "Severe occlusal wear with bite collapse. Precision-guided full mouth reconstruction.",
     imagePairs: [
-      { beforeImg: case2BeforeLeft, afterImg: case2AfterLeft, beforeLabel: "Before — Left Lateral", afterLabel: "After — Left Lateral" },
-      { beforeImg: case2BeforeRight, afterImg: case2AfterRight, beforeLabel: "Before — Right Lateral", afterLabel: "After — Right Lateral" },
+      { beforeImg: case2BeforeLeft, afterImg: case2AfterLeft, beforeLabel: "Before, Left Lateral", afterLabel: "After, Left Lateral" },
+      { beforeImg: case2BeforeRight, afterImg: case2AfterRight, beforeLabel: "Before, Right Lateral", afterLabel: "After, Right Lateral" },
     ],
     details: [
       { label: "Clinical Challenge", text: "Progressive occlusal wear had resulted in significant loss of vertical dimension, posterior bite collapse, and chronic jaw discomfort. The existing dentition showed advanced structural failure across both arches." },
@@ -131,7 +131,7 @@ const correctiveCases: ClinicalCase[] = [
       { label: "Aesthetic Compromise", text: "Existing restorations exhibited visible grey tonal show-through near gingival margins, caused by thin soft tissue overlying compromised underlying structures. The unnatural discoloration undermined the aesthetic zone despite otherwise intact tooth form." },
       { label: "Biologic & Prosthetic Strategy", text: "A staged approach addressed the underlying tissue deficiency through connective tissue grafting to increase soft tissue volume, followed by custom all-ceramic restorations engineered for natural shade integration and optimal light transmission without grey translucency." },
       { label: "Tissue Architecture Goals", text: "Restore adequate soft tissue thickness to mask underlying structures, achieve harmonized gingival contours, and deliver enhanced biological contours that support long-term aesthetic stability without grey shadowing." },
-      { label: "Outcome", text: "Correction of underlying structural and tissue deficiencies resulting in aesthetic normalization — natural shade integration, eliminated grey shadowing, improved soft tissue volume, and harmonized gingival architecture." },
+      { label: "Outcome", text: "Correction of underlying structural and tissue deficiencies resulting in aesthetic normalization, natural shade integration, eliminated grey shadowing, improved soft tissue volume, and harmonized gingival architecture." },
     ],
   },
 ];
@@ -162,7 +162,7 @@ const ClinicalCases = () => {
         <div className="absolute inset-0">
           <img
             src={case1After}
-            alt="Clinical outcome — Full Mouth Rehabilitation"
+            alt="Clinical outcome, Full Mouth Rehabilitation"
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/70" />
@@ -198,7 +198,7 @@ const ClinicalCases = () => {
             </h2>
             <div className="w-10 h-px bg-navy/20 mx-auto mb-8" />
             <p className="font-body text-sm md:text-[15px] text-charcoal-light font-light leading-[1.85]">
-              Each case presented here reflects a structured clinical process —
+              Each case presented here reflects a structured clinical process,
               from comprehensive diagnosis and digital planning through
               biologically guided execution. These outcomes are the result of
               precision engineering, respect for biological principles, and a

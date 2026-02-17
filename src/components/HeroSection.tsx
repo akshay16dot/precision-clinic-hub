@@ -5,7 +5,7 @@ import logoAP from "@/assets/logo-ap.png";
 import heroPortrait from "@/assets/dr-parmar-hero.jpg";
 
 const rotatingQuotes = [
-  { text: "The implants feel completely natural — I can eat and speak with confidence again.", label: "Full-Arch Patient" },
+  { text: "The implants feel completely natural. I can eat and speak with confidence again.", label: "Full-Arch Patient" },
   { text: "The veneers are so natural that even close friends assumed nothing had changed.", label: "Aesthetic Patient" },
   { text: "The result exceeded what I thought was possible. I finally trust my teeth again.", label: "Reconstructive Patient" },
 ];
