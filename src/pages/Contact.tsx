@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import SiteNavigation from "@/components/SiteNavigation";
 import PageFooter from "@/components/PageFooter";
+import { supabase } from "@/integrations/supabase/client";
 
 const fadeUp = {
   initial: { opacity: 0, y: 30 },
@@ -10,7 +11,13 @@ const fadeUp = {
 };
 
 const Contact = () => {
-  const [submitted, setSubmitted] = useState(false);
+  const [formState, setFormState] = useState<"idle" | "submitting" | "success" | "error">("idle");
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+  const [interest, setInterest] = useState("");
+  const [message, setMessage] = useState("");
+  const [honeypot, setHoneypot] = useState("");
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -20,9 +27,35 @@ const Contact = () => {
     };
   }, []);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
+    setFormState("submitting");
+
+    try {
+      const fullMessage = interest
+        ? `Area of Interest: ${interest}\n\n${message}`
+        : message;
+
+      const { data, error } = await supabase.functions.invoke("send-contact-email", {
+        body: {
+          name: name.trim(),
+          email: email.trim(),
+          phone: phone.trim() || undefined,
+          message: fullMessage.trim(),
+          formType: "Consultation Request",
+          pageSource: "Contact Page",
+          honeypot,
+        },
+      });
+
+      if (error) throw error;
+      if (!data?.success) throw new Error(data?.error || "Failed to send");
+
+      setFormState("success");
+    } catch (err) {
+      console.error("Form submission error:", err);
+      setFormState("error");
+    }
   };
 
   return (
@@ -73,17 +106,29 @@ const Contact = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 max-w-5xl mx-auto">
             {/* Form */}
             <motion.div {...fadeUp} transition={{ duration: 0.8 }}>
-              {submitted ? (
+              {formState === "success" ? (
                 <div className="text-center py-20">
                   <h3 className="font-display text-2xl md:text-3xl font-light text-navy mb-4">
                     Thank You
                   </h3>
                   <p className="font-body text-sm text-charcoal-light font-light leading-relaxed">
-                    Your inquiry has been received. We will be in touch shortly to arrange your consultation.
+                    Your message has been received. Our team will contact you shortly.
                   </p>
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-8">
+                  {/* Honeypot - hidden from humans */}
+                  <div className="absolute opacity-0 pointer-events-none" aria-hidden="true" tabIndex={-1}>
+                    <input
+                      type="text"
+                      name="website"
+                      value={honeypot}
+                      onChange={(e) => setHoneypot(e.target.value)}
+                      autoComplete="off"
+                      tabIndex={-1}
+                    />
+                  </div>
+
                   <div>
                     <label className="font-body text-xs tracking-[0.15em] uppercase text-charcoal-light block mb-3">
                       Full Name
@@ -91,6 +136,9 @@ const Contact = () => {
                     <input
                       type="text"
                       required
+                      maxLength={100}
+                      value={name}
+                      onChange={(e) => setName(e.target.value)}
                       className="w-full bg-transparent border-b border-divider py-3 font-body text-sm text-charcoal font-light focus:outline-none focus:border-navy transition-colors"
                     />
                   </div>
@@ -101,6 +149,9 @@ const Contact = () => {
                     <input
                       type="email"
                       required
+                      maxLength={255}
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
                       className="w-full bg-transparent border-b border-divider py-3 font-body text-sm text-charcoal font-light focus:outline-none focus:border-navy transition-colors"
                     />
                   </div>
@@ -110,6 +161,9 @@ const Contact = () => {
                     </label>
                     <input
                       type="tel"
+                      maxLength={20}
+                      value={phone}
+                      onChange={(e) => setPhone(e.target.value)}
                       className="w-full bg-transparent border-b border-divider py-3 font-body text-sm text-charcoal font-light focus:outline-none focus:border-navy transition-colors"
                     />
                   </div>
@@ -118,14 +172,16 @@ const Contact = () => {
                       Area of Interest
                     </label>
                     <select
+                      value={interest}
+                      onChange={(e) => setInterest(e.target.value)}
                       className="w-full bg-transparent border-b border-divider py-3 font-body text-sm text-charcoal font-light focus:outline-none focus:border-navy transition-colors appearance-none"
                     >
                       <option value="">Select an option</option>
-                      <option value="dental-implants">Dental Implants</option>
-                      <option value="full-arch">Full-Arch Rehabilitation</option>
-                      <option value="aesthetic">Aesthetic Dentistry</option>
-                      <option value="maxillofacial">Maxillofacial Rehabilitation</option>
-                      <option value="general">General Consultation</option>
+                      <option value="Dental Implants">Dental Implants</option>
+                      <option value="Full-Arch Rehabilitation">Full-Arch Rehabilitation</option>
+                      <option value="Aesthetic Dentistry">Aesthetic Dentistry</option>
+                      <option value="Maxillofacial Rehabilitation">Maxillofacial Rehabilitation</option>
+                      <option value="General Consultation">General Consultation</option>
                     </select>
                   </div>
                   <div>
@@ -134,14 +190,26 @@ const Contact = () => {
                     </label>
                     <textarea
                       rows={4}
+                      required
+                      maxLength={2000}
+                      value={message}
+                      onChange={(e) => setMessage(e.target.value)}
                       className="w-full bg-transparent border-b border-divider py-3 font-body text-sm text-charcoal font-light focus:outline-none focus:border-navy transition-colors resize-none"
                     />
                   </div>
+
+                  {formState === "error" && (
+                    <p className="font-body text-sm text-red-600 font-light">
+                      Submission failed. Please try again or contact the office directly.
+                    </p>
+                  )}
+
                   <button
                     type="submit"
-                    className="inline-block px-12 py-4 border border-navy text-navy font-body text-xs tracking-[0.2em] uppercase transition-all duration-300 hover:bg-navy hover:text-primary-foreground mt-4"
+                    disabled={formState === "submitting"}
+                    className="inline-block px-12 py-4 border border-navy text-navy font-body text-xs tracking-[0.2em] uppercase transition-all duration-300 hover:bg-navy hover:text-primary-foreground mt-4 disabled:opacity-50 disabled:cursor-not-allowed"
                   >
-                    Submit Inquiry
+                    {formState === "submitting" ? "Sending..." : "Submit Inquiry"}
                   </button>
                 </form>
               )}
@@ -168,11 +236,11 @@ const Contact = () => {
                   <p className="font-body text-xs tracking-[0.2em] uppercase text-charcoal-light mb-4">
                     Contact
                   </p>
-              <a
-                    href="mailto:akshaytheparmar@gmail.com"
+                  <a
+                    href="mailto:drparmardds@gmail.com"
                     className="font-body text-sm text-charcoal-light font-light hover:text-navy transition-colors"
                   >
-                    akshaytheparmar@gmail.com
+                    drparmardds@gmail.com
                   </a>
                 </div>
 

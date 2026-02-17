@@ -33,10 +33,10 @@ const PageFooter = () => {
               Board-Certified Prosthodontist
             </p>
             <a
-              href="mailto:akshaytheparmar@gmail.com"
+              href="mailto:drparmardds@gmail.com"
               className="block font-body text-sm text-primary-foreground/60 font-light hover:text-primary-foreground/80 transition-colors"
             >
-              akshaytheparmar@gmail.com
+              drparmardds@gmail.com
             </a>
           </div>
 
