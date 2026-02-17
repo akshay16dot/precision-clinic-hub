@@ -27,7 +27,8 @@ const fadeUp = {
 
 const ClinicalCaseCard = ({ c, index }: { c: ClinicalCase; index: number }) => {
   const [expanded, setExpanded] = useState(false);
-  const isSinglePair = c.imagePairs.length === 1;
+  const pairs = c.imagePairs || [];
+  const isSinglePair = pairs.length <= 1;
 
   return (
     <motion.div
@@ -61,7 +62,7 @@ const ClinicalCaseCard = ({ c, index }: { c: ClinicalCase; index: number }) => {
         <div className="grid grid-cols-3 gap-3 md:gap-5 mb-8">
           <div className="col-span-2 relative aspect-[4/3] overflow-hidden rounded-sm">
             <img
-              src={c.imagePairs[0].afterImg}
+              src={pairs[0]?.afterImg}
               alt={`${c.title} — After`}
               className="w-full h-full object-cover"
               loading="lazy"
@@ -75,7 +76,7 @@ const ClinicalCaseCard = ({ c, index }: { c: ClinicalCase; index: number }) => {
           </div>
           <div className="col-span-1 relative aspect-[4/3] overflow-hidden rounded-sm">
             <img
-              src={c.imagePairs[0].beforeImg}
+              src={pairs[0]?.beforeImg}
               alt={`${c.title} — Before`}
               className="w-full h-full object-cover"
               loading="lazy"
@@ -91,7 +92,7 @@ const ClinicalCaseCard = ({ c, index }: { c: ClinicalCase; index: number }) => {
       ) : (
         /* Multi-pair: symmetric rows of before/after */
         <div className="space-y-4 md:space-y-5 mb-8">
-          {c.imagePairs.map((pair, pairIndex) => (
+          {pairs.map((pair, pairIndex) => (
             <div key={pairIndex} className="grid grid-cols-2 gap-3 md:gap-5">
               {/* BEFORE */}
               <div className="relative aspect-[4/3] overflow-hidden rounded-sm">
