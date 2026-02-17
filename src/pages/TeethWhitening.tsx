@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
-import PageNavigation from "@/components/PageNavigation";
+import SiteNavigation from "@/components/SiteNavigation";
 import PageCTA from "@/components/PageCTA";
 import PageFooter from "@/components/PageFooter";
 import heroImage from "@/assets/hero-teeth-whitening.png";
@@ -21,7 +21,7 @@ const TeethWhitening = () => {
 
   return (
     <main className="bg-background">
-      <PageNavigation />
+      <SiteNavigation />
 
       {/* ═══════ HERO ═══════ */}
       <section className="relative pt-24 md:pt-0 min-h-[90vh] overflow-hidden">

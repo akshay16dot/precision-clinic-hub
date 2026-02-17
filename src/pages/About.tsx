@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { useEffect } from "react";
-import PageNavigation from "@/components/PageNavigation";
+import SiteNavigation from "@/components/SiteNavigation";
 import PageCTA from "@/components/PageCTA";
 import PageFooter from "@/components/PageFooter";
 import PracticeAffiliations from "@/components/PracticeAffiliations";
@@ -24,7 +24,7 @@ const About = () => {
 
   return (
     <main className="bg-background">
-      <PageNavigation />
+      <SiteNavigation />
 
       {/* ═══════ EDITORIAL HERO ═══════ */}
       <section className="relative pt-24 md:pt-0 min-h-[85vh] overflow-hidden">

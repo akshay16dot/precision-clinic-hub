@@ -131,6 +131,10 @@ const SiteNavigation = () => {
   const dropdownTimeout = useRef<NodeJS.Timeout | null>(null);
   const location = useLocation();
 
+  // Only use transparent/white-text mode on homepage
+  const isHomepage = location.pathname === "/";
+  const showSolid = !isHomepage || scrolled;
+
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
     window.addEventListener("scroll", onScroll, { passive: true });
@@ -175,7 +179,7 @@ const SiteNavigation = () => {
     <>
       <nav
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-          scrolled
+          showSolid
             ? "bg-background/95 backdrop-blur-md shadow-[0_1px_0_0_hsl(var(--divider)/0.4)]"
             : "bg-transparent"
         }`}
@@ -187,9 +191,9 @@ const SiteNavigation = () => {
               src={logoAP}
               alt="Dr. Akshay Parmar"
               className={`transition-all duration-500 ${
-                scrolled ? "h-16 md:h-20" : "h-20 md:h-24"
+                showSolid ? "h-16 md:h-20" : "h-20 md:h-24"
               }`}
-              style={{ filter: scrolled ? "none" : "invert(1)" }}
+              style={{ filter: showSolid ? "none" : "invert(1)" }}
             />
           </Link>
 
@@ -206,7 +210,7 @@ const SiteNavigation = () => {
                   <Link
                     to={item.to}
                     className={`px-3 xl:px-4 py-2 font-body text-[10px] xl:text-[11px] tracking-[0.2em] uppercase transition-colors duration-300 ${
-                      scrolled
+                      showSolid
                         ? "text-muted-foreground hover:text-navy"
                         : "text-primary-foreground/50 hover:text-primary-foreground"
                     }`}
@@ -216,7 +220,7 @@ const SiteNavigation = () => {
                 ) : (
                   <button
                     className={`px-3 xl:px-4 py-2 font-body text-[10px] xl:text-[11px] tracking-[0.2em] uppercase transition-colors duration-300 ${
-                      scrolled
+                      showSolid
                         ? "text-muted-foreground hover:text-navy"
                         : "text-primary-foreground/50 hover:text-primary-foreground"
                     }`}
@@ -265,7 +269,7 @@ const SiteNavigation = () => {
           <button
             onClick={() => setMenuOpen(!menuOpen)}
             className={`lg:hidden p-3 -mr-3 rounded-sm transition-all duration-300 ${
-              scrolled
+              showSolid
                 ? "text-muted-foreground hover:text-navy hover:bg-muted/50"
                 : "text-primary-foreground/70 hover:text-primary-foreground hover:bg-primary-foreground/5"
             }`}

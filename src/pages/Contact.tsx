@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
-import PageNavigation from "@/components/PageNavigation";
+import SiteNavigation from "@/components/SiteNavigation";
 import PageFooter from "@/components/PageFooter";
 
 const fadeUp = {
@@ -27,7 +27,7 @@ const Contact = () => {
 
   return (
     <main className="bg-background">
-      <PageNavigation />
+      <SiteNavigation />
 
       {/* Hero */}
       <section className="pt-32 pb-20 md:pt-40 md:pb-28 px-6 md:px-8 bg-background">

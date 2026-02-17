@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { useEffect, useState, useRef } from "react";
 import { Link } from "react-router-dom";
-import PageNavigation from "@/components/PageNavigation";
+import SiteNavigation from "@/components/SiteNavigation";
 import PageCTA from "@/components/PageCTA";
 import PageFooter from "@/components/PageFooter";
 import case1Before from "@/assets/veneer-case1-before.png";
@@ -84,7 +84,7 @@ const VeneersAesthetic = () => {
 
   return (
     <main className="bg-background">
-      <PageNavigation />
+      <SiteNavigation />
 
       {/* ═══════ HERO ═══════ */}
       <section className="relative pt-24 md:pt-0 min-h-[85vh] overflow-hidden">

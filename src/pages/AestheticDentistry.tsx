@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
-import PageNavigation from "@/components/PageNavigation";
+import SiteNavigation from "@/components/SiteNavigation";
 import PageFooter from "@/components/PageFooter";
 
 const treatments = [
@@ -51,7 +51,7 @@ const AestheticDentistry = () => {
 
   return (
     <main className="bg-background">
-      <PageNavigation />
+      <SiteNavigation />
 
       {/* ── Hero ── */}
       <section className="pt-44 pb-24 md:pt-52 md:pb-32 lg:pb-36 bg-background">

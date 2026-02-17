@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
-import PageNavigation from "@/components/PageNavigation";
+import SiteNavigation from "@/components/SiteNavigation";
 import PageFooter from "@/components/PageFooter";
 
 const fadeUp = {
@@ -22,7 +22,7 @@ const Education = () => {
 
   return (
     <main className="bg-background">
-      <PageNavigation />
+      <SiteNavigation />
 
       {/* Hero */}
       <section className="pt-36 md:pt-44 pb-20 md:pb-28 px-6 md:px-8">

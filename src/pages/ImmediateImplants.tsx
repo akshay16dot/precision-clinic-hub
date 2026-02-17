@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
-import PageNavigation from "@/components/PageNavigation";
+import SiteNavigation from "@/components/SiteNavigation";
 import PageFooter from "@/components/PageFooter";
 import immediateCase1Before from "@/assets/immediate-case1-before.png";
 import immediateCase1After from "@/assets/immediate-case1-after.png";
@@ -44,7 +44,7 @@ const ImmediateImplants = () => {
 
   return (
     <main className="bg-background">
-      <PageNavigation />
+      <SiteNavigation />
 
       {/* ─── HERO ─── */}
       <section

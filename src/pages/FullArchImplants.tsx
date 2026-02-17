@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
-import PageNavigation from "@/components/PageNavigation";
+import SiteNavigation from "@/components/SiteNavigation";
 import PageHero from "@/components/PageHero";
 import PageCTA from "@/components/PageCTA";
 import PageFooter from "@/components/PageFooter";
@@ -69,7 +69,7 @@ const FullArchImplants = () => {
 
   return (
     <main className="bg-background">
-      <PageNavigation />
+      <SiteNavigation />
 
       <PageHero
         subtitle="Board-Certified Prosthodontist · New Jersey"
