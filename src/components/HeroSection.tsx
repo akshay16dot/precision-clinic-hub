@@ -34,7 +34,7 @@ const HeroSection = () => {
           src={heroPortrait}
           alt=""
           aria-hidden="true"
-          className="absolute inset-0 w-full h-full object-cover object-[center_top] sm:object-[8%_top]"
+          className="absolute inset-0 w-full h-full object-cover object-[65%_30%] sm:object-[8%_top]"
           style={{
             filter: "brightness(0.25) contrast(1.08) saturate(0.05) hue-rotate(-5deg) blur(1px)",
             transform: "scale(1.08)",
@@ -103,18 +103,18 @@ const HeroSection = () => {
                 </p>
 
                 {/* Dual CTAs */}
-                <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start mb-8 lg:mb-10">
+                <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start mb-8 lg:mb-10 max-w-[340px] sm:max-w-none mx-auto lg:mx-0">
                   <Link
                     to="/clinical-cases"
                     onClick={(e) => e.stopPropagation()}
-                    className="inline-block px-8 sm:px-10 py-4 border border-primary-foreground/25 bg-primary-foreground text-navy font-body text-[11px] tracking-[0.25em] uppercase transition-all duration-300 hover:bg-transparent hover:text-primary-foreground text-center"
+                    className="inline-block px-8 sm:px-10 py-3.5 border border-primary-foreground/25 bg-primary-foreground text-navy font-body text-[11px] tracking-[0.25em] uppercase transition-all duration-300 hover:bg-transparent hover:text-primary-foreground text-center"
                   >
                     View Clinical Cases
                   </Link>
                   <Link
                     to="/testimonials"
                     onClick={(e) => e.stopPropagation()}
-                    className="inline-block px-8 sm:px-10 py-4 border border-primary-foreground/25 text-primary-foreground/70 font-body text-[11px] tracking-[0.25em] uppercase transition-all duration-300 hover:border-primary-foreground/50 hover:text-primary-foreground text-center"
+                    className="inline-block px-8 sm:px-10 py-3.5 border border-primary-foreground/25 text-primary-foreground/70 font-body text-[11px] tracking-[0.25em] uppercase transition-all duration-300 hover:border-primary-foreground/50 hover:text-primary-foreground text-center"
                   >
                     Read Patient Testimonials
                   </Link>
