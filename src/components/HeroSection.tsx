@@ -34,11 +34,7 @@ const HeroSection = () => {
           src={heroPortrait}
           alt=""
           aria-hidden="true"
-          className="absolute inset-0 w-full h-full object-cover object-[65%_30%] sm:object-[8%_top]"
-          style={{
-            filter: "brightness(0.25) contrast(1.08) saturate(0.05) hue-rotate(-5deg) blur(1px)",
-            transform: "scale(1.08)",
-          }}
+          className="absolute inset-0 w-full h-full object-cover object-[65%_30%] sm:object-[8%_top] hero-bg-portrait"
         />
         <div
           className="absolute inset-0"
