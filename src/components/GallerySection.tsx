@@ -42,7 +42,7 @@ const GallerySection = () => {
           <div className="w-12 h-px bg-navy/20 mx-auto" />
         </motion.div>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-5 lg:gap-6 max-w-5xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-5 lg:gap-6 max-w-5xl mx-auto">
           {cases.map((c, i) => (
             <Link to="/clinical-cases" key={i}>
               <motion.div

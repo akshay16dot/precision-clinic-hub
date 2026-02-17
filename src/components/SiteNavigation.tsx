@@ -186,12 +186,12 @@ const SiteNavigation = () => {
       >
         <div className="luxury-container flex items-center justify-between py-4 px-6 md:px-10">
           {/* Logo */}
-          <Link to="/" className="hover:opacity-80 transition-opacity duration-300 shrink-0">
+            <Link to="/" className="hover:opacity-80 transition-opacity duration-300 shrink-0">
             <img
               src={logoAP}
               alt="Dr. Akshay Parmar"
               className={`transition-all duration-500 ${
-                showSolid ? "h-24 md:h-28" : "h-28 md:h-36"
+                showSolid ? "h-16 sm:h-20 md:h-24 lg:h-28" : "h-20 sm:h-24 md:h-28 lg:h-36"
               }`}
               style={{ filter: showSolid ? "none" : "invert(1)" }}
             />
@@ -303,8 +303,8 @@ const SiteNavigation = () => {
             </div>
 
             {/* Menu content */}
-            <div className="luxury-container px-6 md:px-10 pt-12 md:pt-16 pb-12 overflow-y-auto max-h-[calc(100vh-70px)]">
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-14 md:gap-16 lg:gap-20">
+            <div className="luxury-container px-6 md:px-10 pt-10 md:pt-16 pb-12 overflow-y-auto max-h-[calc(100vh-70px)]">
+              <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-10 sm:gap-12 md:gap-16 lg:gap-20">
                 {megaMenuSections.map((section, si) => (
                   <motion.div
                     key={section.title}
@@ -315,13 +315,13 @@ const SiteNavigation = () => {
                     <p className="font-body text-[10px] tracking-[0.25em] uppercase text-primary-foreground/45 mb-7">
                       {section.title}
                     </p>
-                    <div className="space-y-5">
+                    <div className="space-y-4 sm:space-y-5">
                       {section.links.map((link) =>
                         link.isAnchor ? (
                           <button
                             key={link.label}
                             onClick={() => handleAnchorClick(link.to.replace("/", ""))}
-                            className="block font-body text-[13px] tracking-[0.02em] text-primary-foreground/75 hover:text-primary-foreground transition-colors duration-300"
+                            className="block font-body text-[12px] sm:text-[13px] tracking-[0.02em] text-primary-foreground/75 hover:text-primary-foreground transition-colors duration-300 min-h-[44px] flex items-center"
                           >
                             {link.label}
                           </button>
@@ -330,7 +330,7 @@ const SiteNavigation = () => {
                             key={link.label}
                             to={link.to + (link.hash || "")}
                             onClick={() => setMenuOpen(false)}
-                            className="block font-body text-[13px] tracking-[0.02em] text-primary-foreground/75 hover:text-primary-foreground transition-colors duration-300"
+                            className="block font-body text-[12px] sm:text-[13px] tracking-[0.02em] text-primary-foreground/75 hover:text-primary-foreground transition-colors duration-300 min-h-[44px] flex items-center"
                           >
                             {link.label}
                           </Link>

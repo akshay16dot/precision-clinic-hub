@@ -150,6 +150,6 @@
   }
 
   .luxury-container {
-    @apply max-w-6xl mx-auto;
+    @apply max-w-[1280px] mx-auto;
   }
 }
