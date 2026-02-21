@@ -4,15 +4,17 @@ interface PageSEO {
   title: string;
   description: string;
   canonical?: string;
+  noindex?: boolean;
 }
 
+const BASE_URL = "https://drakshayparmardds.com";
 const DEFAULT_TITLE = "Prosthodontist in New Jersey | Implant & Reconstruction Specialist";
 
 /**
- * Sets document title and meta description for each page.
+ * Sets document title, meta description, canonical, and robots for each page.
  * Resets to default on unmount.
  */
-export function usePageSEO({ title, description, canonical }: PageSEO) {
+export function usePageSEO({ title, description, canonical, noindex = false }: PageSEO) {
   useEffect(() => {
     window.scrollTo(0, 0);
 
@@ -38,19 +40,36 @@ export function usePageSEO({ title, description, canonical }: PageSEO) {
     let ogDesc = document.querySelector('meta[property="og:description"]') as HTMLMetaElement | null;
     if (ogDesc) ogDesc.setAttribute("content", description);
 
-    // Canonical
+    // Canonical — auto-generate from current path if not provided
+    const canonicalUrl = canonical || `${BASE_URL}${window.location.pathname === "/" ? "" : window.location.pathname}`;
     let link = document.querySelector('link[rel="canonical"]') as HTMLLinkElement | null;
-    if (canonical) {
-      if (!link) {
-        link = document.createElement("link");
-        link.rel = "canonical";
-        document.head.appendChild(link);
-      }
-      link.href = canonical;
+    if (!link) {
+      link = document.createElement("link");
+      link.rel = "canonical";
+      document.head.appendChild(link);
     }
+    link.href = canonicalUrl;
+
+    // OG URL
+    let ogUrl = document.querySelector('meta[property="og:url"]') as HTMLMetaElement | null;
+    if (!ogUrl) {
+      ogUrl = document.createElement("meta");
+      ogUrl.setAttribute("property", "og:url");
+      document.head.appendChild(ogUrl);
+    }
+    ogUrl.setAttribute("content", canonicalUrl);
+
+    // Meta robots
+    let robots = document.querySelector('meta[name="robots"]') as HTMLMetaElement | null;
+    if (!robots) {
+      robots = document.createElement("meta");
+      robots.name = "robots";
+      document.head.appendChild(robots);
+    }
+    robots.setAttribute("content", noindex ? "noindex, nofollow" : "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1");
 
     return () => {
       document.title = DEFAULT_TITLE;
     };
-  }, [title, description, canonical]);
+  }, [title, description, canonical, noindex]);
 }
