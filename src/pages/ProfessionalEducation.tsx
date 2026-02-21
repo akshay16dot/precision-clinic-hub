@@ -83,8 +83,8 @@ const peerTestimonials = [
 
 const ProfessionalEducation = () => {
   usePageSEO({
-    title: "Implant Training for Dentists | Prosthodontist-Led Education",
-    description: "Clinical implant education and live surgery mentorship for dental professionals. Evidence-based protocols, full-arch training, and the STABLE IMPLANT Protocol. Board-Certified Prosthodontist instructor.",
+    title: "Dental Implant Courses & Prosthodontic Training | NJ, NY & Mumbai",
+    description: "Advanced dental implant, prosthodontic, and rehabilitation training programs for dentists, including live courses and clinical education led by a board-certified prosthodontist. Programs available in New Jersey, New York, Philadelphia, New Delhi, and Mumbai.",
   });
 
   return (
