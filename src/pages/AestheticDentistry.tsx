@@ -42,8 +42,8 @@ const fade = {
 
 const AestheticDentistry = () => {
   usePageSEO({
-    title: "Aesthetic Dentistry NJ | Veneers & Smile Reconstruction",
-    description: "Aesthetic dental rehabilitation by a Board-Certified Prosthodontist in New Jersey. Porcelain veneers, smile design, bite reconstruction, and tooth wear restoration guided by structural precision.",
+    title: "Full Mouth Rehabilitation & Reconstruction | Prosthodontist | Hamilton Township NJ",
+    description: "Comprehensive full mouth rehabilitation and reconstruction treatments focused on restoring function, structural stability, and natural aesthetics by a board-certified prosthodontist in Hamilton Township NJ.",
   });
 
   return (
