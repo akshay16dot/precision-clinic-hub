@@ -39,8 +39,8 @@ const testimonials = [
 
 const ProfessionalTestimonials = () => {
   usePageSEO({
-    title: "Clinician Testimonials | Implant Training Reviews",
-    description: "Peer reflections from dentists and specialists on clinical implant education, live surgery mentorship, and prosthodontic training programs.",
+    title: "Professional Feedback & Clinical Recognition | Prosthodontic Education",
+    description: "Insights, feedback, and professional perspectives from clinicians and colleagues reflecting educational programs, clinical collaborations, and specialist prosthodontic care philosophy.",
   });
 
   return (
