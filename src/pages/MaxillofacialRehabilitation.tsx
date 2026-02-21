@@ -50,8 +50,8 @@ const approach = [
 
 const MaxillofacialRehabilitation = () => {
   usePageSEO({
-    title: "Maxillofacial Prosthodontist NJ | Oncology Reconstruction",
-    description: "Fellowship-trained maxillofacial prosthodontist in New Jersey. Post-oncologic rehabilitation, obturator prostheses, craniofacial reconstruction, and complex surgical prosthetics. Memorial Sloan Kettering trained.",
+    title: "Maxillofacial Prosthodontics & Complex Rehabilitation | Prosthodontist NJ",
+    description: "Specialized prosthetic rehabilitation for patients requiring maxillofacial, post-surgical, and complex restorative care, provided by a board-certified prosthodontist serving Hamilton Township NJ and surrounding areas.",
   });
 
   return (
