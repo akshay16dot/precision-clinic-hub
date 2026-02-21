@@ -1,13 +1,9 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+import { ChevronDown } from "lucide-react";
+import { useState } from "react";
 import SiteNavigation from "@/components/SiteNavigation";
 import FooterSection from "@/components/FooterSection";
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
 import { usePageSEO } from "@/hooks/usePageSEO";
 
 const fadeUp = {
@@ -16,37 +12,340 @@ const fadeUp = {
   viewport: { once: true, margin: "-60px" },
 };
 
-const faqs = [
+interface FAQ {
+  q: string;
+  a: string;
+}
+
+interface EducationSection {
+  id: string;
+  label: string;
+  title: string;
+  titleItalic: string;
+  description: string;
+  link: string;
+  linkLabel?: string;
+  faqs: FAQ[];
+}
+
+const sections: EducationSection[] = [
   {
-    q: "Is implant placement painful?",
-    a: "Most patients report that the procedure is more comfortable than expected. Local anesthesia ensures you feel no pain during treatment. Mild soreness afterward is normal and typically manageable with over-the-counter medication.",
+    id: "dental-implants",
+    label: "Implant Rehabilitation",
+    title: "Dental",
+    titleItalic: "Implants",
+    description:
+      "Dental implants are precision-engineered replacements that integrate with your jawbone, restoring natural function, stability, and aesthetics. Treatment is individually planned based on bone quality, tissue health, and long-term structural requirements.",
+    link: "/guide/dental-implants",
+    faqs: [
+      {
+        q: "What makes dental implants different from bridges or dentures?",
+        a: "Implants are anchored directly into the jawbone, providing independent support without affecting adjacent teeth. Unlike bridges, they preserve surrounding tooth structure. Unlike dentures, they eliminate slipping and progressive bone loss.",
+      },
+      {
+        q: "How long do dental implants typically last?",
+        a: "With proper care, dental implants are designed for decades of function. Longevity depends on oral hygiene, bone quality, and regular clinical follow-up. Many patients retain their implants for a lifetime.",
+      },
+      {
+        q: "Is implant treatment painful?",
+        a: "Most patients report the procedure is more comfortable than anticipated. Local anesthesia ensures a pain-free experience, and mild post-operative soreness is typically managed with standard over-the-counter medication.",
+      },
+      {
+        q: "What if I have been told I don't have enough bone for implants?",
+        a: "Advanced grafting techniques and strategic implant positioning often make treatment possible even with reduced bone. A specialist evaluation can determine whether your case is treatable with contemporary approaches.",
+      },
+    ],
   },
   {
-    q: "How long do dental implants last?",
-    a: "With proper care and maintenance, dental implants are designed to function for decades. Their longevity depends on oral hygiene, regular follow-up visits, and overall health. Many patients enjoy their implants for a lifetime.",
+    id: "immediate-implants",
+    label: "Same-Day Solutions",
+    title: "Immediate",
+    titleItalic: "Implants",
+    description:
+      "In carefully selected cases, implants can be placed at the same visit as tooth extraction. This approach preserves natural tissue architecture and may significantly reduce overall treatment time while maintaining biologic stability.",
+    link: "/guide/immediate-implants",
+    faqs: [
+      {
+        q: "Am I a candidate for immediate implants?",
+        a: "Candidacy depends on bone quality, infection status, and structural factors at the extraction site. Your specialist performs a thorough evaluation to determine whether immediate placement is safe and predictable for your situation.",
+      },
+      {
+        q: "Is healing different with immediate implants compared to traditional placement?",
+        a: "The integration timeline is similar. Immediate placement preserves existing bone and soft tissue, which can improve long-term outcomes. Your specialist monitors healing carefully with scheduled follow-up visits.",
+      },
+      {
+        q: "Will I leave the appointment with a tooth?",
+        a: "In many cases, a provisional restoration is placed the same day, so you do not leave with a gap. The final restoration is crafted after complete integration to ensure optimal fit and longevity.",
+      },
+    ],
   },
   {
-    q: "How long does healing take?",
-    a: "Most patients feel comfortable within a few days. Full integration of the implant with the bone occurs over several weeks to months, during which you continue your normal routine. Your specialist monitors progress at each follow-up.",
+    id: "full-arch",
+    label: "Complete Rehabilitation",
+    title: "Full-Arch Rehabilitation",
+    titleItalic: "(All-on-X)",
+    description:
+      "Full-arch treatment replaces an entire set of teeth using strategically positioned implants. This approach is designed for patients with multiple failing teeth, advanced wear, or long-term instability, restoring complete oral function and confidence.",
+    link: "/guide/full-arch-implants",
+    faqs: [
+      {
+        q: "What does 'All-on-X' mean?",
+        a: "All-on-X refers to a full arch of teeth supported by a specific number of strategically placed implants, typically four to six. The approach maximizes available bone and provides immediate stability for a complete restoration.",
+      },
+      {
+        q: "How long does full-arch treatment take from start to finish?",
+        a: "Treatment typically spans several months, including planning, surgery, healing, and final prosthetic delivery. Many patients receive functional provisional teeth on the day of surgery while the final restoration is fabricated.",
+      },
+      {
+        q: "Can full-arch implants fail?",
+        a: "When planned and executed by a trained specialist with proper patient selection, full-arch rehabilitation has high long-term success rates. Risk factors include smoking, uncontrolled systemic conditions, and inadequate follow-up care.",
+      },
+      {
+        q: "Is this suitable for patients with significant bone loss?",
+        a: "Yes. Strategic implant angulation and, when necessary, grafting procedures allow treatment even in cases with reduced bone volume. A comprehensive clinical evaluation determines the optimal approach for each patient.",
+      },
+    ],
   },
   {
-    q: "How do I care for my implants?",
-    a: "Implant care is similar to natural tooth care. Regular brushing, flossing, and professional cleanings help maintain long-term health. Your specialist will provide specific guidance tailored to your treatment.",
+    id: "veneers-smile-design",
+    label: "Aesthetic Reconstruction",
+    title: "Veneers & Smile",
+    titleItalic: "Design",
+    description:
+      "Porcelain veneers and smile design treatments are precision-crafted to enhance shape, color, symmetry, and facial harmony. Each case is individually designed based on dental anatomy, functional requirements, and long-term stability.",
+    link: "/guide/veneers",
+    faqs: [
+      {
+        q: "How long do porcelain veneers last?",
+        a: "With proper care, high-quality porcelain veneers typically last 10 to 20 years or longer. Longevity depends on material selection, bonding precision, bite forces, and patient maintenance habits.",
+      },
+      {
+        q: "Do veneers damage natural teeth?",
+        a: "Modern veneer preparation is conservative, preserving as much natural tooth structure as possible. Your specialist designs the treatment to enhance your teeth while protecting their long-term structural integrity.",
+      },
+      {
+        q: "What is smile design, and how does it differ from just placing veneers?",
+        a: "Smile design is a comprehensive planning process that analyzes facial proportions, lip dynamics, gum architecture, and functional bite relationships before any restorations are placed. It ensures harmonious, natural-looking results.",
+      },
+    ],
   },
   {
-    q: "Am I a candidate for implant treatment?",
-    a: "Candidacy depends on several factors including bone quality, gum health, and overall medical history. A comprehensive evaluation determines the best approach for your individual situation. Most patients have viable treatment options.",
+    id: "full-mouth-reconstruction",
+    label: "Complex Rehabilitation",
+    title: "Full Mouth",
+    titleItalic: "Reconstruction",
+    description:
+      "Full mouth reconstruction addresses extensive dental breakdown through a coordinated treatment plan involving multiple restorative procedures. This approach restores function, vertical dimension, structural stability, and long-term oral health.",
+    link: "/aesthetic-dentistry",
+    linkLabel: "Explore Treatment Options",
+    faqs: [
+      {
+        q: "Who needs full mouth reconstruction?",
+        a: "Patients with extensive wear, multiple failing restorations, bite collapse, or long-standing dental neglect may benefit from comprehensive reconstruction. The goal is to restore complete function and structural integrity.",
+      },
+      {
+        q: "How long does full mouth reconstruction take?",
+        a: "Treatment timelines vary based on complexity, typically spanning several months to over a year. Phased treatment plans allow for predictable outcomes while maintaining patient comfort throughout the process.",
+      },
+      {
+        q: "Is full mouth reconstruction painful?",
+        a: "Comfort is prioritized at every stage. Procedures are performed under appropriate anesthesia, and recovery is managed with clear post-operative guidance. Most patients find the process far more comfortable than they expected.",
+      },
+    ],
   },
   {
-    q: "Are there risks I should be aware of?",
-    a: "As with any clinical procedure, there are considerations your specialist will discuss with you in detail. Modern techniques, precision planning, and experienced care significantly reduce complications. Informed decision-making is always prioritized.",
+    id: "gum-soft-tissue",
+    label: "Tissue Enhancement",
+    title: "Gum & Soft Tissue",
+    titleItalic: "Procedures",
+    description:
+      "Healthy gum tissue is essential for implant success, prosthetic stability, and aesthetic outcomes. Soft tissue procedures address recession, inadequate tissue volume, and biologic deficiencies that affect long-term treatment predictability.",
+    link: "/contact",
+    linkLabel: "Discuss Your Needs",
+    faqs: [
+      {
+        q: "Can gum grafting improve implant longevity?",
+        a: "Yes. Adequate keratinized tissue around implants reduces inflammation risk and improves long-term stability. Grafting procedures strengthen the biologic seal that protects the implant-bone interface.",
+      },
+      {
+        q: "Is gum surgery painful?",
+        a: "Soft tissue procedures are performed under local anesthesia with minimal discomfort. Post-operative soreness is typically mild and well-managed. Most patients resume normal activities within a few days.",
+      },
+      {
+        q: "Why is soft tissue important for aesthetics?",
+        a: "The gum line frames your smile. Proper tissue volume, contour, and symmetry are critical for natural-looking results, whether around natural teeth, veneers, or implant-supported restorations.",
+      },
+    ],
+  },
+  {
+    id: "failed-dental-work",
+    label: "Corrective Care",
+    title: "Failed Dental Work &",
+    titleItalic: "Complications",
+    description:
+      "Previous dental treatments can fail due to material fatigue, improper planning, biologic complications, or progressive disease. Specialist evaluation identifies the underlying cause and develops a corrective treatment pathway focused on long-term stability.",
+    link: "/contact",
+    linkLabel: "Request Evaluation",
+    faqs: [
+      {
+        q: "What happens if previous dental work has failed?",
+        a: "A thorough clinical and radiographic evaluation determines the cause of failure. Treatment may involve removal, tissue recovery, and a revised rehabilitation plan designed to address the original shortcomings.",
+      },
+      {
+        q: "Can failed implants be replaced?",
+        a: "In many cases, yes. After careful assessment of bone quality, infection status, and tissue health, a revised implant strategy can be developed. Timing and approach depend on the specific circumstances of failure.",
+      },
+      {
+        q: "How do I know if my current dental work is failing?",
+        a: "Signs include persistent pain, loosening, recurring infections, visible fractures, or progressive bite changes. Early specialist evaluation can identify problems before they become more complex and costly to address.",
+      },
+    ],
+  },
+  {
+    id: "medically-complex",
+    label: "Special Care",
+    title: "Medically Complex &",
+    titleItalic: "Special Care Dentistry",
+    description:
+      "Patients with systemic conditions, medication complexities, or unique medical histories require coordinated, biologically guided treatment planning. Specialist prosthodontic care ensures safe, predictable outcomes tailored to individual health profiles.",
+    link: "/contact",
+    linkLabel: "Schedule Consultation",
+    faqs: [
+      {
+        q: "How are medically complex patients evaluated?",
+        a: "Treatment planning begins with a comprehensive medical review, including coordination with physicians and specialists. Risk factors are identified and managed before, during, and after dental treatment to ensure safety.",
+      },
+      {
+        q: "Can patients on blood thinners or immune-suppressing medications receive implants?",
+        a: "Many patients on complex medication regimens can receive implant treatment with appropriate medical coordination and modified protocols. Each case is individually assessed for safety and predictability.",
+      },
+      {
+        q: "What conditions require special dental treatment planning?",
+        a: "Conditions such as diabetes, autoimmune disorders, osteoporosis, cardiac conditions, history of radiation therapy, and organ transplant require careful coordination between your medical and dental care teams.",
+      },
+    ],
   },
 ];
 
+const FAQItem = ({ faq, index, sectionId }: { faq: FAQ; index: number; sectionId: string }) => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  return (
+    <div className="border-b border-divider last:border-b-0">
+      <button
+        onClick={() => setIsOpen(!isOpen)}
+        className="w-full flex items-start justify-between py-5 text-left group"
+        aria-expanded={isOpen}
+        aria-controls={`${sectionId}-faq-${index}`}
+      >
+        <span className="font-display text-base md:text-lg font-light text-charcoal group-hover:text-navy transition-colors pr-4 leading-snug">
+          {faq.q}
+        </span>
+        <ChevronDown
+          className={`w-4 h-4 text-charcoal-light mt-1.5 shrink-0 transition-transform duration-300 ${
+            isOpen ? "rotate-180" : ""
+          }`}
+        />
+      </button>
+      <div
+        id={`${sectionId}-faq-${index}`}
+        className={`overflow-hidden transition-all duration-300 ease-out ${
+          isOpen ? "max-h-[500px] opacity-100 pb-5" : "max-h-0 opacity-0"
+        }`}
+      >
+        <p className="font-body text-sm text-charcoal-light font-light leading-relaxed pr-8">
+          {faq.a}
+        </p>
+      </div>
+    </div>
+  );
+};
+
+const EducationBlock = ({
+  section,
+  isAlt,
+}: {
+  section: EducationSection;
+  isAlt: boolean;
+}) => {
+  const [showFaqs, setShowFaqs] = useState(false);
+
+  return (
+    <section
+      id={section.id}
+      className="py-16 md:py-20 px-6 md:px-8"
+      style={
+        isAlt
+          ? {
+              background:
+                "linear-gradient(180deg, hsl(40 10% 95%) 0%, hsl(40 12% 93%) 100%)",
+            }
+          : undefined
+      }
+    >
+      <div className="luxury-container max-w-3xl">
+        <motion.div {...fadeUp} transition={{ duration: 0.7 }}>
+          {/* Label */}
+          <p className="font-body text-[10px] tracking-[0.35em] uppercase text-charcoal-light mb-5">
+            {section.label}
+          </p>
+
+          {/* Headline */}
+          <h2 className="font-display text-3xl md:text-4xl font-light text-navy mb-5 leading-[1.1]">
+            {section.title} <span className="italic">{section.titleItalic}</span>
+          </h2>
+
+          {/* Description */}
+          <p className="font-body text-sm md:text-[15px] text-charcoal-light font-light leading-[1.85] mb-8 max-w-2xl">
+            {section.description}
+          </p>
+
+          {/* Action row */}
+          <div className="flex flex-wrap items-center gap-4 mb-2">
+            <Link
+              to={section.link}
+              className="inline-block px-8 py-3 border border-navy/20 text-navy font-body text-[10px] tracking-[0.25em] uppercase transition-all duration-300 hover:border-navy/50 hover:bg-navy hover:text-primary-foreground"
+            >
+              {section.linkLabel || "Learn More"}
+            </Link>
+            <button
+              onClick={() => setShowFaqs(!showFaqs)}
+              className="inline-flex items-center gap-2 px-4 py-3 text-charcoal-light font-body text-[10px] tracking-[0.25em] uppercase transition-colors duration-300 hover:text-navy"
+              aria-expanded={showFaqs}
+            >
+              Common Questions
+              <ChevronDown
+                className={`w-3.5 h-3.5 transition-transform duration-300 ${
+                  showFaqs ? "rotate-180" : ""
+                }`}
+              />
+            </button>
+          </div>
+
+          {/* FAQ panel */}
+          <div
+            className={`overflow-hidden transition-all duration-500 ease-out ${
+              showFaqs ? "max-h-[2000px] opacity-100 mt-6" : "max-h-0 opacity-0 mt-0"
+            }`}
+          >
+            <div className="border-t border-divider pt-2">
+              {section.faqs.map((faq, i) => (
+                <FAQItem key={i} faq={faq} index={i} sectionId={section.id} />
+              ))}
+            </div>
+          </div>
+        </motion.div>
+      </div>
+    </section>
+  );
+};
+
 const PatientEducation = () => {
   usePageSEO({
-    title: "Patient Treatment Guides | Dental Implants & Rehabilitation",
-    description: "Specialist-authored patient guides covering dental implants, full-arch rehabilitation, immediate implants, veneers, whitening, and maxillofacial care. Understand every step of your treatment.",
+    title:
+      "Patient Education | Dental Implants, Veneers & Reconstruction Guide | NJ Prosthodontist",
+    description:
+      "Specialist-authored patient education covering dental implants, All-on-X rehabilitation, porcelain veneers, full mouth reconstruction, and complex restorative care. Understand your treatment options with confidence.",
   });
 
   return (
@@ -54,7 +353,7 @@ const PatientEducation = () => {
       <SiteNavigation />
 
       {/* Hero */}
-      <section className="pt-36 pb-14 md:pt-44 md:pb-18 px-6 md:px-8">
+      <section className="pt-36 pb-16 md:pt-44 md:pb-20 px-6 md:px-8">
         <div className="luxury-container max-w-3xl text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -68,10 +367,9 @@ const PatientEducation = () => {
               Patient Education &{" "}
               <span className="italic">Treatment Guide</span>
             </h1>
-            <p className="font-body text-sm md:text-base text-charcoal-light font-light leading-relaxed max-w-xl mx-auto">
-              Understand your options.
-              <br />
-              Know what to expect.
+            <div className="w-10 h-px bg-navy mx-auto mb-8" />
+            <p className="font-body text-sm md:text-[15px] text-charcoal-light font-light leading-[1.85] max-w-lg mx-auto">
+              Understand your options. Know what to expect.
               <br />
               Make decisions with confidence.
             </p>
@@ -79,490 +377,35 @@ const PatientEducation = () => {
         </div>
       </section>
 
-      {/* Section 1: Dental Implants */}
-      <section
-        className="py-12 md:py-16 px-6 md:px-8"
-        style={{
-          background:
-            "linear-gradient(180deg, hsl(40 10% 95%) 0%, hsl(40 12% 93%) 100%)",
-        }}
-      >
+      {/* Navigation anchors */}
+      <section className="pb-8 px-6 md:px-8">
         <div className="luxury-container max-w-3xl">
-          <motion.div {...fadeUp} transition={{ duration: 0.7 }}>
-            <p className="font-body text-[10px] tracking-[0.35em] uppercase text-charcoal-light mb-4">
-              Treatment Guide
-            </p>
-            <h2 className="font-display text-3xl md:text-4xl font-light text-navy mb-5">
-              What Are <span className="italic">Dental Implants?</span>
-            </h2>
-            <p className="font-body text-sm md:text-base text-charcoal-light font-light leading-relaxed mb-4">
-              Dental implants are modern tooth replacements designed to function
-              like natural teeth.
-            </p>
-            <p className="font-body text-sm md:text-base text-charcoal-light font-light leading-relaxed mb-8">
-              They are small titanium supports placed in the jawbone that act as
-              artificial roots. Once healed, they support crowns, bridges, or
-              full-arch restorations.
-            </p>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-8">
-              {["Natural function", "Long-term stability", "Bone preservation", "Improved comfort"].map(
-                (b, i) => (
-                  <div key={i} className="border-t border-divider pt-3">
-                    <p className="font-body text-xs text-charcoal font-light tracking-wide">
-                      {b}
-                    </p>
-                  </div>
-                )
-              )}
-            </div>
-            <Link
-              to="/guide/dental-implants"
-              className="inline-block px-8 py-3 border border-navy/20 text-navy font-body text-[10px] tracking-[0.25em] uppercase transition-all duration-300 hover:border-navy/50 hover:bg-navy hover:text-primary-foreground"
-            >
-              Learn More
-            </Link>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Section 2: Immediate Implants */}
-      <section className="py-12 md:py-16 px-6 md:px-8">
-        <div className="luxury-container max-w-3xl">
-          <motion.div {...fadeUp} transition={{ duration: 0.7 }}>
-            <p className="font-body text-[10px] tracking-[0.35em] uppercase text-charcoal-light mb-4">
-              Treatment Guide
-            </p>
-            <h2 className="font-display text-3xl md:text-4xl font-light text-navy mb-5">
-              What Are <span className="italic">Immediate Implants?</span>
-            </h2>
-            <p className="font-body text-sm md:text-base text-charcoal-light font-light leading-relaxed mb-4">
-              In selected cases, implants can be placed at the same visit as
-              tooth removal. This approach may reduce treatment time and preserve
-              natural tissue architecture.
-            </p>
-            <p className="font-body text-sm md:text-base text-charcoal-light font-light leading-relaxed mb-8">
-              Not every patient is a candidate. Treatment decisions depend on
-              bone quality, infection status, and structural factors. Your
-              specialist will guide you through the evaluation process.
-            </p>
-            <Link
-              to="/guide/immediate-implants"
-              className="inline-block px-8 py-3 border border-navy/20 text-navy font-body text-[10px] tracking-[0.25em] uppercase transition-all duration-300 hover:border-navy/50 hover:bg-navy hover:text-primary-foreground"
-            >
-              Learn More
-            </Link>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Section 3: Full-Arch */}
-      <section
-        className="py-12 md:py-16 px-6 md:px-8"
-        style={{
-          background:
-            "linear-gradient(180deg, hsl(40 10% 95%) 0%, hsl(40 12% 93%) 100%)",
-        }}
-      >
-        <div className="luxury-container max-w-3xl">
-          <motion.div {...fadeUp} transition={{ duration: 0.7 }}>
-            <p className="font-body text-[10px] tracking-[0.35em] uppercase text-charcoal-light mb-4">
-              Treatment Guide
-            </p>
-            <h2 className="font-display text-3xl md:text-4xl font-light text-navy mb-5">
-              Full-Arch Implant{" "}
-              <span className="italic">Rehabilitation</span>
-            </h2>
-            <p className="font-body text-sm md:text-base text-charcoal-light font-light leading-relaxed mb-8">
-              Full-arch treatment replaces an entire set of teeth using
-              strategically placed implants. This option is often recommended
-              for patients experiencing significant dental challenges.
-            </p>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div>
-                <p className="font-body text-[10px] tracking-[0.3em] uppercase text-charcoal-light mb-3">
-                  Often Recommended For
-                </p>
-                <ul className="space-y-2.5">
-                  {[
-                    "Multiple failing teeth",
-                    "Advanced wear",
-                    "Severe bone loss",
-                    "Long-term instability",
-                  ].map((item, i) => (
-                    <li
-                      key={i}
-                      className="font-body text-sm text-charcoal font-light leading-relaxed pl-4 border-l-2 border-divider"
-                    >
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <div>
-                <p className="font-body text-[10px] tracking-[0.3em] uppercase text-charcoal-light mb-3">
-                  Treatment Focus
-                </p>
-                <ul className="space-y-2.5">
-                  {[
-                    "Designed for strength and longevity",
-                    "Focused on function and comfort",
-                    "Precision-planned treatment",
-                  ].map((item, i) => (
-                    <li
-                      key={i}
-                      className="font-body text-sm text-charcoal font-light leading-relaxed pl-4 border-l-2 border-divider"
-                    >
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-            <div className="mt-8">
-              <Link
-                to="/guide/full-arch-implants"
-                className="inline-block px-8 py-3 border border-navy/20 text-navy font-body text-[10px] tracking-[0.25em] uppercase transition-all duration-300 hover:border-navy/50 hover:bg-navy hover:text-primary-foreground"
+          <motion.div
+            {...fadeUp}
+            transition={{ duration: 0.6 }}
+            className="flex flex-wrap justify-center gap-x-6 gap-y-3"
+          >
+            {sections.map((s) => (
+              <a
+                key={s.id}
+                href={`#${s.id}`}
+                className="font-body text-[10px] tracking-[0.2em] uppercase text-charcoal-light hover:text-navy transition-colors duration-300"
               >
-                Learn More
-              </Link>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Section 4: Veneers */}
-      <section className="py-12 md:py-16 px-6 md:px-8">
-        <div className="luxury-container max-w-3xl">
-          <motion.div {...fadeUp} transition={{ duration: 0.7 }}>
-            <p className="font-body text-[10px] tracking-[0.35em] uppercase text-charcoal-light mb-4">
-              Treatment Guide
-            </p>
-            <h2 className="font-display text-3xl md:text-4xl font-light text-navy mb-5">
-              Veneers & Aesthetic{" "}
-              <span className="italic">Reconstruction</span>
-            </h2>
-            <p className="font-body text-sm md:text-base text-charcoal-light font-light leading-relaxed mb-4">
-              Veneers are precision-crafted restorations designed to enhance the
-              shape, color, and harmony of teeth.
-            </p>
-            <p className="font-body text-sm md:text-base text-charcoal-light font-light leading-relaxed mb-8">
-              Treatment planning prioritizes structural integrity and long-term
-              stability. Each case is individually designed based on facial
-              proportions, dental anatomy, and functional requirements.
-            </p>
-            <Link
-              to="/guide/veneers"
-              className="inline-block px-8 py-3 border border-navy/20 text-navy font-body text-[10px] tracking-[0.25em] uppercase transition-all duration-300 hover:border-navy/50 hover:bg-navy hover:text-primary-foreground"
-            >
-              Learn More
-            </Link>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Section 5: Teeth Whitening */}
-      <section
-        className="py-12 md:py-16 px-6 md:px-8"
-        style={{
-          background:
-            "linear-gradient(180deg, hsl(40 10% 95%) 0%, hsl(40 12% 93%) 100%)",
-        }}
-      >
-        <div className="luxury-container max-w-3xl">
-          <motion.div {...fadeUp} transition={{ duration: 0.7 }}>
-            <p className="font-body text-[10px] tracking-[0.35em] uppercase text-charcoal-light mb-4">
-              Treatment Guide
-            </p>
-            <h2 className="font-display text-3xl md:text-4xl font-light text-navy mb-5">
-              Professional <span className="italic">Teeth Whitening</span>
-            </h2>
-            <p className="font-body text-sm md:text-base text-charcoal-light font-light leading-relaxed mb-4">
-              Professional whitening uses precisely calibrated concentrations and custom-fitted trays to achieve even, predictable brightening under clinical supervision.
-            </p>
-            <p className="font-body text-sm md:text-base text-charcoal-light font-light leading-relaxed mb-8">
-              Results are tailored to your natural tooth composition and aesthetic goals. Safety and comfort are prioritized throughout.
-            </p>
-            <Link
-              to="/guide/teeth-whitening"
-              className="inline-block px-8 py-3 border border-navy/20 text-navy font-body text-[10px] tracking-[0.25em] uppercase transition-all duration-300 hover:border-navy/50 hover:bg-navy hover:text-primary-foreground"
-            >
-              Learn More
-            </Link>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Section 6: Maxillofacial */}
-      <section className="py-12 md:py-16 px-6 md:px-8">
-        <div className="luxury-container max-w-3xl">
-          <motion.div {...fadeUp} transition={{ duration: 0.7 }}>
-            <p className="font-body text-[10px] tracking-[0.35em] uppercase text-charcoal-light mb-4">
-              Treatment Guide
-            </p>
-            <h2 className="font-display text-3xl md:text-4xl font-light text-navy mb-5">
-              Maxillofacial & Oral <span className="italic">Reconstruction</span>
-            </h2>
-            <p className="font-body text-sm md:text-base text-charcoal-light font-light leading-relaxed mb-4">
-              Rehabilitation of structures affected by surgery, trauma, or cancer treatment. Custom prostheses restore function, comfort, and confidence.
-            </p>
-            <p className="font-body text-sm md:text-base text-charcoal-light font-light leading-relaxed mb-8">
-              Treatment is coordinated with your surgical and oncology teams for comprehensive, individualized care.
-            </p>
-            <Link
-              to="/guide/maxillofacial-rehabilitation"
-              className="inline-block px-8 py-3 border border-navy/20 text-navy font-body text-[10px] tracking-[0.25em] uppercase transition-all duration-300 hover:border-navy/50 hover:bg-navy hover:text-primary-foreground"
-            >
-              Learn More
-            </Link>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Section 7: Candidacy */}
-      <section
-        className="py-12 md:py-16 px-6 md:px-8"
-        style={{
-          background:
-            "linear-gradient(180deg, hsl(40 10% 95%) 0%, hsl(40 12% 93%) 100%)",
-        }}
-      >
-        <div className="luxury-container max-w-3xl">
-          <motion.div {...fadeUp} transition={{ duration: 0.7 }}>
-            <h2 className="font-display text-3xl md:text-4xl font-light text-navy mb-5">
-              How Do I Know If I Am a{" "}
-              <span className="italic">Candidate?</span>
-            </h2>
-            <p className="font-body text-sm md:text-base text-charcoal-light font-light leading-relaxed mb-8">
-              Candidacy is determined through comprehensive clinical evaluation.
-              Every treatment plan is individually designed based on your unique
-              situation.
-            </p>
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-5">
-              {[
-                "Bone support",
-                "Gum health",
-                "Bite forces",
-                "Structural condition",
-                "Medical history",
-                "Treatment goals",
-              ].map((factor, i) => (
-                <div key={i} className="border-t border-divider pt-3">
-                  <p className="font-body text-xs text-charcoal font-light tracking-wide">
-                    {factor}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Section 6: Day of Treatment */}
-      <section className="py-12 md:py-16 px-6 md:px-8">
-        <div className="luxury-container max-w-3xl">
-          <motion.div {...fadeUp} transition={{ duration: 0.7 }} className="mb-10">
-            <p className="font-body text-[10px] tracking-[0.35em] uppercase text-charcoal-light mb-4">
-              Your Experience
-            </p>
-            <h2 className="font-display text-3xl md:text-4xl font-light text-navy mb-5">
-              What to Expect on the{" "}
-              <span className="italic">Day of Treatment</span>
-            </h2>
-          </motion.div>
-
-          <div className="space-y-0">
-            {[
-              {
-                num: "01",
-                title: "Comfortable Environment",
-                text: "You are welcomed into a controlled, calm clinical setting designed for your comfort and confidence.",
-              },
-              {
-                num: "02",
-                title: "Anesthesia and Comfort",
-                text: "Local anesthesia ensures complete comfort throughout the procedure. Sedation options are available if preferred.",
-              },
-              {
-                num: "03",
-                title: "Clear Communication",
-                text: "Your specialist explains each step before and during treatment. You are informed and in control throughout.",
-              },
-              {
-                num: "04",
-                title: "Post-Treatment Instructions",
-                text: "Detailed aftercare guidance is provided. You will know exactly what to expect, what to eat, and when to rest.",
-              },
-              {
-                num: "05",
-                title: "Going Home",
-                text: "Most patients return home the same day. A follow-up appointment is scheduled to monitor your progress.",
-              },
-            ].map((step, i) => (
-              <motion.div
-                key={i}
-                {...fadeUp}
-                transition={{ duration: 0.4, delay: i * 0.06 }}
-                className="grid grid-cols-[2.5rem_1fr] gap-4 items-start pb-7"
-              >
-                <span className="font-display text-lg font-light text-navy/30 pt-0.5">
-                  {step.num}
-                </span>
-                <div className="border-b border-divider pb-7">
-                  <p className="font-display text-lg font-light text-navy mb-1.5">
-                    {step.title}
-                  </p>
-                  <p className="font-body text-sm text-charcoal-light font-light leading-relaxed">
-                    {step.text}
-                  </p>
-                </div>
-              </motion.div>
+                {s.label}
+              </a>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Section 7: First Week */}
-      <section
-        className="py-12 md:py-16 px-6 md:px-8"
-        style={{
-          background:
-            "linear-gradient(180deg, hsl(40 10% 95%) 0%, hsl(40 12% 93%) 100%)",
-        }}
-      >
-        <div className="luxury-container max-w-3xl">
-          <motion.div {...fadeUp} transition={{ duration: 0.7 }}>
-            <p className="font-body text-[10px] tracking-[0.35em] uppercase text-charcoal-light mb-4">
-              Recovery
-            </p>
-            <h2 className="font-display text-3xl md:text-4xl font-light text-navy mb-5">
-              First Week of <span className="italic">Healing</span>
-            </h2>
-            <p className="font-body text-sm md:text-base text-charcoal-light font-light leading-relaxed mb-6">
-              Normal experiences during the first week may include mild
-              swelling, temporary soreness, and a recommendation for softer
-              foods. These are expected signs that your body is healing
-              properly.
-            </p>
-            <p className="font-body text-sm md:text-base text-charcoal-light font-light leading-relaxed">
-              Most patients notice gradual improvement each day. Healing
-              responses vary between individuals, and your specialist is
-              available to answer any questions throughout your recovery.
-            </p>
           </motion.div>
         </div>
       </section>
 
-      {/* Section 8: Food Guidance */}
-      <section className="py-12 md:py-16 px-6 md:px-8">
-        <div className="luxury-container max-w-3xl">
-          <motion.div {...fadeUp} transition={{ duration: 0.7 }} className="mb-10">
-            <p className="font-body text-[10px] tracking-[0.35em] uppercase text-charcoal-light mb-4">
-              Dietary Guidance
-            </p>
-            <h2 className="font-display text-3xl md:text-4xl font-light text-navy">
-              Eating After <span className="italic">Treatment</span>
-            </h2>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-14">
-            <motion.div {...fadeUp} transition={{ duration: 0.6 }}>
-              <p className="font-body text-[10px] tracking-[0.3em] uppercase text-charcoal-light mb-4">
-                Single Implants
-              </p>
-              <p className="font-body text-sm text-charcoal-light font-light leading-relaxed mb-3">
-                Soft foods are recommended initially. Smoothies, yogurt,
-                scrambled eggs, and soups are excellent choices for the first
-                few days.
-              </p>
-              <p className="font-body text-sm text-charcoal-light font-light leading-relaxed">
-                Most patients gradually return to their normal diet within one
-                to two weeks as comfort improves.
-              </p>
-            </motion.div>
-
-            <motion.div {...fadeUp} transition={{ duration: 0.6, delay: 0.1 }}>
-              <p className="font-body text-[10px] tracking-[0.3em] uppercase text-charcoal-light mb-4">
-                Full-Arch Treatment
-              </p>
-              <p className="font-body text-sm text-charcoal-light font-light leading-relaxed mb-3">
-                A structured healing diet supports successful integration.
-                Nutrient-rich soft foods such as blended soups, protein shakes,
-                and soft fish are recommended during the initial phase.
-              </p>
-              <p className="font-body text-sm text-charcoal-light font-light leading-relaxed">
-                Your specialist provides guided dietary progression as healing
-                advances. Most patients are pleased by how naturally they eat
-                once fully healed.
-              </p>
-            </motion.div>
-          </div>
-        </div>
-      </section>
-
-      {/* Section 9: Stability Block */}
-      <section
-        className="py-12 md:py-16 px-6 md:px-8"
-        style={{
-          background:
-            "linear-gradient(180deg, hsl(40 10% 95%) 0%, hsl(40 12% 93%) 100%)",
-        }}
-      >
-        <div className="luxury-container max-w-3xl text-center">
-          <motion.div {...fadeUp} transition={{ duration: 0.8 }}>
-            <h2 className="font-display text-3xl md:text-4xl font-light text-navy mb-5">
-              Designed for Long-Term{" "}
-              <span className="italic">Stability</span>
-            </h2>
-            <p className="font-body text-sm md:text-base text-charcoal-light font-light leading-relaxed max-w-xl mx-auto mb-3">
-              Modern implant and restorative treatments are planned with
-              precision, biology, and structural mechanics in mind.
-            </p>
-            <p className="font-body text-sm md:text-base text-charcoal-light font-light leading-relaxed max-w-xl mx-auto">
-              Every decision prioritizes longevity and tissue preservation.
-            </p>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Section 10: FAQ */}
-      <section className="py-12 md:py-16 px-6 md:px-8">
-        <div className="luxury-container max-w-3xl">
-          <motion.div {...fadeUp} transition={{ duration: 0.7 }} className="text-center mb-10">
-            <p className="font-body text-[10px] tracking-[0.35em] uppercase text-charcoal-light mb-4">
-              Your Questions
-            </p>
-            <h2 className="font-display text-3xl md:text-4xl font-light text-navy">
-              Common <span className="italic">Questions</span>
-            </h2>
-          </motion.div>
-
-          <Accordion type="single" collapsible>
-            {faqs.map((faq, i) => (
-              <motion.div
-                key={i}
-                {...fadeUp}
-                transition={{ duration: 0.4, delay: i * 0.04 }}
-              >
-                <AccordionItem
-                  value={`faq-${i}`}
-                  className="border-b border-divider"
-                >
-                  <AccordionTrigger className="py-5 font-display text-lg md:text-xl font-light text-charcoal hover:text-navy transition-colors text-left hover:no-underline">
-                    {faq.q}
-                  </AccordionTrigger>
-                  <AccordionContent className="pb-5 font-body text-sm text-charcoal-light font-light leading-relaxed">
-                    {faq.a}
-                  </AccordionContent>
-                </AccordionItem>
-              </motion.div>
-            ))}
-          </Accordion>
-        </div>
-      </section>
+      {/* Content sections */}
+      {sections.map((section, i) => (
+        <EducationBlock key={section.id} section={section} isAlt={i % 2 === 0} />
+      ))}
 
       {/* Soft CTA */}
       <section
-        className="py-12 md:py-16 px-6 md:px-8"
+        className="py-16 md:py-20 px-6 md:px-8"
         style={{
           background:
             "linear-gradient(180deg, hsl(40 10% 95%) 0%, hsl(40 12% 93%) 100%)",
@@ -571,12 +414,13 @@ const PatientEducation = () => {
         <div className="luxury-container max-w-3xl text-center">
           <motion.div {...fadeUp} transition={{ duration: 0.8 }}>
             <h2 className="font-display text-3xl md:text-4xl font-light text-navy mb-5">
-              Ready to Learn <span className="italic">More?</span>
+              Every Journey Begins with{" "}
+              <span className="italic">Understanding</span>
             </h2>
-            <p className="font-body text-sm md:text-base text-charcoal-light font-light leading-relaxed max-w-xl mx-auto mb-8">
-              Every treatment journey begins with understanding. If you have
-              questions or would like to explore your options, we welcome the
-              conversation.
+            <p className="font-body text-sm md:text-[15px] text-charcoal-light font-light leading-[1.85] max-w-xl mx-auto mb-8">
+              If you have questions about your treatment options, candidacy, or
+              what to expect, we welcome the conversation. Clarity replaces
+              uncertainty.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
