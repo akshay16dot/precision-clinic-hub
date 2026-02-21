@@ -146,8 +146,8 @@ const reassurancePoints = [
 
 const ClinicalCases = () => {
   usePageSEO({
-    title: "Clinical Cases | Implant & Prosthetic Results | Prosthodontist NJ",
-    description: "Documented clinical outcomes in implant reconstruction, full-arch rehabilitation, failed implant correction, and complex aesthetic restoration by a Board-Certified Prosthodontist.",
+    title: "Clinical Cases & Smile Rehabilitation Outcomes | Prosthodontist NJ",
+    description: "Explore real clinical cases highlighting advanced implant rehabilitation, veneers, full-mouth reconstruction, and complex prosthodontic treatments focused on functional and esthetic excellence.",
   });
 
   return (

@@ -60,8 +60,8 @@ const fadeUp = {
 
 const FullArchImplants = () => {
   usePageSEO({
-    title: "Full Arch Dental Implants NJ | Prosthodontist Specialist",
-    description: "Full-arch implant rehabilitation and All-on-X reconstruction by a Board-Certified Prosthodontist in New Jersey. Complete oral reconstruction for failing dentition, bone loss, and unstable prosthetics.",
+    title: "Full-Arch Rehabilitation & All-on-X | Prosthodontist | Hamilton Township NJ",
+    description: "Specialized full-arch implant rehabilitation and All-on-X tooth replacement solutions designed for long-term function, structural stability, and natural aesthetics by a board-certified prosthodontist in Hamilton Township NJ.",
   });
 
   return (

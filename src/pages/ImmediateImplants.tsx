@@ -34,8 +34,8 @@ const faqItems = [
 
 const ImmediateImplants = () => {
   usePageSEO({
-    title: "Immediate Dental Implants NJ | Same-Day Implant Specialist",
-    description: "Immediate implant placement with same-day provisional restoration. Board-Certified Prosthodontist specializing in single-visit extraction and implant protocols in New Jersey.",
+    title: "Immediate Dental Implants | Same-Day Tooth Replacement | Hamilton Township NJ",
+    description: "Precision-driven immediate dental implant solutions for eligible cases, focusing on biologic stability, function, and esthetic outcomes. Provided by a prosthodontic specialist serving Hamilton Township NJ and surrounding areas.",
   });
 
   return (

@@ -56,8 +56,8 @@ const fadeUp = {
 
 const DentalImplants = () => {
   usePageSEO({
-    title: "Dental Implants New Jersey | Board-Certified Prosthodontist",
-    description: "Dental implant placement and reconstruction by a Board-Certified Prosthodontist in NJ. Single-tooth, multi-unit, and complex implant rehabilitation. Correction of failed implants and prostheses.",
+    title: "Dental Implants & Tooth Replacement | Prosthodontist | Hamilton Township NJ",
+    description: "Advanced dental implant and tooth replacement solutions designed for long-term stability, function, and aesthetics by a board-certified prosthodontist serving Hamilton Township NJ, Princeton, Jersey City, and surrounding New Jersey areas.",
   });
 
   return (
