@@ -186,7 +186,7 @@ const SiteNavigation = () => {
             : "bg-transparent"
         }`}
       >
-        <div className="luxury-container flex items-center justify-between py-4 px-6 md:px-10">
+        <div className="luxury-container flex items-center justify-between py-3 sm:py-4 px-6 md:px-10">
           {/* Logo */}
             <Link to="/" className="hover:opacity-80 transition-opacity duration-300 shrink-0">
             <img
