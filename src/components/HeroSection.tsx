@@ -53,11 +53,11 @@ const HeroSection = () => {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 hero-min-h flex flex-col justify-between px-5 sm:px-6 md:px-12 lg:px-24">
-        <div className="pt-20 md:pt-28" />
+      <div className="relative z-10 hero-min-h flex flex-col justify-between px-5 sm:px-8 md:px-12 lg:px-24">
+        <div className="pt-24 sm:pt-24 md:pt-28" />
 
         {/* Main composition */}
-        <div className="flex-1 flex items-center py-6">
+        <div className="flex-1 flex items-center py-6 md:py-8">
           <div className="w-full flex flex-col lg:flex-row items-center gap-6 lg:gap-0">
             {/* Left — Logo (hidden on mobile/tablet, shown only on desktop) */}
             <div className="hidden lg:flex lg:w-[33%] flex-shrink-0 items-center justify-center">
@@ -82,7 +82,7 @@ const HeroSection = () => {
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.9, delay: 0.3 }}
               >
-                <p className="font-display text-[34px] sm:text-[44px] md:text-[52px] lg:text-[3.8rem] xl:text-[4.5rem] font-light text-primary-foreground leading-[0.93] tracking-tight mb-6 lg:mb-7">
+                <p className="font-display text-[32px] sm:text-[38px] md:text-[46px] lg:text-[3.6rem] xl:text-[4.5rem] font-light text-primary-foreground leading-[0.95] tracking-tight mb-6 sm:mb-7 lg:mb-7">
                   Advanced
                   <br />
                   Prosthodontics &amp;
@@ -94,12 +94,12 @@ const HeroSection = () => {
                   Board-Certified Prosthodontist
                 </p>
 
-                <p className="font-body text-[10px] sm:text-[11px] md:text-xs tracking-[0.15em] sm:tracking-[0.2em] uppercase text-primary-foreground/55 leading-relaxed mb-12 lg:mb-14 max-w-lg mx-auto lg:mx-0">
+                <p className="font-body text-[10px] sm:text-[11px] md:text-xs tracking-[0.15em] sm:tracking-[0.2em] uppercase text-primary-foreground/55 leading-relaxed mb-10 sm:mb-12 lg:mb-14 max-w-lg mx-auto lg:mx-0">
                   Dental Implants &nbsp;·&nbsp; Immediate Implants &nbsp;·&nbsp; Veneers &nbsp;·&nbsp; Full-Arch Rehabilitation
                 </p>
 
                 {/* Dual CTAs */}
-                <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start mb-8 lg:mb-10 max-w-[340px] sm:max-w-none mx-auto lg:mx-0">
+                <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start mb-10 lg:mb-12 max-w-[320px] sm:max-w-none mx-auto lg:mx-0">
                   <Link
                     to="/clinical-cases"
                     onClick={(e) => e.stopPropagation()}
