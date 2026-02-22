@@ -12,6 +12,7 @@ const data = {
     "Treatment planning prioritizes structural integrity and long-term stability. Each veneer is individually designed based on facial proportions, dental anatomy, and functional requirements.",
     "This is not cosmetic decoration. It is restorative architecture, guided by prosthodontic principles and biomechanical precision.",
   ],
+  timelineTitle: "Your Treatment Timeline",
   healingPhases: [
     {
       label: "Consultation & Design",
