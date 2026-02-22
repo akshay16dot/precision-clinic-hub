@@ -36,6 +36,7 @@ interface PatientGuideData {
   healingPhases: HealingPhase[];
   healingRecoveryIntro: string;
   healingRecoveryPoints: string[];
+  timelineTitle?: string;
   faqs: FAQ[];
   practicalGuidance: PracticalItem[];
   reassuranceLines: string[];
@@ -112,7 +113,11 @@ const PatientGuideLayout = ({ data }: { data: PatientGuideData }) => {
               What to Expect
             </p>
             <h2 className="font-display text-3xl md:text-4xl font-light text-navy">
-              Your Healing <span className="italic">Timeline</span>
+              {data.timelineTitle ? (
+                <>{data.timelineTitle.split(" ").slice(0, -1).join(" ")}{" "}<span className="italic">{data.timelineTitle.split(" ").slice(-1)[0]}</span></>
+              ) : (
+                <>Your Healing <span className="italic">Timeline</span></>
+              )}
             </h2>
           </motion.div>
 
