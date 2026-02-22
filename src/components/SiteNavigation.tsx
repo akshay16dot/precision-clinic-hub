@@ -180,9 +180,9 @@ const SiteNavigation = () => {
   return (
     <>
       <nav
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-700 ease-out ${
           showSolid
-            ? "bg-background/95 backdrop-blur-md shadow-[0_1px_0_0_hsl(var(--divider)/0.4)]"
+            ? "bg-background/97 backdrop-blur-lg shadow-[0_1px_0_0_hsl(var(--divider)/0.3)]"
             : "bg-transparent"
         }`}
       >
