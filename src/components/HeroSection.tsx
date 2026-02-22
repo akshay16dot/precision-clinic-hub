@@ -82,7 +82,7 @@ const HeroSection = () => {
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.9, delay: 0.3 }}
               >
-                <p className="font-display text-[32px] sm:text-[38px] md:text-[46px] lg:text-[3.6rem] xl:text-[4.5rem] font-light text-primary-foreground leading-[0.95] tracking-tight mb-6 sm:mb-7 lg:mb-7">
+                <p className="font-display text-[28px] sm:text-[36px] md:text-[46px] lg:text-[3.6rem] xl:text-[4.5rem] font-extralight text-primary-foreground leading-[0.97] sm:leading-[0.95] tracking-tight mb-5 sm:mb-7 lg:mb-7">
                   Advanced
                   <br />
                   Prosthodontics &amp;
@@ -90,27 +90,27 @@ const HeroSection = () => {
                   <span className="italic">Implant Reconstruction</span>
                 </p>
 
-                <p className="font-body text-[10px] md:text-xs tracking-[0.3em] uppercase text-primary-foreground/60 leading-relaxed mb-3 lg:mb-4 max-w-md mx-auto lg:mx-0">
+                <p className="font-body text-[10px] md:text-xs tracking-[0.3em] uppercase text-primary-foreground/60 leading-relaxed mb-2.5 sm:mb-3 lg:mb-4 max-w-md mx-auto lg:mx-0">
                   Board-Certified Prosthodontist
                 </p>
 
-                <p className="font-body text-[10px] sm:text-[11px] md:text-xs tracking-[0.15em] sm:tracking-[0.2em] uppercase text-primary-foreground/55 leading-relaxed mb-10 sm:mb-12 lg:mb-14 max-w-lg mx-auto lg:mx-0">
+                <p className="font-body text-[9.5px] sm:text-[11px] md:text-xs tracking-[0.15em] sm:tracking-[0.2em] uppercase text-primary-foreground/50 leading-relaxed mb-9 sm:mb-12 lg:mb-14 max-w-lg mx-auto lg:mx-0">
                   Dental Implants &nbsp;·&nbsp; Immediate Implants &nbsp;·&nbsp; Veneers &nbsp;·&nbsp; Full-Arch Rehabilitation
                 </p>
 
                 {/* Dual CTAs */}
-                <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start mb-10 lg:mb-12 max-w-[320px] sm:max-w-none mx-auto lg:mx-0">
+                <div className="flex flex-col sm:flex-row gap-4 sm:gap-4 justify-center lg:justify-start mb-10 lg:mb-12 max-w-[300px] sm:max-w-none mx-auto lg:mx-0">
                   <Link
                     to="/clinical-cases"
                     onClick={(e) => e.stopPropagation()}
-                    className="inline-block px-8 sm:px-10 py-3.5 border border-primary-foreground/30 bg-primary-foreground text-navy font-body text-[11px] tracking-[0.25em] uppercase transition-all duration-300 hover:bg-transparent hover:text-primary-foreground text-center"
+                    className="inline-block px-8 sm:px-10 py-4 sm:py-3.5 border border-primary-foreground/30 bg-primary-foreground text-navy font-body text-[10.5px] sm:text-[11px] tracking-[0.25em] uppercase transition-all duration-300 hover:bg-transparent hover:text-primary-foreground text-center"
                   >
                     View Clinical Cases
                   </Link>
                   <Link
                     to="/clinical-assessment"
                     onClick={(e) => e.stopPropagation()}
-                    className="inline-block px-8 sm:px-10 py-3.5 border border-primary-foreground/10 text-primary-foreground/45 font-body text-[10px] tracking-[0.25em] uppercase transition-all duration-300 hover:border-primary-foreground/25 hover:text-primary-foreground/70 text-center"
+                    className="inline-block px-8 sm:px-10 py-4 sm:py-3.5 border border-primary-foreground/10 text-primary-foreground/45 font-body text-[9.5px] sm:text-[10px] tracking-[0.25em] uppercase transition-all duration-300 hover:border-primary-foreground/25 hover:text-primary-foreground/70 text-center"
                   >
                     Begin Clinical Self-Assessment
                   </Link>
