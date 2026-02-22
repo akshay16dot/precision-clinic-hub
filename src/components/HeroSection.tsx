@@ -108,11 +108,11 @@ const HeroSection = () => {
                     View Clinical Cases
                   </Link>
                   <Link
-                    to="/testimonials"
+                    to="/clinical-assessment"
                     onClick={(e) => e.stopPropagation()}
                     className="inline-block px-8 sm:px-10 py-3.5 border border-primary-foreground/25 text-primary-foreground/70 font-body text-[11px] tracking-[0.25em] uppercase transition-all duration-300 hover:border-primary-foreground/50 hover:text-primary-foreground text-center"
                   >
-                    Read Patient Testimonials
+                    Start Clinical Self-Assessment
                   </Link>
                 </div>
 

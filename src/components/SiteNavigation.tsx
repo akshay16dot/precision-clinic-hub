@@ -46,6 +46,7 @@ const navItems: NavItem[] = [
   {
     label: "Patients",
     links: [
+      { to: "/clinical-assessment", label: "Clinical Self-Assessment" },
       { to: "/testimonials", label: "Patient Testimonials" },
       { to: "/leave-review", label: "Leave a Review" },
       { to: "/patient-education", label: "Patient Education" },
@@ -100,6 +101,7 @@ const megaMenuSections: { title: string; links: NavLink[] }[] = [
   {
     title: "Patients",
     links: [
+      { to: "/clinical-assessment", label: "Clinical Self-Assessment" },
       { to: "/testimonials", label: "Patient Testimonials" },
       { to: "/leave-review", label: "Leave a Review" },
       { to: "/patient-education", label: "Patient Education" },
