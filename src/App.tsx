@@ -5,6 +5,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 import PageTransition from "@/components/PageTransition";
+import useScrollToHash from "@/hooks/useScrollToHash";
 import Index from "./pages/Index";
 import DentalImplants from "./pages/DentalImplants";
 import FullArchImplants from "./pages/FullArchImplants";
@@ -37,6 +38,7 @@ const queryClient = new QueryClient();
 
 const AnimatedRoutes = () => {
   const location = useLocation();
+  useScrollToHash();
   return (
     <AnimatePresence mode="wait">
       <PageTransition key={location.pathname}>
