@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import SiteNavigation from "@/components/SiteNavigation";
 import PageFooter from "@/components/PageFooter";
 import InquiryForm from "@/components/InquiryForm";
@@ -110,6 +111,23 @@ const Contact = () => {
                   <p className="font-body text-sm text-charcoal-light font-light leading-relaxed">
                     New patient consultations begin with a comprehensive clinical evaluation, diagnostic imaging review, and personalized treatment discussion. Please allow approximately 60–90 minutes for your initial visit.
                   </p>
+                </div>
+
+                <div className="w-12 h-px bg-navy" />
+
+                <div>
+                  <p className="font-body text-xs tracking-[0.2em] uppercase text-charcoal-light mb-4">
+                    Virtual Consultation
+                  </p>
+                  <p className="font-body text-sm text-charcoal-light font-light leading-relaxed mb-4">
+                    For treatment discussions, cosmetic evaluations, and second opinions — a structured specialist evaluation is available remotely.
+                  </p>
+                  <Link
+                    to="/virtual-consultation"
+                    className="inline-block px-8 py-3 border border-navy text-navy font-body text-xs tracking-[0.2em] uppercase transition-all duration-300 hover:bg-navy hover:text-primary-foreground"
+                  >
+                    Request Virtual Consultation
+                  </Link>
                 </div>
               </div>
             </motion.div>
