@@ -90,12 +90,6 @@
     @apply border-border;
   }
 
-  html {
-    scroll-behavior: smooth;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
-
   body {
     @apply bg-background text-foreground antialiased;
     font-family: 'Inter', sans-serif;
@@ -181,18 +175,5 @@
     .hero-bg-portrait {
       filter: brightness(0.25) contrast(1.08) saturate(0.05) hue-rotate(-5deg) blur(1px);
     }
-  }
-}
-
-/* Premium micro-interaction defaults */
-@layer base {
-  a, button {
-    transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
-  }
-
-  a:not([class*="transition-"]) {
-    transition: color 0.35s cubic-bezier(0.25, 0.1, 0.25, 1),
-                opacity 0.35s cubic-bezier(0.25, 0.1, 0.25, 1),
-                border-color 0.35s cubic-bezier(0.25, 0.1, 0.25, 1);
   }
 }

@@ -235,10 +235,10 @@ const SiteNavigation = () => {
                 <AnimatePresence>
                   {item.links && activeDropdown === item.label && (
                     <motion.div
-                      initial={{ opacity: 0, y: 6 }}
+                      initial={{ opacity: 0, y: 4 }}
                       animate={{ opacity: 1, y: 0 }}
                       exit={{ opacity: 0, y: 4 }}
-                      transition={{ duration: 0.25, ease: [0.25, 0.1, 0.25, 1] }}
+                      transition={{ duration: 0.2 }}
                       className="absolute top-full left-0 mt-1 min-w-[260px] bg-background border border-border/60 rounded-sm shadow-[0_8px_30px_-8px_rgba(0,0,0,0.12)] z-[70] py-4 px-1"
                     >
                       {item.links.map((link) =>
@@ -289,7 +289,7 @@ const SiteNavigation = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            transition={{ duration: 0.45, ease: [0.25, 0.1, 0.25, 1] }}
+            transition={{ duration: 0.35, ease: "easeInOut" }}
             className="fixed inset-0 z-[60]"
             style={{ backgroundColor: "hsl(220 36% 26% / 0.98)" }}
           >
@@ -310,9 +310,9 @@ const SiteNavigation = () => {
                 {megaMenuSections.map((section, si) => (
                   <motion.div
                     key={section.title}
-                    initial={{ opacity: 0, y: 14 }}
+                    initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.15 + si * 0.05, duration: 0.55, ease: [0.25, 0.1, 0.25, 1] }}
+                    transition={{ delay: 0.12 + si * 0.06, duration: 0.5, ease: "easeOut" }}
                   >
                     <p className="font-body text-[10px] tracking-[0.25em] uppercase text-primary-foreground/45 mb-7">
                       {section.title}
