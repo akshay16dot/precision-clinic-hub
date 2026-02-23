@@ -120,11 +120,12 @@ const VirtualConsultation = () => {
       <main className="bg-background">
         <SiteNavigation />
         <section className="pt-32 pb-20 md:pt-40 md:pb-28 px-6 md:px-8 bg-background min-h-screen flex items-center">
-          <div className="luxury-container text-center max-w-2xl mx-auto">
+          <div className="luxury-container max-w-2xl mx-auto">
             <motion.div
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8 }}
+              className="text-center"
             >
               <div className="w-12 h-px bg-navy mx-auto mb-12" />
 
@@ -148,16 +149,70 @@ const VirtualConsultation = () => {
 
               <div className="w-8 h-px bg-border mx-auto mb-8" />
 
-              <p className="font-body text-xs text-charcoal-light/50 font-light tracking-wide leading-relaxed mb-12">
+              <p className="font-body text-xs text-charcoal-light/50 font-light tracking-wide leading-relaxed mb-16">
                 Virtual consultations are offered in limited weekly capacity.
               </p>
+            </motion.div>
 
+            {/* Post-Consultation Outcome Guidance */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+              className="border border-border/40 p-8 md:p-12 mb-16"
+            >
+              <p className="font-body text-xs tracking-[0.2em] uppercase text-charcoal-light mb-8 text-center">
+                Consultation Outcomes
+              </p>
+
+              <div className="space-y-8">
+                <div className="border-l-2 border-navy/30 pl-6">
+                  <p className="font-body text-xs tracking-[0.15em] uppercase text-navy mb-2">Suitable Candidate</p>
+                  <p className="font-body text-sm text-charcoal-light font-light leading-relaxed">
+                    Following clinical review, patients identified as suitable candidates will receive guidance on proceeding with a comprehensive in-office evaluation.
+                  </p>
+                </div>
+
+                <div className="border-l-2 border-border pl-6">
+                  <p className="font-body text-xs tracking-[0.15em] uppercase text-charcoal-light mb-2">Requires Further Evaluation</p>
+                  <p className="font-body text-sm text-charcoal-light font-light leading-relaxed">
+                    In certain cases, additional diagnostic information or clinical examination may be required before a treatment pathway can be confirmed.
+                  </p>
+                </div>
+
+                <div className="border-l-2 border-border pl-6">
+                  <p className="font-body text-xs tracking-[0.15em] uppercase text-charcoal-light mb-2">Alternative Care Pathway</p>
+                  <p className="font-body text-sm text-charcoal-light font-light leading-relaxed">
+                    When a case falls outside the scope of specialist prosthodontic care, appropriate referral guidance will be provided.
+                  </p>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Next Step CTA */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.6 }}
+              className="text-center"
+            >
+              <p className="font-body text-xs tracking-[0.2em] uppercase text-charcoal-light mb-6">
+                Next Step: Clinical Evaluation
+              </p>
               <Link
-                to="/"
-                className="inline-block px-10 py-3.5 border border-navy text-navy font-body text-xs tracking-[0.2em] uppercase transition-all duration-300 hover:bg-navy hover:text-primary-foreground"
+                to="/clinical-assessment"
+                className="inline-block px-12 py-4 bg-navy text-primary-foreground font-body text-xs tracking-[0.2em] uppercase transition-all duration-300 hover:bg-navy/90"
               >
-                Return Home
+                Schedule Clinical Evaluation
               </Link>
+              <div className="mt-8">
+                <Link
+                  to="/"
+                  className="font-body text-xs tracking-[0.15em] uppercase text-charcoal-light/60 hover:text-navy transition-colors"
+                >
+                  Return Home
+                </Link>
+              </div>
             </motion.div>
           </div>
         </section>
@@ -223,13 +278,16 @@ const VirtualConsultation = () => {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-6 sm:gap-12">
-              <div className="flex-1 border border-border/40 p-8">
-                <p className="font-body text-xs tracking-[0.2em] uppercase text-charcoal-light mb-4">
-                  Consultation Fee
+              <div className="flex-1 border border-border/40 p-8 md:p-10">
+                <p className="font-body text-xs tracking-[0.2em] uppercase text-charcoal-light mb-5">
+                  Virtual Consultation Fee
                 </p>
-                <p className="font-display text-2xl md:text-3xl font-light text-navy mb-2">$195</p>
-                <p className="font-body text-xs text-charcoal-light font-light leading-relaxed">
-                  Applied toward treatment if pursued.
+                <p className="font-display text-2xl md:text-3xl font-light text-navy mb-6">$195</p>
+                <p className="font-body text-sm text-charcoal-light font-light leading-relaxed mb-4">
+                  This structured consultation is designed for treatment planning discussions, cosmetic evaluations, implant considerations, and second opinions.
+                </p>
+                <p className="font-body text-sm text-charcoal-light font-light leading-relaxed">
+                  The consultation fee is applied toward treatment when pursued.
                 </p>
               </div>
               <div className="flex-1 border border-border/40 p-8">
@@ -358,6 +416,42 @@ const VirtualConsultation = () => {
                 />
               </div>
 
+              {/* Clinical Photo Guidance */}
+              <div className="border border-border/40 p-8 md:p-10">
+                <p className="font-body text-xs tracking-[0.2em] uppercase text-charcoal-light mb-5">
+                  Clinical Photo Guidance
+                </p>
+                <p className="font-body text-sm text-charcoal-light font-light leading-relaxed mb-6">
+                  If clinical records are unavailable, photographs may assist consultation clarity.
+                </p>
+                <div className="mb-6">
+                  <p className="font-body text-xs tracking-[0.15em] uppercase text-charcoal-light mb-3">
+                    Recommended Views
+                  </p>
+                  <ul className="space-y-2">
+                    {["Natural smile", "Teeth together (bite)", "Upper teeth", "Lower teeth", "Side views"].map((view) => (
+                      <li key={view} className="font-body text-sm text-charcoal font-light flex items-center gap-3">
+                        <div className="w-1 h-1 rounded-full bg-navy/40 shrink-0" />
+                        {view}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <div>
+                  <p className="font-body text-xs tracking-[0.15em] uppercase text-charcoal-light mb-3">
+                    Instructions
+                  </p>
+                  <ul className="space-y-2">
+                    {["Use natural lighting", "Avoid filters or edited images", "Maintain clear visibility"].map((note) => (
+                      <li key={note} className="font-body text-xs text-charcoal-light/70 font-light flex items-center gap-3">
+                        <div className="w-1 h-1 rounded-full bg-border shrink-0" />
+                        {note}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+
               {/* File Upload */}
               <div>
                 <label className="font-body text-xs tracking-[0.15em] uppercase text-charcoal-light block mb-3">
@@ -434,7 +528,7 @@ const VirtualConsultation = () => {
                 disabled={formState === "submitting" || !primaryConcern || !clinicalSituation}
                 className="w-full sm:w-auto inline-block px-14 py-4 bg-navy text-primary-foreground font-body text-xs tracking-[0.2em] uppercase transition-all duration-300 hover:bg-navy/90 disabled:opacity-50 disabled:cursor-not-allowed"
               >
-                {formState === "submitting" ? "Submitting..." : "Request Virtual Consultation"}
+                {formState === "submitting" ? "Submitting..." : "Reserve Consultation"}
               </button>
             </form>
           </motion.div>
