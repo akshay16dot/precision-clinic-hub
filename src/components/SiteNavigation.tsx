@@ -186,14 +186,14 @@ const SiteNavigation = () => {
             : "bg-[hsl(220_30%_8%/0.3)] border-b border-primary-foreground/8 shadow-[0_1px_10px_-4px_rgba(0,0,0,0.15),inset_0_1px_0_0_rgba(255,255,255,0.06)]"
         }`}
       >
-        <div className="luxury-container flex items-center justify-between py-3 sm:py-4 px-6 md:px-10">
+        <div className="luxury-container flex items-center justify-between py-2 sm:py-4 px-5 sm:px-6 md:px-10">
           {/* Logo */}
             <Link to="/" className="hover:opacity-80 transition-opacity duration-300 shrink-0">
             <img
               src={logoAP}
               alt="Dr. Akshay Parmar"
               className={`transition-all duration-500 ${
-                showSolid ? "h-24 sm:h-28 md:h-28 lg:h-28" : "h-28 sm:h-32 md:h-32 lg:h-36"
+                showSolid ? "h-20 sm:h-28 md:h-28 lg:h-28" : "h-22 sm:h-32 md:h-32 lg:h-36"
               }`}
               style={{ filter: showSolid ? "none" : "invert(1) brightness(2)" }}
             />

@@ -54,7 +54,7 @@ const HeroSection = () => {
 
       {/* Content */}
       <div className="relative z-10 hero-min-h flex flex-col justify-between px-5 sm:px-8 md:px-12 lg:px-24">
-        <div className="pt-24 sm:pt-24 md:pt-28" />
+        <div className="pt-20 sm:pt-24 md:pt-28" />
 
         {/* Main composition */}
         <div className="flex-1 flex items-center py-6 md:py-8">
@@ -82,7 +82,7 @@ const HeroSection = () => {
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.9, delay: 0.3 }}
               >
-                <p className="font-display text-[32px] sm:text-[38px] md:text-[46px] lg:text-[3.6rem] xl:text-[4.5rem] font-light text-primary-foreground leading-[0.95] tracking-tight mb-6 sm:mb-7 lg:mb-7">
+                <p className="font-display text-[30px] sm:text-[38px] md:text-[46px] lg:text-[3.6rem] xl:text-[4.5rem] font-light text-primary-foreground leading-[1.05] sm:leading-[0.95] tracking-tight mb-5 sm:mb-7 lg:mb-7">
                   Advanced
                   <br />
                   Prosthodontics &amp;
