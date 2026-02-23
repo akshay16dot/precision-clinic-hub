@@ -120,7 +120,7 @@ const Contact = () => {
                     Virtual Consultation
                   </p>
                   <p className="font-body text-sm text-charcoal-light font-light leading-relaxed mb-4">
-                    For treatment discussions, cosmetic evaluations, and second opinions — a structured specialist evaluation is available remotely.
+                    For treatment discussions, cosmetic evaluations, and second opinions. A structured specialist evaluation is available remotely.
                   </p>
                   <Link
                     to="/virtual-consultation"

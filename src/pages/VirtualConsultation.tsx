@@ -305,6 +305,7 @@ const VirtualConsultation = () => {
                   {CLINICAL_SITUATIONS.map((s) => (
                     <label
                       key={s}
+                      onClick={() => setClinicalSituation(s)}
                       className={`flex items-center gap-4 p-4 border cursor-pointer transition-all duration-300 ${
                         clinicalSituation === s
                           ? "border-navy bg-navy/[0.03]"
