@@ -126,17 +126,32 @@ const VirtualConsultation = () => {
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8 }}
             >
-              <CheckCircle className="w-12 h-12 text-navy mx-auto mb-8" strokeWidth={1} />
-              <h1 className="font-display text-3xl md:text-5xl font-light tracking-tight text-navy mb-6">
-                Request Received
+              <div className="w-12 h-px bg-navy mx-auto mb-12" />
+
+              <h1 className="font-display text-3xl md:text-5xl font-light tracking-tight text-navy leading-[0.95] mb-10">
+                Consultation Request
+                <br />
+                <span className="italic font-light">Received</span>
               </h1>
-              <p className="font-body text-sm md:text-base text-charcoal-light font-light leading-relaxed mb-4">
-                Thank you for your virtual consultation request. Your submission will be reviewed by our clinical team, and we will contact you to confirm scheduling.
+
+              <div className="space-y-6 max-w-lg mx-auto mb-12">
+                <p className="font-body text-sm md:text-base text-charcoal-light font-light leading-relaxed">
+                  Thank you for submitting your Virtual Consultation request.
+                </p>
+                <p className="font-body text-sm md:text-base text-charcoal-light font-light leading-relaxed">
+                  Each request is personally reviewed to ensure appropriate case preparation and clinical suitability.
+                </p>
+                <p className="font-body text-sm md:text-base text-charcoal-light font-light leading-relaxed">
+                  Our office will contact you shortly regarding next steps.
+                </p>
+              </div>
+
+              <div className="w-8 h-px bg-border mx-auto mb-8" />
+
+              <p className="font-body text-xs text-charcoal-light/50 font-light tracking-wide leading-relaxed mb-12">
+                Virtual consultations are offered in limited weekly capacity.
               </p>
-              <p className="font-body text-xs text-charcoal-light/60 font-light leading-relaxed mb-10">
-                Virtual consultations are reviewed prior to confirmation.
-                A clinical examination may be required for definitive diagnosis.
-              </p>
+
               <Link
                 to="/"
                 className="inline-block px-10 py-3.5 border border-navy text-navy font-body text-xs tracking-[0.2em] uppercase transition-all duration-300 hover:bg-navy hover:text-primary-foreground"

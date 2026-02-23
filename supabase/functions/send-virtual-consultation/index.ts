@@ -113,7 +113,7 @@ serve(async (req) => {
     const emailPayload: Record<string, unknown> = {
       from: "Dr. Parmar Website <onboarding@resend.dev>",
       to: ["drparmardds@gmail.com"],
-      subject: `Virtual Consultation: ${payload.name.trim()} — ${payload.primaryConcern}`,
+      subject: `Virtual Consultation: ${payload.name.trim()} - ${payload.primaryConcern}`,
       html: htmlBody,
       reply_to: payload.email.trim(),
     };
@@ -139,6 +139,59 @@ serve(async (req) => {
         JSON.stringify({ success: false, error: "Failed to send consultation request." }),
         { status: 500, headers: { ...corsHeaders, "Content-Type": "application/json" } }
       );
+    }
+
+    // Send acknowledgement email to patient
+    const ackHtml = `
+      <div style="font-family: 'Helvetica Neue', Arial, sans-serif; max-width: 560px; margin: 0 auto; background: #ffffff;">
+        <div style="padding: 48px 32px 32px; text-align: center; border-bottom: 1px solid #e8e6e3;">
+          <p style="color: #999; font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; margin: 0 0 24px;">
+            Board-Certified Prosthodontist
+          </p>
+          <h1 style="color: #1a2942; font-size: 22px; font-weight: 300; letter-spacing: 0.05em; margin: 0;">
+            Consultation Request Received
+          </h1>
+        </div>
+        <div style="padding: 36px 32px;">
+          <p style="color: #555; font-size: 14px; line-height: 1.8; margin: 0 0 18px;">
+            Thank you for submitting your Virtual Consultation request.
+          </p>
+          <p style="color: #555; font-size: 14px; line-height: 1.8; margin: 0 0 18px;">
+            Your submission has been received and will be reviewed by our office.
+          </p>
+          <p style="color: #555; font-size: 14px; line-height: 1.8; margin: 0 0 18px;">
+            Virtual consultations are structured to ensure appropriate clinical preparation and case evaluation.
+          </p>
+          <p style="color: #555; font-size: 14px; line-height: 1.8; margin: 0;">
+            Our team will contact you shortly regarding availability and next steps.
+          </p>
+        </div>
+        <div style="padding: 24px 32px 36px; text-align: center;">
+          <div style="width: 40px; height: 1px; background: #ccc; margin: 0 auto 20px;"></div>
+          <p style="color: #aaa; font-size: 11px; line-height: 1.6; margin: 0;">
+            Virtual consultations are offered in limited weekly capacity.
+          </p>
+        </div>
+      </div>
+    `;
+
+    // Fire-and-forget: don't fail the main request if ack email fails
+    try {
+      await fetch("https://api.resend.com/emails", {
+        method: "POST",
+        headers: {
+          "Authorization": `Bearer ${RESEND_API_KEY}`,
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          from: "Dr. Parmar <onboarding@resend.dev>",
+          to: [payload.email.trim()],
+          subject: "Consultation Request Received",
+          html: ackHtml,
+        }),
+      });
+    } catch (ackErr) {
+      console.error("Acknowledgement email error:", ackErr);
     }
 
     return new Response(
