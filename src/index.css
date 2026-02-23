@@ -155,7 +155,13 @@
 
   /* Reusable hero utilities */
   .hero-min-h {
-    min-height: clamp(520px, 75vh, 820px);
+    min-height: clamp(480px, 72vh, 820px);
+  }
+
+  @media (min-width: 640px) {
+    .hero-min-h {
+      min-height: clamp(520px, 75vh, 820px);
+    }
   }
 
   .hero-navy-fallback {
