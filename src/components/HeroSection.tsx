@@ -103,14 +103,14 @@ const HeroSection = () => {
                   <Link
                     to="/clinical-cases"
                     onClick={(e) => e.stopPropagation()}
-                    className="inline-block px-8 sm:px-10 py-4 sm:py-3.5 border border-primary-foreground/30 bg-primary-foreground text-navy font-body text-[10.5px] sm:text-[11px] tracking-[0.25em] uppercase transition-all duration-300 hover:bg-transparent hover:text-primary-foreground text-center"
+                    className="inline-block px-8 sm:px-10 py-4 sm:py-3.5 border border-primary-foreground/30 bg-primary-foreground text-navy font-body text-[10.5px] sm:text-[11px] tracking-[0.25em] uppercase transition-all duration-500 ease-out hover:bg-transparent hover:text-primary-foreground active:scale-[0.97] text-center"
                   >
                     View Clinical Cases
                   </Link>
                   <Link
                     to="/clinical-assessment"
                     onClick={(e) => e.stopPropagation()}
-                    className="inline-block px-8 sm:px-10 py-4 sm:py-3.5 border border-primary-foreground/10 text-primary-foreground/45 font-body text-[9.5px] sm:text-[10px] tracking-[0.25em] uppercase transition-all duration-300 hover:border-primary-foreground/25 hover:text-primary-foreground/70 text-center"
+                    className="inline-block px-8 sm:px-10 py-4 sm:py-3.5 border border-primary-foreground/10 text-primary-foreground/45 font-body text-[9.5px] sm:text-[10px] tracking-[0.25em] uppercase transition-all duration-500 ease-out hover:border-primary-foreground/25 hover:text-primary-foreground/70 active:scale-[0.97] text-center"
                   >
                     Begin Clinical Self-Assessment
                   </Link>
