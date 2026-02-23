@@ -180,10 +180,10 @@ const SiteNavigation = () => {
   return (
     <>
       <nav
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-700 ease-out backdrop-blur-2xl backdrop-saturate-150 ${
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-700 ease-out backdrop-blur-3xl backdrop-saturate-[1.8] ${
           showSolid
-            ? "bg-background/70 border-b border-border/30 shadow-[0_1px_8px_-4px_rgba(0,0,0,0.06)]"
-            : "bg-[hsl(220_30%_10%/0.25)] border-b border-primary-foreground/6 shadow-[0_1px_6px_-3px_rgba(0,0,0,0.12)]"
+            ? "bg-background/55 border-b border-border/20 shadow-[0_1px_12px_-4px_rgba(0,0,0,0.08),inset_0_1px_0_0_rgba(255,255,255,0.4)]"
+            : "bg-[hsl(220_30%_8%/0.3)] border-b border-primary-foreground/8 shadow-[0_1px_10px_-4px_rgba(0,0,0,0.15),inset_0_1px_0_0_rgba(255,255,255,0.06)]"
         }`}
       >
         <div className="luxury-container flex items-center justify-between py-3 sm:py-4 px-6 md:px-10">
