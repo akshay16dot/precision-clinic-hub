@@ -180,10 +180,10 @@ const SiteNavigation = () => {
   return (
     <>
       <nav
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-700 ease-out backdrop-blur-xl ${
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-700 ease-out backdrop-blur-2xl backdrop-saturate-150 ${
           showSolid
-            ? "bg-background/80 border-b border-border/40"
-            : "bg-[hsl(220_30%_12%/0.35)] border-b border-primary-foreground/8"
+            ? "bg-background/70 border-b border-border/30 shadow-[0_1px_8px_-4px_rgba(0,0,0,0.06)]"
+            : "bg-[hsl(220_30%_10%/0.25)] border-b border-primary-foreground/6 shadow-[0_1px_6px_-3px_rgba(0,0,0,0.12)]"
         }`}
       >
         <div className="luxury-container flex items-center justify-between py-3 sm:py-4 px-6 md:px-10">
