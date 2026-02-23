@@ -15,12 +15,17 @@ interface Question {
   options: { label: string; value: string }[];
 }
 
-interface Recommendation {
+interface Pathway {
   title: string;
   titleItalic: string;
   description: string;
   link: string;
   linkLabel: string;
+}
+
+interface AssessmentResult {
+  primary: Pathway;
+  secondary: Pathway[];
 }
 
 // --- Data ---
@@ -98,134 +103,152 @@ const questions: Question[] = [
   },
 ];
 
-function getRecommendations(answers: Record<string, string>): Recommendation[] {
-  const recs: Recommendation[] = [];
+const PATHWAYS: Record<string, Pathway> = {
+  fullArch: {
+    title: "Full-Arch",
+    titleItalic: "Rehabilitation",
+    description:
+      "Based on your responses, comprehensive implant-supported rehabilitation may be the most appropriate area of clinical consideration. Full-arch solutions are designed to restore complete dental function and aesthetics with long-term biological stability.",
+    link: "/full-arch-implants-new-jersey",
+    linkLabel: "Explore Full-Arch Rehabilitation",
+  },
+  fullMouth: {
+    title: "Full Mouth",
+    titleItalic: "Reconstruction",
+    description:
+      "Your responses suggest that comprehensive full-mouth rehabilitation may be the most relevant treatment consideration. This approach addresses both functional limitations and structural instability through coordinated specialist care.",
+    link: "/tooth-wear-rehabilitation",
+    linkLabel: "Explore Full Mouth Reconstruction",
+  },
+  implants: {
+    title: "Dental Implant",
+    titleItalic: "Rehabilitation",
+    description:
+      "Based on your responses, dental implant rehabilitation appears to be a primary treatment consideration. Implants provide a biologically integrated, long-term solution for missing or failing teeth.",
+    link: "/dental-implants-new-jersey",
+    linkLabel: "Explore Dental Implants",
+  },
+  immediateImplants: {
+    title: "Immediate Implant",
+    titleItalic: "Placement",
+    description:
+      "Your clinical profile suggests that immediate implant placement at the time of extraction may be a relevant consideration, potentially reducing treatment stages and recovery time.",
+    link: "/immediate-implant-rehabilitation",
+    linkLabel: "Explore Immediate Implants",
+  },
+  veneers: {
+    title: "Veneers & Smile",
+    titleItalic: "Design",
+    description:
+      "Based on your responses, porcelain veneers or cosmetic reconstruction may be the most appropriate consideration to achieve your aesthetic goals with lasting structural integrity.",
+    link: "/veneers-aesthetic-reconstruction",
+    linkLabel: "Explore Veneers & Smile Design",
+  },
+  gumTissue: {
+    title: "Gum & Soft Tissue",
+    titleItalic: "Enhancement",
+    description:
+      "Soft tissue health is foundational to long-term treatment success. Clinical evaluation of gum and tissue conditions may be an important part of your care plan.",
+    link: "/aesthetic-dentistry",
+    linkLabel: "Explore Soft Tissue Procedures",
+  },
+  medicalComplex: {
+    title: "Medically Complex",
+    titleItalic: "Care",
+    description:
+      "Patients with systemic health considerations benefit from specialist coordination to ensure safe, predictable treatment outcomes.",
+    link: "/maxillofacial-rehabilitation",
+    linkLabel: "Explore Specialized Care",
+  },
+  consultation: {
+    title: "Comprehensive",
+    titleItalic: "Consultation",
+    description:
+      "A specialist consultation provides thorough clinical evaluation and personalized treatment discussion tailored to your unique dental health.",
+    link: "/contact",
+    linkLabel: "Schedule a Consultation",
+  },
+};
 
-  const needsImplants =
-    answers["missing-teeth"] === "yes" ||
-    answers["missing-teeth"] === "extractions";
-  const failedWork =
-    answers["failing-work"] === "yes" || answers["failing-work"] === "unsure";
-  const chewingIssues =
-    answers["chewing"] === "yes" || answers["chewing"] === "some";
-  const smileConcern =
-    answers["smile-concern"] === "yes" || answers["smile-concern"] === "some";
-  const majorTreatment =
-    answers["major-treatment"] === "yes" ||
-    answers["major-treatment"] === "second-opinion";
-  const gumConcern =
-    answers["gum-tissue"] === "yes" || answers["gum-tissue"] === "unsure";
-  const medicalComplex =
-    answers["medical-complexity"] === "yes" ||
-    answers["medical-complexity"] === "unsure";
+function getAssessmentResult(answers: Record<string, string>): AssessmentResult {
+  // --- Score functional vs aesthetic severity ---
+  const missingTeeth = answers["missing-teeth"] === "yes";
+  const needsExtractions = answers["missing-teeth"] === "extractions";
+  const failedWork = answers["failing-work"] === "yes";
+  const failedWorkUnsure = answers["failing-work"] === "unsure";
+  const chewingSevere = answers["chewing"] === "yes";
+  const chewingSome = answers["chewing"] === "some";
+  const smilePrimary = answers["smile-concern"] === "yes";
+  const smileSecondary = answers["smile-concern"] === "some";
+  const majorTreatment = answers["major-treatment"] === "yes" || answers["major-treatment"] === "second-opinion";
+  const gumConcern = answers["gum-tissue"] === "yes" || answers["gum-tissue"] === "unsure";
+  const medicalComplex = answers["medical-complexity"] === "yes" || answers["medical-complexity"] === "unsure";
 
-  if (needsImplants) {
-    recs.push({
-      title: "Dental",
-      titleItalic: "Implants",
-      description:
-        "Based on your responses, dental implant rehabilitation may be a relevant treatment consideration. Implants offer a biologically integrated solution for missing teeth.",
-      link: "/dental-implants-new-jersey",
-      linkLabel: "Explore Dental Implants",
-    });
+  let functionalScore = 0;
+  if (missingTeeth) functionalScore += 3;
+  if (needsExtractions) functionalScore += 2;
+  if (failedWork) functionalScore += 3;
+  if (failedWorkUnsure) functionalScore += 1;
+  if (chewingSevere) functionalScore += 3;
+  if (chewingSome) functionalScore += 1;
+  if (majorTreatment) functionalScore += 2;
+
+  let aestheticScore = 0;
+  if (smilePrimary) aestheticScore += 3;
+  if (smileSecondary) aestheticScore += 1;
+  if (gumConcern) aestheticScore += 1;
+
+  const secondary: Pathway[] = [];
+  let primary: Pathway;
+
+  // --- Dominant pathway selection ---
+  if (functionalScore >= 6 && majorTreatment && (missingTeeth || needsExtractions)) {
+    // Severe functional + major treatment + missing teeth → Full-Arch
+    primary = PATHWAYS.fullArch;
+    secondary.push(PATHWAYS.implants);
+  } else if (functionalScore >= 6 && majorTreatment) {
+    // Severe functional + major treatment → Full Mouth Reconstruction
+    primary = PATHWAYS.fullMouth;
+    if (missingTeeth || needsExtractions) secondary.push(PATHWAYS.implants);
+  } else if (missingTeeth || needsExtractions) {
+    if (majorTreatment) {
+      primary = PATHWAYS.fullArch;
+    } else {
+      primary = PATHWAYS.implants;
+      secondary.push(PATHWAYS.immediateImplants);
+    }
+  } else if (functionalScore >= 4) {
+    // Moderate functional issues without missing teeth
+    primary = PATHWAYS.fullMouth;
+  } else if (aestheticScore >= 2 && functionalScore <= 2) {
+    // Primarily aesthetic concerns
+    primary = PATHWAYS.veneers;
+    if (gumConcern) secondary.push(PATHWAYS.gumTissue);
+  } else if (gumConcern && functionalScore <= 1 && aestheticScore <= 1) {
+    primary = PATHWAYS.gumTissue;
+  } else {
+    primary = PATHWAYS.consultation;
   }
 
-  if (needsImplants && majorTreatment) {
-    recs.push({
-      title: "Full-Arch",
-      titleItalic: "Rehabilitation",
-      description:
-        "Your responses suggest that comprehensive implant-supported rehabilitation, including full-arch solutions, may warrant clinical evaluation.",
-      link: "/full-arch-implants-new-jersey",
-      linkLabel: "Explore Full-Arch Solutions",
-    });
+  // Add medically complex as secondary when relevant
+  if (medicalComplex && primary !== PATHWAYS.medicalComplex) {
+    secondary.push(PATHWAYS.medicalComplex);
   }
 
-  if (needsImplants && !majorTreatment) {
-    recs.push({
-      title: "Immediate Implant",
-      titleItalic: "Placement",
-      description:
-        "Depending on clinical factors, immediate implant placement at the time of extraction may be a consideration worth exploring with your specialist.",
-      link: "/immediate-implant-rehabilitation",
-      linkLabel: "Explore Immediate Implants",
-    });
+  // Add aesthetic secondary if functional is primary and there are aesthetic concerns
+  if (functionalScore > aestheticScore && aestheticScore >= 2 && primary !== PATHWAYS.veneers) {
+    secondary.push(PATHWAYS.veneers);
   }
 
-  if (smileConcern && !majorTreatment) {
-    recs.push({
-      title: "Veneers & Smile",
-      titleItalic: "Design",
-      description:
-        "Treatment considerations may include porcelain veneers or cosmetic reconstruction to address appearance-related concerns with long-term stability.",
-      link: "/veneers-aesthetic-reconstruction",
-      linkLabel: "Explore Veneers & Smile Design",
-    });
-  }
-
-  if ((chewingIssues && majorTreatment) || (failedWork && majorTreatment)) {
-    recs.push({
-      title: "Full Mouth",
-      titleItalic: "Reconstruction",
-      description:
-        "Your responses indicate that comprehensive full-mouth rehabilitation may be an appropriate area of clinical discussion to restore function and stability.",
-      link: "/tooth-wear-rehabilitation",
-      linkLabel: "Explore Full Mouth Reconstruction",
-    });
-  }
-
-  if (gumConcern) {
-    recs.push({
-      title: "Gum & Soft Tissue",
-      titleItalic: "Procedures",
-      description:
-        "Soft tissue health plays a foundational role in long-term treatment success. Clinical evaluation of gum and tissue conditions may be beneficial.",
-      link: "/aesthetic-dentistry",
-      linkLabel: "Explore Gum & Tissue Procedures",
-    });
-  }
-
-  if (failedWork) {
-    recs.push({
-      title: "Failed Dental Work &",
-      titleItalic: "Complications",
-      description:
-        "Addressing previously failed or compromised dental work requires specialist-level evaluation to determine appropriate corrective pathways.",
-      link: "/patient-education#failed-work",
-      linkLabel: "Explore Treatment of Failed Work",
-    });
-  }
-
-  if (medicalComplex) {
-    recs.push({
-      title: "Medically Complex",
-      titleItalic: "Care",
-      description:
-        "Patients with systemic health considerations benefit from specialist coordination to ensure safe, predictable treatment planning.",
-      link: "/maxillofacial-rehabilitation",
-      linkLabel: "Explore Specialized Care",
-    });
-  }
-
-  // Ensure at least one recommendation
-  if (recs.length === 0) {
-    recs.push({
-      title: "Comprehensive",
-      titleItalic: "Consultation",
-      description:
-        "A specialist consultation allows for thorough clinical evaluation and personalized treatment discussion based on your unique dental health.",
-      link: "/contact",
-      linkLabel: "Schedule a Consultation",
-    });
-  }
-
-  // Deduplicate by link
-  const seen = new Set<string>();
-  return recs.filter((r) => {
-    if (seen.has(r.link)) return false;
-    seen.add(r.link);
+  // Deduplicate and limit secondary
+  const seen = new Set([primary.link]);
+  const uniqueSecondary = secondary.filter((s) => {
+    if (seen.has(s.link)) return false;
+    seen.add(s.link);
     return true;
-  });
+  }).slice(0, 2);
+
+  return { primary, secondary: uniqueSecondary };
 }
 
 // --- Components ---
@@ -291,7 +314,7 @@ const ClinicalAssessment = () => {
     setAnswers({});
   };
 
-  const recommendations = step === "results" ? getRecommendations(answers) : [];
+  const result = step === "results" ? getAssessmentResult(answers) : null;
 
   return (
     <>
@@ -392,7 +415,7 @@ const ClinicalAssessment = () => {
           )}
 
           {/* --- RESULTS --- */}
-          {step === "results" && (
+          {step === "results" && result && (
             <motion.section
               key="results"
               variants={fadeVariants}
@@ -411,63 +434,87 @@ const ClinicalAssessment = () => {
                     Based on Your <span className="italic">Responses</span>
                   </h2>
                   <p className="font-body text-sm text-muted-foreground leading-relaxed max-w-lg mx-auto">
-                    The following treatment considerations may be relevant to your situation. Clinical evaluation by a specialist is recommended to determine the most appropriate course of care.
+                    Primary treatment considerations have been identified. Clinical evaluation by a specialist is recommended to determine the most appropriate course of care.
                   </p>
                 </div>
 
-                <div className="space-y-6 mb-16">
-                  {recommendations.map((rec, i) => (
-                    <motion.div
-                      key={rec.link}
-                      initial={{ opacity: 0, y: 16 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ delay: 0.15 + i * 0.1, duration: 0.5 }}
-                      className="border border-border/60 rounded-sm p-8 md:p-10 hover:border-navy/30 transition-colors duration-300"
-                    >
-                      <h3 className="font-display text-xl md:text-2xl font-light text-navy mb-3">
-                        {rec.title}{" "}
-                        <span className="italic">{rec.titleItalic}</span>
-                      </h3>
-                      <p className="font-body text-[13px] text-muted-foreground leading-relaxed mb-5">
-                        {rec.description}
-                      </p>
-                      <Link
-                        to={rec.link}
-                        className="inline-flex items-center gap-2 font-body text-[11px] tracking-[0.2em] uppercase text-navy hover:text-navy/70 transition-colors duration-300"
-                      >
-                        {rec.linkLabel}
-                        <ArrowRight size={13} strokeWidth={1.5} />
-                      </Link>
-                    </motion.div>
-                  ))}
-                </div>
-
-                {/* Consultation CTA */}
-                <div className="text-center border-t border-border/40 pt-14">
+                {/* Primary Pathway */}
+                <motion.div
+                  initial={{ opacity: 0, y: 16 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.15, duration: 0.5 }}
+                  className="border border-navy/20 rounded-sm p-10 md:p-12 mb-6"
+                >
                   <p className="font-body text-[10px] tracking-[0.3em] uppercase text-muted-foreground mb-4">
-                    Next Step
+                    Primary Treatment Consideration
                   </p>
                   <h3 className="font-display text-2xl md:text-3xl font-light text-navy mb-4">
-                    Schedule a <span className="italic">Consultation</span>
+                    {result.primary.title}{" "}
+                    <span className="italic">{result.primary.titleItalic}</span>
                   </h3>
-                  <p className="font-body text-[13px] text-muted-foreground leading-relaxed max-w-md mx-auto mb-8">
-                    A comprehensive clinical evaluation provides the clarity needed for confident, informed treatment decisions.
+                  <p className="font-body text-[13px] text-muted-foreground leading-relaxed mb-8">
+                    {result.primary.description}
                   </p>
-                  <div className="flex flex-col sm:flex-row gap-3 justify-center">
+                  <div className="flex flex-col sm:flex-row gap-3">
                     <Link
                       to="/contact"
-                      className="inline-flex items-center justify-center gap-3 px-10 py-4 bg-navy text-primary-foreground font-body text-[11px] tracking-[0.25em] uppercase transition-all duration-300 hover:bg-navy/90"
+                      className="inline-flex items-center justify-center gap-3 px-14 py-[18px] bg-navy text-primary-foreground font-body text-[11px] tracking-[0.25em] uppercase transition-all duration-300 hover:bg-navy/90"
                     >
-                      Request Consultation
+                      Schedule Consultation
                       <ArrowRight size={14} strokeWidth={1.5} />
                     </Link>
-                    <button
-                      onClick={handleRestart}
-                      className="inline-flex items-center justify-center gap-2 px-8 py-4 border border-border/60 text-muted-foreground font-body text-[11px] tracking-[0.25em] uppercase transition-all duration-300 hover:border-navy/40 hover:text-navy"
+                    <Link
+                      to={result.primary.link}
+                      className="inline-flex items-center justify-center gap-2 px-10 py-[18px] border border-border/60 text-muted-foreground font-body text-[11px] tracking-[0.25em] uppercase transition-all duration-300 hover:border-navy/40 hover:text-navy"
                     >
-                      Retake Assessment
-                    </button>
+                      {result.primary.linkLabel}
+                    </Link>
                   </div>
+                </motion.div>
+
+                {/* Secondary Considerations */}
+                {result.secondary.length > 0 && (
+                  <div className="mt-12 mb-16">
+                    <p className="font-body text-[10px] tracking-[0.3em] uppercase text-muted-foreground mb-6">
+                      Additional Considerations
+                    </p>
+                    <div className="space-y-4">
+                      {result.secondary.map((sec, i) => (
+                        <motion.div
+                          key={sec.link}
+                          initial={{ opacity: 0, y: 12 }}
+                          animate={{ opacity: 1, y: 0 }}
+                          transition={{ delay: 0.3 + i * 0.1, duration: 0.4 }}
+                          className="border border-border/40 rounded-sm p-7 md:p-8"
+                        >
+                          <h4 className="font-display text-lg md:text-xl font-light text-navy mb-2">
+                            {sec.title}{" "}
+                            <span className="italic">{sec.titleItalic}</span>
+                          </h4>
+                          <p className="font-body text-[12px] text-muted-foreground/70 leading-relaxed mb-4">
+                            {sec.description}
+                          </p>
+                          <Link
+                            to={sec.link}
+                            className="inline-flex items-center gap-2 font-body text-[11px] tracking-[0.2em] uppercase text-navy/70 hover:text-navy transition-colors duration-300"
+                          >
+                            {sec.linkLabel}
+                            <ArrowRight size={12} strokeWidth={1.5} />
+                          </Link>
+                        </motion.div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
+                {/* Restart */}
+                <div className="text-center mt-14 pt-10 border-t border-border/30">
+                  <button
+                    onClick={handleRestart}
+                    className="inline-flex items-center justify-center gap-2 px-8 py-4 border border-border/60 text-muted-foreground font-body text-[11px] tracking-[0.25em] uppercase transition-all duration-300 hover:border-navy/40 hover:text-navy"
+                  >
+                    Retake Assessment
+                  </button>
                 </div>
 
                 {/* Disclaimer */}
