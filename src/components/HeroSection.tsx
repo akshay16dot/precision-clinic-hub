@@ -54,7 +54,7 @@ const HeroSection = () => {
 
       {/* Content */}
       <div className="relative z-10 hero-min-h flex flex-col justify-between px-5 sm:px-8 md:px-12 lg:px-24">
-        <div className="pt-24 sm:pt-24 md:pt-28" />
+        <div className="pt-36 sm:pt-40 md:pt-44" />
 
         {/* Main composition */}
         <div className="flex-1 flex items-center py-6 md:py-8">
