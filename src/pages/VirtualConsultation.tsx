@@ -326,12 +326,28 @@ const VirtualConsultation = () => {
         <div className="w-12 h-px bg-navy mx-auto" />
       </div>
 
-      {/* Form */}
+      {/* Authority Framing */}
       <section className="section-padding bg-background">
         <div className="luxury-container max-w-2xl mx-auto">
-          <motion.div {...fadeUp} transition={{ duration: 0.8 }}>
-            <p className="font-body text-xs tracking-[0.2em] uppercase text-charcoal-light mb-10 text-center">
-              Request Virtual Consultation
+          <motion.div {...fadeUp} transition={{ duration: 0.8 }} className="text-center mb-16">
+            <p className="font-body text-xs tracking-[0.2em] uppercase text-charcoal-light mb-6">
+              Consultation Request Review
+            </p>
+            <p className="font-body text-sm text-charcoal-light font-light leading-relaxed mb-4">
+              Virtual consultations are individually reviewed to ensure clinical appropriateness.
+            </p>
+            <p className="font-body text-sm text-charcoal-light font-light leading-relaxed">
+              This structured process preserves the quality and depth of specialist evaluation.
+            </p>
+            <div className="w-8 h-px bg-border mx-auto mt-10" />
+          </motion.div>
+
+          <motion.div {...fadeUp} transition={{ duration: 0.8, delay: 0.1 }}>
+            <p className="font-body text-xs tracking-[0.2em] uppercase text-charcoal-light mb-4 text-center">
+              Available Consultation Windows
+            </p>
+            <p className="font-body text-xs text-charcoal-light/50 font-light text-center mb-10">
+              Select from currently released specialist consultation windows.
             </p>
 
             <form onSubmit={handleSubmit} className="space-y-8">
@@ -526,6 +542,19 @@ const VirtualConsultation = () => {
                     ))}
                   </div>
                 )}
+              </div>
+
+              {/* Consultation Commitment Policy */}
+              <div className="border border-border/40 p-8 md:p-10">
+                <p className="font-body text-xs tracking-[0.2em] uppercase text-charcoal-light mb-4">
+                  Consultation Commitment Policy
+                </p>
+                <p className="font-body text-sm text-charcoal-light font-light leading-relaxed mb-3">
+                  Virtual consultation time is reserved exclusively for you.
+                </p>
+                <p className="font-body text-sm text-charcoal-light font-light leading-relaxed">
+                  We kindly request at least 24 hours' notice for rescheduling.
+                </p>
               </div>
 
               {/* Disclaimer */}

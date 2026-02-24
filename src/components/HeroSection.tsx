@@ -116,6 +116,16 @@ const HeroSection = () => {
                   </Link>
                 </div>
 
+                {/* Specialist Availability Microcopy */}
+                <div className="max-w-md mx-auto lg:mx-0 mb-10 lg:mb-12">
+                  <p className="font-body text-[10px] tracking-[0.2em] uppercase text-primary-foreground/35 leading-relaxed mb-1.5">
+                    Specialist Consultation Availability is Limited
+                  </p>
+                  <p className="font-body text-[10px] text-primary-foreground/25 font-light leading-relaxed">
+                    Virtual consultations are reserved for treatment planning discussions, cosmetic evaluations, and complex restorative cases.
+                  </p>
+                </div>
+
                 {/* Rotating testimonial */}
                 <div className="max-w-lg mx-auto lg:mx-0">
                   <p className="font-body text-[9px] tracking-[0.3em] uppercase text-primary-foreground/45 mb-3">
