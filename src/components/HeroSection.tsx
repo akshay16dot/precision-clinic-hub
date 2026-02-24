@@ -113,13 +113,10 @@ const HeroSection = () => {
                     <Link
                       to="/clinical-assessment"
                       onClick={(e) => e.stopPropagation()}
-                      className="inline-block w-full px-8 sm:px-10 py-3.5 border border-primary-foreground/30 bg-primary-foreground text-navy font-body text-[11px] tracking-[0.25em] uppercase transition-all duration-300 hover:bg-transparent hover:text-primary-foreground text-center"
+                      className="cta-tactile inline-block w-full px-8 sm:px-10 py-3.5 border border-primary-foreground/30 bg-primary-foreground text-navy font-body text-[11px] tracking-[0.25em] uppercase transition-all duration-300 hover:bg-transparent hover:text-primary-foreground text-center"
                     >
                       Schedule Consultation
                     </Link>
-                    <p className="font-body text-[9px] text-primary-foreground/45 font-light tracking-wide mt-2 text-center lg:text-left">
-                      Comprehensive clinical examination &amp; definitive diagnosis
-                    </p>
                   </div>
 
                   {/* Secondary: View Clinical Cases */}
@@ -127,7 +124,7 @@ const HeroSection = () => {
                     <Link
                       to="/clinical-cases"
                       onClick={(e) => e.stopPropagation()}
-                      className="inline-block w-full px-8 sm:px-10 py-3.5 border border-primary-foreground/25 text-primary-foreground/75 font-body text-[10px] tracking-[0.25em] uppercase transition-all duration-300 hover:bg-primary-foreground hover:text-navy hover:border-primary-foreground text-center"
+                      className="cta-tactile inline-block w-full px-8 sm:px-10 py-3.5 border border-primary-foreground/25 text-primary-foreground/75 font-body text-[10px] tracking-[0.25em] uppercase transition-all duration-300 hover:bg-primary-foreground hover:text-navy hover:border-primary-foreground text-center"
                     >
                       View Clinical Cases
                     </Link>
