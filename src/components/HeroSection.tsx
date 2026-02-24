@@ -40,14 +40,22 @@ const HeroSection = () => {
           className="absolute inset-0"
           style={{
             background:
-              "linear-gradient(145deg, hsl(220 30% 10% / 0.94) 0%, hsl(220 22% 14% / 0.85) 45%, hsl(218 20% 16% / 0.86) 75%, hsl(220 30% 10% / 0.96) 100%)",
+              "linear-gradient(145deg, hsl(220 32% 8% / 0.96) 0%, hsl(220 24% 11% / 0.88) 40%, hsl(218 22% 13% / 0.89) 70%, hsl(220 32% 8% / 0.97) 100%)",
+          }}
+        />
+        {/* Subtle luminosity behind headline region */}
+        <div
+          className="absolute inset-0"
+          style={{
+            background:
+              "radial-gradient(ellipse 60% 50% at 55% 45%, hsl(220 20% 18% / 0.12) 0%, transparent 70%)",
           }}
         />
         <div
           className="absolute inset-0"
           style={{
             background:
-              "linear-gradient(180deg, transparent 50%, hsl(220 28% 10% / 0.98) 100%)",
+              "linear-gradient(180deg, transparent 45%, hsl(220 30% 7% / 0.99) 100%)",
           }}
         />
       </div>
@@ -82,7 +90,7 @@ const HeroSection = () => {
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.9, delay: 0.3 }}
               >
-                <p className="font-display text-[32px] sm:text-[38px] md:text-[46px] lg:text-[3.6rem] xl:text-[4.5rem] font-light text-primary-foreground leading-[0.95] tracking-tight mb-6 sm:mb-7 lg:mb-7">
+                <p className="font-display text-[32px] sm:text-[38px] md:text-[46px] lg:text-[3.6rem] xl:text-[4.5rem] font-light text-primary-foreground leading-[0.95] tracking-tight mb-6 sm:mb-7 lg:mb-7" style={{ textShadow: '0 1px 30px hsl(220 30% 8% / 0.5)' }}>
                   Advanced
                   <br />
                   Prosthodontics &amp;
@@ -90,11 +98,11 @@ const HeroSection = () => {
                   <span className="italic">Implant Reconstruction</span>
                 </p>
 
-                <p className="font-body text-[10px] md:text-xs tracking-[0.3em] uppercase text-primary-foreground/60 leading-relaxed mb-3 lg:mb-4 max-w-md mx-auto lg:mx-0">
+                <p className="font-body text-[10px] md:text-xs tracking-[0.3em] uppercase text-primary-foreground/65 leading-relaxed mb-3 lg:mb-4 max-w-md mx-auto lg:mx-0">
                   Board-Certified Prosthodontist
                 </p>
 
-                <p className="font-body text-[10px] sm:text-[11px] md:text-xs tracking-[0.15em] sm:tracking-[0.2em] uppercase text-primary-foreground/55 leading-relaxed mb-10 sm:mb-12 lg:mb-14 max-w-lg mx-auto lg:mx-0">
+                <p className="font-body text-[10px] sm:text-[11px] md:text-xs tracking-[0.15em] sm:tracking-[0.2em] uppercase text-primary-foreground/58 leading-relaxed mb-10 sm:mb-12 lg:mb-14 max-w-lg mx-auto lg:mx-0">
                   Dental Implants &nbsp;·&nbsp; Immediate Implants &nbsp;·&nbsp; Veneers &nbsp;·&nbsp; Full-Arch Rehabilitation
                 </p>
 
