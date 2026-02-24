@@ -34,9 +34,17 @@ const FooterSection = () => {
             </p>
             <a
               href="mailto:drparmardds@gmail.com"
-              className="block font-body text-sm text-primary-foreground/60 font-light hover:text-primary-foreground/80 transition-colors"
+              className="block font-body text-sm text-primary-foreground/60 font-light hover:text-primary-foreground/80 transition-colors mb-3"
             >
               drparmardds@gmail.com
+            </a>
+            <a
+              href="https://maps.google.com/?q=1544+Kuser+Rd+Hamilton+Township+NJ+08619"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block font-body text-xs text-primary-foreground/45 font-light hover:text-primary-foreground/70 transition-colors leading-relaxed"
+            >
+              1544 Kuser Rd, Hamilton Township, NJ 08619
             </a>
           </div>
 
