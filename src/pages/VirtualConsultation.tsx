@@ -303,6 +303,25 @@ const VirtualConsultation = () => {
         </div>
       </section>
 
+      {/* Consultation Fee Policy */}
+      <section className="py-12 md:py-16 px-6 md:px-8 bg-background">
+        <div className="luxury-container max-w-3xl mx-auto">
+          <motion.div {...fadeUp} transition={{ duration: 0.8 }}>
+            <div className="border border-border/40 p-8 md:p-10">
+              <p className="font-body text-xs tracking-[0.2em] uppercase text-charcoal-light mb-5">
+                Consultation Fee Policy
+              </p>
+              <p className="font-body text-sm text-charcoal-light font-light leading-relaxed mb-4">
+                The Virtual Consultation Fee covers professional time, clinical review, and evaluation.
+              </p>
+              <p className="font-body text-sm text-charcoal-light font-light leading-relaxed">
+                In cases where a virtual consultation is not clinically appropriate, the fee may be applied toward an in-person clinical evaluation.
+              </p>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
       <div className="luxury-container px-6 md:px-8">
         <div className="w-12 h-px bg-navy mx-auto" />
       </div>
