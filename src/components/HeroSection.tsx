@@ -98,11 +98,11 @@ const HeroSection = () => {
                   <span className="italic">Implant Reconstruction</span>
                 </p>
 
-                <p className="font-body text-[10px] md:text-xs tracking-[0.3em] uppercase text-primary-foreground/65 leading-relaxed mb-3 lg:mb-4 max-w-md mx-auto lg:mx-0">
+                <p className="font-body text-[10px] md:text-xs tracking-[0.3em] uppercase text-primary-foreground/80 leading-relaxed mb-3 lg:mb-4 max-w-md mx-auto lg:mx-0">
                   Board-Certified Prosthodontist
                 </p>
 
-                <p className="font-body text-[10px] sm:text-[11px] md:text-xs tracking-[0.15em] sm:tracking-[0.2em] uppercase text-primary-foreground/58 leading-relaxed mb-10 sm:mb-12 lg:mb-14 max-w-lg mx-auto lg:mx-0">
+                <p className="font-body text-[10px] sm:text-[11px] md:text-xs tracking-[0.15em] sm:tracking-[0.2em] uppercase text-primary-foreground/70 leading-relaxed mb-10 sm:mb-12 lg:mb-14 max-w-lg mx-auto lg:mx-0">
                   Dental Implants &nbsp;·&nbsp; Immediate Implants &nbsp;·&nbsp; Veneers &nbsp;·&nbsp; Full-Arch Rehabilitation
                 </p>
 
@@ -117,7 +117,7 @@ const HeroSection = () => {
                     >
                       Schedule Consultation
                     </Link>
-                    <p className="font-body text-[9px] text-primary-foreground/30 font-light tracking-wide mt-2 text-center lg:text-left">
+                    <p className="font-body text-[9px] text-primary-foreground/45 font-light tracking-wide mt-2 text-center lg:text-left">
                       Comprehensive clinical examination &amp; definitive diagnosis
                     </p>
                   </div>
@@ -127,7 +127,7 @@ const HeroSection = () => {
                     <Link
                       to="/clinical-cases"
                       onClick={(e) => e.stopPropagation()}
-                      className="inline-block w-full px-8 sm:px-10 py-3.5 border border-primary-foreground/20 text-primary-foreground/60 font-body text-[10px] tracking-[0.25em] uppercase transition-all duration-300 hover:bg-primary-foreground hover:text-navy hover:border-primary-foreground text-center"
+                      className="inline-block w-full px-8 sm:px-10 py-3.5 border border-primary-foreground/25 text-primary-foreground/75 font-body text-[10px] tracking-[0.25em] uppercase transition-all duration-300 hover:bg-primary-foreground hover:text-navy hover:border-primary-foreground text-center"
                     >
                       View Clinical Cases
                     </Link>
@@ -137,7 +137,7 @@ const HeroSection = () => {
                   <Link
                     to="/virtual-consultation"
                     onClick={(e) => e.stopPropagation()}
-                    className="font-body text-[9px] tracking-[0.2em] uppercase text-primary-foreground/50 hover:text-primary-foreground/75 transition-colors duration-300 text-center lg:text-left mt-1"
+                    className="font-body text-[9px] tracking-[0.2em] uppercase text-primary-foreground/60 hover:text-primary-foreground/80 transition-colors duration-300 text-center lg:text-left mt-1"
                   >
                     Virtual Consultation →
                   </Link>
@@ -146,7 +146,7 @@ const HeroSection = () => {
                   <Link
                     to="/clinical-assessment"
                     onClick={(e) => e.stopPropagation()}
-                    className="font-body text-[9px] tracking-[0.2em] uppercase text-primary-foreground/45 hover:text-primary-foreground/70 transition-colors duration-300 text-center lg:text-left"
+                    className="font-body text-[9px] tracking-[0.2em] uppercase text-primary-foreground/55 hover:text-primary-foreground/75 transition-colors duration-300 text-center lg:text-left"
                   >
                     Begin Online Assessment →
                   </Link>
@@ -154,7 +154,7 @@ const HeroSection = () => {
 
                 {/* Rotating testimonial */}
                 <div className="max-w-lg mx-auto lg:mx-0">
-                  <p className="font-body text-[9px] tracking-[0.3em] uppercase text-primary-foreground/45 mb-3">
+                  <p className="font-body text-[9px] tracking-[0.3em] uppercase text-primary-foreground/55 mb-3">
                     Patient Feedback
                   </p>
                   <div className="h-14 sm:h-12 relative overflow-hidden">
@@ -166,7 +166,7 @@ const HeroSection = () => {
                         exit={{ opacity: 0, y: -8 }}
                         transition={{ duration: 0.5 }}
                       >
-                        <p className="font-body text-[11px] md:text-xs text-primary-foreground/60 font-light italic leading-relaxed">
+                        <p className="font-body text-[11px] md:text-xs text-primary-foreground/70 font-light italic leading-relaxed">
                           "{rotatingQuotes[quoteIndex].text}"
                         </p>
                       </motion.div>
