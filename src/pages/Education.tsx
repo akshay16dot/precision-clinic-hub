@@ -22,7 +22,7 @@ const Education = () => {
       <SiteNavigation />
 
       {/* Hero */}
-      <section className="pt-36 md:pt-44 pb-20 md:pb-28 px-6 md:px-8">
+      <section className="pt-48 md:pt-56 pb-20 md:pb-28 px-6 md:px-8">
         <div className="luxury-container text-center">
           <motion.p
             initial={{ opacity: 0, y: 15 }}

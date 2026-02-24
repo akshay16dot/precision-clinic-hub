@@ -51,7 +51,7 @@ const AestheticDentistry = () => {
       <SiteNavigation />
 
       {/* ── Hero ── */}
-      <section className="pt-44 pb-24 md:pt-52 md:pb-32 lg:pb-36 bg-background">
+      <section className="pt-48 pb-24 md:pt-56 md:pb-32 lg:pb-36 bg-background">
         <div className="luxury-container px-6 md:px-8">
           <motion.div
             {...fade}
