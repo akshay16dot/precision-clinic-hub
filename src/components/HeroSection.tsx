@@ -114,25 +114,31 @@ const HeroSection = () => {
                     </p>
                   </div>
 
-                  {/* Secondary: Virtual Consultation */}
+                  {/* Secondary: View Clinical Cases */}
                   <div>
                     <Link
-                      to="/virtual-consultation"
+                      to="/clinical-cases"
                       onClick={(e) => e.stopPropagation()}
                       className="inline-block w-full px-8 sm:px-10 py-3.5 border border-primary-foreground/10 text-primary-foreground/45 font-body text-[10px] tracking-[0.25em] uppercase transition-all duration-300 hover:border-primary-foreground/25 hover:text-primary-foreground/70 text-center"
                     >
-                      Virtual Consultation
+                      View Clinical Cases
                     </Link>
-                    <p className="font-body text-[9px] text-primary-foreground/22 font-light tracking-wide mt-2 text-center lg:text-left">
-                      Designed for treatment discussions &amp; case planning
-                    </p>
                   </div>
 
-                  {/* Tertiary: Online Assessment */}
+                  {/* Tertiary: Virtual Consultation */}
+                  <Link
+                    to="/virtual-consultation"
+                    onClick={(e) => e.stopPropagation()}
+                    className="font-body text-[9px] tracking-[0.2em] uppercase text-primary-foreground/30 hover:text-primary-foreground/55 transition-colors duration-300 text-center lg:text-left mt-1"
+                  >
+                    Virtual Consultation →
+                  </Link>
+
+                  {/* Quaternary: Online Assessment */}
                   <Link
                     to="/clinical-assessment"
                     onClick={(e) => e.stopPropagation()}
-                    className="font-body text-[9px] tracking-[0.2em] uppercase text-primary-foreground/30 hover:text-primary-foreground/55 transition-colors duration-300 text-center lg:text-left mt-1"
+                    className="font-body text-[9px] tracking-[0.2em] uppercase text-primary-foreground/25 hover:text-primary-foreground/50 transition-colors duration-300 text-center lg:text-left"
                   >
                     Begin Online Assessment →
                   </Link>
@@ -177,7 +183,7 @@ const HeroSection = () => {
             © {new Date().getFullYear()}
           </p>
           <span className="font-body text-[10px] tracking-[0.25em] uppercase text-primary-foreground/50 group-hover:text-primary-foreground/70 transition-all duration-500 relative after:content-[''] after:absolute after:bottom-[-2px] after:left-0 after:w-full after:h-px after:bg-primary-foreground/40 after:scale-x-0 after:origin-right after:transition-transform after:duration-500 group-hover:after:scale-x-100 group-hover:after:origin-left">
-            Explore Clinical Cases
+            Clinical Case Portfolio
           </span>
           <motion.div
             animate={{ y: [0, 5, 0] }}
