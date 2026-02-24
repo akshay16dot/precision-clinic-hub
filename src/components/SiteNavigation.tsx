@@ -182,10 +182,10 @@ const SiteNavigation = () => {
   return (
     <>
       <nav
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-700 ease-out backdrop-blur-3xl backdrop-saturate-[1.8] ${
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-700 ease-out backdrop-blur-3xl sm:backdrop-blur-3xl backdrop-saturate-[1.8] ${
           showSolid
             ? "bg-background/55 border-b border-border/20 shadow-[0_1px_12px_-4px_rgba(0,0,0,0.08),inset_0_1px_0_0_rgba(255,255,255,0.4)]"
-            : "bg-[hsl(220_30%_8%/0.3)] border-b border-primary-foreground/8 shadow-[0_1px_10px_-4px_rgba(0,0,0,0.15),inset_0_1px_0_0_rgba(255,255,255,0.06)]"
+            : "bg-[hsl(220_30%_8%/0.45)] sm:bg-[hsl(220_30%_8%/0.3)] border-b border-primary-foreground/10 sm:border-primary-foreground/8 shadow-[0_1px_10px_-4px_rgba(0,0,0,0.2),inset_0_1px_0_0_rgba(255,255,255,0.08)] sm:shadow-[0_1px_10px_-4px_rgba(0,0,0,0.15),inset_0_1px_0_0_rgba(255,255,255,0.06)]"
         }`}
       >
         <div className="luxury-container flex items-center justify-between py-3 sm:py-4 px-6 md:px-10">
@@ -197,7 +197,10 @@ const SiteNavigation = () => {
               className={`transition-all duration-500 ${
                 showSolid ? "h-24 sm:h-28 md:h-28 lg:h-28" : "h-28 sm:h-32 md:h-32 lg:h-36"
               }`}
-              style={{ filter: showSolid ? "none" : "invert(1) brightness(2)" }}
+              style={{ 
+                filter: showSolid ? "none" : "invert(1) brightness(2)",
+                mixBlendMode: showSolid ? "normal" : "screen"
+              }}
             />
           </Link>
 
