@@ -119,7 +119,7 @@ const HeroSection = () => {
                     <Link
                       to="/clinical-cases"
                       onClick={(e) => e.stopPropagation()}
-                      className="inline-block w-full px-8 sm:px-10 py-3.5 border border-primary-foreground/10 text-primary-foreground/45 font-body text-[10px] tracking-[0.25em] uppercase transition-all duration-300 hover:border-primary-foreground/25 hover:text-primary-foreground/70 text-center"
+                      className="inline-block w-full px-8 sm:px-10 py-3.5 border border-primary-foreground/20 text-primary-foreground/60 font-body text-[10px] tracking-[0.25em] uppercase transition-all duration-300 hover:bg-primary-foreground hover:text-navy hover:border-primary-foreground text-center"
                     >
                       View Clinical Cases
                     </Link>
@@ -129,7 +129,7 @@ const HeroSection = () => {
                   <Link
                     to="/virtual-consultation"
                     onClick={(e) => e.stopPropagation()}
-                    className="font-body text-[9px] tracking-[0.2em] uppercase text-primary-foreground/30 hover:text-primary-foreground/55 transition-colors duration-300 text-center lg:text-left mt-1"
+                    className="font-body text-[9px] tracking-[0.2em] uppercase text-primary-foreground/50 hover:text-primary-foreground/75 transition-colors duration-300 text-center lg:text-left mt-1"
                   >
                     Virtual Consultation →
                   </Link>
@@ -138,7 +138,7 @@ const HeroSection = () => {
                   <Link
                     to="/clinical-assessment"
                     onClick={(e) => e.stopPropagation()}
-                    className="font-body text-[9px] tracking-[0.2em] uppercase text-primary-foreground/25 hover:text-primary-foreground/50 transition-colors duration-300 text-center lg:text-left"
+                    className="font-body text-[9px] tracking-[0.2em] uppercase text-primary-foreground/45 hover:text-primary-foreground/70 transition-colors duration-300 text-center lg:text-left"
                   >
                     Begin Online Assessment →
                   </Link>
@@ -182,8 +182,8 @@ const HeroSection = () => {
           <p className="font-body text-[10px] tracking-[0.3em] uppercase text-primary-foreground/45">
             © {new Date().getFullYear()}
           </p>
-          <span className="font-body text-[10px] tracking-[0.25em] uppercase text-primary-foreground/50 group-hover:text-primary-foreground/70 transition-all duration-500 relative after:content-[''] after:absolute after:bottom-[-2px] after:left-0 after:w-full after:h-px after:bg-primary-foreground/40 after:scale-x-0 after:origin-right after:transition-transform after:duration-500 group-hover:after:scale-x-100 group-hover:after:origin-left">
-            Clinical Case Portfolio
+          <span className="font-body text-[10px] tracking-[0.2em] uppercase text-primary-foreground/45">
+            1544 Kuser Rd, Hamilton Township, NJ 08619
           </span>
           <motion.div
             animate={{ y: [0, 5, 0] }}
