@@ -176,4 +176,36 @@
       filter: brightness(0.25) contrast(1.08) saturate(0.05) hue-rotate(-5deg) blur(1px);
     }
   }
+
+  /* Tactile button interactions */
+  .cta-tactile {
+    @apply transition-all duration-300 ease-out;
+    will-change: transform, opacity;
+  }
+
+  .cta-tactile:hover {
+    transform: scale(1.015);
+    filter: brightness(1.04);
+  }
+
+  .cta-tactile:active {
+    transform: scale(0.985);
+    filter: brightness(0.97);
+    transition-duration: 100ms;
+  }
+
+  /* Section depth separation */
+  .section-depth {
+    position: relative;
+  }
+
+  .section-depth::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent 5%, hsl(var(--divider) / 0.4) 50%, transparent 95%);
+  }
 }
