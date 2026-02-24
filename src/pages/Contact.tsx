@@ -22,7 +22,7 @@ const Contact = () => {
       <SiteNavigation />
 
       {/* Hero */}
-      <section className="pt-32 pb-20 md:pt-40 md:pb-28 px-6 md:px-8 bg-background">
+      <section className="pt-48 pb-20 md:pt-56 md:pb-28 px-6 md:px-8 bg-background">
         <div className="luxury-container text-center">
           <motion.p
             initial={{ opacity: 0, y: 20 }}

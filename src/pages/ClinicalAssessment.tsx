@@ -332,7 +332,7 @@ const ClinicalAssessment = () => {
               transition={{ duration: 0.5 }}
               className="hero-min-h flex items-center justify-center px-6"
             >
-              <div className="max-w-2xl text-center pt-28 pb-16">
+              <div className="max-w-2xl text-center pt-40 pb-16">
                 <p className="font-body text-[10px] tracking-[0.3em] uppercase text-muted-foreground mb-6">
                   Guided Educational Tool
                 </p>
@@ -368,7 +368,7 @@ const ClinicalAssessment = () => {
               transition={{ duration: 0.4 }}
               className="hero-min-h flex flex-col items-center justify-center px-6"
             >
-              <div className="max-w-xl w-full pt-28 pb-16">
+              <div className="max-w-xl w-full pt-40 pb-16">
                 <ProgressBar current={currentQ + 1} total={questions.length} />
 
                 <div className="text-center mb-10">
@@ -423,7 +423,7 @@ const ClinicalAssessment = () => {
               animate="animate"
               exit="exit"
               transition={{ duration: 0.5 }}
-              className="px-6 pt-32 pb-20"
+              className="px-6 pt-44 pb-20"
             >
               <div className="max-w-3xl mx-auto">
                 <div className="text-center mb-16">

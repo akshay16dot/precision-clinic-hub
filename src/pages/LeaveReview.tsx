@@ -15,7 +15,7 @@ const LeaveReview = () => {
     <main className="bg-background">
       <SiteNavigation />
 
-      <section className="pt-32 md:pt-40 pb-16 md:pb-20 px-6 md:px-8">
+      <section className="pt-48 md:pt-56 pb-16 md:pb-20 px-6 md:px-8">
         <div className="luxury-container max-w-2xl text-center">
           <motion.p
             initial={{ opacity: 0 }}

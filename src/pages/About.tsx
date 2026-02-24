@@ -24,7 +24,7 @@ const About = () => {
       <SiteNavigation />
 
       {/* ═══════ EDITORIAL HERO ═══════ */}
-      <section className="relative pt-24 md:pt-0 hero-min-h overflow-hidden">
+      <section className="relative pt-36 md:pt-0 hero-min-h overflow-hidden">
         <div className="grid grid-cols-1 lg:grid-cols-12 hero-min-h">
           {/* Left: Portrait */}
           <div className="relative lg:col-span-5 min-h-[300px] sm:min-h-[400px] lg:min-h-full">

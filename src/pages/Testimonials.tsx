@@ -54,7 +54,7 @@ const Testimonials = () => {
       <SiteNavigation />
 
       {/* Hero */}
-      <section className="pt-32 md:pt-40 pb-16 md:pb-20 px-6 md:px-8 bg-navy">
+      <section className="pt-48 md:pt-56 pb-16 md:pb-20 px-6 md:px-8 bg-navy">
         <div className="luxury-container max-w-3xl text-center">
           <motion.p
             initial={{ opacity: 0 }}
