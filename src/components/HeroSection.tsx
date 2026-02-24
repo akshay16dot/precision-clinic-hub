@@ -98,32 +98,44 @@ const HeroSection = () => {
                   Dental Implants &nbsp;·&nbsp; Immediate Implants &nbsp;·&nbsp; Veneers &nbsp;·&nbsp; Full-Arch Rehabilitation
                 </p>
 
-                {/* Dual CTAs */}
-                <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start mb-10 lg:mb-12 max-w-[320px] sm:max-w-none mx-auto lg:mx-0">
-                  <Link
-                    to="/clinical-cases"
-                    onClick={(e) => e.stopPropagation()}
-                    className="inline-block px-8 sm:px-10 py-3.5 border border-primary-foreground/30 bg-primary-foreground text-navy font-body text-[11px] tracking-[0.25em] uppercase transition-all duration-300 hover:bg-transparent hover:text-primary-foreground text-center"
-                  >
-                    View Clinical Cases
-                  </Link>
-                  <Link
-                    to="/virtual-consultation"
-                    onClick={(e) => e.stopPropagation()}
-                    className="inline-block px-8 sm:px-10 py-3.5 border border-primary-foreground/10 text-primary-foreground/45 font-body text-[10px] tracking-[0.25em] uppercase transition-all duration-300 hover:border-primary-foreground/25 hover:text-primary-foreground/70 text-center"
-                  >
-                    Virtual Consultation
-                  </Link>
-                </div>
+                {/* Consultation Pathways */}
+                <div className="flex flex-col gap-4 sm:gap-5 justify-center lg:justify-start mb-10 lg:mb-12 max-w-[360px] sm:max-w-md mx-auto lg:mx-0">
+                  {/* Primary: In-Clinic Consultation */}
+                  <div>
+                    <Link
+                      to="/clinical-assessment"
+                      onClick={(e) => e.stopPropagation()}
+                      className="inline-block w-full px-8 sm:px-10 py-3.5 border border-primary-foreground/30 bg-primary-foreground text-navy font-body text-[11px] tracking-[0.25em] uppercase transition-all duration-300 hover:bg-transparent hover:text-primary-foreground text-center"
+                    >
+                      Schedule Consultation
+                    </Link>
+                    <p className="font-body text-[9px] text-primary-foreground/30 font-light tracking-wide mt-2 text-center lg:text-left">
+                      Comprehensive clinical examination &amp; definitive diagnosis
+                    </p>
+                  </div>
 
-                {/* Specialist Availability Microcopy */}
-                <div className="max-w-md mx-auto lg:mx-0 mb-10 lg:mb-12">
-                  <p className="font-body text-[10px] tracking-[0.2em] uppercase text-primary-foreground/35 leading-relaxed mb-1.5">
-                    Specialist Consultation Availability is Limited
-                  </p>
-                  <p className="font-body text-[10px] text-primary-foreground/25 font-light leading-relaxed">
-                    Virtual consultations are reserved for treatment planning discussions, cosmetic evaluations, and complex restorative cases.
-                  </p>
+                  {/* Secondary: Virtual Consultation */}
+                  <div>
+                    <Link
+                      to="/virtual-consultation"
+                      onClick={(e) => e.stopPropagation()}
+                      className="inline-block w-full px-8 sm:px-10 py-3.5 border border-primary-foreground/10 text-primary-foreground/45 font-body text-[10px] tracking-[0.25em] uppercase transition-all duration-300 hover:border-primary-foreground/25 hover:text-primary-foreground/70 text-center"
+                    >
+                      Virtual Consultation
+                    </Link>
+                    <p className="font-body text-[9px] text-primary-foreground/22 font-light tracking-wide mt-2 text-center lg:text-left">
+                      Designed for treatment discussions &amp; case planning
+                    </p>
+                  </div>
+
+                  {/* Tertiary: Online Assessment */}
+                  <Link
+                    to="/clinical-assessment"
+                    onClick={(e) => e.stopPropagation()}
+                    className="font-body text-[9px] tracking-[0.2em] uppercase text-primary-foreground/30 hover:text-primary-foreground/55 transition-colors duration-300 text-center lg:text-left mt-1"
+                  >
+                    Begin Online Assessment →
+                  </Link>
                 </div>
 
                 {/* Rotating testimonial */}
