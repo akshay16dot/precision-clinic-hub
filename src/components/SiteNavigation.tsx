@@ -190,7 +190,7 @@ const SiteNavigation = () => {
       >
         <div className="luxury-container flex items-center justify-between py-3 sm:py-4 px-6 md:px-10">
           {/* Logo */}
-            <Link to="/" className="hover:opacity-80 transition-opacity duration-300 shrink-0">
+            <Link to="/" className="hover:opacity-80 transition-opacity duration-300 shrink-0 -ml-3 sm:-ml-2 lg:ml-0">
             <img
               src={logoAP}
               alt="Dr. Akshay Parmar"
