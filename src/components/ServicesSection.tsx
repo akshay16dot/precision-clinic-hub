@@ -4,37 +4,37 @@ import { Link } from "react-router-dom";
 const coreServices = [
   {
     title: "Dental Implants",
-    description: "Precision-placed titanium implants for permanent tooth replacement. Single-tooth, multiple, and complex cases with predictable long-term outcomes.",
+    description: "Permanent replacements for missing teeth that look, feel, and function like your own. Single tooth or multiple, planned for long-term stability.",
     link: "/dental-implants-new-jersey",
     icon: "01",
   },
   {
-    title: "Immediate Implants",
-    description: "Same-day implant placement at the time of extraction, preserving bone architecture, reducing treatment time, and accelerating rehabilitation.",
+    title: "Same-Day Implants",
+    description: "When possible, your implant is placed the same day a tooth is removed, fewer visits, less bone loss, and a faster path back to a complete smile.",
     link: "/dental-implants-new-jersey",
     icon: "02",
   },
   {
     title: "All-on-X / Full-Arch",
-    description: "Complete arch rehabilitation using strategically positioned implants for non-removable, full-arch tooth replacement with immediate function.",
+    description: "A full set of fixed teeth supported by just a few implants. A life-changing option for patients with failing teeth or long-term dentures.",
     link: "/full-arch-implants-new-jersey",
     icon: "03",
   },
   {
-    title: "Veneers",
-    description: "Custom porcelain veneers and smile rehabilitation designed for facial harmony, material excellence, and enduring natural aesthetics.",
+    title: "Porcelain Veneers",
+    description: "Custom-made veneers designed for your face, not a template. Natural shape, natural color, and a smile that still looks like you.",
     link: "/aesthetic-dentistry",
     icon: "04",
   },
   {
-    title: "Prosthodontic Reconstruction",
-    description: "Full mouth reconstruction addressing function, occlusion, and long-term dental health through coordinated advanced prosthetic solutions.",
+    title: "Full-Mouth Reconstruction",
+    description: "For worn, broken, or failing teeth, a coordinated plan that rebuilds bite, function, and appearance, all in the right order.",
     link: "/dental-implants-new-jersey",
     icon: "05",
   },
   {
-    title: "Maxillofacial Prosthodontics",
-    description: "Specialized rehabilitation of complex maxillofacial defects, restoring form, function, and quality of life through precision prosthetic solutions.",
+    title: "Complex & Maxillofacial Cases",
+    description: "Specialist care for patients with significant bone loss, congenital differences, or jaw and facial reconstruction needs.",
     link: "/maxillofacial-rehabilitation",
     icon: "06",
   },
@@ -59,10 +59,10 @@ const ServicesSection = () => {
           className="text-center mb-20"
         >
           <p className="font-body text-[10px] tracking-[0.4em] uppercase text-charcoal-light mb-5">
-            Specialist Treatment
+            What Dr. Parmar Treats
           </p>
           <h2 className="font-display text-4xl md:text-5xl font-light text-navy mb-4">
-            Core Focus <span className="italic">Areas</span>
+            Specialist <span className="italic">Treatments</span>
           </h2>
           <div className="w-12 h-px bg-navy/20 mx-auto" />
         </motion.div>

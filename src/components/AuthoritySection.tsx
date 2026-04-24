@@ -3,10 +3,10 @@ import drParmar from "@/assets/dr-parmar-portrait.png";
 
 const credentials = [
   "Board-Certified Prosthodontist",
-  "Implant & Full-Arch Specialist",
+  "Dental Implant & Full-Arch Specialist",
   "Veneers & Smile Reconstruction",
-  "Maxillofacial Prosthodontics",
-  "Founder, STABLE IMPLANT Protocol™",
+  "Complex Full-Mouth Rehabilitation",
+  "Maxillofacial Prosthetic Care",
   "Former Teaching Faculty, NYU Prosthodontics",
 ];
 
@@ -61,13 +61,13 @@ const AuthoritySection = () => {
             transition={{ duration: 1 }}
           >
             <p className="font-body text-[10px] tracking-[0.4em] uppercase text-charcoal-light mb-6">
-              About Dr. Parmar
+              Meet Dr. Parmar
             </p>
             <h2 className="font-display text-3xl md:text-4xl font-light text-navy mb-2">
-              Clinical <span className="italic">Authority</span>
+              Specialist Care You <span className="italic">Can Trust</span>
             </h2>
             <p className="font-body text-sm text-charcoal-light font-light leading-relaxed mb-8 max-w-md">
-              A specialist committed to precision-driven, biologically respectful rehabilitation, restoring function, aesthetics, and long-term stability.
+              A board-certified prosthodontist with advanced training in implants, full-arch rehabilitation, and complex restorative care, focused on results that look natural and hold up over time.
             </p>
 
             <div className="space-y-4">
