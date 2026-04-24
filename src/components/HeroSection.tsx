@@ -62,7 +62,7 @@ const HeroSection = () => {
 
       {/* Content */}
       <div className="relative z-10 hero-min-h flex flex-col justify-between px-5 sm:px-8 md:px-12 lg:px-24">
-        <div className="pt-44 sm:pt-48 md:pt-52 lg:pt-56" />
+        <div className="pt-32 sm:pt-40 md:pt-48 lg:pt-56" />
 
         {/* Main composition */}
         <div className="flex-1 flex items-center py-6 md:py-8">
@@ -90,7 +90,7 @@ const HeroSection = () => {
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.9, delay: 0.3 }}
               >
-                <p className="font-display text-[32px] sm:text-[38px] md:text-[46px] lg:text-[3.6rem] xl:text-[4.5rem] font-light text-primary-foreground leading-[0.95] tracking-tight mb-6 sm:mb-7 lg:mb-7" style={{ textShadow: '0 1px 30px hsl(220 30% 8% / 0.5)' }}>
+                <p className="font-display text-[30px] sm:text-[38px] md:text-[46px] lg:text-[3.6rem] xl:text-[4.5rem] font-light text-primary-foreground leading-[0.98] tracking-tight mb-4 sm:mb-6 lg:mb-7" style={{ textShadow: '0 1px 30px hsl(220 30% 8% / 0.5)' }}>
                   Rebuilding
                   <br />
                   Smiles That Feel
@@ -98,55 +98,47 @@ const HeroSection = () => {
                   <span className="italic">Like Your Own</span>
                 </p>
 
-                <p className="font-body text-[10px] md:text-xs tracking-[0.3em] uppercase text-primary-foreground/80 leading-relaxed mb-3 lg:mb-4 max-w-md mx-auto lg:mx-0">
+                <p className="font-body text-[10px] md:text-xs tracking-[0.3em] uppercase text-primary-foreground/80 leading-relaxed mb-2 lg:mb-4 max-w-md mx-auto lg:mx-0">
                   Dr. Akshay Parmar &nbsp;·&nbsp; Board-Certified Prosthodontist
                 </p>
 
-                <p className="font-body text-[11px] sm:text-[12px] md:text-[13px] text-primary-foreground/75 font-light leading-relaxed mb-10 sm:mb-12 lg:mb-14 max-w-md mx-auto lg:mx-0">
+                <p className="font-body text-[12px] sm:text-[12px] md:text-[13px] text-primary-foreground/75 font-light leading-relaxed mb-7 sm:mb-10 lg:mb-14 max-w-md mx-auto lg:mx-0">
                   Dental implants, veneers, and full-mouth reconstruction for patients who want a result that lasts. Specialist care in Hamilton Township, NJ.
                 </p>
 
-                {/* Consultation Pathways */}
-                <div className="flex flex-col gap-4 sm:gap-5 justify-center lg:justify-start mb-10 lg:mb-12 max-w-[360px] sm:max-w-md mx-auto lg:mx-0">
-                  {/* Primary: In-Clinic Consultation */}
-                  <div>
+                {/* Consultation Pathways — clearer hierarchy */}
+                <div className="flex flex-col gap-3 sm:gap-4 justify-center lg:justify-start mb-8 sm:mb-10 lg:mb-12 max-w-[360px] sm:max-w-md mx-auto lg:mx-0">
+                  {/* Primary: Schedule Consultation */}
+                  <Link
+                    to="/contact"
+                    onClick={(e) => e.stopPropagation()}
+                    className="cta-tactile inline-block w-full px-8 sm:px-10 py-4 bg-primary-foreground text-navy font-body text-[12px] tracking-[0.25em] uppercase font-medium transition-all duration-300 hover:bg-primary-foreground/90 text-center shadow-[0_8px_24px_-8px_hsl(220_30%_8%/0.5)]"
+                  >
+                    Schedule Consultation
+                  </Link>
+
+                  {/* Secondary row: two equal patient paths */}
+                  <div className="grid grid-cols-2 gap-2.5 sm:gap-3">
                     <Link
                       to="/clinical-assessment"
                       onClick={(e) => e.stopPropagation()}
-                      className="cta-tactile inline-block w-full px-8 sm:px-10 py-3.5 border border-primary-foreground/30 bg-primary-foreground text-navy font-body text-[11px] tracking-[0.25em] uppercase transition-all duration-300 hover:bg-transparent hover:text-primary-foreground text-center"
+                      className="cta-tactile inline-block w-full px-3 sm:px-5 py-3.5 border border-primary-foreground/30 text-primary-foreground/85 font-body text-[10px] tracking-[0.18em] uppercase transition-all duration-300 hover:bg-primary-foreground hover:text-navy hover:border-primary-foreground text-center"
                     >
-                      Schedule Consultation
+                      Online Assessment
                     </Link>
-                  </div>
-
-                  {/* Secondary: View Clinical Cases */}
-                  <div>
                     <Link
-                      to="/clinical-cases"
+                      to="/virtual-consultation"
                       onClick={(e) => e.stopPropagation()}
-                      className="cta-tactile inline-block w-full px-8 sm:px-10 py-3.5 border border-primary-foreground/25 text-primary-foreground/75 font-body text-[10px] tracking-[0.25em] uppercase transition-all duration-300 hover:bg-primary-foreground hover:text-navy hover:border-primary-foreground text-center"
+                      className="cta-tactile inline-block w-full px-3 sm:px-5 py-3.5 border border-primary-foreground/30 text-primary-foreground/85 font-body text-[10px] tracking-[0.18em] uppercase transition-all duration-300 hover:bg-primary-foreground hover:text-navy hover:border-primary-foreground text-center"
                     >
-                      View Clinical Cases
+                      Virtual Consult
                     </Link>
                   </div>
 
-                  {/* Tertiary: Virtual Consultation */}
-                  <Link
-                    to="/virtual-consultation"
-                    onClick={(e) => e.stopPropagation()}
-                    className="font-body text-[9px] tracking-[0.2em] uppercase text-primary-foreground/60 hover:text-primary-foreground/80 transition-colors duration-300 text-center lg:text-left mt-1"
-                  >
-                    Virtual Consultation →
-                  </Link>
-
-                  {/* Quaternary: Online Assessment */}
-                  <Link
-                    to="/clinical-assessment"
-                    onClick={(e) => e.stopPropagation()}
-                    className="font-body text-[9px] tracking-[0.2em] uppercase text-primary-foreground/55 hover:text-primary-foreground/75 transition-colors duration-300 text-center lg:text-left"
-                  >
-                    Begin Online Assessment →
-                  </Link>
+                  {/* Reassurance microcopy */}
+                  <p className="font-body text-[10px] text-primary-foreground/55 leading-relaxed text-center lg:text-left mt-1">
+                    Not sure where to start? Begin with a short online assessment, no commitment required.
+                  </p>
                 </div>
 
                 {/* Rotating testimonial */}
