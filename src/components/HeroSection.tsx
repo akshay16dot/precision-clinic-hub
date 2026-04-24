@@ -5,9 +5,9 @@ import logoAP from "@/assets/logo-ap.png";
 import heroPortrait from "@/assets/dr-parmar-hero.jpg";
 
 const rotatingQuotes = [
-  { text: "The implants feel completely natural. I can eat and speak with confidence again.", label: "Full-Arch Patient" },
-  { text: "The veneers are so natural that even close friends assumed nothing had changed.", label: "Aesthetic Patient" },
-  { text: "The result exceeded what I thought was possible. I finally trust my teeth again.", label: "Reconstructive Patient" },
+  { text: "I can finally eat, smile, and speak without thinking twice. The implants feel like my own teeth.", label: "Full-Arch Patient" },
+  { text: "My veneers look so natural that even close friends couldn't tell anything had changed.", label: "Aesthetic Patient" },
+  { text: "After years of avoiding dentists, Dr. Parmar gave me back a smile I actually trust.", label: "Reconstructive Patient" },
 ];
 
 const HeroSection = () => {
@@ -82,7 +82,7 @@ const HeroSection = () => {
             {/* Right — Typography (full width on mobile/tablet) */}
             <div className="w-full lg:w-[59%] text-center lg:text-left lg:pl-6">
               <h1 className="sr-only">
-                Board-Certified Prosthodontist &amp; Implant Specialist in New Jersey
+                Dental Implants, Veneers &amp; Full-Mouth Reconstruction in New Jersey
               </h1>
 
               <motion.div
@@ -91,19 +91,19 @@ const HeroSection = () => {
                 transition={{ duration: 0.9, delay: 0.3 }}
               >
                 <p className="font-display text-[32px] sm:text-[38px] md:text-[46px] lg:text-[3.6rem] xl:text-[4.5rem] font-light text-primary-foreground leading-[0.95] tracking-tight mb-6 sm:mb-7 lg:mb-7" style={{ textShadow: '0 1px 30px hsl(220 30% 8% / 0.5)' }}>
-                  Advanced
+                  Rebuilding
                   <br />
-                  Prosthodontics &amp;
+                  Smiles That Feel
                   <br />
-                  <span className="italic">Implant Reconstruction</span>
+                  <span className="italic">Like Your Own</span>
                 </p>
 
                 <p className="font-body text-[10px] md:text-xs tracking-[0.3em] uppercase text-primary-foreground/80 leading-relaxed mb-3 lg:mb-4 max-w-md mx-auto lg:mx-0">
-                  Board-Certified Prosthodontist
+                  Dr. Akshay Parmar &nbsp;·&nbsp; Board-Certified Prosthodontist
                 </p>
 
-                <p className="font-body text-[10px] sm:text-[11px] md:text-xs tracking-[0.15em] sm:tracking-[0.2em] uppercase text-primary-foreground/70 leading-relaxed mb-10 sm:mb-12 lg:mb-14 max-w-lg mx-auto lg:mx-0">
-                  Dental Implants &nbsp;·&nbsp; Immediate Implants &nbsp;·&nbsp; Veneers &nbsp;·&nbsp; Full-Arch Rehabilitation
+                <p className="font-body text-[11px] sm:text-[12px] md:text-[13px] text-primary-foreground/75 font-light leading-relaxed mb-10 sm:mb-12 lg:mb-14 max-w-md mx-auto lg:mx-0">
+                  Dental implants, veneers, and full-mouth reconstruction for patients who want a result that lasts. Specialist care in Hamilton Township, NJ.
                 </p>
 
                 {/* Consultation Pathways */}
