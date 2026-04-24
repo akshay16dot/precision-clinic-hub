@@ -31,36 +31,41 @@ const GallerySection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.8 }}
-          className="text-center mb-16"
+          className="text-center mb-12 md:mb-16 max-w-2xl mx-auto"
         >
-          <p className="font-body text-[10px] tracking-[0.4em] uppercase text-charcoal-light mb-6">
-            Selected Work
+          <p className="font-body text-[10px] tracking-[0.4em] uppercase text-charcoal-light mb-5 md:mb-6">
+            Real Patients · Real Outcomes
           </p>
-          <h2 className="font-display text-4xl md:text-5xl font-light text-navy mb-4">
-            Clinical <span className="italic">Cases</span>
+          <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-light text-navy mb-5 leading-[1.05]">
+            A Look at the <span className="italic">Work</span>
           </h2>
-          <div className="w-12 h-px bg-navy/20 mx-auto" />
+          <p className="font-body text-sm md:text-[15px] text-charcoal-light font-light leading-relaxed max-w-xl mx-auto">
+            Selected cases from Dr. Parmar's practice, full-mouth rebuilds, implant restorations, and corrective work for patients who came in looking for a lasting result.
+          </p>
+          <div className="w-12 h-px bg-navy/20 mx-auto mt-8" />
         </motion.div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-5 lg:gap-6 max-w-5xl mx-auto">
           {cases.map((c, i) => (
-            <Link to="/clinical-cases" key={i}>
+            <Link to="/clinical-cases" key={i} aria-label={`View ${c.title} case`}>
               <motion.div
-                initial={{ opacity: 0, scale: 0.96 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: i * 0.08 }}
-                className="relative aspect-[4/3] group cursor-pointer overflow-hidden rounded-sm border border-divider hover:border-navy/15 hover:shadow-[0_6px_24px_-10px_hsl(220_20%_15%/0.1)] transition-all duration-500"
+                initial={{ opacity: 0, y: 16 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-40px" }}
+                transition={{ duration: 0.6, delay: Math.min(i, 3) * 0.06, ease: [0.22, 1, 0.36, 1] }}
+                className="relative aspect-[4/3] group cursor-pointer overflow-hidden rounded-sm border border-divider hover:border-navy/20 hover:shadow-[0_10px_30px_-12px_hsl(220_20%_15%/0.18)] transition-all duration-500"
               >
                 <img
                   src={c.img}
                   alt={c.title}
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.04]"
                   loading="lazy"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                <div className="absolute bottom-0 left-0 right-0 p-3 md:p-4 translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
-                  <p className="font-body text-[9px] md:text-[10px] tracking-[0.3em] uppercase text-white/80 font-light">
+                {/* Persistent subtle bottom gradient for label legibility on mobile */}
+                <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-black/55 to-transparent sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-500" />
+                {/* Persistent label on mobile, reveal on desktop */}
+                <div className="absolute bottom-0 left-0 right-0 p-3 md:p-4 sm:translate-y-2 sm:opacity-0 sm:group-hover:translate-y-0 sm:group-hover:opacity-100 transition-all duration-500">
+                  <p className="font-body text-[9px] md:text-[10px] tracking-[0.3em] uppercase text-white/90 font-light">
                     {c.title}
                   </p>
                 </div>
@@ -73,12 +78,15 @@ const GallerySection = () => {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          className="text-center mt-12"
+          transition={{ duration: 0.6, delay: 0.3 }}
+          className="text-center mt-12 md:mt-14"
         >
+          <p className="font-body text-[11px] text-charcoal-light/65 font-light italic mb-5 max-w-md mx-auto leading-relaxed">
+            Every case shown is treatment completed in this practice. Photographs reflect actual patient outcomes.
+          </p>
           <Link
             to="/clinical-cases"
-            className="font-body text-[10px] tracking-[0.25em] uppercase text-navy/50 hover:text-navy transition-colors duration-300 border-b border-navy/15 hover:border-navy/35 pb-px"
+            className="font-body text-[10px] tracking-[0.25em] uppercase text-navy/60 hover:text-navy transition-colors duration-300 border-b border-navy/15 hover:border-navy/40 pb-px"
           >
             View All Clinical Work
           </Link>
