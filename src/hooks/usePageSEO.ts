@@ -26,7 +26,7 @@ interface PageSEO {
 }
 
 const BASE_URL = "https://drparmardds.com";
-const SITE_NAME = "Dr. Akshay Parmar, DDS, FACP";
+const SITE_NAME = "Dr. Akshay Parmar, DDS, FACP, FAAMP";
 const DEFAULT_IMAGE = "/og-image.png";
 
 type SeoEntry = { title: string; description: string };
@@ -38,7 +38,7 @@ const PAGE_SEO: Record<string, SeoEntry> = {
       "Board-certified prosthodontist in Hamilton Township, NJ. Dental implants, full-arch reconstruction and complex restorative care. Call (609) 585-1616.",
   },
   "/about": {
-    title: "About Dr. Akshay Parmar, DDS, FACP | Prosthodontist",
+    title: "About Dr. Akshay Parmar, DDS, MDSc, FACP | Prosthodontist",
     description:
       "Board-certified prosthodontist, NYU faculty and implant educator. The training, credentials and treatment philosophy behind the Hamilton Township practice.",
   },
