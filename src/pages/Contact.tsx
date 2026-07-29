@@ -84,12 +84,12 @@ const Contact = () => {
                     Hamilton Township, New Jersey
                   </p>
                   <a
-                    href="https://maps.google.com/?q=1544+Kuser+Rd+Hamilton+Township+NJ+08619"
+                    href="https://maps.google.com/?q=1544+Kuser+Rd+Suite+C3+Hamilton+Township+NJ+08619"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="font-body text-sm text-charcoal-light font-light hover:text-navy transition-colors mt-2 inline-block"
                   >
-                    1544 Kuser Rd, Hamilton Township, NJ 08619
+                    1544 Kuser Rd, Suite C3, Hamilton Township, NJ 08619
                   </a>
                   <p className="font-body text-sm text-charcoal-light font-light mt-2">
                     Serving patients across Northern and Central New Jersey.
