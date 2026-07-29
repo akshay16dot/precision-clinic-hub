@@ -37,10 +37,10 @@ const FooterSection = () => {
 
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-3 shrink-0">
               <a
-                href="tel:+16092230600"
+                href="tel:+16095851616"
                 className="cta-tactile px-6 py-3.5 bg-primary-foreground text-navy font-body text-[11px] tracking-[0.25em] uppercase font-medium transition-all duration-300 hover:bg-primary-foreground/90 text-center"
               >
-                Call (609) 223-0600
+                Call (609) 585-1616
               </a>
               <Link
                 to="/contact"
@@ -67,10 +67,10 @@ const FooterSection = () => {
               </p>
               <div className="space-y-2.5">
                 <a
-                  href="tel:+16092230600"
+                  href="tel:+16095851616"
                   className="block font-body text-sm text-primary-foreground/75 font-light hover:text-primary-foreground transition-colors"
                 >
-                  (609) 223-0600
+                  (609) 585-1616
                 </a>
                 <a
                   href="mailto:drparmardds@gmail.com"
@@ -79,12 +79,12 @@ const FooterSection = () => {
                   drparmardds@gmail.com
                 </a>
                 <a
-                  href="https://maps.google.com/?q=1544+Kuser+Rd+Hamilton+Township+NJ+08619"
+                  href="https://maps.google.com/?q=1544+Kuser+Rd+Suite+C3+Hamilton+Township+NJ+08619"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="block font-body text-xs text-primary-foreground/50 font-light hover:text-primary-foreground/75 transition-colors leading-relaxed"
                 >
-                  1544 Kuser Rd
+                  1544 Kuser Rd, Suite C3
                   <br />
                   Hamilton Township, NJ 08619
                 </a>

@@ -39,12 +39,12 @@ const PageFooter = () => {
               drparmardds@gmail.com
             </a>
             <a
-              href="https://maps.google.com/?q=1544+Kuser+Rd+Hamilton+Township+NJ+08619"
+              href="https://maps.google.com/?q=1544+Kuser+Rd+Suite+C3+Hamilton+Township+NJ+08619"
               target="_blank"
               rel="noopener noreferrer"
               className="block font-body text-xs text-primary-foreground/45 font-light hover:text-primary-foreground/70 transition-colors leading-relaxed"
             >
-              1544 Kuser Rd, Hamilton Township, NJ 08619
+              1544 Kuser Rd, Suite C3, Hamilton Township, NJ 08619
             </a>
           </div>
 

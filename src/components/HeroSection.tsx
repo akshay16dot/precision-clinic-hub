@@ -180,7 +180,7 @@ const HeroSection = () => {
             © {new Date().getFullYear()}
           </p>
           <span className="font-body text-[9px] tracking-[0.15em] uppercase text-primary-foreground/40 italic">
-            1544 Kuser Rd, Hamilton Township, NJ 08619
+            1544 Kuser Rd, Suite C3, Hamilton Township, NJ 08619
           </span>
           <motion.div
             animate={{ y: [0, 5, 0] }}
