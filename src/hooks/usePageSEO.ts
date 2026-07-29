@@ -7,7 +7,7 @@ interface PageSEO {
   noindex?: boolean;
 }
 
-const BASE_URL = "https://drakshayparmardds.com";
+const BASE_URL = "https://drparmardds.com";
 const DEFAULT_TITLE = "Prosthodontist & Dental Implant Specialist | Hamilton Township NJ | Dr. Akshay Parmar";
 
 /**
