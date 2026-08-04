@@ -1,5 +1,8 @@
 import SiteNavigation from "@/components/SiteNavigation";
 import HeroSection from "@/components/HeroSection";
+import CredentialStrip from "@/components/CredentialStrip";
+import HowItWorks from "@/components/HowItWorks";
+import MaxfacStrip from "@/components/MaxfacStrip";
 import IntroSection from "@/components/IntroSection";
 import AuthoritySection from "@/components/AuthoritySection";
 import ServicesSection from "@/components/ServicesSection";
@@ -20,11 +23,14 @@ const Index = () => {
     <main className="bg-background">
       <SiteNavigation />
       <HeroSection />
-      <IntroSection />
-      <AuthoritySection />
-      <ServicesSection />
+      <CredentialStrip />
       <GallerySection />
+      <IntroSection />
+      <ServicesSection />
       <PhilosophySection />
+      <MaxfacStrip />
+      <AuthoritySection />
+      <HowItWorks />
       <CTASection />
       <EducationSection />
       <FooterSection />
