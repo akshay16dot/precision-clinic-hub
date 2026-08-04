@@ -1,192 +1,106 @@
-import { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import { useNavigate, Link } from "react-router-dom";
-import logoAP from "@/assets/logo-ap.png";
+import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import heroPortrait from "@/assets/dr-parmar-hero.jpg";
 
-const rotatingQuotes = [
-  { text: "I can finally eat, smile, and speak without thinking twice. The implants feel like my own teeth.", label: "Full-Arch Patient" },
-  { text: "My veneers look so natural that even close friends couldn't tell anything had changed.", label: "Aesthetic Patient" },
-  { text: "After years of avoiding dentists, Dr. Parmar gave me back a smile I actually trust.", label: "Reconstructive Patient" },
-];
-
 const HeroSection = () => {
-  const navigate = useNavigate();
-  const [quoteIndex, setQuoteIndex] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setQuoteIndex((prev) => (prev + 1) % rotatingQuotes.length);
-    }, 6000);
-    return () => clearInterval(interval);
-  }, []);
-
   return (
-    <section
-      className="relative hero-min-h hero-navy-fallback overflow-hidden cursor-pointer group"
-      onClick={() => navigate("/clinical-cases")}
-      role="link"
-      aria-label="View Selected Clinical Work"
-    >
-      {/* Background portrait */}
-      <div className="absolute inset-0">
+    <section className="relative bg-background overflow-hidden">
+      {/* ── Mobile: warm portrait band that melts into the page ── */}
+      <div className="lg:hidden relative w-full h-[52vh] min-h-[340px]">
         <img
           src={heroPortrait}
-          alt=""
-          aria-hidden="true"
-          className="absolute inset-0 w-full h-full object-cover object-[65%_30%] sm:object-[8%_top] hero-bg-portrait"
+          alt="Dr. Akshay Parmar, board-certified prosthodontist in Hamilton Township, NJ"
+          className="absolute inset-0 w-full h-full object-cover object-[center_38%]"
         />
         <div
           className="absolute inset-0"
           style={{
             background:
-              "linear-gradient(145deg, hsl(220 32% 8% / 0.96) 0%, hsl(220 24% 11% / 0.88) 40%, hsl(218 22% 13% / 0.89) 70%, hsl(220 32% 8% / 0.97) 100%)",
-          }}
-        />
-        {/* Subtle luminosity behind headline region */}
-        <div
-          className="absolute inset-0"
-          style={{
-            background:
-              "radial-gradient(ellipse 60% 50% at 55% 45%, hsl(220 20% 18% / 0.12) 0%, transparent 70%)",
-          }}
-        />
-        <div
-          className="absolute inset-0"
-          style={{
-            background:
-              "linear-gradient(180deg, transparent 45%, hsl(220 30% 7% / 0.99) 100%)",
+              "linear-gradient(180deg, hsl(40 20% 98% / 0.0) 55%, hsl(40 20% 98% / 0.65) 82%, hsl(40 20% 98%) 100%)",
           }}
         />
       </div>
 
-      {/* Content */}
-      <div className="relative z-10 hero-min-h flex flex-col justify-between px-5 sm:px-8 md:px-12 lg:px-24">
-        <div className="pt-44 sm:pt-48 md:pt-52 lg:pt-56" />
+      <div className="lg:grid lg:grid-cols-[54%_46%] lg:min-h-screen">
+        {/* ── Copy ── */}
+        <div className="flex flex-col justify-center px-6 sm:px-10 lg:pl-16 xl:pl-24 lg:pr-10 pt-8 pb-16 sm:pb-20 lg:pt-40 lg:pb-24 text-center lg:text-left">
+          <motion.div
+            initial={{ opacity: 0, y: 24 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
+          >
+            <p className="font-body text-[10px] sm:text-[11px] tracking-[0.32em] uppercase text-charcoal-light mb-6 sm:mb-8">
+              Board-Certified Prosthodontist · Hamilton Township, NJ
+            </p>
 
-        {/* Main composition */}
-        <div className="flex-1 flex items-center py-6 md:py-8">
-          <div className="w-full flex flex-col lg:flex-row items-center gap-6 lg:gap-0">
-            {/* Left — Logo (hidden on mobile/tablet, shown only on desktop) */}
-            <div className="hidden lg:flex lg:w-[33%] flex-shrink-0 items-center justify-center">
-              <img
-                src={logoAP}
-                alt="Dr. Akshay Parmar, Board-Certified Prosthodontist"
-                className="w-[75%] lg:scale-[2.5] object-contain"
-                style={{ filter: "invert(1)" }}
-              />
-            </div>
+            <h1 className="font-display font-light text-navy tracking-tight leading-[1.04] text-[38px] sm:text-[50px] lg:text-[58px] xl:text-[68px] mb-6 sm:mb-8">
+              Rebuilding smiles
+              <br />
+              that feel <span className="italic">like your own.</span>
+            </h1>
 
-            <div className="hidden lg:block lg:w-[8%]" />
+            <p className="font-body text-[14px] sm:text-[15px] text-charcoal-light font-light leading-relaxed max-w-md mx-auto lg:mx-0 mb-9 sm:mb-11">
+              Implants, veneers and full-arch reconstruction for the cases other
+              dentists call complex, planned and finished start to finish by one
+              specialist team. Often in a day.
+            </p>
 
-            {/* Right — Typography (full width on mobile/tablet) */}
-            <div className="w-full lg:w-[59%] text-center lg:text-left lg:pl-6">
-              <h1 className="sr-only">
-                Dental Implants, Veneers &amp; Full-Mouth Reconstruction in New Jersey
-              </h1>
-
-              <motion.div
-                initial={{ opacity: 0, x: 20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.9, delay: 0.3 }}
+            <div className="flex flex-col items-center lg:items-start gap-5">
+              <Link
+                to="/contact"
+                className="cta-tactile inline-block px-12 py-[18px] bg-navy text-primary-foreground font-body text-[12px] tracking-[0.25em] uppercase font-medium transition-all duration-300 hover:bg-navy/90 shadow-[0_10px_30px_-10px_hsl(220_45%_18%/0.45)] w-full sm:w-auto text-center"
               >
-                <p className="font-display text-[30px] sm:text-[38px] md:text-[46px] lg:text-[3.6rem] xl:text-[4.5rem] font-light text-primary-foreground leading-[0.98] tracking-tight mb-4 sm:mb-6 lg:mb-7" style={{ textShadow: '0 1px 30px hsl(220 30% 8% / 0.5)' }}>
-                  Rebuilding
-                  <br />
-                  Smiles That Feel
-                  <br />
-                  <span className="italic">Like Your Own</span>
-                </p>
+                Book a Consultation
+              </Link>
 
-                <p className="font-body text-[10px] md:text-xs tracking-[0.3em] uppercase text-primary-foreground/80 leading-relaxed mb-2 lg:mb-4 max-w-md mx-auto lg:mx-0">
-                  Dr. Akshay Parmar &nbsp;·&nbsp; Board-Certified Prosthodontist
-                </p>
-
-                <p className="font-body text-[12px] sm:text-[12px] md:text-[13px] text-primary-foreground/75 font-light leading-relaxed mb-7 sm:mb-10 lg:mb-14 max-w-md mx-auto lg:mx-0">
-                  Dental implants, veneers, and full-mouth reconstruction for patients who want a result that lasts. Specialist care in Hamilton Township, NJ.
-                </p>
-
-                {/* Consultation Pathways — clearer hierarchy */}
-                <div className="flex flex-col gap-3 sm:gap-4 justify-center lg:justify-start mb-8 sm:mb-10 lg:mb-12 max-w-[360px] sm:max-w-md mx-auto lg:mx-0">
-                  {/* Primary: Schedule Consultation */}
-                  <Link
-                    to="/contact"
-                    onClick={(e) => e.stopPropagation()}
-                    className="cta-tactile inline-block w-full px-8 sm:px-10 py-4 bg-primary-foreground text-navy font-body text-[12px] tracking-[0.25em] uppercase font-medium transition-all duration-300 hover:bg-primary-foreground/90 text-center shadow-[0_8px_24px_-8px_hsl(220_30%_8%/0.5)]"
-                  >
-                    Schedule Consultation
-                  </Link>
-
-                  {/* Secondary row: two equal patient paths */}
-                  <div className="grid grid-cols-2 gap-2.5 sm:gap-3">
-                    <Link
-                      to="/clinical-assessment"
-                      onClick={(e) => e.stopPropagation()}
-                      className="cta-tactile inline-block w-full px-3 sm:px-5 py-3.5 border border-primary-foreground/30 text-primary-foreground/85 font-body text-[10px] tracking-[0.18em] uppercase transition-all duration-300 hover:bg-primary-foreground hover:text-navy hover:border-primary-foreground text-center"
-                    >
-                      Online Assessment
-                    </Link>
-                    <Link
-                      to="/virtual-consultation"
-                      onClick={(e) => e.stopPropagation()}
-                      className="cta-tactile inline-block w-full px-3 sm:px-5 py-3.5 border border-primary-foreground/30 text-primary-foreground/85 font-body text-[10px] tracking-[0.18em] uppercase transition-all duration-300 hover:bg-primary-foreground hover:text-navy hover:border-primary-foreground text-center"
-                    >
-                      Virtual Consult
-                    </Link>
-                  </div>
-
-                  {/* Reassurance microcopy */}
-                  <p className="font-body text-[10px] text-primary-foreground/55 leading-relaxed text-center lg:text-left mt-1">
-                    Not sure where to start? Begin with a short online assessment, no commitment required.
-                  </p>
-                </div>
-
-                {/* Rotating testimonial */}
-                <div className="max-w-lg mx-auto lg:mx-0">
-                  <p className="font-body text-[9px] tracking-[0.3em] uppercase text-primary-foreground/55 mb-3">
-                    Patient Feedback
-                  </p>
-                  <div className="h-14 sm:h-12 relative overflow-hidden">
-                    <AnimatePresence mode="wait">
-                      <motion.div
-                        key={quoteIndex}
-                        initial={{ opacity: 0, y: 8 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        exit={{ opacity: 0, y: -8 }}
-                        transition={{ duration: 0.5 }}
-                      >
-                        <p className="font-body text-[11px] md:text-xs text-primary-foreground/70 font-light italic leading-relaxed">
-                          "{rotatingQuotes[quoteIndex].text}"
-                        </p>
-                      </motion.div>
-                    </AnimatePresence>
-                  </div>
-                  <Link
-                    to="/testimonials"
-                    onClick={(e) => e.stopPropagation()}
-                    className="font-body text-[9px] tracking-[0.2em] uppercase text-primary-foreground/45 hover:text-primary-foreground/70 transition-colors duration-300 mt-1 inline-block"
-                  >
-                    More Testimonials →
-                  </Link>
-                </div>
-              </motion.div>
+              <Link
+                to="/clinical-assessment"
+                className="font-body text-[11px] tracking-[0.14em] uppercase text-charcoal-light/75 hover:text-navy transition-colors duration-300 border-b border-charcoal-light/25 hover:border-navy/40 pb-0.5"
+              >
+                Not ready? Start with a 2-minute online assessment
+              </Link>
             </div>
-          </div>
+
+            <div className="mt-10 sm:mt-12 pt-6 border-t border-divider max-w-md mx-auto lg:mx-0">
+              <p className="font-body text-[9.5px] sm:text-[10px] tracking-[0.22em] uppercase text-charcoal-light/60 leading-loose">
+                Trained at Memorial Sloan Kettering &nbsp;·&nbsp; Former NYU Faculty
+                &nbsp;·&nbsp; (609) 585-1616
+              </p>
+            </div>
+          </motion.div>
         </div>
 
-        {/* Bottom bar */}
-        <div className="pb-5 md:pb-6 flex items-end justify-between">
-          <p className="font-body text-[10px] tracking-[0.3em] uppercase text-primary-foreground/45">
-            © {new Date().getFullYear()}
-          </p>
-          <span className="font-body text-[9px] tracking-[0.15em] uppercase text-primary-foreground/40 italic">
-            1544 Kuser Rd, Suite C3, Hamilton Township, NJ 08619
-          </span>
+        {/* ── Desktop: full-height portrait, melting into the ivory field ── */}
+        <div className="hidden lg:block relative">
           <motion.div
-            animate={{ y: [0, 5, 0] }}
-            transition={{ repeat: Infinity, duration: 2.5, ease: "easeInOut" }}
-            className="w-px h-7 bg-primary-foreground/25"
-          />
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1.4, ease: "easeOut" }}
+            className="absolute inset-0"
+          >
+            <img
+              src={heroPortrait}
+              alt=""
+              aria-hidden="true"
+              className="absolute inset-0 w-full h-full object-cover object-[center_25%]"
+            />
+            {/* Blend the photo's left edge into the page field */}
+            <div
+              className="absolute inset-0"
+              style={{
+                background:
+                  "linear-gradient(90deg, hsl(40 20% 98%) 0%, hsl(40 20% 98% / 0.35) 12%, transparent 30%)",
+              }}
+            />
+            {/* Soften the bottom so the credential strip reads cleanly */}
+            <div
+              className="absolute inset-0"
+              style={{
+                background:
+                  "linear-gradient(180deg, transparent 78%, hsl(40 20% 98% / 0.55) 100%)",
+              }}
+            />
+          </motion.div>
         </div>
       </div>
     </section>

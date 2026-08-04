@@ -137,7 +137,7 @@ const SiteNavigation = () => {
 
   // Only use transparent/white-text mode on homepage
   const isHomepage = location.pathname === "/";
-  const showSolid = !isHomepage || scrolled;
+  const showSolid = true; // light hero: nav always in solid/light mode
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
@@ -195,7 +195,7 @@ const SiteNavigation = () => {
               src={logoAP}
               alt="Dr. Akshay Parmar"
               className={`transition-all duration-500 ${
-                showSolid ? "h-36 sm:h-40 md:h-40 lg:h-40" : "h-40 sm:h-44 md:h-44 lg:h-48"
+                showSolid ? "h-24 sm:h-28 md:h-32 lg:h-36 mix-blend-multiply" : "h-40 sm:h-44 md:h-44 lg:h-48"
               }`}
               style={{ 
                 filter: showSolid ? "none" : "invert(1) brightness(2)",

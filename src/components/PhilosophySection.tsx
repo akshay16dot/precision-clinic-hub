@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import surgeryPhoto from "@/assets/parmar-surgery.jpg";
 
 const philosophies = [
   {
@@ -39,11 +40,12 @@ const PhilosophySection = () => {
             <span className="italic"> and built around you</span>
           </h2>
           <p className="font-body text-sm md:text-[15px] text-primary-foreground/65 font-light leading-relaxed max-w-xl mx-auto">
-            A few principles guide every treatment, from a single implant to a full-mouth rebuild.
+            Every treatment follows the STABLE Protocol, Dr. Parmar's system for Soft Tissue And Bone Level Esthetics, taught to surgeons across the USA and India. A few of its principles:
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-14 lg:gap-x-20 lg:gap-y-16 max-w-4xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-[1fr_minmax(280px,380px)] gap-12 lg:gap-16 max-w-5xl mx-auto items-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-14 lg:gap-x-16 lg:gap-y-14">
           {philosophies.map((item, i) => (
             <motion.div
               key={i}
@@ -61,6 +63,31 @@ const PhilosophySection = () => {
               </p>
             </motion.div>
           ))}
+        </div>
+
+          {/* In the operatory */}
+          <motion.div
+            initial={{ opacity: 0, x: 24 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, margin: "-80px" }}
+            transition={{ duration: 0.9 }}
+            className="relative mx-auto w-full max-w-sm lg:max-w-none"
+          >
+            <img
+              src={surgeryPhoto}
+              alt="Dr. Parmar performing implant surgery with his team"
+              loading="lazy"
+              className="w-full rounded-sm"
+              style={{
+                filter: "brightness(0.92) saturate(0.9)",
+                maskImage: "linear-gradient(180deg, transparent 0%, black 7%, black 93%, transparent 100%)",
+                WebkitMaskImage: "linear-gradient(180deg, transparent 0%, black 7%, black 93%, transparent 100%)",
+              }}
+            />
+            <p className="font-body text-[9px] tracking-[0.25em] uppercase text-primary-foreground/40 mt-3 text-center">
+              STABLE Protocol implant surgery, Hamilton Township
+            </p>
+          </motion.div>
         </div>
       </div>
     </section>

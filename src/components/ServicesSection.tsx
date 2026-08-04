@@ -1,42 +1,55 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
+import imgImplants from "@/assets/hero-dental.jpg";
+import imgImmediate from "@/assets/immediate-case2-after.png";
+import imgFullArch from "@/assets/fullarch-prosthesis.jpg";
+import imgVeneers from "@/assets/veneer-case1-after.png";
+import imgFullMouth from "@/assets/outcome-1-after.png";
+import imgMaxfac from "@/assets/obturator-prosthesis.png";
+
 const coreServices = [
   {
     title: "Dental Implants",
     description: "Permanent replacements for missing teeth that look, feel, and function like your own. Single tooth or multiple, planned for long-term stability.",
     link: "/dental-implants-new-jersey",
     icon: "01",
+    img: imgImplants,
   },
   {
     title: "Same-Day Implants",
     description: "When possible, your implant is placed the same day a tooth is removed, fewer visits, less bone loss, and a faster path back to a complete smile.",
-    link: "/dental-implants-new-jersey",
+    link: "/immediate-implant-rehabilitation",
     icon: "02",
+    img: imgImmediate,
   },
   {
     title: "All-on-X / Full-Arch",
     description: "A full set of fixed teeth supported by just a few implants. A life-changing option for patients with failing teeth or long-term dentures.",
     link: "/full-arch-implants-new-jersey",
     icon: "03",
+    img: imgFullArch,
   },
   {
     title: "Porcelain Veneers",
     description: "Custom-made veneers designed for your face, not a template. Natural shape, natural color, and a smile that still looks like you.",
-    link: "/aesthetic-dentistry",
+    link: "/veneers-aesthetic-reconstruction",
     icon: "04",
+    img: imgVeneers,
   },
   {
     title: "Full-Mouth Reconstruction",
     description: "For worn, broken, or failing teeth, a coordinated plan that rebuilds bite, function, and appearance, all in the right order.",
-    link: "/dental-implants-new-jersey",
+    link: "/aesthetic-dentistry",
     icon: "05",
+    img: imgFullMouth,
   },
   {
     title: "Complex & Maxillofacial Cases",
     description: "Specialist care for patients with significant bone loss, congenital differences, or jaw and facial reconstruction needs.",
     link: "/maxillofacial-rehabilitation",
     icon: "06",
+    img: imgMaxfac,
   },
 ];
 
@@ -78,17 +91,28 @@ const ServicesSection = () => {
             >
               <Link
                 to={service.link}
-                className="block h-full p-8 md:p-10 border border-divider bg-background hover:bg-card group transition-all duration-500 hover:border-navy/20 hover:shadow-[0_8px_30px_-12px_hsl(220_20%_15%/0.12)]"
+                className="block h-full border border-divider bg-background hover:bg-card group transition-all duration-500 hover:border-navy/20 hover:shadow-[0_8px_30px_-12px_hsl(220_20%_15%/0.12)] overflow-hidden"
               >
-                <p className="font-body text-[10px] tracking-[0.3em] uppercase text-charcoal-light/40 mb-6 group-hover:text-navy/40 transition-colors duration-500">
-                  {service.icon}
-                </p>
+                <div className="relative aspect-[16/9] overflow-hidden">
+                  <img
+                    src={service.img}
+                    alt={service.title}
+                    loading="lazy"
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.05]"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/25 to-transparent" />
+                  <p className="absolute bottom-2.5 left-4 font-body text-[10px] tracking-[0.3em] uppercase text-white/70">
+                    {service.icon}
+                  </p>
+                </div>
+                <div className="p-7 md:p-8">
                 <h3 className="font-display text-xl md:text-2xl font-medium text-navy mb-4 group-hover:text-charcoal transition-colors duration-300">
                   {service.title}
                 </h3>
                 <p className="font-body text-xs text-charcoal-light font-light leading-relaxed">
                   {service.description}
                 </p>
+                </div>
               </Link>
             </motion.div>
           ))}
