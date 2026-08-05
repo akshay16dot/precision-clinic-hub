@@ -3,10 +3,13 @@ import { motion } from "framer-motion";
 const affiliations = [
   "Memorial Sloan Kettering",
   "NYU College of Dentistry",
+  "UCSF",
+  "UConn",
   "American Board of Prosthodontics",
   "American College of Prosthodontists",
   "American Academy of Maxillofacial Prosthetics",
-  "Straumann Faculty",
+  "Founder & Teacher, STABLE Academy",
+  "Floxient Dental Operating Software",
 ];
 
 const CredentialStrip = () => {

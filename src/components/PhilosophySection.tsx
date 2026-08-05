@@ -40,7 +40,7 @@ const PhilosophySection = () => {
             <span className="italic"> and built around you</span>
           </h2>
           <p className="font-body text-sm md:text-[15px] text-primary-foreground/65 font-light leading-relaxed max-w-xl mx-auto">
-            Every treatment follows the STABLE Protocol, Dr. Parmar's system for Soft Tissue And Bone Level Esthetics, taught to surgeons across the USA and India. A few of its principles:
+            Every treatment follows the STABLE Protocol™, Dr. Parmar's system for Soft Tissue And Bone Level Esthetics, taught to surgeons across the USA and India. A few of its principles:
           </p>
         </motion.div>
 
@@ -85,7 +85,7 @@ const PhilosophySection = () => {
               }}
             />
             <p className="font-body text-[9px] tracking-[0.25em] uppercase text-primary-foreground/40 mt-3 text-center">
-              STABLE Protocol implant surgery, Hamilton Township
+              STABLE Protocol™ implant surgery, Hamilton Township
             </p>
           </motion.div>
         </div>
