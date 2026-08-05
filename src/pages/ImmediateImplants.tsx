@@ -44,7 +44,7 @@ const ImmediateImplants = () => {
 
       {/* ─── HERO ─── */}
       <section
-        className="relative hero-min-h hero-navy-fallback flex items-center justify-center px-6 md:px-8"
+        className="relative hero-min-h hero-navy-fallback flex items-center justify-center px-6 md:px-8 pt-32 md:pt-52"
         style={{
           background:
             "linear-gradient(180deg, hsl(30 8% 8%) 0%, hsl(28 6% 12%) 40%, hsl(30 8% 10%) 100%)",
@@ -455,7 +455,7 @@ const ImmediateImplants = () => {
                 structured framework, not a quick technique.
               </p>
               <p className="font-body text-sm md:text-base text-charcoal-light font-light leading-relaxed">
-                This approach follows the principles of the STABLE Protocol,
+                This approach follows the principles of the STABLE Protocol™,
                 emphasizing diagnosis, tissue preservation, implant stability,
                 and prosthetic harmony from the start.
               </p>

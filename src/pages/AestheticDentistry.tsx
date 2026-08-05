@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 import SiteNavigation from "@/components/SiteNavigation";
 import PageFooter from "@/components/PageFooter";
 import { usePageSEO } from "@/hooks/usePageSEO";
+import fullmouthBefore from "@/assets/fullmouth-case1-before.jpg";
+import fullmouthAfter from "@/assets/fullmouth-case1-after.jpg";
 
 const treatments = [
   {
@@ -115,6 +117,54 @@ const AestheticDentistry = () => {
             </p>
             <p className="font-display text-lg md:text-xl font-light text-charcoal italic leading-relaxed">
               The goal is not artificial perfection. The goal is refined, natural, enduring results.
+            </p>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* ── Case in Point ── */}
+      <section className="section-padding bg-background">
+        <div className="luxury-container">
+          <motion.div {...fade} transition={{ duration: 0.8 }} className="text-center mb-14 md:mb-16">
+            <p className="font-body text-[10px] tracking-[0.3em] uppercase text-charcoal-light mb-6">
+              Real Patients, Real Outcomes
+            </p>
+            <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-light text-navy">
+              Full-Mouth Rehabilitation, <em className="italic">In Practice</em>
+            </h2>
+          </motion.div>
+
+          <motion.div
+            {...fade}
+            transition={{ duration: 0.9 }}
+            className="max-w-4xl mx-auto"
+          >
+            <div className="grid grid-cols-2 rounded-sm overflow-hidden border border-divider shadow-[0_14px_44px_-18px_hsl(220_20%_15%/0.25)]">
+              <div className="relative aspect-[3/4] sm:aspect-[4/4]">
+                <img
+                  src={fullmouthBefore}
+                  alt="Full-mouth rehabilitation case, before treatment"
+                  loading="lazy"
+                  className="absolute inset-0 w-full h-full object-cover"
+                />
+                <span className="absolute top-3 left-3 px-2.5 py-1 font-body text-[9px] tracking-[0.22em] uppercase rounded-sm bg-black/55 text-white/90">
+                  Before
+                </span>
+              </div>
+              <div className="relative aspect-[3/4] sm:aspect-[4/4]">
+                <img
+                  src={fullmouthAfter}
+                  alt="Full-mouth rehabilitation case, after treatment"
+                  loading="lazy"
+                  className="absolute inset-0 w-full h-full object-cover"
+                />
+                <span className="absolute top-3 left-3 px-2.5 py-1 font-body text-[9px] tracking-[0.22em] uppercase rounded-sm bg-white/80 text-navy/85 backdrop-blur-sm">
+                  After
+                </span>
+              </div>
+            </div>
+            <p className="font-body text-[11px] md:text-xs tracking-[0.15em] uppercase text-charcoal-light/70 text-center mt-5">
+              Worn, failing dentition rebuilt to full function and a natural, even smile.
             </p>
           </motion.div>
         </div>
