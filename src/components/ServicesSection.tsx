@@ -1,8 +1,8 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
-import imgImplants from "@/assets/hero-dental.jpg";
-import imgImmediate from "@/assets/immediate-case2-after.png";
+import imgImplants from "@/assets/case8-after.png";
+import imgImmediate from "@/assets/patientA-after.jpg";
 import imgFullArch from "@/assets/fullarch-prosthesis.jpg";
 import imgVeneers from "@/assets/veneer-case1-after.png";
 import imgFullMouth from "@/assets/outcome-1-after.png";

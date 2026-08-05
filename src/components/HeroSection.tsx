@@ -6,11 +6,11 @@ const HeroSection = () => {
   return (
     <section className="relative bg-background overflow-hidden">
       {/* ── Mobile: warm portrait band that melts into the page ── */}
-      <div className="lg:hidden relative w-full h-[52vh] min-h-[340px]">
+      <div className="lg:hidden relative w-full h-[52vh] min-h-[340px] mt-[112px] sm:mt-[128px]">
         <img
           src={heroPortrait}
           alt="Dr. Akshay Parmar, board-certified prosthodontist in Hamilton Township, NJ"
-          className="absolute inset-0 w-full h-full object-cover object-[center_38%]"
+          className="absolute inset-0 w-full h-full object-cover object-[center_20%]"
         />
         <div
           className="absolute inset-0"
