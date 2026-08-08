@@ -20,7 +20,7 @@ interface PageSEO {
   canonical?: string;
   /** Absolute or root-relative image. Defaults to the site OG image. */
   image?: string;
-  /** Open Graph type. Guides are auto-set to "article". */
+  /** Open Graph type. */
   type?: string;
   noindex?: boolean;
 }
@@ -64,8 +64,7 @@ const PAGE_SEO: Record<string, SeoEntry> = {
     description:
       "Immediate implant placement with same-day provisional teeth. Who qualifies, what the protocol involves, and how the result is protected long term.",
   },
-  // NOTE: this route is the full mouth rehabilitation page, not cosmetic dentistry.
-  "/aesthetic-dentistry": {
+  "/full-mouth-reconstruction-new-jersey": {
     title: "Full Mouth Reconstruction in Hamilton Township, NJ",
     description:
       "Rebuilding a failing dentition as one plan: implants, crowns and restorations sequenced for function first, appearance second. Board-certified prosthodontist.",
@@ -95,6 +94,70 @@ const PAGE_SEO: Record<string, SeoEntry> = {
     title: "Professional Teeth Whitening | Hamilton Township, NJ",
     description:
       "Specialist-supervised in-office and take-home whitening, including what to do when you already have crowns, veneers or bonded restorations.",
+  },
+
+  // Maxillofacial prosthetics. One page per prosthesis type: the category has
+  // almost no real competition, and per-type pages are what rank for the queries
+  // patients actually use ("prosthetic nose after cancer", "prosthetic ear").
+  "/nasal-prosthesis": {
+    title: "Nasal Prosthesis (Prosthetic Nose) | Maxillofacial Prosthodontist NJ",
+    description:
+      "Custom silicone nasal prostheses after cancer surgery, Mohs resection or trauma. How they are made, how they attach, and how long they last.",
+  },
+  "/auricular-prosthesis": {
+    title: "Auricular Prosthesis (Prosthetic Ear) | Maxillofacial Prosthodontist NJ",
+    description:
+      "Custom silicone ear prostheses for microtia, cancer surgery and trauma. Adhesive versus implant retention, and how the opposite ear is mirrored.",
+  },
+  "/orbital-prosthesis": {
+    title: "Orbital Prosthesis After Eye Removal | Maxillofacial Prosthodontist NJ",
+    description:
+      "Custom orbital prostheses after exenteration, with a hand-painted iris matched to your remaining eye. How it differs from an ocular prosthesis.",
+  },
+  "/facial-prosthesis-insurance-coverage": {
+    title: "Does Insurance Cover a Facial Prosthesis? Medicare Codes Explained",
+    description:
+      "Insurance coverage for nasal, orbital and auricular prostheses: the Medicare HCPCS codes, what triggers replacement, and how to appeal a denial.",
+  },
+
+  // Full-arch commercial cluster. The cost page is the highest-intent query in
+  // this market and currently has no authoritative local answer.
+  "/all-on-4-cost-new-jersey": {
+    title: "All-on-4 Cost in New Jersey: An Honest Breakdown | Prosthodontist",
+    description:
+      "What All-on-4 actually costs in New Jersey, what drives the price from $15,000 to $40,000 per arch, and why quotes differ so widely.",
+  },
+  "/all-on-4-vs-all-on-6": {
+    title: "All-on-4 vs All-on-6 vs Zygomatic: How to Choose | NJ Prosthodontist",
+    description:
+      "When four implants is enough, when you need six, and when zygomatic implants are the right answer. An honest comparison from a board-certified prosthodontist.",
+  },
+
+  // Anterior aesthetics
+  "/front-tooth-implant-new-jersey": {
+    title: "Front Tooth Implant: The Hardest Case in Implant Dentistry | NJ",
+    description:
+      "Why replacing a front tooth is the most demanding case in implant dentistry, what goes wrong, and how anterior cases should actually be planned.",
+  },
+
+  // The STABLE Protocol. Brand asset: establishes authorship without
+  // publishing the paid course content.
+  "/stable-protocol": {
+    title: "The STABLE Protocol\u2122 | Soft Tissue And Bone Level Esthetics",
+    description:
+      "The STABLE Protocol\u2122, developed by Dr. Akshay Parmar: a tissue-first system for implants, immediate placement, full-arch and aesthetic restorative work.",
+  },
+
+  // Revision and specialist choice
+  "/failed-dental-implant-revision": {
+    title: "Failed Dental Implant? Revision and Second Opinions | NJ Prosthodontist",
+    description:
+      "What to do when an implant fails, loosens or was placed wrong. Revision options, what can be saved, and honest second opinions in Hamilton Township, NJ.",
+  },
+  "/prosthodontist-vs-oral-surgeon": {
+    title: "Prosthodontist vs Oral Surgeon vs Periodontist for Implants",
+    description:
+      "Who should place and restore your dental implants? What each specialty is trained to do, and how to decide which one your case actually needs.",
   },
 
   // Conversion paths
@@ -132,11 +195,6 @@ const PAGE_SEO: Record<string, SeoEntry> = {
   },
 
   // Education
-  "/education": {
-    title: "Education and Resources | Dr. Akshay Parmar, Prosthodontist",
-    description:
-      "Patient guides and clinician training from a board-certified prosthodontist and implant faculty member based in New Jersey.",
-  },
   "/patient-education": {
     title: "Patient Education: Implants, Dentures and Reconstruction",
     description:
@@ -148,37 +206,6 @@ const PAGE_SEO: Record<string, SeoEntry> = {
       "Live courses in surgical implant foundations, full-arch prosthetic protocols and digital workflows. New Jersey, New York, Philadelphia, Delhi and Mumbai.",
   },
 
-  // Guides (og:type is set to "article" automatically)
-  "/guide/dental-implants": {
-    title: "Dental Implants: A Complete Patient Guide from a Specialist",
-    description:
-      "How implants work, who qualifies, the timeline, what they cost and what makes them fail. Written by a board-certified prosthodontist.",
-  },
-  "/guide/full-arch-implants": {
-    title: "All-on-X Full-Arch Implants: Patient Guide and Costs",
-    description:
-      "All-on-4 versus All-on-6, materials, surgical timeline, cost ranges and the maintenance nobody warns you about.",
-  },
-  "/guide/immediate-implants": {
-    title: "Immediate Implants: Are You a Candidate? Patient Guide",
-    description:
-      "When a tooth can be replaced the same day, when it should not be, and what the evidence actually shows about success rates.",
-  },
-  "/guide/veneers": {
-    title: "Porcelain Veneers: Types, Cost and Longevity Guide",
-    description:
-      "Feldspathic versus pressed versus composite, how much tooth is removed, realistic lifespan, and when veneers are the wrong answer.",
-  },
-  "/guide/maxillofacial-rehabilitation": {
-    title: "Maxillofacial Prosthetics: A Patient Guide After Cancer",
-    description:
-      "Rehabilitation after head and neck cancer surgery: obturators, implant-retained prostheses, timing, and what recovery actually looks like.",
-  },
-  "/guide/teeth-whitening": {
-    title: "Teeth Whitening: What Actually Works, From a Specialist",
-    description:
-      "Peroxide concentrations, sensitivity, why whitening never changes crowns or veneers, and how to avoid ending up with a mismatched smile.",
-  },
 };
 
 /** Normalize a pathname for map lookup and canonical building. */
@@ -239,7 +266,7 @@ export function usePageSEO({
     const finalDescription = entry?.description ?? description;
     const url = canonical ? absolute(canonical) : canonicalFor(routePath);
     const imageUrl = absolute(image);
-    const ogType = type ?? (routePath.startsWith("/guide/") ? "article" : "website");
+    const ogType = type ?? "website";
 
     document.title = finalTitle;
 
