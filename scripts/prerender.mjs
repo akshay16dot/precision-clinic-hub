@@ -31,6 +31,7 @@ const ROUTES = [
   "/professional-testimonials",
   "/leave-review",
   "/patient-education",
+  "/patient-questions",
   "/professional-education",
   // Maxillofacial prosthetics
   "/nasal-prosthesis",
