@@ -148,6 +148,12 @@ const PAGE_SEO: Record<string, SeoEntry> = {
       "The STABLE Protocol\u2122, developed by Dr. Akshay Parmar: a tissue-first system for implants, immediate placement, full-arch and aesthetic restorative work.",
   },
 
+  "/patient-questions": {
+    title: "Dental Questions Answered | Implants, Dentures, Veneers | NJ",
+    description:
+      "Straight answers to the questions patients actually ask about dental implants, All-on-4, dentures, veneers, cost and recovery. From a board-certified prosthodontist.",
+  },
+
   // Revision and specialist choice
   "/failed-dental-implant-revision": {
     title: "Failed Dental Implant? Revision and Second Opinions | NJ Prosthodontist",
