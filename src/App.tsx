@@ -35,6 +35,7 @@ import AllOnFourVsAllOnSix from "./pages/AllOnFourVsAllOnSix";
 import FrontToothImplant from "./pages/FrontToothImplant";
 import RedirectTo from "./pages/RedirectTo";
 import StableProtocol from "./pages/StableProtocol";
+import PatientQuestions from "./pages/PatientQuestions";
 
 const queryClient = new QueryClient();
 
@@ -60,6 +61,7 @@ const App = () => (
           <Route path="/contact" element={<Contact />} />
           <Route path="/clinical-cases" element={<ClinicalCases />} />
           <Route path="/professional-education" element={<ProfessionalEducation />} />
+          <Route path="/patient-questions" element={<PatientQuestions />} />
           <Route path="/patient-education" element={<PatientEducation />} />
           <Route path="/guide/dental-implants" element={<RedirectTo to="/dental-implants-new-jersey" />} />
           <Route path="/guide/immediate-implants" element={<RedirectTo to="/immediate-implant-rehabilitation" />} />
