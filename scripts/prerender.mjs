@@ -18,7 +18,7 @@ const ROUTES = [
   "/dental-implants-new-jersey",
   "/full-arch-implants-new-jersey",
   "/immediate-implant-rehabilitation",
-  "/aesthetic-dentistry",
+  "/full-mouth-reconstruction-new-jersey",
   "/veneers-aesthetic-reconstruction",
   "/maxillofacial-rehabilitation",
   "/smile-design",
@@ -30,15 +30,23 @@ const ROUTES = [
   "/testimonials",
   "/professional-testimonials",
   "/leave-review",
-  "/education",
   "/patient-education",
   "/professional-education",
-  "/guide/dental-implants",
-  "/guide/full-arch-implants",
-  "/guide/immediate-implants",
-  "/guide/veneers",
-  "/guide/maxillofacial-rehabilitation",
-  "/guide/teeth-whitening",
+  // Maxillofacial prosthetics
+  "/nasal-prosthesis",
+  "/auricular-prosthesis",
+  "/orbital-prosthesis",
+  "/facial-prosthesis-insurance-coverage",
+  // Revision and specialist choice
+  "/failed-dental-implant-revision",
+  "/prosthodontist-vs-oral-surgeon",
+  // Full-arch commercial cluster
+  "/all-on-4-cost-new-jersey",
+  "/all-on-4-vs-all-on-6",
+  // The STABLE Protocol
+  "/stable-protocol",
+  // Anterior aesthetics
+  "/front-tooth-implant-new-jersey",
 ];
 
 const MIME = { ".html": "text/html", ".js": "text/javascript", ".css": "text/css", ".png": "image/png", ".jpg": "image/jpeg", ".svg": "image/svg+xml", ".ico": "image/x-icon", ".webmanifest": "application/manifest+json", ".xml": "application/xml", ".txt": "text/plain", ".woff2": "font/woff2" };
