@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 import SiteNavigation from "@/components/SiteNavigation";
 import PageFooter from "@/components/PageFooter";
 import { usePageSEO } from "@/hooks/usePageSEO";
+import TreatmentJourney from "@/components/TreatmentJourney";
+import { immediateImplantsJourney } from "@/data/treatmentGuides";
 import immediateCase1Before from "@/assets/immediate-case1-before.png";
 import immediateCase1After from "@/assets/immediate-case1-after.png";
 import immediateCase2Before from "@/assets/immediate-case2-before.png";
@@ -13,24 +15,6 @@ const fadeUp = {
   whileInView: { opacity: 1, y: 0 },
   viewport: { once: true, margin: "-100px" },
 };
-
-const faqItems = [
-  {
-    question: "Is same-day treatment painful?",
-    answer:
-      "Most patients report less discomfort than expected. Modern protocols are designed around precision and comfort, and recovery is typically manageable with clear instructions and structured follow-up.",
-  },
-  {
-    question: "Will it look natural right away?",
-    answer:
-      "The temporary restoration is designed to look natural and protect the site while tissues heal. The final restoration is refined after adaptation, so the end result looks balanced and stable.",
-  },
-  {
-    question: "How long does the full process take?",
-    answer:
-      "Timelines vary, but immediate rehabilitation often reduces the overall journey by minimizing separate stages. The final schedule is confirmed after evaluation and planning.",
-  },
-];
 
 const ImmediateImplants = () => {
   usePageSEO({
@@ -520,61 +504,35 @@ const ImmediateImplants = () => {
         </div>
       </section>
 
-      {/* ─── SECTION 7: FAQ ─── */}
-      <section
-        className="py-24 md:py-36"
-        style={{
-          background:
-            "linear-gradient(180deg, hsl(40 12% 95%) 0%, hsl(40 15% 96%) 100%)",
-        }}
-      >
+      
+
+      {/* Related reading */}
+      <section className="py-14 md:py-20 px-6 md:px-8" style={{ background: "linear-gradient(180deg, hsl(40 15% 96%) 0%, hsl(40 18% 97%) 100%)" }}>
         <div className="luxury-container">
-          <motion.div
-            {...fadeUp}
-            transition={{ duration: 1 }}
-            className="max-w-2xl mx-auto text-center mb-16 md:mb-20"
-          >
-            <p className="font-body text-xs tracking-[0.3em] uppercase text-charcoal-light/60 mb-6">
-              Patient Questions
+          <motion.div {...fadeUp} transition={{ duration: 0.8 }} className="max-w-2xl mx-auto text-center">
+            <p className="font-body text-[10px] tracking-[0.3em] uppercase text-charcoal-light/60 mb-7">
+              Related Reading
             </p>
-            <h2 className="font-display text-3xl md:text-5xl font-light text-navy leading-tight">
-              Common Patient <span className="italic">Questions</span>
-            </h2>
-          </motion.div>
-
-          <div className="max-w-2xl mx-auto space-y-16 md:space-y-20">
-            {faqItems.map((item, i) => (
-              <motion.div
-                key={i}
-                {...fadeUp}
-                transition={{ duration: 0.8, delay: i * 0.1 }}
-                className="text-center"
-              >
-                <h3 className="font-display text-xl md:text-2xl font-light text-navy mb-5">
-                  {item.question}
-                </h3>
-                <p className="font-body text-sm md:text-base text-charcoal-light font-light leading-relaxed">
-                  {item.answer}
-                </p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Patient Guide Link */}
-      <section className="py-12 md:py-16 px-6 md:px-8" style={{ background: "linear-gradient(180deg, hsl(40 15% 96%) 0%, hsl(40 18% 97%) 100%)" }}>
-        <div className="luxury-container text-center">
-          <motion.div {...fadeUp} transition={{ duration: 0.8 }}>
-            <Link
-              to="/guide/immediate-implants"
-              className="inline-block font-body text-[10px] tracking-[0.25em] uppercase text-navy border-b border-navy/30 pb-0.5 hover:border-navy transition-colors"
-            >
-              Learn About the Process
-            </Link>
+            <div className="flex flex-wrap items-center justify-center gap-x-7 gap-y-3.5">
+              {[
+                { to: "/front-tooth-implant-new-jersey", label: "Front Tooth Implants" },
+                { to: "/all-on-4-cost-new-jersey", label: "All-on-4 Cost in NJ" },
+                { to: "/failed-dental-implant-revision", label: "Failed Implant Revision" },
+              ].map((l, i) => (
+                <Link
+                  key={i}
+                  to={l.to}
+                  className="font-body text-[11px] tracking-[0.16em] uppercase text-navy/65 hover:text-navy transition-colors duration-300 border-b border-navy/20 hover:border-navy/50 pb-px"
+                >
+                  {l.label}
+                </Link>
+              ))}
+            </div>
           </motion.div>
         </div>
       </section>
+
+      <TreatmentJourney data={immediateImplantsJourney} />
 
       {/* ─── SECTION 8: FINAL CTA ─── */}
       <section
@@ -622,6 +580,7 @@ const ImmediateImplants = () => {
           </motion.div>
         </div>
       </section>
+
 
       <PageFooter />
     </main>

@@ -5,6 +5,8 @@ import PageHero from "@/components/PageHero";
 import PageCTA from "@/components/PageCTA";
 import PageFooter from "@/components/PageFooter";
 import { usePageSEO } from "@/hooks/usePageSEO";
+import TreatmentJourney from "@/components/TreatmentJourney";
+import { fullArchJourney } from "@/data/treatmentGuides";
 import fullArchLeft from "@/assets/full-arch-left.png";
 import fullArchLower from "@/assets/full-arch-lower.png";
 import outcome1Before from "@/assets/outcome-1-before.png";
@@ -390,69 +392,7 @@ const FullArchImplants = () => {
         </div>
       </section>
 
-      {/* Editorial – Common Patient Questions */}
-      <section className="py-24 md:py-36" style={{ background: 'linear-gradient(180deg, hsl(40 15% 96%) 0%, hsl(40 18% 97%) 100%)' }}>
-        <div className="luxury-container">
-          <motion.div {...fadeUp} transition={{ duration: 1 }} className="max-w-2xl mx-auto">
-            <div className="text-center mb-16 md:mb-20">
-              <p className="font-body text-xs tracking-[0.3em] uppercase text-charcoal-light/60 mb-6">
-                Patient Guidance
-              </p>
-              <h2 className="font-display text-3xl md:text-5xl font-light text-navy leading-tight">
-                Common Patient <span className="italic">Questions</span>
-              </h2>
-            </div>
-
-            <div className="space-y-16 md:space-y-20">
-              <div>
-                <h3 className="font-display text-xl md:text-2xl font-light text-navy mb-5">
-                  Is full-arch implant treatment painful?
-                </h3>
-                <div className="space-y-4">
-                  <p className="font-body text-sm md:text-base text-charcoal-light font-light leading-relaxed">
-                    Full-arch rehabilitation is performed using modern surgical protocols designed for precision and patient comfort.
-                  </p>
-                  <p className="font-body text-sm md:text-base text-charcoal-light font-light leading-relaxed">
-                    Most patients report significantly less discomfort than anticipated, particularly when treatment is carefully planned and executed in controlled stages.
-                  </p>
-                </div>
-              </div>
-
-              <div className="w-12 h-px bg-navy/10 mx-auto" />
-
-              <div>
-                <h3 className="font-display text-xl md:text-2xl font-light text-navy mb-5">
-                  How long does the process take?
-                </h3>
-                <div className="space-y-4">
-                  <p className="font-body text-sm md:text-base text-charcoal-light font-light leading-relaxed">
-                    Treatment duration varies depending on healing response, biological factors, and case complexity.
-                  </p>
-                  <p className="font-body text-sm md:text-base text-charcoal-light font-light leading-relaxed">
-                    A structured clinical sequence allows each phase to be completed methodically, ensuring stability, adaptation, and refinement at every stage.
-                  </p>
-                </div>
-              </div>
-
-              <div className="w-12 h-px bg-navy/10 mx-auto" />
-
-              <div>
-                <h3 className="font-display text-xl md:text-2xl font-light text-navy mb-5">
-                  Am I too old for this treatment?
-                </h3>
-                <div className="space-y-4">
-                  <p className="font-body text-sm md:text-base text-charcoal-light font-light leading-relaxed">
-                    Full-arch rehabilitation is not defined by age, but by overall health, bone support, and functional needs.
-                  </p>
-                  <p className="font-body text-sm md:text-base text-charcoal-light font-light leading-relaxed">
-                    Many patients across a wide age range successfully undergo treatment following proper clinical evaluation.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </motion.div>
-        </div>
-      </section>
+      
 
       <section className="section-padding" style={{ background: 'linear-gradient(180deg, hsl(40 15% 96%) 0%, hsl(40 20% 98%) 100%)' }}>
         <div className="luxury-container">
@@ -647,19 +587,33 @@ const FullArchImplants = () => {
         </div>
       </section>
 
-      {/* Patient Guide Link */}
-      <section className="py-12 md:py-16 px-6 md:px-8 bg-background">
-        <div className="luxury-container text-center">
-          <motion.div {...fadeUp} transition={{ duration: 0.8 }}>
-            <Link
-              to="/guide/full-arch-implants"
-              className="inline-block font-body text-[10px] tracking-[0.25em] uppercase text-navy border-b border-navy/30 pb-0.5 hover:border-navy transition-colors"
-            >
-              Learn About the Process
-            </Link>
+      {/* Related reading */}
+      <section className="py-14 md:py-20 px-6 md:px-8 bg-background">
+        <div className="luxury-container">
+          <motion.div {...fadeUp} transition={{ duration: 0.8 }} className="max-w-2xl mx-auto text-center">
+            <p className="font-body text-[10px] tracking-[0.3em] uppercase text-charcoal-light/70 mb-7">
+              Before You Decide
+            </p>
+            <div className="flex flex-wrap items-center justify-center gap-x-7 gap-y-3.5">
+              {[
+                { to: "/all-on-4-cost-new-jersey", label: "What All-on-4 Costs in NJ" },
+                { to: "/all-on-4-vs-all-on-6", label: "All-on-4 vs All-on-6" },
+                { to: "/failed-dental-implant-revision", label: "Failed Implant Revision" },
+              ].map((l, i) => (
+                <Link
+                  key={i}
+                  to={l.to}
+                  className="font-body text-[11px] tracking-[0.16em] uppercase text-navy/65 hover:text-navy transition-colors duration-300 border-b border-navy/20 hover:border-navy/50 pb-px"
+                >
+                  {l.label}
+                </Link>
+              ))}
+            </div>
           </motion.div>
         </div>
       </section>
+
+      <TreatmentJourney data={fullArchJourney} />
 
       {/* Editorial – Consultation CTA */}
       <section className="py-28 md:py-40" style={{ background: 'linear-gradient(180deg, hsl(40 18% 97%) 0%, hsl(40 12% 95%) 100%)' }}>

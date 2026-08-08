@@ -1,166 +1,178 @@
-import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
-import SiteNavigation from "@/components/SiteNavigation";
-import PageCTA from "@/components/PageCTA";
-import PageFooter from "@/components/PageFooter";
 import { usePageSEO } from "@/hooks/usePageSEO";
-import heroImage from "@/assets/hero-tooth-wear.png";
-
-const fadeUp = {
-  initial: { opacity: 0, y: 20 },
-  whileInView: { opacity: 1, y: 0 },
-  viewport: { once: true, margin: "-80px" },
-};
+import {
+  ClinicalPage,
+  Section,
+  P,
+  H3,
+  List,
+  Note,
+  RefTable,
+  FAQ,
+  PageCTA,
+  RelatedPages,
+} from "@/components/ClinicalPage";
 
 const ToothWearRehabilitation = () => {
   usePageSEO({
-    title: "Bite Reconstruction & Tooth Wear | Prosthodontist NJ",
-    description: "Specialist-led bite reconstruction and tooth wear rehabilitation in New Jersey. Biomechanically precise restorations that recover lost vertical dimension, function, and structural integrity.",
+    title: "Worn Teeth and Bite Reconstruction | Hamilton Township NJ",
+    description:
+      "Severe tooth wear, erosion and collapsed bite. Why worn teeth are a functional problem rather than a cosmetic one, and how lost vertical dimension is rebuilt.",
   });
 
   return (
-    <main className="bg-background">
-      <SiteNavigation />
+    <ClinicalPage
+      eyebrow="Tooth Wear & Bite Reconstruction"
+      title="Worn teeth are not"
+      titleItalic="a cosmetic problem"
+      standfirst="Teeth that have worn short are usually the visible end of a process that has also changed your bite, your jaw position and the load on everything still standing. Treating the appearance without addressing the cause guarantees it happens again."
+    >
+      <Section eyebrow="What is actually happening">
+        <P>
+          Enamel does not grow back. Once it is gone, the softer dentine underneath wears
+          several times faster, which is why tooth wear tends to accelerate rather than
+          progress steadily. Teeth that took twenty years to shorten by a millimetre can
+          lose considerably more in the following five.
+        </P>
+        <P>
+          As the teeth shorten, the jaw closes further than it was designed to. The
+          distance between your nose and chin reduces. That is what dentists mean by a
+          collapsed bite or lost vertical dimension, and it is why people with advanced
+          wear often look older than they are, with a shortened lower face and deeper
+          lines at the corners of the mouth.
+        </P>
+        <Note label="Why this matters clinically">
+          If you rebuild worn teeth without restoring the lost height, you are building
+          taller teeth into a space that no longer exists. They chip, they fracture, or
+          they push the jaw somewhere it does not want to go. Restoring the vertical
+          dimension is not an upsell, it is what makes the restorations survivable.
+        </Note>
+      </Section>
 
-      {/* ═══════ HERO ═══════ */}
-      <section className="relative pt-36 md:pt-0 hero-min-h overflow-hidden">
-        <div className="grid grid-cols-1 lg:grid-cols-12 hero-min-h">
-          <div className="relative lg:col-span-5 min-h-[300px] sm:min-h-[400px] lg:min-h-full overflow-hidden">
-            <motion.img
-              src={heroImage}
-              alt="Night guard for bite rehabilitation"
-              initial={{ opacity: 0, scale: 1.05 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 1.4 }}
-              className="absolute inset-0 w-full h-full object-cover object-[center_30%] sm:object-center"
-            />
-            <div className="absolute inset-0 bg-gradient-to-r from-transparent to-background/20 lg:to-background/40" />
-          </div>
+      <Section alt heading="Three causes, and they need different" headingItalic="answers">
+        <RefTable
+          head={["Type", "Cause and what it looks like"]}
+          rows={[
+            [
+              "Attrition",
+              "Tooth against tooth, usually grinding or clenching. Flat, polished, matching wear facets on opposing teeth. Often worst on the canines and front teeth.",
+            ],
+            [
+              "Erosion",
+              "Acid dissolving enamel. Dietary acid, reflux, or frequent vomiting. Smooth, scooped, glossy surfaces, often with cupped hollows on the biting surfaces and thinning behind the upper front teeth.",
+            ],
+            [
+              "Abrasion",
+              "Something mechanical other than teeth. Aggressive brushing, abrasive pastes, habits like holding objects between the teeth. Typically notching at the gum line.",
+            ],
+          ]}
+          caption="Most advanced cases are a combination, and identifying the dominant cause changes the treatment plan and what has to change afterwards to protect it."
+        />
+        <P>
+          This distinction is the part most often skipped. Rebuilding an erosion case
+          without addressing the acid source, or a grinding case without a night guard,
+          means the new restorations are exposed to exactly what destroyed the originals.
+        </P>
+      </Section>
 
-          <div className="lg:col-span-7 flex items-center px-8 md:px-12 lg:px-20 xl:px-28 py-20 lg:py-0 lg:pt-16">
-            <motion.div
-              initial={{ opacity: 0, y: 25 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1, delay: 0.5 }}
-              className="max-w-lg"
-            >
-              <p className="font-body text-[10px] tracking-[0.4em] uppercase text-charcoal-light mb-6">
-                Aesthetic Dentistry
-              </p>
+      <Section heading="How lost height is" headingItalic="rebuilt">
+        <H3>Establishing where the bite should sit</H3>
+        <P>
+          Records, imaging and an assessment of how the jaw moves and where it is
+          comfortable establish the target position. This is a measured decision rather
+          than an estimate.
+        </P>
 
-              <h1 className="font-display text-4xl md:text-5xl lg:text-[3.5rem] xl:text-6xl font-light tracking-tight text-navy leading-[0.93] mb-8">
-                Tooth Wear &amp; Bite
-                <br />
-                <span className="italic font-light">Rehabilitation</span>
-              </h1>
+        <H3>Testing it before committing</H3>
+        <P>
+          The proposed new height is trialled first, usually with provisional restorations
+          or a removable appliance worn for a period. You eat, speak and sleep in the
+          proposed bite, and it is adjusted based on how it performs. Muscles and the jaw
+          joint adapt over weeks rather than instantly.
+        </P>
 
-              <div className="w-10 h-px bg-navy mb-8" />
+        <H3>Rebuilding</H3>
+        <P>
+          Once the tested position is confirmed, the definitive restorations reproduce it.
+          Depending on how much structure remains, this may be onlays and partial coverage
+          restorations, full crowns, or in less advanced cases direct composite. Preserving
+          tooth structure is prioritized wherever the loading allows it.
+        </P>
 
-              <p className="font-body text-sm md:text-[15px] text-charcoal-light font-light leading-[1.85] mb-4">
-                Teeth naturally change over time, especially in patients who clench or grind.
-              </p>
+        <H3>Protecting the result</H3>
+        <P>
+          A night guard where grinding was the driver, and management of the acid source
+          where erosion was. This is not optional maintenance. It is the difference
+          between a rebuild that lasts fifteen years and one that fails in three.
+        </P>
+      </Section>
 
-              <p className="font-body text-sm md:text-[15px] text-charcoal-light font-light leading-[1.85] mb-4">
-                Excessive wear can affect appearance, sensitivity, comfort, and long-term stability.
-              </p>
+      <Section alt heading="Catching it" headingItalic="early is cheaper">
+        <P>
+          Wear is one of the few dental problems where the cost curve is genuinely steep.
+          Early intervention can often be additive, meaning material is added to the teeth
+          without cutting them down. Advanced cases usually require full coverage
+          restorations on many teeth.
+        </P>
+        <List
+          items={[
+            "Front teeth looking shorter than they used to, or becoming more transparent at the edges",
+            "Flat, shiny wear surfaces that match up with the opposing teeth",
+            "Increasing sensitivity to cold or sweet things",
+            "Chipping at the edges of the front teeth",
+            "A partner mentioning grinding at night, or waking with jaw or temple soreness",
+            "Old fillings that appear to be standing proud of the surrounding tooth, which usually means the tooth around them has worn down",
+          ]}
+        />
+        <Note label="If you recognize several of these">
+          It is worth an assessment even if nothing hurts. Wear is painless for most of
+          its course, which is precisely why it is usually addressed late. Photographic
+          records taken now also give a baseline to measure against, which is useful even
+          if no treatment is done yet.
+        </Note>
+      </Section>
 
-              <p className="font-body text-sm md:text-[15px] text-charcoal-light font-light leading-[1.85] mb-4">
-                Treatment focuses on restoring structural integrity, protecting remaining tooth structure, and re-establishing a healthy, functional bite.
-              </p>
-
-              <p className="font-body text-sm md:text-[15px] text-charcoal-light font-light leading-[1.85]">
-                The objective is preservation, function, and longevity.
-              </p>
-
-              <div className="mt-10">
-                <a href="/patient-education" className="inline-block px-9 py-4 bg-navy font-body text-[11px] tracking-[0.25em] uppercase transition-all duration-300 hover:opacity-90" style={{ color: "hsl(40 20% 98%)" }}>
-                  Learn More
-                </a>
-              </div>
-            </motion.div>
-          </div>
-        </div>
-      </section>
-
-      {/* ═══════ UNDERSTANDING WEAR ═══════ */}
-      <section className="py-24 md:py-32 px-6 md:px-8" style={{ background: "linear-gradient(180deg, hsl(40 10% 95%) 0%, hsl(40 12% 93%) 100%)" }}>
-        <div className="luxury-container max-w-3xl">
-          <motion.div {...fadeUp} transition={{ duration: 0.8 }} className="text-center">
-            <p className="font-body text-[10px] tracking-[0.35em] uppercase text-charcoal-light mb-6">Understanding the Condition</p>
-            <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-light text-navy leading-[0.95] mb-10">
-              Why Teeth <span className="italic">Wear</span>
-            </h2>
-            <p className="font-body text-sm md:text-[15px] text-charcoal-light font-light leading-[1.85] mb-6 max-w-xl mx-auto">
-              Tooth wear is a gradual process that often goes unnoticed until significant structure has been lost. Contributing factors include:
-            </p>
-            <div className="max-w-sm mx-auto space-y-8 mb-12">
-              {["Clenching and grinding (bruxism)", "Acidic dietary habits", "Natural aging and attrition", "Previous dental work breakdown", "Bite misalignment"].map((item, i) => (
-                <motion.div key={i} {...fadeUp} transition={{ duration: 0.5, delay: i * 0.07 }} className="text-center">
-                  <p className="font-display text-lg md:text-xl font-light text-charcoal tracking-tight">{item}</p>
-                </motion.div>
-              ))}
-            </div>
-            <p className="font-body text-sm md:text-[15px] text-charcoal-light font-light leading-[1.85] max-w-xl mx-auto">
-              Early intervention preserves more natural tooth structure and simplifies treatment.
-            </p>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* ═══════ TREATMENT APPROACH ═══════ */}
-      <section className="py-24 md:py-32 px-6 md:px-8">
-        <div className="luxury-container max-w-3xl">
-          <motion.div {...fadeUp} transition={{ duration: 0.8 }} className="text-center">
-            <p className="font-body text-[10px] tracking-[0.35em] uppercase text-charcoal-light mb-6">Treatment Philosophy</p>
-            <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-light text-navy leading-[0.95] mb-10">
-              Restoring Structure, <span className="italic">Protecting Biology</span>
-            </h2>
-            <div className="max-w-xl mx-auto space-y-6 text-left">
-              {[
-                { title: "Comprehensive Assessment", desc: "A detailed evaluation of wear patterns, bite dynamics, and contributing habits informs every treatment decision." },
-                { title: "Conservative Restoration", desc: "Treatment prioritizes preserving healthy tooth structure while rebuilding what has been lost." },
-                { title: "Bite Stabilization", desc: "Re-establishing proper occlusal relationships prevents further damage and promotes comfort." },
-                { title: "Protective Planning", desc: "Night guards and maintenance protocols safeguard long-term results." },
-              ].map((step, i) => (
-                <motion.div key={i} {...fadeUp} transition={{ duration: 0.5, delay: i * 0.08 }} className="border-b border-divider pb-6">
-                  <h3 className="font-display text-xl font-light text-navy mb-2">{step.title}</h3>
-                  <p className="font-body text-sm text-charcoal-light font-light leading-[1.85]">{step.desc}</p>
-                </motion.div>
-              ))}
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* ═══════ CLOSING ═══════ */}
-      <section className="py-20 md:py-28 px-6 md:px-8" style={{ background: "linear-gradient(180deg, hsl(40 10% 95%) 0%, hsl(40 12% 93%) 100%)" }}>
-        <div className="luxury-container max-w-2xl text-center">
-          <motion.p {...fadeUp} transition={{ duration: 0.8 }} className="font-display text-2xl md:text-3xl font-light text-navy italic leading-snug">
-            "Preservation is the foundation of every lasting restoration."
-          </motion.p>
-        </div>
-      </section>
-
-      {/* Patient Guide Link */}
-      <section className="py-12 md:py-16 px-6 md:px-8 bg-background">
-        <div className="luxury-container text-center">
-          <motion.div {...fadeUp} transition={{ duration: 0.8 }}>
-            <Link
-              to="/guide/veneers"
-              className="inline-block font-body text-[10px] tracking-[0.25em] uppercase text-navy border-b border-navy/30 pb-0.5 hover:border-navy transition-colors"
-            >
-              Learn About the Process
-            </Link>
-          </motion.div>
-        </div>
-      </section>
+      <Section eyebrow="Common questions" heading="Questions patients ask" headingItalic="most often">
+        <FAQ
+          items={[
+            {
+              q: "Can worn teeth just be built back up without crowns?",
+              a: "In earlier cases, frequently yes. Composite bonding added to the worn surfaces can restore shape and height without cutting the tooth, and it is reversible and considerably less expensive. It wears faster than porcelain and needs maintenance, but for a younger patient with moderate wear it is often the better first step precisely because it preserves options.",
+            },
+            {
+              q: "Will changing my bite feel strange?",
+              a: "Initially, usually yes, and that is expected. Most people adapt over two to six weeks. This is exactly why the new position is tested in provisionals first, so any difficulty adapting is discovered while the position can still be changed easily.",
+            },
+            {
+              q: "Will a night guard alone fix it?",
+              a: "A night guard prevents further wear. It does not restore what has already been lost. For someone with early wear it can be the entire treatment, and that is a good outcome. For someone whose bite has already collapsed, it protects the situation but does not correct it.",
+            },
+            {
+              q: "Is grinding caused by stress?",
+              a: "Stress is one contributor, but sleep-disordered breathing, certain medications, reflux and airway issues are all associated with nocturnal grinding. Where the pattern suggests a sleep or airway component, that is worth investigating rather than assuming stress and stopping there.",
+            },
+            {
+              q: "Will insurance cover it?",
+              a: "Coverage is generally better when the treatment is documented as functional rather than cosmetic, which is how genuine wear cases should be presented, with photographs and records showing structural loss. Annual maximums still limit what is realistically recoverable on a large case.",
+            },
+          ]}
+        />
+      </Section>
 
       <PageCTA
-        title="Protect and Restore Your Smile"
-        description="Treatment begins with a thorough assessment of your bite, wear patterns, and long-term goals."
+        heading="Find out how much has actually been lost"
+        body="An assessment establishes the cause, measures what has been lost, and sets out whether this is a case for monitoring, conservative additive treatment, or a full rebuild. Many patients need considerably less than they expect."
+        note="Dr. Akshay Parmar, BDS, DDS, MDSc, FACP, FAAMP. Board-certified prosthodontist, Hamilton Township, New Jersey."
       />
-      <PageFooter />
-    </main>
+
+      <RelatedPages
+        links={[
+          { to: "/full-mouth-reconstruction-new-jersey", label: "Full Mouth Reconstruction" },
+          { to: "/veneers-aesthetic-reconstruction", label: "Porcelain Veneers" },
+          { to: "/smile-design", label: "Digital Smile Design" },
+          { to: "/clinical-cases", label: "Before & After Cases" },
+        ]}
+      />
+    </ClinicalPage>
   );
 };
 

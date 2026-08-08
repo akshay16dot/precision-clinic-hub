@@ -4,6 +4,8 @@ import SiteNavigation from "@/components/SiteNavigation";
 import PageCTA from "@/components/PageCTA";
 import PageFooter from "@/components/PageFooter";
 import { usePageSEO } from "@/hooks/usePageSEO";
+import TreatmentJourney from "@/components/TreatmentJourney";
+import { teethWhiteningJourney } from "@/data/treatmentGuides";
 import heroImage from "@/assets/hero-teeth-whitening.png";
 
 const fadeUp = {
@@ -146,7 +148,7 @@ const TeethWhitening = () => {
         <div className="luxury-container text-center">
           <motion.div {...fadeUp} transition={{ duration: 0.8 }}>
             <Link
-              to="/guide/teeth-whitening"
+              to="/teeth-whitening"
               className="inline-block font-body text-[10px] tracking-[0.25em] uppercase text-navy border-b border-navy/30 pb-0.5 hover:border-navy transition-colors"
             >
               Learn About the Process
@@ -154,6 +156,8 @@ const TeethWhitening = () => {
           </motion.div>
         </div>
       </section>
+
+      <TreatmentJourney data={teethWhiteningJourney} />
 
       <PageCTA
         title="A Brighter, More Confident Smile"

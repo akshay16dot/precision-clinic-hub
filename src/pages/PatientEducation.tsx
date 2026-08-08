@@ -36,7 +36,7 @@ const sections: EducationSection[] = [
     titleItalic: "Implants",
     description:
       "Dental implants are precision-engineered replacements that integrate with your jawbone, restoring natural function, stability, and aesthetics. Treatment is individually planned based on bone quality, tissue health, and long-term structural requirements.",
-    link: "/guide/dental-implants",
+    link: "/dental-implants-new-jersey",
     faqs: [
       {
         q: "What makes dental implants different from bridges or dentures?",
@@ -63,7 +63,7 @@ const sections: EducationSection[] = [
     titleItalic: "Implants",
     description:
       "In carefully selected cases, implants can be placed at the same visit as tooth extraction. This approach preserves natural tissue architecture and may significantly reduce overall treatment time while maintaining biologic stability.",
-    link: "/guide/immediate-implants",
+    link: "/immediate-implant-rehabilitation",
     faqs: [
       {
         q: "Am I a candidate for immediate implants?",
@@ -86,7 +86,7 @@ const sections: EducationSection[] = [
     titleItalic: "(All-on-X)",
     description:
       "Full-arch treatment replaces an entire set of teeth using strategically positioned implants. This approach is designed for patients with multiple failing teeth, advanced wear, or long-term instability, restoring complete oral function and confidence.",
-    link: "/guide/full-arch-implants",
+    link: "/full-arch-implants-new-jersey",
     faqs: [
       {
         q: "What does 'All-on-X' mean?",
@@ -113,7 +113,7 @@ const sections: EducationSection[] = [
     titleItalic: "Design",
     description:
       "Porcelain veneers and smile design treatments are precision-crafted to enhance shape, color, symmetry, and facial harmony. Each case is individually designed based on dental anatomy, functional requirements, and long-term stability.",
-    link: "/guide/veneers",
+    link: "/veneers-aesthetic-reconstruction",
     faqs: [
       {
         q: "How long do porcelain veneers last?",

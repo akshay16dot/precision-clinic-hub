@@ -5,6 +5,8 @@ import PageHero from "@/components/PageHero";
 import PageCTA from "@/components/PageCTA";
 import PageFooter from "@/components/PageFooter";
 import { usePageSEO } from "@/hooks/usePageSEO";
+import TreatmentJourney from "@/components/TreatmentJourney";
+import { dentalImplantsJourney } from "@/data/treatmentGuides";
 
 const benefits = [
   {
@@ -164,19 +166,34 @@ const DentalImplants = () => {
         </div>
       </section>
 
-      {/* Patient Guide Link */}
-      <section className="py-12 md:py-16 px-6 md:px-8 bg-background">
-        <div className="luxury-container text-center">
-          <motion.div {...fadeUp} transition={{ duration: 0.8 }}>
-            <Link
-              to="/guide/dental-implants"
-              className="inline-block font-body text-[10px] tracking-[0.25em] uppercase text-navy border-b border-navy/30 pb-0.5 hover:border-navy transition-colors"
-            >
-              Learn About the Process
-            </Link>
+      {/* Related reading */}
+      <section className="py-14 md:py-20 px-6 md:px-8 bg-background">
+        <div className="luxury-container">
+          <motion.div {...fadeUp} transition={{ duration: 0.8 }} className="max-w-2xl mx-auto text-center">
+            <p className="font-body text-[10px] tracking-[0.3em] uppercase text-charcoal-light/70 mb-7">
+              Related Reading
+            </p>
+            <div className="flex flex-wrap items-center justify-center gap-x-7 gap-y-3.5">
+              {[
+                { to: "/front-tooth-implant-new-jersey", label: "Front Tooth Implants" },
+                { to: "/immediate-implant-rehabilitation", label: "Same-Day Implants" },
+                { to: "/failed-dental-implant-revision", label: "Failed Implant Revision" },
+                { to: "/prosthodontist-vs-oral-surgeon", label: "Which Specialist Do I Need?" },
+              ].map((l, i) => (
+                <Link
+                  key={i}
+                  to={l.to}
+                  className="font-body text-[11px] tracking-[0.16em] uppercase text-navy/65 hover:text-navy transition-colors duration-300 border-b border-navy/20 hover:border-navy/50 pb-px"
+                >
+                  {l.label}
+                </Link>
+              ))}
+            </div>
           </motion.div>
         </div>
       </section>
+
+      <TreatmentJourney data={dentalImplantsJourney} />
 
       <PageCTA
         description="Begin with a comprehensive evaluation to determine the most appropriate implant rehabilitation pathway for your clinical needs."

@@ -4,6 +4,8 @@ import SiteNavigation from "@/components/SiteNavigation";
 import PageCTA from "@/components/PageCTA";
 import PageFooter from "@/components/PageFooter";
 import { usePageSEO } from "@/hooks/usePageSEO";
+import TreatmentJourney from "@/components/TreatmentJourney";
+import { maxillofacialJourney } from "@/data/treatmentGuides";
 import drParmarMSK from "@/assets/dr-parmar-msk.png";
 import obturatorProsthesis from "@/assets/obturator-prosthesis.png";
 import obturatorProsthesis2 from "@/assets/obturator-prosthesis-2.png";
@@ -430,12 +432,39 @@ const MaxillofacialRehabilitation = () => {
         </div>
       </section>
 
-      {/* Patient Guide Link */}
-      <section className="py-12 md:py-16 px-6 md:px-8 bg-background">
+      {/* Prosthesis types */}
+      <section className="py-14 md:py-20 px-6 md:px-8 bg-background">
+        <div className="luxury-container">
+          <motion.div {...fadeUp} transition={{ duration: 0.8 }} className="max-w-2xl mx-auto text-center">
+            <p className="font-body text-[10px] tracking-[0.3em] uppercase text-charcoal-light/70 mb-7">
+              Prosthesis Types
+            </p>
+            <div className="flex flex-wrap items-center justify-center gap-x-7 gap-y-3.5">
+              {[
+                { to: "/nasal-prosthesis", label: "Nasal Prosthesis" },
+                { to: "/auricular-prosthesis", label: "Auricular Prosthesis" },
+                { to: "/orbital-prosthesis", label: "Orbital Prosthesis" },
+                { to: "/facial-prosthesis-insurance-coverage", label: "Insurance Coverage" },
+              ].map((l, i) => (
+                <Link
+                  key={i}
+                  to={l.to}
+                  className="font-body text-[11px] tracking-[0.16em] uppercase text-navy/65 hover:text-navy transition-colors duration-300 border-b border-navy/20 hover:border-navy/50 pb-px"
+                >
+                  {l.label}
+                </Link>
+              ))}
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Legacy guide link, kept hidden from layout but harmless */}
+      <section className="hidden">
         <div className="luxury-container text-center">
           <motion.div {...fadeUp} transition={{ duration: 0.8 }}>
             <Link
-              to="/guide/maxillofacial-rehabilitation"
+              to="/maxillofacial-rehabilitation"
               className="inline-block font-body text-[10px] tracking-[0.25em] uppercase text-navy border-b border-navy/30 pb-0.5 hover:border-navy transition-colors"
             >
               Learn About the Process
@@ -443,6 +472,8 @@ const MaxillofacialRehabilitation = () => {
           </motion.div>
         </div>
       </section>
+
+      <TreatmentJourney data={maxillofacialJourney} />
 
       <PageCTA
         title="Begin the Conversation"

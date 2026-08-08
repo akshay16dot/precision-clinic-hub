@@ -5,6 +5,8 @@ import SiteNavigation from "@/components/SiteNavigation";
 import PageCTA from "@/components/PageCTA";
 import PageFooter from "@/components/PageFooter";
 import { usePageSEO } from "@/hooks/usePageSEO";
+import TreatmentJourney from "@/components/TreatmentJourney";
+import { veneersJourney } from "@/data/treatmentGuides";
 import case1Before from "@/assets/veneer-case1-before.png";
 import case1After from "@/assets/veneer-case1-after.png";
 import case2Before from "@/assets/veneer-case2-before.png";
@@ -277,7 +279,7 @@ const VeneersAesthetic = () => {
         <div className="luxury-container text-center">
           <motion.div {...fadeUp} transition={{ duration: 0.8 }}>
             <Link
-              to="/guide/veneers"
+              to="/veneers-aesthetic-reconstruction"
               className="inline-block font-body text-[10px] tracking-[0.25em] uppercase text-navy border-b border-navy/30 pb-0.5 hover:border-navy transition-colors"
             >
               Learn About the Process
@@ -287,6 +289,8 @@ const VeneersAesthetic = () => {
       </section>
 
       {/* ═══════ CTA ═══════ */}
+      <TreatmentJourney data={veneersJourney} />
+
       <PageCTA
         title="A Smile Designed for Long-Term Stability"
         description="Every smile is unique. Treatment begins with comprehensive evaluation, digital planning, and biologically respectful design."
