@@ -99,6 +99,7 @@
     color-scheme: light only;
     -webkit-text-size-adjust: 100%;
     forced-color-adjust: none;
+    overflow-x: hidden;
   }
 
   * {
@@ -109,6 +110,7 @@
     @apply bg-background text-foreground antialiased;
     font-family: 'Inter', sans-serif;
     color-scheme: light only;
+    overflow-x: hidden;
   }
 
   h1, h2, h3, h4, h5, h6 {
