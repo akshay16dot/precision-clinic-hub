@@ -95,12 +95,12 @@ const ServicesSection = () => {
                 to={service.link}
                 className="flex flex-col h-full border border-divider bg-background hover:bg-card group transition-all duration-500 hover:border-navy/20 hover:shadow-[0_8px_30px_-12px_hsl(220_20%_15%/0.12)] overflow-hidden"
               >
-                <div className={`relative aspect-[16/9] overflow-hidden shrink-0 ${service.contain ? "bg-navy" : ""}`}>
+                <div className={`relative aspect-[16/9] overflow-hidden shrink-0 ${service.contain ? "bg-navy-deep" : ""}`}>
                   <img
                     src={service.img}
                     alt={service.title}
                     loading="lazy"
-                    className={`w-full h-full transition-transform duration-700 group-hover:scale-[1.05] ${service.contain ? "object-contain p-2" : "object-cover"}`}
+                    className={`w-full h-full transition-transform duration-700 group-hover:scale-[1.05] ${service.contain ? "object-contain" : "object-cover"}`}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/25 to-transparent" />
                   <p className="absolute bottom-2.5 left-4 font-body text-[10px] tracking-[0.3em] uppercase text-white/70">
