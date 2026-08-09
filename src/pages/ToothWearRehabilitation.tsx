@@ -1,4 +1,6 @@
 import { usePageSEO } from "@/hooks/usePageSEO";
+import caseOne from "@/assets/tooth-wear-case-1.jpg.asset.json";
+import caseTwo from "@/assets/tooth-wear-case-2.jpg.asset.json";
 import {
   ClinicalPage,
   Section,
@@ -11,6 +13,7 @@ import {
   PageCTA,
   RelatedPages,
 } from "@/components/ClinicalPage";
+
 
 const ToothWearRehabilitation = () => {
   usePageSEO({
