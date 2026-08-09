@@ -15,6 +15,7 @@ const coreServices = [
     link: "/dental-implants-new-jersey",
     icon: "01",
     img: imgImplants,
+    contain: true,
   },
   {
     title: "Same-Day Implants",
