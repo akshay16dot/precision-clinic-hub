@@ -246,7 +246,7 @@ const SiteNavigation = () => {
                 {item.to && !item.links ? (
                   <Link
                     to={item.to}
-                    className={`px-3 xl:px-4 py-2 font-body text-[10px] xl:text-[11px] tracking-[0.2em] uppercase transition-colors duration-300 ${
+                    className={`inline-flex items-center leading-none px-3 xl:px-4 py-2 font-body text-[10px] xl:text-[11px] tracking-[0.2em] uppercase transition-colors duration-300 ${
                       showSolid
                         ? "text-muted-foreground hover:text-navy"
                         : "text-primary-foreground/50 hover:text-primary-foreground"
@@ -256,7 +256,7 @@ const SiteNavigation = () => {
                   </Link>
                 ) : (
                   <button
-                    className={`px-3 xl:px-4 py-2 font-body text-[10px] xl:text-[11px] tracking-[0.2em] uppercase transition-colors duration-300 ${
+                    className={`inline-flex items-center leading-none px-3 xl:px-4 py-2 font-body text-[10px] xl:text-[11px] tracking-[0.2em] uppercase transition-colors duration-300 ${
                       showSolid
                         ? "text-muted-foreground hover:text-navy"
                         : "text-primary-foreground/50 hover:text-primary-foreground"
