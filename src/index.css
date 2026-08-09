@@ -36,6 +36,7 @@
 
     /* Custom tokens */
     --navy: 220 45% 18%;
+    --navy-deep: 220 40% 5%;
     --navy-light: 220 35% 30%;
     --charcoal: 220 15% 20%;
     --charcoal-light: 220 10% 40%;
@@ -86,6 +87,12 @@
 }
 
 @layer base {
+  html {
+    color-scheme: light only;
+    -webkit-text-size-adjust: 100%;
+    forced-color-adjust: none;
+  }
+
   * {
     @apply border-border;
   }
@@ -93,6 +100,7 @@
   body {
     @apply bg-background text-foreground antialiased;
     font-family: 'Inter', sans-serif;
+    color-scheme: light only;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -115,6 +123,10 @@
 
   .bg-navy {
     background-color: hsl(var(--navy));
+  }
+
+  .bg-navy-deep {
+    background-color: hsl(var(--navy-deep));
   }
 
   .text-charcoal {
