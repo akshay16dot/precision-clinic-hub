@@ -55,34 +55,42 @@
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
+  /* Site is light-only. Dark class mirrors the light palette so no device
+     setting or auto dark theme can invert the brand colors. */
   .dark {
-    --background: 220 20% 8%;
-    --foreground: 40 15% 90%;
-    --card: 220 20% 10%;
-    --card-foreground: 40 15% 90%;
-    --popover: 220 20% 8%;
-    --popover-foreground: 40 15% 90%;
-    --primary: 40 15% 90%;
-    --primary-foreground: 220 20% 8%;
-    --secondary: 220 15% 15%;
-    --secondary-foreground: 40 15% 90%;
-    --muted: 220 15% 15%;
-    --muted-foreground: 220 10% 55%;
-    --accent: 220 15% 15%;
-    --accent-foreground: 40 15% 90%;
-    --destructive: 0 62.8% 30.6%;
+    --background: 40 20% 98%;
+    --foreground: 220 15% 20%;
+    --card: 40 15% 96%;
+    --card-foreground: 220 15% 20%;
+    --popover: 40 20% 98%;
+    --popover-foreground: 220 15% 20%;
+    --primary: 220 45% 18%;
+    --primary-foreground: 40 20% 98%;
+    --secondary: 40 12% 94%;
+    --secondary-foreground: 220 15% 20%;
+    --muted: 40 10% 93%;
+    --muted-foreground: 220 10% 50%;
+    --accent: 220 45% 18%;
+    --accent-foreground: 40 20% 98%;
+    --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
-    --border: 220 15% 18%;
-    --input: 220 15% 18%;
-    --ring: 40 15% 80%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
+    --border: 220 15% 88%;
+    --input: 220 15% 88%;
+    --ring: 220 45% 18%;
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
     --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root, .dark, html, body {
+      color-scheme: light only;
+    }
   }
 }
 
