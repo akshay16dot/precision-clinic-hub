@@ -136,7 +136,7 @@ const sections: EducationSection[] = [
     titleItalic: "Reconstruction",
     description:
       "Full mouth reconstruction addresses extensive dental breakdown through a coordinated treatment plan involving multiple restorative procedures. This approach restores function, vertical dimension, structural stability, and long-term oral health.",
-    link: "/aesthetic-dentistry",
+    link: "/full-mouth-reconstruction-new-jersey",
     linkLabel: "Explore Treatment Options",
     faqs: [
       {

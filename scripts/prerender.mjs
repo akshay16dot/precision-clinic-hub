@@ -48,6 +48,15 @@ const ROUTES = [
   "/stable-protocol",
   // Anterior aesthetics
   "/front-tooth-implant-new-jersey",
+  // Legacy URLs: emit static HTML at the old paths so GitHub Pages does not
+  // return a 404 before React can redirect to the canonical destination.
+  "/aesthetic-dentistry",
+  "/guide/dental-implants",
+  "/guide/immediate-implants",
+  "/guide/full-arch-implants",
+  "/guide/teeth-whitening",
+  "/guide/veneers",
+  "/guide/maxillofacial-rehabilitation",
 ];
 
 const MIME = { ".html": "text/html", ".js": "text/javascript", ".css": "text/css", ".png": "image/png", ".jpg": "image/jpeg", ".svg": "image/svg+xml", ".ico": "image/x-icon", ".webmanifest": "application/manifest+json", ".xml": "application/xml", ".txt": "text/plain", ".woff2": "font/woff2" };

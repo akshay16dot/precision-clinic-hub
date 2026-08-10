@@ -10,7 +10,7 @@ const professionalLinks = [
   {
     name: "The Dental Project",
     description: "Clinical Education & Surgical Training",
-    url: "https://www.instagram.com/thedental_project/",
+    url: "https://www.instagram.com/parmarsmiles/",
   },
   {
     name: "Decoded Weekly",
@@ -105,7 +105,7 @@ const FooterSection = () => {
               <Link to="/full-arch-implants-new-jersey" className="block font-body text-xs text-primary-foreground/55 hover:text-primary-foreground/85 tracking-wide transition-colors">
                 Full-Arch Rehabilitation
               </Link>
-              <Link to="/aesthetic-dentistry" className="block font-body text-xs text-primary-foreground/55 hover:text-primary-foreground/85 tracking-wide transition-colors">
+              <Link to="/full-mouth-reconstruction-new-jersey" className="block font-body text-xs text-primary-foreground/55 hover:text-primary-foreground/85 tracking-wide transition-colors">
                 Aesthetic Dentistry
               </Link>
               <Link to="/maxillofacial-rehabilitation" className="block font-body text-xs text-primary-foreground/55 hover:text-primary-foreground/85 tracking-wide transition-colors">
