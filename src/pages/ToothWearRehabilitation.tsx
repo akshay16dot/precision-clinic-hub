@@ -1,6 +1,4 @@
 import { usePageSEO } from "@/hooks/usePageSEO";
-import caseOne from "@/assets/tooth-wear-case-1.jpg.asset.json";
-import caseTwo from "@/assets/tooth-wear-case-2.jpg.asset.json";
 import {
   ClinicalPage,
   Section,
@@ -10,10 +8,12 @@ import {
   Note,
   RefTable,
   FAQ,
+  CaseGallery,
   PageCTA,
   RelatedPages,
 } from "@/components/ClinicalPage";
-
+import toothWearCase1 from "@/assets/toothwear-case1.jpg";
+import toothWearCase2 from "@/assets/toothwear-case2.jpg";
 
 const ToothWearRehabilitation = () => {
   usePageSEO({
@@ -109,45 +109,24 @@ const ToothWearRehabilitation = () => {
         </P>
       </Section>
 
-      <section className="py-14 md:py-20" style={{ background: "hsl(40 20% 98%)" }}>
-        <div className="luxury-container px-6 md:px-8">
-          <div className="max-w-2xl mx-auto mb-10">
-            <p className="font-body text-[10px] tracking-[0.3em] uppercase text-charcoal-light/70 mb-5">
-              Real Patients &middot; Real Outcomes
-            </p>
-            <h2 className="font-display text-2xl md:text-[32px] font-light text-navy leading-[1.2]">
-              Worn and collapsed bites,{" "}
-              <em className="italic">rebuilt</em>
-            </h2>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 max-w-4xl mx-auto">
-            {[
-              { src: caseOne.url, caption: "Severe wear with shortened front teeth, restored to full height and contour." },
-              { src: caseTwo.url, caption: "Collapsed bite and failing dentition, rebuilt with restored vertical dimension." },
-            ].map((c) => (
-              <figure key={c.src} className="border border-divider bg-background overflow-hidden">
-                <img
-                  src={c.src}
-                  alt={c.caption}
-                  loading="lazy"
-                  className="w-full h-auto object-cover"
-                />
-                <figcaption className="p-5 font-body text-xs text-charcoal-light font-light leading-relaxed">
-                  <span className="block text-[10px] tracking-[0.25em] uppercase text-charcoal-light/70 mb-2">
-                    Before / After
-                  </span>
-                  {c.caption}
-                </figcaption>
-              </figure>
-            ))}
-          </div>
-          <p className="max-w-2xl mx-auto mt-8 font-body text-[11px] text-charcoal-light/70 font-light leading-relaxed">
-            Actual patients treated by Dr. Akshay Parmar. Individual results vary.
-          </p>
-        </div>
-      </section>
-
-
+      <CaseGallery
+        eyebrow="Case Photography"
+        heading="What rebuilding lost height"
+        headingItalic="actually looks like"
+        intro="Two patients with advanced wear, restored to a corrected bite. Shown with their consent."
+        cases={[
+          {
+            image: toothWearCase1,
+            alt: "Worn, discoloured and chipped front teeth before treatment, and the same teeth rebuilt to a full, even smile after bite reconstruction",
+            label: "Advanced wear, rebuilt to a corrected bite",
+          },
+          {
+            image: toothWearCase2,
+            alt: "Shortened, worn upper front teeth before treatment, and a full arch of natural-looking restorations after full mouth rebuild",
+            label: "Collapsed bite, restored across the full arch",
+          },
+        ]}
+      />
 
       <Section alt heading="Catching it" headingItalic="early is cheaper">
         <P>
