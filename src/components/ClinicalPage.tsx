@@ -115,6 +115,87 @@ export const Section = ({
   </section>
 );
 
+/* ── Case gallery. Composite before/after photographs on a dark section so it
+      reads as a break from the surrounding prose. Each image is a single file
+      with "before" stacked above "after" — labelled with two small pinned tags
+      rather than split into two crops, since splitting risks cutting a photo
+      at the wrong line. Only ever pass photographs with documented consent. ── */
+export const CaseGallery = ({
+  eyebrow,
+  heading,
+  headingItalic,
+  intro,
+  cases,
+}: {
+  eyebrow?: string;
+  heading?: string;
+  headingItalic?: string;
+  intro?: string;
+  cases: { image: string; alt: string; label: string }[];
+}) => (
+  <section className="py-14 md:py-20" style={{ background: "hsl(220 32% 12%)" }}>
+    <div className="luxury-container px-6 md:px-8">
+      <motion.div
+        {...fade}
+        transition={{ duration: 0.7 }}
+        className="max-w-2xl mx-auto text-center mb-12 md:mb-14"
+      >
+        {eyebrow && (
+          <p className="font-body text-[10px] tracking-[0.3em] uppercase text-primary-foreground/45 mb-5">
+            {eyebrow}
+          </p>
+        )}
+        {heading && (
+          <h2 className="font-display text-2xl md:text-[32px] font-light text-primary-foreground leading-[1.2] mb-5">
+            {heading}
+            {headingItalic && (
+              <>
+                {" "}
+                <em className="italic">{headingItalic}</em>
+              </>
+            )}
+          </h2>
+        )}
+        {intro && (
+          <p className="font-body text-sm text-primary-foreground/60 font-light leading-relaxed">
+            {intro}
+          </p>
+        )}
+      </motion.div>
+
+      <div
+        className={`grid gap-6 md:gap-8 mx-auto ${
+          cases.length > 1 ? "max-w-4xl sm:grid-cols-2" : "max-w-md"
+        }`}
+      >
+        {cases.map((c, i) => (
+          <motion.figure
+            key={i}
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-40px" }}
+            transition={{ duration: 0.6, delay: Math.min(i, 3) * 0.08 }}
+            className="relative overflow-hidden rounded-sm border border-primary-foreground/10"
+          >
+            <img src={c.image} alt={c.alt} loading="lazy" className="w-full h-auto block" />
+            <span className="absolute left-4 top-4 px-2.5 py-1 bg-[hsl(220_30%_8%/0.72)] backdrop-blur-sm font-body text-[9px] tracking-[0.22em] uppercase text-primary-foreground/85">
+              Before
+            </span>
+            <span className="absolute left-4 top-[54%] px-2.5 py-1 bg-[hsl(220_30%_8%/0.72)] backdrop-blur-sm font-body text-[9px] tracking-[0.22em] uppercase text-primary-foreground/85">
+              After
+            </span>
+            <figcaption className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-[hsl(220_30%_8%/0.9)] to-transparent px-5 pt-12 pb-4">
+              <span className="font-body text-[10.5px] tracking-[0.08em] text-primary-foreground/90">
+                {c.label}
+              </span>
+            </figcaption>
+          </motion.figure>
+        ))}
+      </div>
+    </div>
+  </section>
+);
+
 /* ── Body paragraph ── */
 export const P = ({ children }: { children: ReactNode }) => (
   <p className="font-body text-[15px] md:text-base text-charcoal-light font-light leading-[1.75]">
