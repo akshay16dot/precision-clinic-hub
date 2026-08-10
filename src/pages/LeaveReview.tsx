@@ -51,7 +51,7 @@ const LeaveReview = () => {
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.3 }}
-            href="https://g.page/review"
+            href="https://g.page/r/CUmWZHTd3MBfEAI/review"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-3 px-14 py-[18px] bg-navy text-primary-foreground font-body text-[11px] tracking-[0.25em] uppercase transition-all duration-300 hover:opacity-90 border border-navy"
