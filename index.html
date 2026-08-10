@@ -3,8 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="color-scheme" content="light" />
-    <meta name="supported-color-schemes" content="light" />
     <title>Prosthodontist in Hamilton Township, NJ | Dr. Akshay Parmar</title>
     <meta name="description" content="Board-certified prosthodontist in Hamilton Township, NJ. Dental implants, full-arch reconstruction and complex restorative care. Call (609) 585-1616." />
     <meta name="author" content="Dr. Akshay Parmar, BDS, DDS, MDSc, FACP, FAAMP" />
@@ -23,13 +21,47 @@
     <meta name="twitter:image" content="https://drparmardds.com/og-image.png?v=2" />
     <meta name="geo.region" content="US-NJ" />
     <meta name="geo.placename" content="Hamilton Township, New Jersey" />
-    <link rel="icon" type="image/x-icon" href="/favicon.ico?v=7" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=7" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=7" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=7" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico?v=8" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=8" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=8" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=8" />
     <link rel="manifest" href="/site.webmanifest?v=7" />
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
     <meta name="theme-color" content="#151E2D" />
+    <style>
+      /* Splash screen: shows immediately (before the JS bundle even loads,
+         so there's no flash of unstyled content), then the inline script
+         below fades it out ~1s after first paint. Pure CSS/vanilla JS,
+         not React, so it renders instantly on a static/prerendered page
+         and never depends on hydration finishing. */
+      #splash-screen {
+        position: fixed;
+        inset: 0;
+        z-index: 999;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #192743;
+        transition: opacity 0.4s ease;
+      }
+      #splash-screen img {
+        width: 88px;
+        height: auto;
+        opacity: 0;
+        transform: scale(0.92);
+        animation: splash-in 0.5s ease-out 0.05s forwards;
+      }
+      #splash-screen.splash-exit {
+        opacity: 0;
+        pointer-events: none;
+      }
+      @keyframes splash-in {
+        to { opacity: 1; transform: scale(1); }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        #splash-screen img { animation: none; opacity: 1; transform: none; }
+      }
+    </style>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -108,7 +140,8 @@
           "employee": { "@id": "https://drparmardds.com/#akshay-parmar" },
           "sameAs": [
             "https://www.instagram.com/dr.akshayparmar/",
-            "https://www.instagram.com/thedental_project/",
+            "https://www.instagram.com/parmarsmiles/",
+            "https://www.youtube.com/@ParmarSmiles",
             "https://substack.com/@decodedweekly"
           ]
         },
@@ -165,7 +198,6 @@
           "sameAs": [
             "https://dental.nyu.edu/faculty/pt/ap8746.html",
             "https://www.instagram.com/dr.akshayparmar/",
-            "https://www.youtube.com/@HoProsthodontics",
             "https://www.linkedin.com/in/akshay-parmar-972308ab/"
           ]
         },
@@ -181,6 +213,22 @@
     </script>
   </head>
   <body>
+    <div id="splash-screen" aria-hidden="true">
+      <img src="/splash-icon.png" alt="" width="88" height="80" />
+    </div>
+    <script>
+      (function () {
+        var el = document.getElementById("splash-screen");
+        if (!el) return;
+        var reduced = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+        setTimeout(function () {
+          el.classList.add("splash-exit");
+          setTimeout(function () {
+            el.remove();
+          }, 420);
+        }, reduced ? 150 : 950);
+      })();
+    </script>
     <noscript>
       <h1>Dr. Akshay Parmar, BDS, DDS, MDSc, FACP, FAAMP, Prosthodontist in Hamilton Township, NJ</h1>
       <p>
