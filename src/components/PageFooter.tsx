@@ -8,9 +8,14 @@ const professionalLinks = [
     url: "https://www.instagram.com/dr.akshayparmar/",
   },
   {
-    name: "The Dental Project",
-    description: "Clinical Education & Surgical Training",
-    url: "https://www.instagram.com/thedental_project/",
+    name: "Parmar Smiles (Instagram)",
+    description: "Patient Stories & Smile Transformations",
+    url: "https://www.instagram.com/parmarsmiles/",
+  },
+  {
+    name: "Parmar Smiles (YouTube)",
+    description: "Patient Education",
+    url: "https://www.youtube.com/@ParmarSmiles",
   },
   {
     name: "Decoded Weekly",
@@ -26,8 +31,13 @@ const PageFooter = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-10 items-start">
           {/* Logo & Contact */}
           <div>
-            <Link to="/">
-              <img src={logoAP} alt="Dr. Akshay Parmar" className="h-44 md:h-56 mb-6" style={{ filter: "invert(1)" }} />
+            <Link to="/" className="inline-block mb-6">
+              <img
+                src={logoAP}
+                alt="Dr. Akshay Parmar"
+                className="h-24 md:h-28 w-auto"
+                style={{ filter: "brightness(0) invert(1)" }}
+              />
             </Link>
             <p className="font-body text-[10px] tracking-[0.3em] uppercase text-primary-foreground/45 mb-3">
               Board-Certified Prosthodontist
@@ -55,7 +65,7 @@ const PageFooter = () => {
             </p>
             <Link to="/dental-implants-new-jersey" className="block font-body text-xs text-primary-foreground/55 hover:text-primary-foreground/80 tracking-wide transition-colors">Dental Implants</Link>
             <Link to="/full-arch-implants-new-jersey" className="block font-body text-xs text-primary-foreground/55 hover:text-primary-foreground/80 tracking-wide transition-colors">Full-Arch Rehabilitation</Link>
-            <Link to="/aesthetic-dentistry" className="block font-body text-xs text-primary-foreground/55 hover:text-primary-foreground/80 tracking-wide transition-colors">Aesthetic Dentistry</Link>
+            <Link to="/full-mouth-reconstruction-new-jersey" className="block font-body text-xs text-primary-foreground/55 hover:text-primary-foreground/80 tracking-wide transition-colors">Aesthetic Dentistry</Link>
             <Link to="/maxillofacial-rehabilitation" className="block font-body text-xs text-primary-foreground/55 hover:text-primary-foreground/80 tracking-wide transition-colors">Maxillofacial Rehabilitation</Link>
             <Link to="/education" className="block font-body text-xs text-primary-foreground/55 hover:text-primary-foreground/80 tracking-wide transition-colors">Education & Courses</Link>
             <Link to="/about" className="block font-body text-xs text-primary-foreground/55 hover:text-primary-foreground/80 tracking-wide transition-colors">About</Link>
