@@ -219,19 +219,32 @@ const SiteNavigation = () => {
         }`}
       >
         <div className="luxury-container flex items-center justify-between py-3 sm:py-4 px-6 md:px-10">
-          {/* Logo */}
-            <Link to="/" className="hover:opacity-80 transition-opacity duration-300 shrink-0 -ml-3 sm:-ml-2 lg:ml-0">
+          {/* Logo: the "Parmar" script wordmark is the primary mark, used at a
+              size where it stays legible (confirmed at 64px+; this renders
+              taller than that on every breakpoint). The name is pixels inside
+              this image, not live text, so the alt attribute carries it for
+              search and AI crawlers. The tagline underneath is real text,
+              stacked below the mark rather than beside it so it reads as
+              part of the same lockup instead of competing with it. */}
+          <Link
+            to="/"
+            className="hover:opacity-80 transition-opacity duration-300 shrink-0 -ml-3 sm:-ml-2 lg:ml-0 flex flex-col items-start gap-1 sm:gap-1.5"
+          >
             <img
               src={logoAP}
               alt="Dr. Akshay Parmar"
-              className={`transition-all duration-500 ${
-                showSolid ? "h-24 sm:h-28 md:h-32 lg:h-36 mix-blend-multiply" : "h-40 sm:h-44 md:h-44 lg:h-48"
+              className={`transition-all duration-500 w-auto shrink-0 ${
+                showSolid ? "h-9 sm:h-10 md:h-12 lg:h-14" : "h-11 sm:h-12 md:h-14 lg:h-16"
               }`}
-              style={{ 
-                filter: showSolid ? "none" : "invert(1) brightness(2)",
-                mixBlendMode: showSolid ? "normal" : "screen"
-              }}
+              style={{ filter: showSolid ? "none" : "brightness(0) invert(1)" }}
             />
+            <span
+              className={`font-body text-[6px] sm:text-[6.5px] md:text-[7px] tracking-[0.16em] uppercase whitespace-nowrap transition-colors duration-300 ${
+                showSolid ? "text-charcoal-light/60" : "text-primary-foreground/55"
+              }`}
+            >
+              Implants &nbsp;·&nbsp; Aesthetics &nbsp;·&nbsp; Smile Reconstruction
+            </span>
           </Link>
 
           {/* Desktop nav items */}
