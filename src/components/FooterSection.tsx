@@ -8,9 +8,14 @@ const professionalLinks = [
     url: "https://www.instagram.com/dr.akshayparmar/",
   },
   {
-    name: "The Dental Project",
-    description: "Clinical Education & Surgical Training",
-    url: "https://www.instagram.com/thedental_project/",
+    name: "Parmar Smiles (Instagram)",
+    description: "Patient Stories & Smile Transformations",
+    url: "https://www.instagram.com/parmarsmiles/",
+  },
+  {
+    name: "Parmar Smiles (YouTube)",
+    description: "Patient Education",
+    url: "https://www.youtube.com/@ParmarSmiles",
   },
   {
     name: "Decoded Weekly",
@@ -59,8 +64,13 @@ const FooterSection = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-10 items-start">
             {/* Practice & Contact */}
             <div>
-              <Link to="/" className="inline-block">
-                <img src={logoAP} alt="Dr. Akshay Parmar" className="h-32 md:h-44 mb-5" style={{ filter: "invert(1)" }} />
+              <Link to="/" className="inline-block mb-5">
+                <img
+                  src={logoAP}
+                  alt="Dr. Akshay Parmar"
+                  className="h-20 md:h-24 w-auto"
+                  style={{ filter: "brightness(0) invert(1)" }}
+                />
               </Link>
               <p className="font-body text-[10px] tracking-[0.3em] uppercase text-primary-foreground/45 mb-4">
                 Board-Certified Prosthodontist
@@ -105,7 +115,7 @@ const FooterSection = () => {
               <Link to="/full-arch-implants-new-jersey" className="block font-body text-xs text-primary-foreground/55 hover:text-primary-foreground/85 tracking-wide transition-colors">
                 Full-Arch Rehabilitation
               </Link>
-              <Link to="/aesthetic-dentistry" className="block font-body text-xs text-primary-foreground/55 hover:text-primary-foreground/85 tracking-wide transition-colors">
+              <Link to="/full-mouth-reconstruction-new-jersey" className="block font-body text-xs text-primary-foreground/55 hover:text-primary-foreground/85 tracking-wide transition-colors">
                 Aesthetic Dentistry
               </Link>
               <Link to="/maxillofacial-rehabilitation" className="block font-body text-xs text-primary-foreground/55 hover:text-primary-foreground/85 tracking-wide transition-colors">
