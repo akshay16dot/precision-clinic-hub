@@ -33,11 +33,15 @@ const HeroSection = () => {
               Board-Certified Prosthodontist · Hamilton Township, NJ
             </p>
 
-            <h1 className="font-display font-light text-navy tracking-tight leading-[1.04] text-[38px] sm:text-[50px] lg:text-[58px] xl:text-[68px] mb-6 sm:mb-8">
+            <h1 className="font-display font-light text-navy tracking-tight leading-[1.04] text-[38px] sm:text-[50px] lg:text-[58px] xl:text-[68px] mb-5 sm:mb-6">
               Rebuilding smiles
               <br />
               that feel <span className="italic">like your own.</span>
             </h1>
+
+            <p className="font-body text-[10.5px] sm:text-[11px] tracking-[0.28em] uppercase text-navy/60 font-medium mb-6 sm:mb-8">
+              Implants &nbsp;·&nbsp; Aesthetics &nbsp;·&nbsp; Smile Reconstruction
+            </p>
 
             <p className="font-body text-[14px] sm:text-[15px] text-charcoal-light font-light leading-relaxed max-w-md mx-auto lg:mx-0 mb-9 sm:mb-11">
               Implants, veneers and full-arch reconstruction for the cases other
