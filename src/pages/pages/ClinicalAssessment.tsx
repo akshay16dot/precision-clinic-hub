@@ -149,7 +149,7 @@ const PATHWAYS: Record<string, Pathway> = {
     titleItalic: "Enhancement",
     description:
       "Soft tissue health is foundational to long-term treatment success. Clinical evaluation of gum and tissue conditions may be an important part of your care plan.",
-    link: "/aesthetic-dentistry",
+    link: "/full-mouth-reconstruction-new-jersey",
     linkLabel: "Explore Soft Tissue Procedures",
   },
   medicalComplex: {

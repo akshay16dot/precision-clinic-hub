@@ -175,7 +175,7 @@ const AllOnFourVsAllOnSix = () => {
           { to: "/all-on-4-cost-new-jersey", label: "All-on-4 Cost" },
           { to: "/full-arch-implants-new-jersey", label: "Full-Arch Implants" },
           { to: "/failed-dental-implant-revision", label: "Failed Implant Revision" },
-          { to: "/guide/full-arch-implants", label: "Full-Arch Patient Guide" },
+          { to: "/full-arch-implants-new-jersey", label: "Full-Arch Implant Overview" },
         ]}
       />
     </ClinicalPage>

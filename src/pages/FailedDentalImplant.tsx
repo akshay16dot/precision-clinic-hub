@@ -183,7 +183,7 @@ const FailedDentalImplant = () => {
           { to: "/prosthodontist-vs-oral-surgeon", label: "Which Specialist Do You Need?" },
           { to: "/dental-implants-new-jersey", label: "Dental Implants" },
           { to: "/full-arch-implants-new-jersey", label: "Full-Arch Implants" },
-          { to: "/aesthetic-dentistry", label: "Full Mouth Reconstruction" },
+          { to: "/full-mouth-reconstruction-new-jersey", label: "Full Mouth Reconstruction" },
         ]}
       />
     </ClinicalPage>

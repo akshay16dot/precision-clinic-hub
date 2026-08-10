@@ -40,7 +40,7 @@ const coreServices = [
   {
     title: "Full-Mouth Reconstruction",
     description: "For worn, broken, or failing teeth, a coordinated plan that rebuilds bite, function, and appearance, all in the right order.",
-    link: "/aesthetic-dentistry",
+    link: "/full-mouth-reconstruction-new-jersey",
     icon: "05",
     img: imgFullMouth,
   },

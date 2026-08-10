@@ -73,7 +73,8 @@
         {
           "@type": ["Dentist", "LocalBusiness"],
           "@id": "https://drparmardds.com/#practice",
-          "name": "Dr. Akshay Parmar, BDS, DDS, MDSc, FACP, FAAMP",
+          "name": "Dr. Akshay Parmar, DDS, FACP",
+          "alternateName": "Dr. Akshay Parmar, BDS, DDS, MDSc, FACP, FAAMP",
           "description": "Board-certified prosthodontist providing dental implant rehabilitation, full-arch reconstruction, immediate implant therapy, maxillofacial prosthetics, and correction of failed implants in Hamilton Township, New Jersey.",
           "url": "https://drparmardds.com/",
           "image": "https://drparmardds.com/og-image.png",
@@ -94,10 +95,17 @@
             "latitude": 40.208256,
             "longitude": -74.697055
           },
+          "hasMap": "https://www.google.com/search?q=Dr.+Akshay+Parmar,+DDS,+FACP&ludocid=6899757472830232137",
           "openingHoursSpecification": [
             {
               "@type": "OpeningHoursSpecification",
-              "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+              "dayOfWeek": ["Monday", "Wednesday", "Thursday"],
+              "opens": "09:00",
+              "closes": "18:00"
+            },
+            {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": "Friday",
               "opens": "10:00",
               "closes": "17:00"
             }
@@ -137,9 +145,9 @@
               { "@type": "Offer", "itemOffered": { "@type": "MedicalProcedure", "name": "Failed Implant Revision" } }
             ]
           },
-          "founder": { "@id": "https://drparmardds.com/#akshay-parmar" },
           "employee": { "@id": "https://drparmardds.com/#akshay-parmar" },
           "sameAs": [
+            "https://www.google.com/search?q=Dr.+Akshay+Parmar,+DDS,+FACP&ludocid=6899757472830232137",
             "https://www.instagram.com/dr.akshayparmar/",
             "https://www.instagram.com/parmarsmiles/",
             "https://www.youtube.com/@ParmarSmiles",
@@ -156,9 +164,13 @@
           "medicalSpecialty": ["Prosthodontics", "Maxillofacial Prosthetics"],
           "url": "https://drparmardds.com/about",
           "worksFor": { "@id": "https://drparmardds.com/#practice" },
+          "identifier": {
+            "@type": "PropertyValue",
+            "propertyID": "NPI",
+            "value": "1255891883"
+          },
           "alumniOf": [
             { "@type": "Organization", "name": "Memorial Sloan Kettering Cancer Center" },
-            { "@type": "CollegeOrUniversity", "name": "New York University College of Dentistry" },
             { "@type": "CollegeOrUniversity", "name": "University of California, San Francisco" },
             { "@type": "CollegeOrUniversity", "name": "University of Connecticut" }
           ],
@@ -196,8 +208,25 @@
               "recognizedBy": { "@type": "Organization", "name": "American Academy of Maxillofacial Prosthetics" }
             }
           ],
+          "memberOf": [
+            {
+              "@type": "Organization",
+              "name": "American College of Prosthodontists",
+              "url": "https://www.prosthodontics.org/"
+            },
+            {
+              "@type": "Organization",
+              "name": "American Academy of Maxillofacial Prosthetics",
+              "url": "https://www.maxillofacialprosthetics.org/"
+            }
+          ],
+          "subjectOf": {
+            "@type": "WebPage",
+            "url": "https://www.prosthodontics.org/meet-the-2025-annual-appeal-committee/"
+          },
           "sameAs": [
             "https://dental.nyu.edu/faculty/pt/ap8746.html",
+            "https://npiregistry.cms.hhs.gov/provider-view/1255891883",
             "https://www.instagram.com/dr.akshayparmar/",
             "https://www.linkedin.com/in/akshay-parmar-972308ab/"
           ]
@@ -206,7 +235,7 @@
           "@type": "WebSite",
           "@id": "https://drparmardds.com/#website",
           "url": "https://drparmardds.com/",
-          "name": "Dr. Akshay Parmar, DDS, FACP, FAAMP",
+          "name": "Dr. Akshay Parmar, DDS, FACP",
           "publisher": { "@id": "https://drparmardds.com/#practice" }
         }
       ]
@@ -243,7 +272,8 @@
         1544 Kuser Rd, Suite C3, Hamilton Township, NJ 08619<br />
         Phone: <a href="tel:+16095851616">(609) 585-1616</a><br />
         Email: <a href="mailto:drparmardds@gmail.com">drparmardds@gmail.com</a><br />
-        Office hours: Monday to Friday, 10:00am to 5:00pm
+        Office hours: Monday 9:00am–6:00pm; Tuesday closed; Wednesday and Thursday
+        9:00am–6:00pm; Friday 10:00am–5:00pm
       </p>
       <ul>
         <li><a href="/dental-implants-new-jersey">Dental implants in Hamilton Township, NJ</a></li>
