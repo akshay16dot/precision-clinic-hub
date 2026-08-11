@@ -223,7 +223,7 @@ function normalizePath(raw: string): string {
 
 /** Canonical URLs must match sitemap.xml byte for byte. */
 function canonicalFor(path: string): string {
-  return path === "/" ? `${BASE_URL}/` : `${BASE_URL}${path}`;
+  return path === "/" ? `${BASE_URL}/` : `${BASE_URL}${path}/`;
 }
 
 function absolute(pathOrUrl: string): string {
