@@ -80,8 +80,8 @@ const SectionTitle = ({ children }: { children: React.ReactNode }) => (
 
 const VeneersAesthetic = () => {
   usePageSEO({
-    title: "Porcelain Veneers & Smile Reconstruction | Prosthodontist | Hamilton Township NJ",
-    description: "Precision-driven porcelain veneers and smile reconstruction treatments designed for facial harmony, functional stability, and long-term aesthetics by a board-certified prosthodontist serving Hamilton Township NJ, Princeton, Jersey City, and surrounding New Jersey areas.",
+    title: "Natural Porcelain Veneers & Aesthetic Dentistry | Hamilton NJ",
+    description: "Natural porcelain veneers and aesthetic smile reconstruction planned, tested and delivered by a board-certified prosthodontist in one Hamilton office, with function, facial harmony and maintenance considered from the start.",
   });
 
   return (

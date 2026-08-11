@@ -1,4 +1,4 @@
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import SiteNavigation from "@/components/SiteNavigation";
@@ -122,6 +122,36 @@ const PatientQuestions = () => {
     description:
       "Straight answers to the questions patients actually ask about dental implants, All-on-4, dentures, veneers, cost and recovery. Written by a board-certified prosthodontist.",
   });
+
+  useEffect(() => {
+    const id = "patient-questions-faq-schema";
+    document.getElementById(id)?.remove();
+
+    const schema = {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "@id": "https://drparmardds.com/patient-questions#faq",
+      url: "https://drparmardds.com/patient-questions",
+      name: "Patient Dental Questions Answered by Dr. Akshay Parmar",
+      author: { "@id": "https://drparmardds.com/#akshay-parmar" },
+      mainEntity: QUESTIONS.map((item) => ({
+        "@type": "Question",
+        name: item.q,
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: item.a,
+        },
+      })),
+    };
+
+    const script = document.createElement("script");
+    script.id = id;
+    script.type = "application/ld+json";
+    script.text = JSON.stringify(schema);
+    document.head.appendChild(script);
+
+    return () => script.remove();
+  }, []);
 
   const [query, setQuery] = useState("");
   const [cat, setCat] = useState<string | null>(null);

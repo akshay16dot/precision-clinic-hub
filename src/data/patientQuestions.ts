@@ -633,6 +633,16 @@ export const QUESTIONS: PatientQuestion[] = [
   },
   {
     cat: "choosing", stage: "before",
+    q: "Can implant surgery and the final teeth be done under one roof?",
+    a: "Yes. In a specialist-led implant practice, the same team can coordinate diagnosis, 3D planning, implant placement, provisional teeth, the final restoration and maintenance. The advantage is continuity: the person planning the final tooth also controls the implant position and remains responsible for how the result functions. Some patients still need an outside medical or surgical specialist, and a good practice will say so when that is safer.",
+  },
+  {
+    cat: "choosing", stage: "before",
+    q: "Who is responsible for my All-on-4 teeth after surgery?",
+    a: "Ask this before treatment. Full-arch care continues well after implants are placed: the provisional bridge needs adjustment, the final bridge must be designed and delivered, and the implants and prosthesis need lifelong maintenance. A complete plan names the clinician and office responsible for every stage rather than ending at surgery.",
+  },
+  {
+    cat: "choosing", stage: "before",
     q: "How do I judge before and after photographs?",
     a: "Look for consistent lighting and angles between the two, full-face images rather than only close-ups, and cases that resemble yours. Be cautious of galleries showing only ideal cases, and ask whether the clinician personally did the work shown.",
   },

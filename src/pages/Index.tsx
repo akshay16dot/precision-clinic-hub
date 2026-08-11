@@ -11,6 +11,7 @@ import GallerySection from "@/components/GallerySection";
 import CTASection from "@/components/CTASection";
 import EducationSection from "@/components/EducationSection";
 import FooterSection from "@/components/FooterSection";
+import OneRoofCare from "@/components/OneRoofCare";
 import { usePageSEO } from "@/hooks/usePageSEO";
 
 const Index = () => {
@@ -26,6 +27,7 @@ const Index = () => {
       <CredentialStrip />
       <GallerySection />
       <IntroSection />
+      <OneRoofCare />
       <ServicesSection />
       <PhilosophySection />
       <MaxfacStrip />

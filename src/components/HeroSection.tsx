@@ -44,9 +44,9 @@ const HeroSection = () => {
             </p>
 
             <p className="font-body text-[14px] sm:text-[15px] text-charcoal-light font-light leading-relaxed max-w-md mx-auto lg:mx-0 mb-9 sm:mb-11">
-              Implants, veneers and full-arch reconstruction for the cases other
-              dentists call complex, planned and finished start to finish by one
-              specialist team. Often in a day.
+              Implants, All-on-4 full-arch care, veneers and complex reconstruction,
+              coordinated by one specialist-led team from surgery through final teeth
+              and maintenance. All in one Hamilton office when clinically appropriate.
             </p>
 
             <div className="flex flex-col items-center lg:items-start gap-5">

@@ -28,7 +28,7 @@ const FullMouthReconstruction = () => {
       eyebrow="Full Mouth Reconstruction"
       title="When the problem is not one tooth,"
       titleItalic="it is all of them"
-      standfirst="Full mouth reconstruction is what happens when repairing teeth one at a time has stopped working. It rebuilds function, bite and appearance as a single plan rather than a decade of separate emergencies. Planned and delivered by a board-certified prosthodontist in Hamilton Township, New Jersey."
+      standfirst="Full mouth reconstruction is what happens when repairing teeth one at a time has stopped working. It rebuilds function, bite and appearance as one coordinated plan rather than a decade of separate emergencies. When clinically appropriate, implant surgery, provisional restorations, final teeth and maintenance are coordinated under one roof by Dr. Parmar and the Hamilton team."
     >
       <Section eyebrow="Who this is for">
         <P>
