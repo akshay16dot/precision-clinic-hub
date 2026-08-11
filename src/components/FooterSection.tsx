@@ -89,12 +89,12 @@ const FooterSection = () => {
                   drparmardds@gmail.com
                 </a>
                 <a
-                  href="https://maps.google.com/?q=544+Kuser+Road+Hamilton+NJ+08619"
+                  href="https://maps.google.com/?q=1544+Kuser+Road+Suite+C3+Hamilton+NJ+08619"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="block font-body text-xs text-primary-foreground/50 font-light hover:text-primary-foreground/75 transition-colors leading-relaxed"
                 >
-                  544 Kuser Road
+                  1544 Kuser Road, Suite C3
                   <br />
                   Hamilton, NJ 08619
                 </a>

@@ -89,7 +89,7 @@ const Contact = () => {
                     rel="noopener noreferrer"
                     className="font-body text-sm text-charcoal-light font-light hover:text-navy transition-colors mt-2 inline-block"
                   >
-                    544 Kuser Road, Hamilton, NJ 08619
+                    1544 Kuser Road, Suite C3, Hamilton, NJ 08619
                   </a>
                   <p className="font-body text-sm text-charcoal-light font-light mt-2">
                     Serving patients across Northern and Central New Jersey.

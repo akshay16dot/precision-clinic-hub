@@ -45,7 +45,7 @@ const PAGE_SEO: Record<string, SeoEntry> = {
   "/contact": {
     title: "Contact Our Hamilton Township, NJ Office | (609) 585-1616",
     description:
-      "Visit our prosthodontic practice at 544 Kuser Road, Hamilton, NJ 08619. Office hours, directions, parking and consultation requests.",
+      "Visit our prosthodontic practice at 1544 Kuser Road, Suite C3, Hamilton, NJ 08619. Office hours, directions, parking and consultation requests.",
   },
 
   // Service pages

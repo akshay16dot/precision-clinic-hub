@@ -52,7 +52,7 @@ const CTASection = () => {
           </div>
 
           <p className="font-body text-[11px] text-charcoal-light/70 font-light">
-            Or call <a href="tel:+16095851616" className="text-navy hover:underline underline-offset-4">(609) 585-1616</a> &nbsp;·&nbsp; 544 Kuser Road, Hamilton, NJ
+            Or call <a href="tel:+16095851616" className="text-navy hover:underline underline-offset-4">(609) 585-1616</a> &nbsp;·&nbsp; 1544 Kuser Road, Suite C3, Hamilton, NJ
           </p>
         </motion.div>
       </div>
