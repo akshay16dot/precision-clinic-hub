@@ -183,7 +183,7 @@ const PatientQuestions = () => {
       .sort((a, b) => b.hits - a.hits || b.score - a.score);
 
     /* Answers matching every word come first. Partial matches are only used to
-       top up a thin result set — otherwise one common word like "implant"
+       top up a thin result set; otherwise one common word like "implant"
        drags in half the page and the useful answer is buried. */
     const full = ranked.filter((s) => s.hits === tokens.length);
     const chosen =

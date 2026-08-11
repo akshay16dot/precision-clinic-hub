@@ -154,7 +154,7 @@ const ClinicalCases = () => {
     <main className="bg-background">
       <SiteNavigation />
 
-      {/* ═══════ SECTION 1 — HERO ═══════ */}
+      {/* SECTION 1: HERO */}
       <section className="relative hero-min-h hero-navy-fallback flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <img
@@ -185,7 +185,7 @@ const ClinicalCases = () => {
         </div>
       </section>
 
-      {/* ═══════ SECTION 2 — AUTHORITY FRAMING ═══════ */}
+      {/* SECTION 2: AUTHORITY FRAMING */}
       <section className="py-20 md:py-28 px-6 md:px-8">
         <div className="luxury-container max-w-2xl text-center">
           <motion.div {...fadeUp} transition={{ duration: 0.8 }}>
@@ -205,7 +205,7 @@ const ClinicalCases = () => {
         </div>
       </section>
 
-      {/* ═══════ SECTION 3 — PRIMARY CLINICAL GALLERY ═══════ */}
+      {/* SECTION 3: PRIMARY CLINICAL GALLERY */}
       <section
         id="gallery"
         className="py-16 md:py-24 px-6 md:px-8"
@@ -226,7 +226,7 @@ const ClinicalCases = () => {
         </div>
       </section>
 
-      {/* ═══════ SECTION 3B — CORRECTIVE & COMPLEX REHABILITATION ═══════ */}
+      {/* SECTION 3B: CORRECTIVE & COMPLEX REHABILITATION */}
       <section className="py-16 md:py-24 px-6 md:px-8">
         <div className="luxury-container max-w-5xl">
           <motion.div {...fadeUp} transition={{ duration: 0.7 }} className="text-center mb-16 md:mb-20">
@@ -243,7 +243,7 @@ const ClinicalCases = () => {
         </div>
       </section>
 
-      {/* ═══════ SECTION 4 — EDUCATIONAL REASSURANCE ═══════ */}
+      {/* SECTION 4: EDUCATIONAL REASSURANCE */}
       <section
         className="py-20 md:py-28 px-6 md:px-8"
         style={{ background: "linear-gradient(180deg, hsl(40 10% 96%) 0%, hsl(40 12% 94%) 100%)" }}
@@ -265,7 +265,7 @@ const ClinicalCases = () => {
         </div>
       </section>
 
-      {/* ═══════ SECTION 5 — CONVERSION BLOCK ═══════ */}
+      {/* SECTION 5: CONVERSION BLOCK */}
       <section className="py-20 md:py-28 px-6 md:px-8">
         <div className="luxury-container max-w-2xl text-center">
           <motion.div {...fadeUp} transition={{ duration: 0.8 }}>

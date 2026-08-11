@@ -105,7 +105,7 @@ const PatientGuideLayout = ({ data }: { data: PatientGuideData }) => {
         </div>
       </section>
 
-      {/* 2. What to Expect — Healing Phases */}
+      {/* 2. What to Expect: Healing Phases */}
       <section className="py-14 md:py-20 px-6 md:px-8">
         <div className="luxury-container max-w-3xl">
           <motion.div {...fadeUp} transition={{ duration: 0.7 }} className="mb-12">

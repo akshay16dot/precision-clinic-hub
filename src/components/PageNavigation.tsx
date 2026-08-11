@@ -79,7 +79,7 @@ const PageNavigation = () => {
 
   return (
     <>
-      {/* Fixed header — constant height, never changes */}
+      {/* Fixed header with constant height */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-background/90 backdrop-blur-md border-b border-divider">
         <div className="luxury-container flex items-center justify-between h-[88px] md:h-[104px] px-6 md:px-8">
           {/* Logo */}
@@ -145,7 +145,7 @@ const PageNavigation = () => {
         </div>
       </nav>
 
-      {/* Mobile menu — fixed overlay, completely outside nav flow */}
+      {/* Mobile menu is a fixed overlay outside nav flow */}
       <AnimatePresence>
         {menuOpen && (
           <motion.div

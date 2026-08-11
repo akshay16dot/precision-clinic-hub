@@ -117,7 +117,7 @@ export const Section = ({
 
 /* ── Case gallery. Composite before/after photographs on a dark section so it
       reads as a break from the surrounding prose. Each image is a single file
-      with "before" stacked above "after" — labelled with two small pinned tags
+      with "before" stacked above "after", labelled with two small pinned tags
       rather than split into two crops, since splitting risks cutting a photo
       at the wrong line. Only ever pass photographs with documented consent. ── */
 export const CaseGallery = ({

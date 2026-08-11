@@ -26,7 +26,7 @@ interface PageSEO {
 }
 
 const BASE_URL = "https://drparmardds.com";
-const SITE_NAME = "Dr. Akshay Parmar, DDS, FACP, FAAMP";
+const SITE_NAME = "Dr. Akshay Parmar, BDS, DDS, MDSc, FACP, FAAMP";
 const DEFAULT_IMAGE = "/og-image.png";
 
 type SeoEntry = { title: string; description: string };
@@ -45,7 +45,7 @@ const PAGE_SEO: Record<string, SeoEntry> = {
   "/contact": {
     title: "Contact Our Hamilton Township, NJ Office | (609) 585-1616",
     description:
-      "Visit our prosthodontic practice at 1544 Kuser Rd, Suite C3, Hamilton Township, NJ 08619. Office hours, directions, parking and consultation requests.",
+      "Visit our prosthodontic practice at 544 Kuser Road, Hamilton, NJ 08619. Office hours, directions, parking and consultation requests.",
   },
 
   // Service pages

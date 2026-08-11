@@ -330,7 +330,7 @@ const SiteNavigation = () => {
         </div>
       </nav>
 
-      {/* Full overlay mega menu — brighter navy */}
+      {/* Full overlay mega menu with brighter navy */}
       <AnimatePresence>
         {menuOpen && (
           <motion.div

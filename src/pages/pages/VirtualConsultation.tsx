@@ -78,9 +78,9 @@ const VirtualConsultation = () => {
     setFormState("submitting");
 
     try {
-      let fileNames: string[] = [];
-      let fileContents: string[] = [];
-      let fileMimeTypes: string[] = [];
+      const fileNames: string[] = [];
+      const fileContents: string[] = [];
+      const fileMimeTypes: string[] = [];
 
       if (files.length > 0) {
         for (const file of files) {
