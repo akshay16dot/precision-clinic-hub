@@ -74,13 +74,10 @@ const ClinicalPortfolioCard = ({ clinicalCase }: { clinicalCase: ClinicalPortfol
 };
 
 const ClinicalPortfolioGrid = () => {
-  const [showAll, setShowAll] = useState(false);
-  const visibleCases = showAll ? clinicalPortfolioCases : clinicalPortfolioCases.slice(0, 6);
-
   return (
     <div>
       <div className="grid gap-7 md:grid-cols-2 lg:grid-cols-3">
-        {visibleCases.map((clinicalCase, index) => (
+        {clinicalPortfolioCases.map((clinicalCase, index) => (
           <motion.div
             key={clinicalCase.id}
             initial={{ opacity: 0, y: 18 }}
@@ -92,18 +89,6 @@ const ClinicalPortfolioGrid = () => {
           </motion.div>
         ))}
       </div>
-
-      {!showAll && (
-        <div className="mt-12 text-center">
-          <button
-            type="button"
-            onClick={() => setShowAll(true)}
-            className="min-h-12 border border-navy/25 px-9 font-body text-[10px] uppercase tracking-[0.24em] text-navy transition-colors hover:bg-navy hover:text-white"
-          >
-            View three more cases
-          </button>
-        </div>
-      )}
 
       <p className="mx-auto mt-10 max-w-2xl text-center font-body text-[11px] font-light leading-relaxed text-charcoal-light">
         Actual patients treated by Dr. Parmar. Photographs are unfiltered and shown for educational purposes. Individual anatomy, treatment needs, healing, and results vary.
