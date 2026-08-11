@@ -177,6 +177,39 @@ const PAGE_SEO: Record<string, SeoEntry> = {
     description:
       "Send photos and get a specialist opinion on implants, full-arch treatment, a failing restoration or a second opinion, without travelling first.",
   },
+  "/patients-traveling-to-hamilton": {
+    title: "Traveling to Hamilton for Prosthodontic Care | Dr. Parmar",
+    description:
+      "Plan specialist implant, full-arch, reconstruction or maxillofacial care in Hamilton, NJ. Virtual consultation, records, travel and coordinated visits.",
+  },
+
+  // Regional patient guides. Each page addresses a distinct travel corridor
+  // with original guidance rather than repeating generic city text.
+  "/prosthodontist-princeton-nj": {
+    title: "Prosthodontist Near Princeton, NJ | Implants & Reconstruction",
+    description:
+      "Board-certified prosthodontic care near Princeton for implants, All-on-4, full-mouth reconstruction and complex dentistry in Hamilton, NJ.",
+  },
+  "/prosthodontist-mercer-county-nj": {
+    title: "Prosthodontist in Mercer County, NJ | Dr. Akshay Parmar",
+    description:
+      "Specialist implants, full-arch care, aesthetic reconstruction and maxillofacial prosthodontics in Hamilton for patients across Mercer County.",
+  },
+  "/prosthodontist-robbinsville-cranbury-nj": {
+    title: "Prosthodontist Near Robbinsville & Cranbury, NJ",
+    description:
+      "Implants, All-on-4, second opinions and complex reconstruction near Robbinsville, East Windsor, Hightstown and Cranbury, NJ.",
+  },
+  "/prosthodontist-bucks-county-pa": {
+    title: "Prosthodontist Near Bucks County, PA | Hamilton, NJ",
+    description:
+      "Specialist implant and reconstructive care in Hamilton for patients traveling from Yardley, Newtown, Lower Makefield and Bucks County.",
+  },
+  "/prosthodontist-new-brunswick-edison-nj": {
+    title: "Prosthodontist Near New Brunswick & Edison, NJ",
+    description:
+      "Advanced implants, full-arch treatment, corrective care and maxillofacial prosthodontics for New Brunswick, Edison and Central Jersey patients.",
+  },
 
   // Proof
   "/clinical-cases": {

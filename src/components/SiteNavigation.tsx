@@ -61,6 +61,7 @@ const navItems: NavItem[] = [
       { to: "/leave-review", label: "Leave a Review" },
       { to: "/patient-questions", label: "Questions Answered" },
       { to: "/virtual-consultation", label: "Virtual Consultation" },
+      { to: "/patients-traveling-to-hamilton", label: "Traveling to Hamilton" },
       { to: "/contact", label: "Consultations" },
     ],
   },
@@ -133,6 +134,7 @@ const megaMenuSections: { title: string; links: NavLink[] }[] = [
     links: [
       { to: "/clinical-assessment", label: "Clinical Self-Assessment" },
       { to: "/virtual-consultation", label: "Virtual Consultation" },
+      { to: "/patients-traveling-to-hamilton", label: "Traveling to Hamilton" },
       { to: "/testimonials", label: "Patient Testimonials" },
       { to: "/leave-review", label: "Leave a Review" },
       { to: "/patient-questions", label: "Questions Answered" },

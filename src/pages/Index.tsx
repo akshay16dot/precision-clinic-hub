@@ -12,6 +12,7 @@ import CTASection from "@/components/CTASection";
 import EducationSection from "@/components/EducationSection";
 import FooterSection from "@/components/FooterSection";
 import OneRoofCare from "@/components/OneRoofCare";
+import RegionalReach from "@/components/RegionalReach";
 import { usePageSEO } from "@/hooks/usePageSEO";
 
 const Index = () => {
@@ -28,6 +29,7 @@ const Index = () => {
       <GallerySection />
       <IntroSection />
       <OneRoofCare />
+      <RegionalReach />
       <ServicesSection />
       <PhilosophySection />
       <MaxfacStrip />
