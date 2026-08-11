@@ -144,6 +144,9 @@ const FooterSection = () => {
                 <Link to="/virtual-consultation" className="block font-body text-xs text-primary-foreground/55 hover:text-primary-foreground/85 tracking-wide transition-colors">
                   Virtual Consultation
                 </Link>
+                <Link to="/patients-traveling-to-hamilton" className="block font-body text-xs text-primary-foreground/55 hover:text-primary-foreground/85 tracking-wide transition-colors">
+                  Traveling to Hamilton
+                </Link>
                 <Link to="/testimonials" className="block font-body text-xs text-primary-foreground/55 hover:text-primary-foreground/85 tracking-wide transition-colors">
                   Patient Testimonials
                 </Link>

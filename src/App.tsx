@@ -3,39 +3,43 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Index from "./pages/Index";
-import DentalImplants from "./pages/DentalImplants";
-import FullArchImplants from "./pages/FullArchImplants";
-import FullMouthReconstruction from "./pages/FullMouthReconstruction";
-import MaxillofacialRehabilitation from "./pages/MaxillofacialRehabilitation";
-import ImmediateImplants from "./pages/ImmediateImplants";
-import VeneersAesthetic from "./pages/VeneersAesthetic";
-import About from "./pages/About";
-import Contact from "./pages/Contact";
-import ClinicalCases from "./pages/ClinicalCases";
-import ProfessionalEducation from "./pages/ProfessionalEducation";
-import PatientEducation from "./pages/PatientEducation";
-import SmileDesign from "./pages/SmileDesign";
-import ToothWearRehabilitation from "./pages/ToothWearRehabilitation";
-import TeethWhitening from "./pages/TeethWhitening";
-import NotFound from "./pages/NotFound";
-import Testimonials from "./pages/Testimonials";
-import LeaveReview from "./pages/LeaveReview";
-import ProfessionalTestimonials from "./pages/ProfessionalTestimonials";
-import ClinicalAssessment from "./pages/ClinicalAssessment";
-import VirtualConsultation from "./pages/VirtualConsultation";
-import NasalProsthesis from "./pages/NasalProsthesis";
-import AuricularProsthesis from "./pages/AuricularProsthesis";
-import OrbitalProsthesis from "./pages/OrbitalProsthesis";
-import FacialProsthesisInsurance from "./pages/FacialProsthesisInsurance";
-import FailedDentalImplant from "./pages/FailedDentalImplant";
-import ProsthodontistVsOralSurgeon from "./pages/ProsthodontistVsOralSurgeon";
-import AllOnFourCost from "./pages/AllOnFourCost";
-import AllOnFourVsAllOnSix from "./pages/AllOnFourVsAllOnSix";
-import FrontToothImplant from "./pages/FrontToothImplant";
-import RedirectTo from "./pages/RedirectTo";
-import StableProtocol from "./pages/StableProtocol";
-import PatientQuestions from "./pages/PatientQuestions";
+import { lazy, Suspense } from "react";
+
+const Index = lazy(() => import("./pages/Index"));
+const DentalImplants = lazy(() => import("./pages/DentalImplants"));
+const FullArchImplants = lazy(() => import("./pages/FullArchImplants"));
+const FullMouthReconstruction = lazy(() => import("./pages/FullMouthReconstruction"));
+const MaxillofacialRehabilitation = lazy(() => import("./pages/MaxillofacialRehabilitation"));
+const ImmediateImplants = lazy(() => import("./pages/ImmediateImplants"));
+const VeneersAesthetic = lazy(() => import("./pages/VeneersAesthetic"));
+const About = lazy(() => import("./pages/About"));
+const Contact = lazy(() => import("./pages/Contact"));
+const ClinicalCases = lazy(() => import("./pages/ClinicalCases"));
+const ProfessionalEducation = lazy(() => import("./pages/ProfessionalEducation"));
+const PatientEducation = lazy(() => import("./pages/PatientEducation"));
+const SmileDesign = lazy(() => import("./pages/SmileDesign"));
+const ToothWearRehabilitation = lazy(() => import("./pages/ToothWearRehabilitation"));
+const TeethWhitening = lazy(() => import("./pages/TeethWhitening"));
+const NotFound = lazy(() => import("./pages/NotFound"));
+const Testimonials = lazy(() => import("./pages/Testimonials"));
+const LeaveReview = lazy(() => import("./pages/LeaveReview"));
+const ProfessionalTestimonials = lazy(() => import("./pages/ProfessionalTestimonials"));
+const ClinicalAssessment = lazy(() => import("./pages/ClinicalAssessment"));
+const VirtualConsultation = lazy(() => import("./pages/VirtualConsultation"));
+const NasalProsthesis = lazy(() => import("./pages/NasalProsthesis"));
+const AuricularProsthesis = lazy(() => import("./pages/AuricularProsthesis"));
+const OrbitalProsthesis = lazy(() => import("./pages/OrbitalProsthesis"));
+const FacialProsthesisInsurance = lazy(() => import("./pages/FacialProsthesisInsurance"));
+const FailedDentalImplant = lazy(() => import("./pages/FailedDentalImplant"));
+const ProsthodontistVsOralSurgeon = lazy(() => import("./pages/ProsthodontistVsOralSurgeon"));
+const AllOnFourCost = lazy(() => import("./pages/AllOnFourCost"));
+const AllOnFourVsAllOnSix = lazy(() => import("./pages/AllOnFourVsAllOnSix"));
+const FrontToothImplant = lazy(() => import("./pages/FrontToothImplant"));
+const RedirectTo = lazy(() => import("./pages/RedirectTo"));
+const StableProtocol = lazy(() => import("./pages/StableProtocol"));
+const PatientQuestions = lazy(() => import("./pages/PatientQuestions"));
+const TravelingPatients = lazy(() => import("./pages/TravelingPatients"));
+const RegionalCare = lazy(() => import("./pages/RegionalCare"));
 
 const queryClient = new QueryClient();
 
@@ -45,6 +49,7 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
+        <Suspense fallback={<div className="min-h-screen bg-background" aria-hidden="true" />}>
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/dental-implants-new-jersey" element={<DentalImplants />} />
@@ -74,6 +79,12 @@ const App = () => (
           <Route path="/professional-testimonials" element={<ProfessionalTestimonials />} />
           <Route path="/clinical-assessment" element={<ClinicalAssessment />} />
           <Route path="/virtual-consultation" element={<VirtualConsultation />} />
+          <Route path="/patients-traveling-to-hamilton" element={<TravelingPatients />} />
+          <Route path="/prosthodontist-princeton-nj" element={<RegionalCare region="princeton" />} />
+          <Route path="/prosthodontist-mercer-county-nj" element={<RegionalCare region="mercer" />} />
+          <Route path="/prosthodontist-robbinsville-cranbury-nj" element={<RegionalCare region="east" />} />
+          <Route path="/prosthodontist-bucks-county-pa" element={<RegionalCare region="bucks" />} />
+          <Route path="/prosthodontist-new-brunswick-edison-nj" element={<RegionalCare region="new-brunswick" />} />
 
           {/* Maxillofacial prosthetics, one page per prosthesis type */}
           <Route path="/nasal-prosthesis" element={<NasalProsthesis />} />
@@ -104,6 +115,7 @@ const App = () => (
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
+        </Suspense>
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>
