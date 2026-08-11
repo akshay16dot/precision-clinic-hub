@@ -213,9 +213,9 @@ const PAGE_SEO: Record<string, SeoEntry> = {
 
   // Proof
   "/clinical-cases": {
-    title: "Before and After Cases | Implants and Reconstruction NJ",
+    title: "All-on-4, All-on-6 & Full-Mouth Before and After Cases | NJ",
     description:
-      "Documented full-arch, implant and full mouth reconstruction cases, with the clinical reasoning behind each treatment plan.",
+      "Documented All-on-4, All-on-6, full-arch implant, veneer and full-mouth reconstruction cases treated by Dr. Akshay Parmar in Hamilton Township, NJ.",
   },
   "/clinical-case/full-mouth-rehabilitation": {
     title: "Full-Mouth Rehabilitation Case | Dr. Akshay Parmar",

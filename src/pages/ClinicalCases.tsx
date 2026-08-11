@@ -4,7 +4,10 @@ import SiteNavigation from "@/components/SiteNavigation";
 import FooterSection from "@/components/FooterSection";
 import ClinicalCaseCard from "@/components/ClinicalCaseCard";
 import type { ClinicalCase } from "@/components/ClinicalCaseCard";
+import ClinicalPortfolioGrid from "@/components/ClinicalPortfolioGrid";
+import JsonLd from "@/components/JsonLd";
 import { usePageSEO } from "@/hooks/usePageSEO";
+import { clinicalPortfolioCases } from "@/data/clinicalPortfolioCases";
 
 import case1After from "@/assets/case1-after.png";
 import case1Before from "@/assets/case1-before.png";
@@ -150,6 +153,26 @@ const reassurancePoints = [
   "Aesthetic integration engineered to complement natural anatomy",
 ];
 
+const portfolioStructuredData = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  name: "Dental implant and prosthodontic before-and-after cases",
+  description:
+    "Documented All-on-4, All-on-6, full-mouth reconstruction, implant, veneer and crown cases treated by Dr. Akshay Parmar in Hamilton Township, New Jersey.",
+  numberOfItems: clinicalPortfolioCases.length,
+  itemListElement: clinicalPortfolioCases.map((clinicalCase, index) => ({
+    "@type": "ListItem",
+    position: index + 1,
+    item: {
+      "@type": "MedicalProcedure",
+      name: clinicalCase.title,
+      description: clinicalCase.description,
+      image: [clinicalCase.beforeImage, clinicalCase.afterImage],
+      url: `https://drparmardds.com/clinical-cases/#${clinicalCase.id}`,
+    },
+  })),
+};
+
 const ClinicalCases = () => {
   usePageSEO({
     title: "Clinical Cases & Smile Rehabilitation Outcomes | Prosthodontist NJ",
@@ -158,6 +181,7 @@ const ClinicalCases = () => {
 
   return (
     <main className="bg-background">
+      <JsonLd id="clinical-portfolio" data={portfolioStructuredData} />
       <SiteNavigation />
 
       {/* SECTION 1: HERO */}
@@ -246,6 +270,24 @@ const ClinicalCases = () => {
               <ClinicalCaseCard key={i + 3} c={c} index={i + 3} />
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* ADDITIONAL DOCUMENTED CLINICAL WORK */}
+      <section className="border-t border-navy/10 bg-background px-6 py-20 md:px-8 md:py-28">
+        <div className="luxury-container max-w-6xl">
+          <motion.div {...fadeUp} transition={{ duration: 0.7 }} className="mx-auto mb-14 max-w-2xl text-center md:mb-16">
+            <p className="mb-6 font-body text-[10px] uppercase tracking-[0.4em] text-charcoal-light">
+              Documented Clinical Outcomes
+            </p>
+            <h2 className="mb-7 font-display text-3xl font-light text-navy md:text-4xl">
+              Further Selected <span className="italic">Work</span>
+            </h2>
+            <p className="font-body text-sm font-light leading-[1.85] text-charcoal-light md:text-[15px]">
+              A broader view of full-arch implant rehabilitation, All-on-4, All-on-6, aesthetic reconstruction, and full-mouth treatment. Select Before or After on any case to compare the documented clinical views.
+            </p>
+          </motion.div>
+          <ClinicalPortfolioGrid />
         </div>
       </section>
 
