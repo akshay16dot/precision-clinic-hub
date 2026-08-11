@@ -217,6 +217,36 @@ const PAGE_SEO: Record<string, SeoEntry> = {
     description:
       "Documented full-arch, implant and full mouth reconstruction cases, with the clinical reasoning behind each treatment plan.",
   },
+  "/clinical-case/full-mouth-rehabilitation": {
+    title: "Full-Mouth Rehabilitation Case | Dr. Akshay Parmar",
+    description:
+      "A documented full-mouth rehabilitation case addressing severe wear, failing restorations and bite instability with implants, crowns and bridges.",
+  },
+  "/clinical-case/bite-reconstruction": {
+    title: "Bite Reconstruction Case for Severe Tooth Wear | NJ",
+    description:
+      "A documented implant-supported bite reconstruction case addressing severe wear, loss of vertical dimension and posterior collapse.",
+  },
+  "/clinical-case/full-arch-implant-reconstruction": {
+    title: "Full-Arch Implant Reconstruction Case | All-on-X NJ",
+    description:
+      "A documented fixed full-arch implant case for non-restorable teeth affected by extensive caries and periodontal breakdown.",
+  },
+  "/clinical-case/failed-implant-rehabilitation": {
+    title: "Failed Implant Prosthesis Correction Case | NJ",
+    description:
+      "A documented corrective case addressing a fractured, poorly fitting implant prosthesis, unstable bite and compromised tissue health.",
+  },
+  "/clinical-case/implant-overdenture": {
+    title: "Implant Overdenture Case | Denture Stability NJ",
+    description:
+      "A documented implant-assisted overdenture case addressing poor denture retention, chewing difficulty and functional confidence.",
+  },
+  "/clinical-case/anterior-implant-aesthetics": {
+    title: "Anterior Implant and Soft-Tissue Aesthetic Case | NJ",
+    description:
+      "A documented anterior aesthetic correction case addressing grey shadowing, thin soft tissue and compromised restorative contours.",
+  },
   "/testimonials": {
     title: "Patient Reviews | Dr. Akshay Parmar, Hamilton Township NJ",
     description:

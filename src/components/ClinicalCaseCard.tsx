@@ -1,5 +1,6 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 export interface ImagePair {
   beforeImg: string;
@@ -19,6 +20,7 @@ export interface ClinicalCase {
   descriptor: string;
   imagePairs: ImagePair[];
   details: DetailSection[];
+  casePath?: string;
 }
 
 const fadeUp = {
@@ -131,14 +133,24 @@ const ClinicalCaseCard = ({ c, index }: { c: ClinicalCase; index: number }) => {
         </div>
       )}
 
-      {/* Learn More Toggle */}
+      {/* Searchable case page and optional quick summary */}
       <div className="pl-10 md:pl-12">
-        <button
-          onClick={() => setExpanded(!expanded)}
-          className="font-body text-[10px] tracking-[0.25em] uppercase text-navy/60 hover:text-navy transition-colors duration-300 border-b border-navy/20 hover:border-navy/40 pb-px"
-        >
-          {expanded ? "Close" : "Learn More"}
-        </button>
+        <div className="flex flex-wrap items-center gap-x-7 gap-y-3">
+          {c.casePath && (
+            <Link
+              to={c.casePath}
+              className="font-body text-[10px] tracking-[0.25em] uppercase text-navy hover:text-navy/70 transition-colors duration-300 border-b border-navy/35 hover:border-navy/60 pb-px"
+            >
+              View Full Case
+            </Link>
+          )}
+          <button
+            onClick={() => setExpanded(!expanded)}
+            className="font-body text-[10px] tracking-[0.25em] uppercase text-navy/60 hover:text-navy transition-colors duration-300 border-b border-navy/20 hover:border-navy/40 pb-px"
+          >
+            {expanded ? "Close Summary" : "Quick Summary"}
+          </button>
+        </div>
 
         <AnimatePresence>
           {expanded && (

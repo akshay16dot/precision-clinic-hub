@@ -40,6 +40,7 @@ const StableProtocol = lazy(() => import("./pages/StableProtocol"));
 const PatientQuestions = lazy(() => import("./pages/PatientQuestions"));
 const TravelingPatients = lazy(() => import("./pages/TravelingPatients"));
 const RegionalCare = lazy(() => import("./pages/RegionalCare"));
+const ClinicalCaseDetail = lazy(() => import("./pages/ClinicalCaseDetail"));
 
 const queryClient = new QueryClient();
 
@@ -85,6 +86,12 @@ const App = () => (
           <Route path="/prosthodontist-robbinsville-cranbury-nj" element={<RegionalCare region="east" />} />
           <Route path="/prosthodontist-bucks-county-pa" element={<RegionalCare region="bucks" />} />
           <Route path="/prosthodontist-new-brunswick-edison-nj" element={<RegionalCare region="new-brunswick" />} />
+          <Route path="/clinical-case/full-mouth-rehabilitation" element={<ClinicalCaseDetail slug="full-mouth-rehabilitation" />} />
+          <Route path="/clinical-case/bite-reconstruction" element={<ClinicalCaseDetail slug="bite-reconstruction" />} />
+          <Route path="/clinical-case/full-arch-implant-reconstruction" element={<ClinicalCaseDetail slug="full-arch-implant-reconstruction" />} />
+          <Route path="/clinical-case/failed-implant-rehabilitation" element={<ClinicalCaseDetail slug="failed-implant-rehabilitation" />} />
+          <Route path="/clinical-case/implant-overdenture" element={<ClinicalCaseDetail slug="implant-overdenture" />} />
+          <Route path="/clinical-case/anterior-implant-aesthetics" element={<ClinicalCaseDetail slug="anterior-implant-aesthetics" />} />
 
           {/* Maxillofacial prosthetics, one page per prosthesis type */}
           <Route path="/nasal-prosthesis" element={<NasalProsthesis />} />
