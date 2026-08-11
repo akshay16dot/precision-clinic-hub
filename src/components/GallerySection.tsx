@@ -83,14 +83,14 @@ const CaseCard = ({ c, i }: { c: (typeof cases)[number]; i: number }) => {
       {/* After (default) */}
       <img
         src={c.after}
-        alt={`${c.title} — result`}
+        alt={`${c.title}, result`}
         loading="lazy"
         className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ${showBefore ? "opacity-0" : "opacity-100"}`}
       />
       {/* Before (revealed) */}
       <img
         src={c.before}
-        alt={`${c.title} — before treatment`}
+        alt={`${c.title}, before treatment`}
         loading="lazy"
         className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ${showBefore ? "opacity-100" : "opacity-0"}`}
       />

@@ -223,7 +223,7 @@ const MaxillofacialRehabilitation = () => {
         className="relative py-28 md:py-36 px-6 md:px-8 overflow-hidden"
         style={{ background: "linear-gradient(180deg, hsl(220 18% 9%) 0%, hsl(220 15% 11%) 100%)" }}
       >
-        {/* Background prosthesis image — mobile/tablet only */}
+        {/* Background prosthesis image, mobile/tablet only */}
         <div className="absolute inset-0 lg:hidden">
           <img
             src={obturatorProsthesis2}
