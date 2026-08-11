@@ -6,6 +6,7 @@ import PageCTA from "@/components/PageCTA";
 import PageFooter from "@/components/PageFooter";
 import { usePageSEO } from "@/hooks/usePageSEO";
 import TreatmentJourney from "@/components/TreatmentJourney";
+import OneRoofCare from "@/components/OneRoofCare";
 import { fullArchJourney } from "@/data/treatmentGuides";
 import fullArchLeft from "@/assets/full-arch-left.png";
 import fullArchLower from "@/assets/full-arch-lower.png";
@@ -62,8 +63,8 @@ const fadeUp = {
 
 const FullArchImplants = () => {
   usePageSEO({
-    title: "Full-Arch Rehabilitation & All-on-X | Prosthodontist | Hamilton Township NJ",
-    description: "Specialized full-arch implant rehabilitation and All-on-X tooth replacement solutions designed for long-term function, structural stability, and natural aesthetics by a board-certified prosthodontist in Hamilton Township NJ.",
+    title: "All-on-4 & Full-Arch Implants Under One Roof | Hamilton NJ",
+    description: "All-on-4 and All-on-X full-arch implants coordinated under one roof by a board-certified prosthodontist, from surgery and same-day provisional teeth through the final bridge and maintenance.",
   });
 
   return (
@@ -72,14 +73,16 @@ const FullArchImplants = () => {
 
       <PageHero
         subtitle="Board-Certified Prosthodontist · New Jersey"
-        title="Full-Arch Implant"
-        titleItalic="Rehabilitation"
+        title="All-on-4 & Full-Arch"
+        titleItalic="Implant Rehabilitation"
         paragraphs={[
-          "Full-arch implant rehabilitation is designed for patients requiring comprehensive restoration of function, stability, and aesthetics.",
-          "Dr. Akshay Parmar provides advanced full-arch implant rehabilitation across New Jersey, focusing on precision-driven planning, biological stability, and long-term functional outcomes.",
-          "Treatment is guided by prosthodontic principles, structural biomechanics, and individualized care.",
+          "All-on-4, All-on-6 and All-on-X describe fixed full-arch teeth supported by strategically placed dental implants.",
+          "When clinically appropriate, Dr. Akshay Parmar and one specialist-led team coordinate planning, implant surgery, same-day provisional teeth, the final bridge and long-term maintenance in the Hamilton office.",
+          "The number and position of implants are selected for the individual case, with the final teeth guiding the surgical plan from the beginning.",
         ]}
       />
+
+      <OneRoofCare compact />
 
       {/* Clinical Prosthesis Showcase – Three Column Editorial */}
       <section className="relative py-16 md:py-24 overflow-hidden" style={{ background: 'linear-gradient(180deg, hsl(30 8% 10%) 0%, hsl(28 6% 12%) 50%, hsl(30 8% 10%) 100%)' }}>

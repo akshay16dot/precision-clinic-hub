@@ -15,7 +15,7 @@ const steps = [
   {
     num: "03",
     title: "Rebuild",
-    body: "One specialist team from surgery to final teeth, with provisionals the same day where the case allows. You are never left without a smile.",
+    body: "One specialist-led team coordinates surgery, provisional teeth, the final prosthesis and maintenance in one office, with same-day provisionals where the case allows.",
   },
 ];
 

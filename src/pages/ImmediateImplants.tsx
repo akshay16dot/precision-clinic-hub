@@ -18,8 +18,8 @@ const fadeUp = {
 
 const ImmediateImplants = () => {
   usePageSEO({
-    title: "Immediate Dental Implants | Same-Day Tooth Replacement | Hamilton Township NJ",
-    description: "Precision-driven immediate dental implant solutions for eligible cases, focusing on biologic stability, function, and esthetic outcomes. Provided by a prosthodontic specialist serving Hamilton Township NJ and surrounding areas.",
+    title: "Immediate Dental Implants & Same-Day Teeth | Hamilton NJ",
+    description: "Immediate implants and same-day provisional teeth coordinated under one roof when clinically appropriate, from extraction and implant placement through the final restoration and maintenance.",
   });
 
   return (
@@ -58,8 +58,9 @@ const ImmediateImplants = () => {
             className="font-body text-sm md:text-base font-light leading-relaxed max-w-xl mx-auto mb-10"
             style={{ color: "hsl(30 8% 55%)" }}
           >
-            A modern, stability-first approach to replacing teeth with natural
-            aesthetics and long-term simplicity.
+            When clinically appropriate, extraction, implant placement, a same-day
+            provisional tooth and the final restoration are coordinated by one
+            specialist-led team in the Hamilton office.
           </p>
           <div
             className="w-12 h-px mx-auto mb-8"

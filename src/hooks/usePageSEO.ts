@@ -35,7 +35,7 @@ const PAGE_SEO: Record<string, SeoEntry> = {
   "/": {
     title: "Prosthodontist in Hamilton Township, NJ | Dr. Akshay Parmar",
     description:
-      "Board-certified prosthodontist in Hamilton Township, NJ. Dental implants, full-arch reconstruction and complex restorative care. Call (609) 585-1616.",
+      "Dental implants, All-on-4, veneers and complex reconstruction coordinated under one roof by a board-certified prosthodontist in Hamilton Township, NJ.",
   },
   "/about": {
     title: "About Dr. Akshay Parmar, DDS, MDSc, FACP | Prosthodontist",
@@ -50,24 +50,24 @@ const PAGE_SEO: Record<string, SeoEntry> = {
 
   // Service pages
   "/dental-implants-new-jersey": {
-    title: "Dental Implants in Hamilton Township, NJ | Prosthodontist",
+    title: "Dental Implants Placed & Restored Under One Roof | Hamilton NJ",
     description:
-      "Single and multiple dental implants placed and restored by a board-certified prosthodontist in Hamilton Township, NJ. Serving Mercer County.",
+      "Dental implants placed and restored by one specialist-led team, from 3D planning and surgery through the final tooth and maintenance. Hamilton Township, NJ.",
   },
   "/full-arch-implants-new-jersey": {
-    title: "All-on-4 and Full-Arch Implants | Hamilton Township, NJ",
+    title: "All-on-4 & Full-Arch Implants Under One Roof | Hamilton NJ",
     description:
-      "Full-arch implant rehabilitation, All-on-4 and All-on-X, for failing or missing teeth. Planned and restored by a prosthodontist in Hamilton Township, NJ.",
+      "All-on-4 and All-on-X implants coordinated under one roof, from surgery and same-day provisional teeth through the final bridge and maintenance.",
   },
   "/immediate-implant-rehabilitation": {
     title: "Immediate Dental Implants, Teeth in a Day | Hamilton, NJ",
     description:
-      "Immediate implant placement with same-day provisional teeth. Who qualifies, what the protocol involves, and how the result is protected long term.",
+      "Immediate implants and same-day provisional teeth under one roof when appropriate, from extraction and implant placement through the final restoration.",
   },
   "/full-mouth-reconstruction-new-jersey": {
     title: "Full Mouth Reconstruction in Hamilton Township, NJ",
     description:
-      "Rebuilding a failing dentition as one plan: implants, crowns and restorations sequenced for function first, appearance second. Board-certified prosthodontist.",
+      "Full mouth reconstruction as one coordinated plan under one roof: implants, provisional restorations, final teeth and maintenance led by a prosthodontist.",
   },
   // Deconflicted from the page above: this one is bite and vertical dimension.
   "/tooth-wear-rehabilitation": {
@@ -76,9 +76,9 @@ const PAGE_SEO: Record<string, SeoEntry> = {
       "Severe wear, erosion and collapsed bite. Recovering lost vertical dimension with restorations planned around how your jaw actually works.",
   },
   "/veneers-aesthetic-reconstruction": {
-    title: "Porcelain Veneers in Hamilton Township, NJ | Prosthodontist",
+    title: "Natural Porcelain Veneers & Aesthetic Dentistry | Hamilton NJ",
     description:
-      "Conservative porcelain veneers designed and placed by a prosthodontist. Preparation, materials, realistic lifespan and what actually lasts.",
+      "Natural porcelain veneers and aesthetic smile reconstruction planned, tested and delivered by a board-certified prosthodontist in one Hamilton office.",
   },
   "/maxillofacial-rehabilitation": {
     title: "Maxillofacial Prosthodontics, Oral Cancer Care | NJ",
@@ -149,9 +149,9 @@ const PAGE_SEO: Record<string, SeoEntry> = {
   },
 
   "/patient-questions": {
-    title: "Dental Questions Answered | Implants, Dentures, Veneers | NJ",
+    title: "140+ Dental Questions Answered | Implants, All-on-4, Veneers",
     description:
-      "Straight answers to the questions patients actually ask about dental implants, All-on-4, dentures, veneers, cost and recovery. From a board-certified prosthodontist.",
+      "Plain answers to 140+ patient questions about implants, All-on-4, dentures, veneers, costs, recovery and complications from a prosthodontist.",
   },
 
   // Revision and specialist choice

@@ -6,6 +6,7 @@ import PageCTA from "@/components/PageCTA";
 import PageFooter from "@/components/PageFooter";
 import { usePageSEO } from "@/hooks/usePageSEO";
 import TreatmentJourney from "@/components/TreatmentJourney";
+import OneRoofCare from "@/components/OneRoofCare";
 import { dentalImplantsJourney } from "@/data/treatmentGuides";
 
 const benefits = [
@@ -58,8 +59,8 @@ const fadeUp = {
 
 const DentalImplants = () => {
   usePageSEO({
-    title: "Dental Implants & Tooth Replacement | Prosthodontist | Hamilton Township NJ",
-    description: "Advanced dental implant and tooth replacement solutions designed for long-term stability, function, and aesthetics by a board-certified prosthodontist serving Hamilton Township NJ, Princeton, Jersey City, and surrounding New Jersey areas.",
+    title: "Dental Implants Placed & Restored Under One Roof | Hamilton NJ",
+    description: "Dental implants placed and restored by one specialist-led team in Hamilton Township, NJ, from 3D planning and surgery through the final tooth and long-term maintenance.",
   });
 
   return (
@@ -73,9 +74,11 @@ const DentalImplants = () => {
         paragraphs={[
           "Dental implant treatment requires precision, planning, and a biologically driven approach.",
           "Dr. Akshay Parmar provides advanced dental implant rehabilitation across New Jersey, focusing on long-term stability, functional integration, and aesthetic harmony.",
-          "Treatment ranges from single-tooth implants to full-arch and complex rehabilitation.",
+          "From a single front tooth to All-on-4 full-arch care, planning, implant placement, restoration and maintenance can be coordinated by one specialist-led team in the Hamilton office when clinically appropriate.",
         ]}
       />
+
+      <OneRoofCare compact />
 
       <div className="luxury-container px-6 md:px-8">
         <div className="w-12 h-px bg-navy mx-auto" />

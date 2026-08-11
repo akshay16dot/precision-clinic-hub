@@ -25,8 +25,8 @@ const coreServices = [
     img: imgImmediate,
   },
   {
-    title: "All-on-X / Full-Arch",
-    description: "A full set of fixed teeth supported by just a few implants. A life-changing option for patients with failing teeth or long-term dentures.",
+    title: "All-on-4 / Full-Arch",
+    description: "All-on-4 and All-on-X fixed teeth for failing teeth or long-term dentures, planned from surgery through the final prosthesis and maintenance.",
     link: "/full-arch-implants-new-jersey",
     icon: "03",
     img: imgFullArch,
