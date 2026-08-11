@@ -34,6 +34,7 @@ const fadeUp = {
 const primaryCases: ClinicalCase[] = [
   {
     title: "Full Mouth Rehabilitation",
+    casePath: "/clinical-case/full-mouth-rehabilitation",
     subtitle: "Implants, Crowns & Bridge Reconstruction",
     descriptor: "Collapsed bite reconstruction caused by severe wear. Restoration of function, stability, and aesthetics.",
     imagePairs: [{ beforeImg: case1Before, afterImg: case1After }],
@@ -46,6 +47,7 @@ const primaryCases: ClinicalCase[] = [
   },
   {
     title: "Comprehensive Bite Reconstruction",
+    casePath: "/clinical-case/bite-reconstruction",
     subtitle: "Implant-Supported Rehabilitation",
     descriptor: "Severe occlusal wear with bite collapse. Precision-guided full mouth reconstruction.",
     imagePairs: [
@@ -61,6 +63,7 @@ const primaryCases: ClinicalCase[] = [
   },
   {
     title: "Full Arch Implant Reconstruction",
+    casePath: "/clinical-case/full-arch-implant-reconstruction",
     subtitle: "Advanced Restorative Rehabilitation",
     descriptor: "Extensive caries and periodontal damage. Full arch implant-supported restoration.",
     imagePairs: [{ beforeImg: case3Before, afterImg: case3After }],
@@ -76,6 +79,7 @@ const primaryCases: ClinicalCase[] = [
 const correctiveCases: ClinicalCase[] = [
   {
     title: "Failed Implant & Prosthetic Rehabilitation",
+    casePath: "/clinical-case/failed-implant-rehabilitation",
     subtitle: "Corrective Reconstruction",
     descriptor: "Correction of previously failing implants and prosthesis. Restoration of structural stability, function, and aesthetics.",
     imagePairs: [{ beforeImg: case4Before, afterImg: case4After }],
@@ -88,6 +92,7 @@ const correctiveCases: ClinicalCase[] = [
   },
   {
     title: "Implant-Assisted Overdenture Rehabilitation",
+    casePath: "/clinical-case/implant-overdenture",
     subtitle: "Retention & Stability Restoration",
     descriptor: "Management of an unstable, poorly retentive denture. Implant-supported overdenture restoring retention and function.",
     imagePairs: [{ beforeImg: case5Before, afterImg: case5After }],
@@ -124,6 +129,7 @@ const correctiveCases: ClinicalCase[] = [
   },
   {
     title: "Anterior Aesthetic Rehabilitation",
+    casePath: "/clinical-case/anterior-implant-aesthetics",
     subtitle: "Implant & Soft Tissue Reconstruction",
     descriptor: "Correction of grey shadowing caused by thin soft tissue and compromised underlying structures. Biologic correction and aesthetic refinement restoring natural shade integration and harmonized gingival architecture.",
     imagePairs: [{ beforeImg: case8Before, afterImg: case8After }],
