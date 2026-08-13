@@ -226,7 +226,7 @@ const PatientQuestions = () => {
       <SiteNavigation />
 
       {/* ── Hero ── */}
-      <section className="pt-40 md:pt-48 pb-10 md:pb-14 bg-background">
+      <section className="pt-32 md:pt-40 pb-10 md:pb-14 bg-background">
         <div className="luxury-container px-6 md:px-8">
           <motion.div
             initial={{ opacity: 0, y: 22 }}

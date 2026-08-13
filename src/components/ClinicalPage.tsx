@@ -35,7 +35,7 @@ export const ClinicalPage = ({
   <main className="bg-background">
     <SiteNavigation />
 
-    <section className="pt-40 md:pt-48 pb-14 md:pb-20 bg-background">
+    <section className="pt-32 md:pt-40 pb-14 md:pb-20 bg-background">
       <div className="luxury-container px-6 md:px-8">
         <motion.div
           initial={{ opacity: 0, y: 24 }}

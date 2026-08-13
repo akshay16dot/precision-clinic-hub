@@ -70,7 +70,7 @@ const StableProtocol = () => {
 
       {/* ── Hero ── */}
       <section
-        className="relative pt-40 md:pt-52 pb-20 md:pb-28"
+        className="relative pt-32 md:pt-40 pb-20 md:pb-28"
         style={{ background: "linear-gradient(180deg, hsl(220 22% 9%) 0%, hsl(220 18% 13%) 100%)" }}
       >
         <div className="luxury-container px-6 md:px-8">

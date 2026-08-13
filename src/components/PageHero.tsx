@@ -9,7 +9,7 @@ interface PageHeroProps {
 
 const PageHero = ({ subtitle, title, titleItalic, paragraphs }: PageHeroProps) => {
   return (
-    <section className="pt-48 pb-24 md:pt-56 md:pb-32 px-6 md:px-8 bg-background">
+    <section className="pt-36 pb-20 md:pt-44 md:pb-24 px-6 md:px-8 bg-background">
       <div className="luxury-container text-center">
         <motion.p
           initial={{ opacity: 0, y: 20 }}

@@ -28,7 +28,7 @@ const ImmediateImplants = () => {
 
       {/* ─── HERO ─── */}
       <section
-        className="relative hero-min-h hero-navy-fallback flex items-center justify-center px-6 md:px-8 pt-32 md:pt-52"
+        className="relative hero-min-h hero-navy-fallback flex items-center justify-center px-6 md:px-8 pt-28 md:pt-40"
         style={{
           background:
             "linear-gradient(180deg, hsl(30 8% 8%) 0%, hsl(28 6% 12%) 40%, hsl(30 8% 10%) 100%)",

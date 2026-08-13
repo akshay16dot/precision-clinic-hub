@@ -62,7 +62,7 @@ const ClinicalCaseDetail = ({ slug }: { slug: ClinicalCaseSlug }) => {
       <SiteNavigation />
       <JsonLd id={`clinical-case-${slug}`} data={structuredData} />
 
-      <section className="pt-44 md:pt-52 pb-16 md:pb-24 px-6 md:px-8">
+      <section className="pt-36 md:pt-44 pb-16 md:pb-24 px-6 md:px-8">
         <div className="luxury-container max-w-5xl">
           <motion.div initial={{ opacity: 0, y: 22 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.85 }} className="max-w-3xl">
             <Link to="/clinical-cases" className="font-body text-[9px] tracking-[0.24em] uppercase text-charcoal-light/60 hover:text-navy transition-colors">Clinical Cases</Link>

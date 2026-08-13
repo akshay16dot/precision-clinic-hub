@@ -63,7 +63,7 @@ const PatientGuideLayout = ({ data }: { data: PatientGuideData }) => {
       <SiteNavigation />
 
       {/* Hero */}
-      <section className="pt-48 pb-14 md:pt-56 md:pb-18 px-6 md:px-8">
+      <section className="pt-36 pb-14 md:pt-44 md:pb-18 px-6 md:px-8">
         <div className="luxury-container max-w-3xl text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

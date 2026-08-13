@@ -119,7 +119,7 @@ const VirtualConsultation = () => {
     return (
       <main className="bg-background">
         <SiteNavigation />
-        <section className="pt-48 pb-20 md:pt-56 md:pb-28 px-6 md:px-8 bg-background min-h-screen flex items-center">
+        <section className="pt-36 pb-20 md:pt-44 md:pb-24 px-6 md:px-8 bg-background min-h-screen flex items-center">
           <div className="luxury-container max-w-2xl mx-auto">
             <motion.div
               initial={{ opacity: 0, scale: 0.95 }}
@@ -226,7 +226,7 @@ const VirtualConsultation = () => {
       <SiteNavigation />
 
       {/* Hero */}
-      <section className="pt-48 pb-16 md:pt-56 md:pb-24 px-6 md:px-8 bg-background">
+      <section className="pt-36 pb-16 md:pt-44 md:pb-24 px-6 md:px-8 bg-background">
         <div className="luxury-container text-center">
           <motion.p
             initial={{ opacity: 0, y: 20 }}

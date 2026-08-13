@@ -220,7 +220,7 @@ const SiteNavigation = () => {
             : "bg-[hsl(220_30%_8%/0.45)] sm:bg-[hsl(220_30%_8%/0.3)] border-b border-primary-foreground/10 sm:border-primary-foreground/8 shadow-[0_1px_10px_-4px_rgba(0,0,0,0.2),inset_0_1px_0_0_rgba(255,255,255,0.08)] sm:shadow-[0_1px_10px_-4px_rgba(0,0,0,0.15),inset_0_1px_0_0_rgba(255,255,255,0.06)]"
         }`}
       >
-        <div className="luxury-container flex items-center justify-between py-3 sm:py-4 px-6 md:px-10">
+        <div className="luxury-container flex items-center justify-between py-2.5 sm:py-3 px-5 sm:px-6 md:px-10">
           {/* Founder mark and practice wordmark. The AP implant monogram is the
               visual signature; PARMAR remains the clear, searchable name. */}
           <Link
