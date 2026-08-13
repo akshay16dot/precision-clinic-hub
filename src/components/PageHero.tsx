@@ -11,11 +11,11 @@ const PageHero = ({ subtitle, title, titleItalic, paragraphs }: PageHeroProps) =
   return (
     <section className="relative overflow-hidden pt-36 pb-20 md:pt-44 md:pb-24 px-6 md:px-8 bg-background">
       <img
-        src="/splash-icon.png?v=12"
+        src="/ap-implant-mark.svg?v=13"
         alt=""
         aria-hidden="true"
-        width="488"
-        height="442"
+        width="508"
+        height="501"
         className="pointer-events-none absolute left-1/2 top-1/2 h-[19rem] w-[19rem] -translate-x-1/2 -translate-y-1/2 object-contain opacity-[0.018] md:h-[28rem] md:w-[28rem]"
         style={{
           filter:

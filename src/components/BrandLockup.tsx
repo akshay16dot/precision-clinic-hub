@@ -20,11 +20,11 @@ const BrandLockup = ({
       } ${className}`}
     >
       <img
-        src="/splash-icon.png?v=12"
+        src="/ap-implant-mark.svg?v=13"
         alt=""
         aria-hidden="true"
-        width="488"
-        height="442"
+        width="508"
+        height="501"
         className={`shrink-0 object-contain transition-all duration-500 ${
           isFooter ? "h-20 w-20 md:h-24 md:w-24" : "h-14 w-14 sm:h-16 sm:w-16"
         }`}
