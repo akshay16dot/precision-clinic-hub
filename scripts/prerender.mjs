@@ -14,6 +14,7 @@ const PORT = 4173;
 const ROUTES = [
   "/",
   "/about",
+  "/meet-the-team",
   "/contact",
   "/dental-implants-new-jersey",
   "/full-arch-implants-new-jersey",
