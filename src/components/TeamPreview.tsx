@@ -30,7 +30,7 @@ const TeamPreview = () => {
           viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 0.9 }}
         >
-          <p className="mb-6 font-body text-[10px] uppercase tracking-[0.38em] text-primary-foreground/45">
+          <p className="mb-6 font-body text-[10px] uppercase tracking-[0.38em] text-primary-foreground/70">
             The People Behind Your Care
           </p>
           <h2 className="font-display text-4xl font-light leading-[0.98] text-primary-foreground md:text-5xl lg:text-6xl">
@@ -38,12 +38,12 @@ const TeamPreview = () => {
             <br />
             <span className="italic">Strengthened by continuity.</span>
           </h2>
-          <p className="mt-8 max-w-xl font-body text-sm font-light leading-[1.9] text-primary-foreground/62 md:text-[15px]">
+          <p className="mt-8 max-w-xl font-body text-sm font-light leading-[1.9] text-primary-foreground/80 md:text-[15px]">
             Every complex treatment begins with Dr. Parmar's diagnosis and clinical direction. Dr. Randazzo remains involved in select maxillofacial and prosthodontic care, while Dr. Vakharia provides select prosthodontic care. Together, the team offers clear leadership, trusted experience and coordinated treatment.
           </p>
           <Link
             to="/meet-the-team"
-            className="mt-9 inline-flex border-b border-primary-foreground/35 pb-1 font-body text-[10px] uppercase tracking-[0.25em] text-primary-foreground transition-colors hover:border-primary-foreground"
+            className="mt-9 inline-flex border-b border-primary-foreground/55 pb-1 font-body text-[10px] uppercase tracking-[0.25em] text-primary-foreground transition-colors hover:border-primary-foreground"
           >
             Meet the Team
           </Link>
@@ -54,12 +54,12 @@ const TeamPreview = () => {
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 0.9, delay: 0.08 }}
-          className="border-y border-primary-foreground/15"
+          className="border-y border-primary-foreground/25"
         >
           {clinicians.map((clinician) => (
             <div
               key={clinician.name}
-              className={`grid grid-cols-[3.25rem_1fr] items-center gap-5 border-b border-primary-foreground/15 py-7 last:border-b-0 sm:grid-cols-[4rem_1fr] sm:gap-7 ${
+              className={`grid grid-cols-[3.25rem_1fr] items-center gap-5 border-b border-primary-foreground/25 py-7 last:border-b-0 sm:grid-cols-[4rem_1fr] sm:gap-7 ${
                 clinician.featured ? "bg-primary-foreground/[0.035]" : ""
               }`}
             >
@@ -67,7 +67,7 @@ const TeamPreview = () => {
                 className={`flex h-12 w-12 items-center justify-center rounded-full border font-display text-base font-light tracking-[0.08em] sm:h-14 sm:w-14 ${
                   clinician.featured
                     ? "border-primary-foreground/45 bg-primary-foreground text-navy"
-                    : "border-primary-foreground/22 text-primary-foreground/78"
+                    : "border-primary-foreground/50 text-primary-foreground/90"
                 }`}
               >
                 {clinician.initials}
@@ -76,7 +76,7 @@ const TeamPreview = () => {
                 <p className="font-display text-xl font-light text-primary-foreground sm:text-2xl">
                   {clinician.name}
                 </p>
-                <p className="mt-1.5 font-body text-[9px] uppercase tracking-[0.2em] text-primary-foreground/42 sm:text-[10px]">
+                <p className="mt-1.5 font-body text-[9px] uppercase tracking-[0.2em] text-primary-foreground/70 sm:text-[10px]">
                   {clinician.role}
                 </p>
               </div>

@@ -19,21 +19,21 @@ const BrandLockup = ({
         isFooter ? "flex-col items-center gap-3 text-center" : "items-center gap-2.5"
       } ${className}`}
     >
-      <img
-        src="/ap-implant-mark.svg?v=13"
-        alt=""
-        aria-hidden="true"
-        width="508"
-        height="501"
-        className={`shrink-0 object-contain transition-all duration-500 ${
-          isFooter ? "h-20 w-20 md:h-24 md:w-24" : "h-9 w-9 sm:h-10 sm:w-10"
-        }`}
-        style={{
-          filter: inverted
-            ? "none"
-            : "brightness(0) saturate(100%) invert(16%) sepia(18%) saturate(1704%) hue-rotate(178deg) brightness(88%) contrast(91%)",
-        }}
-      />
+      {isFooter && (
+        <img
+          src="/ap-implant-mark.svg?v=13"
+          alt=""
+          aria-hidden="true"
+          width="508"
+          height="501"
+          className="h-20 w-20 shrink-0 object-contain transition-all duration-500 md:h-24 md:w-24"
+          style={{
+            filter: inverted
+              ? "none"
+              : "brightness(0) saturate(100%) invert(16%) sepia(18%) saturate(1704%) hue-rotate(178deg) brightness(88%) contrast(91%)",
+          }}
+        />
+      )}
 
       <span
         className={`flex min-w-0 flex-col ${
@@ -47,7 +47,7 @@ const BrandLockup = ({
           width="917"
           height="440"
           className={`object-contain ${isFooter ? "object-center" : "object-left"} ${
-            isFooter ? "h-10 w-40 md:h-12 md:w-52" : "h-14 w-auto sm:h-16"
+            isFooter ? "h-10 w-40 md:h-12 md:w-52" : "h-[3.65rem] w-auto sm:h-[4.15rem]"
           }`}
           style={{
             filter: inverted
@@ -66,8 +66,8 @@ const BrandLockup = ({
         )}
         {!isFooter && (
           <span
-            className={`mt-0.5 font-body text-[6px] uppercase leading-[1.5] tracking-[0.11em] sm:text-[6.5px] sm:tracking-[0.13em] ${
-              inverted ? "text-primary-foreground/55" : "text-charcoal-light/55"
+            className={`mt-0.5 font-body text-[6.5px] uppercase leading-[1.5] tracking-[0.12em] sm:text-[7px] sm:tracking-[0.14em] ${
+              inverted ? "text-primary-foreground/70" : "text-charcoal-light/70"
             }`}
           >
             <span className="block whitespace-nowrap">Prosthodontics <span aria-hidden="true">·</span> Implants</span>

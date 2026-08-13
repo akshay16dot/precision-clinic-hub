@@ -224,19 +224,35 @@ const SiteNavigation = () => {
             : "bg-[hsl(220_30%_8%/0.45)] sm:bg-[hsl(220_30%_8%/0.3)] border-b border-primary-foreground/10 sm:border-primary-foreground/8 shadow-[0_1px_10px_-4px_rgba(0,0,0,0.2),inset_0_1px_0_0_rgba(255,255,255,0.08)] sm:shadow-[0_1px_10px_-4px_rgba(0,0,0,0.15),inset_0_1px_0_0_rgba(255,255,255,0.06)]"
         }`}
       >
-        <div className="luxury-container flex items-center justify-between py-2.5 sm:py-3 px-5 sm:px-6 md:px-10">
-          {/* Founder mark and practice wordmark. The AP implant monogram is the
-              visual signature; PARMAR remains the clear, searchable name. */}
+        <div className="luxury-container relative grid min-h-[78px] grid-cols-[44px_1fr_44px] items-center px-5 py-2.5 sm:min-h-[86px] sm:grid-cols-[48px_1fr_48px] sm:px-6 md:px-10 lg:grid-cols-[180px_1fr_48px] lg:gap-3 lg:px-6 xl:grid-cols-[210px_1fr_52px] xl:px-10">
+          {/* On mobile the AP mark signs the left edge while PARMAR owns the
+              visual center. They remain distinct instead of competing. */}
           <Link
             to="/"
-            className="shrink-0 transition-opacity duration-300 hover:opacity-80"
+            className="flex justify-start transition-opacity duration-300 hover:opacity-80 lg:hidden"
+            aria-label="AP implant monogram, home"
+          >
+            <img
+              src="/ap-implant-mark.svg?v=13"
+              alt=""
+              aria-hidden="true"
+              width="508"
+              height="501"
+              className="h-9 w-9 object-contain sm:h-10 sm:w-10"
+              style={{ filter: "brightness(0) saturate(100%) invert(16%) sepia(18%) saturate(1704%) hue-rotate(178deg) brightness(88%) contrast(91%)" }}
+            />
+          </Link>
+
+          <Link
+            to="/"
+            className="flex justify-center transition-opacity duration-300 hover:opacity-80 lg:justify-start"
             aria-label="Parmar Prosthodontics, home"
           >
             <BrandLockup inverted={!showSolid} />
           </Link>
 
           {/* Desktop nav items */}
-          <div className="hidden lg:flex items-center gap-1">
+          <div className="hidden items-center justify-center lg:flex">
             {navItems.map((item) => (
               <div
                 key={item.label}
@@ -247,7 +263,7 @@ const SiteNavigation = () => {
                 {item.to && !item.links ? (
                   <Link
                     to={item.to}
-                    className={`inline-flex items-center leading-none px-3 xl:px-4 py-2 font-body text-[10px] xl:text-[11px] tracking-[0.2em] uppercase transition-colors duration-300 ${
+                    className={`inline-flex items-center leading-none px-2.5 xl:px-3.5 py-2 font-body text-[9px] xl:text-[10.5px] tracking-[0.18em] uppercase transition-colors duration-300 ${
                       showSolid
                         ? "text-muted-foreground hover:text-navy"
                         : "text-primary-foreground/50 hover:text-primary-foreground"
@@ -257,7 +273,7 @@ const SiteNavigation = () => {
                   </Link>
                 ) : (
                   <button
-                    className={`inline-flex items-center leading-none px-3 xl:px-4 py-2 font-body text-[10px] xl:text-[11px] tracking-[0.2em] uppercase transition-colors duration-300 ${
+                    className={`inline-flex items-center leading-none px-2.5 xl:px-3.5 py-2 font-body text-[9px] xl:text-[10.5px] tracking-[0.18em] uppercase transition-colors duration-300 ${
                       showSolid
                         ? "text-muted-foreground hover:text-navy"
                         : "text-primary-foreground/50 hover:text-primary-foreground"
@@ -303,10 +319,27 @@ const SiteNavigation = () => {
             ))}
           </div>
 
+          {/* Desktop signature mark, deliberately separated from the wordmark. */}
+          <Link
+            to="/"
+            className="hidden justify-end transition-opacity duration-300 hover:opacity-80 lg:flex"
+            aria-label="AP implant monogram, home"
+          >
+            <img
+              src="/ap-implant-mark.svg?v=13"
+              alt=""
+              aria-hidden="true"
+              width="508"
+              height="501"
+              className="h-10 w-10 object-contain xl:h-11 xl:w-11"
+              style={{ filter: "brightness(0) saturate(100%) invert(16%) sepia(18%) saturate(1704%) hue-rotate(178deg) brightness(88%) contrast(91%)" }}
+            />
+          </Link>
+
           {/* Mobile menu toggle */}
           <button
             onClick={() => setMenuOpen(!menuOpen)}
-            className={`lg:hidden p-3 -mr-3 rounded-sm transition-all duration-300 ${
+            className={`justify-self-end lg:hidden p-3 -mr-3 rounded-sm transition-all duration-300 ${
               showSolid
                 ? "text-muted-foreground hover:text-navy hover:bg-muted/50"
                 : "text-primary-foreground/70 hover:text-primary-foreground hover:bg-primary-foreground/5"
