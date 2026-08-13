@@ -19,15 +19,15 @@ const IntroSection = () => {
           <div className="w-12 h-px bg-navy mx-auto mb-12" />
 
           <h2 className="font-display text-2xl md:text-3xl lg:text-4xl font-light text-charcoal leading-relaxed mb-8">
-            One specialist-led team. One coordinated plan. Under one roof.
+            One clinical vision. A team built around your care.
           </h2>
 
           <p className="font-body text-sm md:text-base text-charcoal-light font-light leading-relaxed max-w-2xl mx-auto mb-4">
-            Dr. Parmar focuses on the cases other dentists refer out: missing teeth, failing restorations, worn-down bites, aesthetic reconstruction and full-mouth rebuilds, with care planned to feel natural and last.
+            Dr. Parmar leads diagnosis, treatment planning and complex care for missing teeth, failing restorations, worn-down bites, aesthetic reconstruction and full-mouth rehabilitation, with every plan designed to feel natural and last.
           </p>
 
           <p className="font-body text-sm md:text-base text-charcoal-light font-light leading-relaxed max-w-2xl mx-auto">
-            When the case allows, planning, implant placement, provisional teeth, the final prosthesis and long-term maintenance are coordinated in the same Hamilton office by the team responsible for the outcome.
+            He is supported by an experienced prosthodontic team that brings continuity and collaboration to select cases. When clinically appropriate, planning, implant placement, provisional teeth, the final prosthesis and long-term maintenance remain coordinated in the same Hamilton office.
           </p>
         </motion.div>
       </div>

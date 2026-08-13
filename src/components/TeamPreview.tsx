@@ -39,7 +39,7 @@ const TeamPreview = () => {
             <span className="italic">Strengthened by continuity.</span>
           </h2>
           <p className="mt-8 max-w-xl font-body text-sm font-light leading-[1.9] text-primary-foreground/62 md:text-[15px]">
-            Dr. Parmar leads the practice and its clinical direction. Dr. Randazzo remains involved in select maxillofacial and prosthodontic care, while Dr. Vakharia provides select prosthodontic care. Together, the practice moves forward with clear leadership, trusted experience and coordinated treatment.
+            Every complex treatment begins with Dr. Parmar's diagnosis and clinical direction. Dr. Randazzo remains involved in select maxillofacial and prosthodontic care, while Dr. Vakharia provides select prosthodontic care. Together, the team offers clear leadership, trusted experience and coordinated treatment.
           </p>
           <Link
             to="/meet-the-team"

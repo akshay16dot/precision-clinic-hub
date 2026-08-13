@@ -45,7 +45,7 @@ const PAGE_SEO: Record<string, SeoEntry> = {
   "/meet-the-team": {
     title: "Meet the Prosthodontic Team | Parmar, Hamilton Township NJ",
     description:
-      "Meet the specialist-led team providing coordinated prosthodontic, implant, restorative and maxillofacial care in Hamilton Township, New Jersey.",
+      "Meet Dr. Akshay Parmar, practice owner and clinical lead, with Dr. Joseph Randazzo and Dr. Neel Vakharia providing select coordinated prosthodontic care.",
   },
   "/contact": {
     title: "Contact Our Hamilton Township, NJ Office | (609) 585-1616",
