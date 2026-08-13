@@ -16,7 +16,7 @@ const BrandLockup = ({
   return (
     <span
       className={`inline-flex max-w-full ${
-        isFooter ? "flex-col items-center gap-3 text-center" : "items-center gap-3 sm:gap-3.5"
+        isFooter ? "flex-col items-center gap-3 text-center" : "items-center gap-2.5 sm:gap-3"
       } ${className}`}
     >
       <img
@@ -47,7 +47,7 @@ const BrandLockup = ({
           width="917"
           height="440"
           className={`object-contain ${isFooter ? "object-center" : "object-left"} ${
-            isFooter ? "h-10 w-40 md:h-12 md:w-52" : "h-9 w-[9.25rem] sm:h-10 sm:w-[10.5rem]"
+            isFooter ? "h-10 w-40 md:h-12 md:w-52" : "h-10 w-[10.5rem] sm:h-11 sm:w-48"
           }`}
           style={{
             filter: inverted
