@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import logoAP from "@/assets/logo-ap.png";
+import BrandLockup from "@/components/BrandLockup";
 
 const professionalLinks = [
   {
@@ -32,12 +32,7 @@ const PageFooter = () => {
           {/* Logo & Contact */}
           <div>
             <Link to="/" className="inline-block mb-6">
-              <img
-                src={logoAP}
-                alt="Dr. Akshay Parmar"
-                className="h-24 md:h-28 w-auto"
-                style={{ filter: "brightness(0) invert(1)" }}
-              />
+              <BrandLockup inverted size="footer" />
             </Link>
             <p className="font-body text-[10px] tracking-[0.3em] uppercase text-primary-foreground/45 mb-3">
               Board-Certified Prosthodontist
