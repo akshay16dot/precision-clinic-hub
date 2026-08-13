@@ -16,7 +16,7 @@ const BrandLockup = ({
   return (
     <span
       className={`inline-flex max-w-full ${
-        isFooter ? "flex-col items-center gap-3 text-center" : "items-center gap-2.5 sm:gap-3"
+        isFooter ? "flex-col items-center gap-3 text-center" : "items-center gap-2.5"
       } ${className}`}
     >
       <img
@@ -26,7 +26,7 @@ const BrandLockup = ({
         width="508"
         height="501"
         className={`shrink-0 object-contain transition-all duration-500 ${
-          isFooter ? "h-20 w-20 md:h-24 md:w-24" : "h-12 w-12 sm:h-14 sm:w-14"
+          isFooter ? "h-20 w-20 md:h-24 md:w-24" : "h-9 w-9 sm:h-10 sm:w-10"
         }`}
         style={{
           filter: inverted
@@ -37,7 +37,7 @@ const BrandLockup = ({
 
       <span
         className={`flex min-w-0 flex-col ${
-          isFooter ? "items-center" : "translate-y-1 items-start sm:translate-y-1.5"
+          isFooter ? "items-center" : "translate-y-0.5 items-start sm:translate-y-1"
         }`}
       >
         <img
@@ -47,7 +47,7 @@ const BrandLockup = ({
           width="917"
           height="440"
           className={`object-contain ${isFooter ? "object-center" : "object-left"} ${
-            isFooter ? "h-10 w-40 md:h-12 md:w-52" : "h-10 w-[10.5rem] sm:h-11 sm:w-48"
+            isFooter ? "h-10 w-40 md:h-12 md:w-52" : "h-14 w-auto sm:h-16"
           }`}
           style={{
             filter: inverted
@@ -66,7 +66,7 @@ const BrandLockup = ({
         )}
         {!isFooter && (
           <span
-            className={`mt-1 font-body text-[5.5px] uppercase leading-[1.55] tracking-[0.1em] sm:text-[6px] sm:tracking-[0.12em] ${
+            className={`mt-0.5 font-body text-[6px] uppercase leading-[1.5] tracking-[0.11em] sm:text-[6.5px] sm:tracking-[0.13em] ${
               inverted ? "text-primary-foreground/55" : "text-charcoal-light/55"
             }`}
           >

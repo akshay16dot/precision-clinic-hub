@@ -13,6 +13,7 @@ import EducationSection from "@/components/EducationSection";
 import FooterSection from "@/components/FooterSection";
 import OneRoofCare from "@/components/OneRoofCare";
 import RegionalReach from "@/components/RegionalReach";
+import TeamPreview from "@/components/TeamPreview";
 import { usePageSEO } from "@/hooks/usePageSEO";
 
 const Index = () => {
@@ -28,6 +29,7 @@ const Index = () => {
       <CredentialStrip />
       <GallerySection />
       <IntroSection />
+      <TeamPreview />
       <OneRoofCare />
       <RegionalReach />
       <ServicesSection />
