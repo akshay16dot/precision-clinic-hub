@@ -9,8 +9,20 @@ interface PageHeroProps {
 
 const PageHero = ({ subtitle, title, titleItalic, paragraphs }: PageHeroProps) => {
   return (
-    <section className="pt-36 pb-20 md:pt-44 md:pb-24 px-6 md:px-8 bg-background">
-      <div className="luxury-container text-center">
+    <section className="relative overflow-hidden pt-36 pb-20 md:pt-44 md:pb-24 px-6 md:px-8 bg-background">
+      <img
+        src="/splash-icon.png?v=12"
+        alt=""
+        aria-hidden="true"
+        width="488"
+        height="442"
+        className="pointer-events-none absolute left-1/2 top-1/2 h-[19rem] w-[19rem] -translate-x-1/2 -translate-y-1/2 object-contain opacity-[0.018] md:h-[28rem] md:w-[28rem]"
+        style={{
+          filter:
+            "brightness(0) saturate(100%) invert(16%) sepia(18%) saturate(1704%) hue-rotate(178deg) brightness(88%) contrast(91%)",
+        }}
+      />
+      <div className="luxury-container relative z-10 text-center">
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}

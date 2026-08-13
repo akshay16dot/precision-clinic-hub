@@ -30,8 +30,8 @@ const PageFooter = () => {
       <div className="luxury-container">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-10 items-start">
           {/* Logo & Contact */}
-          <div>
-            <Link to="/" className="inline-block mb-6">
+          <div className="text-center md:text-left">
+            <Link to="/" className="inline-flex mb-6">
               <BrandLockup inverted size="footer" />
             </Link>
             <p className="font-body text-[10px] tracking-[0.3em] uppercase text-primary-foreground/45 mb-3">
