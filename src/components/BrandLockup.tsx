@@ -47,7 +47,7 @@ const BrandLockup = ({
           width="917"
           height="440"
           className={`object-contain ${isFooter ? "object-center" : "object-left"} ${
-            isFooter ? "h-10 w-40 md:h-12 md:w-52" : "h-7 w-[7.75rem] sm:h-8 sm:w-[9rem]"
+            isFooter ? "h-10 w-40 md:h-12 md:w-52" : "h-9 w-[9.25rem] sm:h-10 sm:w-[10.5rem]"
           }`}
           style={{
             filter: inverted
