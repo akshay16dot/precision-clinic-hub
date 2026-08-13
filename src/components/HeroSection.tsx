@@ -39,14 +39,19 @@ const HeroSection = () => {
               that feel <span className="italic">like your own.</span>
             </h1>
 
-            <p className="font-body text-[10.5px] sm:text-[11px] tracking-[0.28em] uppercase text-navy/60 font-medium mb-6 sm:mb-8">
-              Implants &nbsp;·&nbsp; Aesthetics &nbsp;·&nbsp; Smile Reconstruction
+            <p className="font-body text-[9.5px] sm:text-[10.5px] tracking-[0.2em] sm:tracking-[0.24em] uppercase text-navy/60 font-medium leading-loose mb-6 sm:mb-8">
+              <span className="block sm:inline">Prosthodontics &nbsp;·&nbsp; Implants</span>
+              <span className="hidden sm:inline"> &nbsp;·&nbsp; </span>
+              <span className="block sm:inline">All-on-4 &nbsp;·&nbsp; Aesthetics</span>
+              <span className="hidden sm:inline"> &nbsp;·&nbsp; </span>
+              <span className="block sm:inline">Smile Reconstruction &nbsp;·&nbsp; Maxillofacial</span>
             </p>
 
             <p className="font-body text-[14px] sm:text-[15px] text-charcoal-light font-light leading-relaxed max-w-md mx-auto lg:mx-0 mb-9 sm:mb-11">
-              Implants, All-on-4 full-arch care, veneers and complex reconstruction,
-              coordinated by one specialist-led team from surgery through final teeth
-              and maintenance. All in one Hamilton office when clinically appropriate.
+              Dental implants, All-on-4 and All-on-X full-arch care, veneers, full-mouth
+              reconstruction and maxillofacial prosthetics, coordinated by one
+              specialist-led team from surgery through final teeth and maintenance.
+              All in one Hamilton office when clinically appropriate.
             </p>
 
             <div className="flex flex-col items-center lg:items-start gap-5">

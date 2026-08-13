@@ -35,7 +35,11 @@ const BrandLockup = ({
         }}
       />
 
-      <span className={`flex min-w-0 flex-col ${isFooter ? "items-center" : "items-start"}`}>
+      <span
+        className={`flex min-w-0 flex-col ${
+          isFooter ? "items-center" : "translate-y-1 items-start sm:translate-y-1.5"
+        }`}
+      >
         <img
           src={parmarWordmark}
           alt=""
@@ -58,6 +62,16 @@ const BrandLockup = ({
             }`}
           >
             Prosthodontics <span aria-hidden="true">·</span> Implants <span aria-hidden="true">·</span> Aesthetic Reconstruction
+          </span>
+        )}
+        {!isFooter && (
+          <span
+            className={`mt-1 font-body text-[5.5px] uppercase leading-[1.55] tracking-[0.1em] sm:text-[6px] sm:tracking-[0.12em] ${
+              inverted ? "text-primary-foreground/55" : "text-charcoal-light/55"
+            }`}
+          >
+            <span className="block whitespace-nowrap">Prosthodontics <span aria-hidden="true">·</span> Implants</span>
+            <span className="block whitespace-nowrap">Aesthetic Reconstruction</span>
           </span>
         )}
         <span className="sr-only">Parmar Prosthodontics</span>

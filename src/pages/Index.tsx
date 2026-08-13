@@ -18,7 +18,7 @@ import { usePageSEO } from "@/hooks/usePageSEO";
 const Index = () => {
   usePageSEO({
     title: "Prosthodontist & Dental Implant Specialist | Hamilton Township NJ | Dr. Akshay Parmar",
-    description: "Board-certified prosthodontist providing advanced dental implants, All-on-X rehabilitation, porcelain veneers, full mouth reconstruction, and complex restorative care in Hamilton Township NJ, Princeton, Jersey City, and surrounding New Jersey areas.",
+    description: "Board-certified prosthodontist providing dental implants, All-on-4 and All-on-X full-arch rehabilitation, porcelain veneers, full-mouth reconstruction and maxillofacial prosthetics in Hamilton Township, New Jersey.",
   });
 
   return (

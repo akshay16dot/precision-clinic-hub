@@ -35,7 +35,7 @@ const PAGE_SEO: Record<string, SeoEntry> = {
   "/": {
     title: "Prosthodontist in Hamilton Township, NJ | Dr. Akshay Parmar",
     description:
-      "Dental implants, All-on-4, veneers and complex reconstruction coordinated under one roof by a board-certified prosthodontist in Hamilton Township, NJ.",
+      "Dental implants, All-on-4 and All-on-X, veneers, full-mouth reconstruction and maxillofacial prosthetics under one roof in Hamilton Township, NJ.",
   },
   "/about": {
     title: "About Dr. Akshay Parmar, DDS, MDSc, FACP | Prosthodontist",

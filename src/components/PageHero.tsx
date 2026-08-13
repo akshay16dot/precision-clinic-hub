@@ -16,7 +16,7 @@ const PageHero = ({ subtitle, title, titleItalic, paragraphs }: PageHeroProps) =
         aria-hidden="true"
         width="508"
         height="501"
-        className="pointer-events-none absolute left-1/2 top-1/2 h-[19rem] w-[19rem] -translate-x-1/2 -translate-y-1/2 object-contain opacity-[0.018] md:h-[28rem] md:w-[28rem]"
+        className="pointer-events-none absolute left-[72%] top-[56%] h-[22rem] w-[22rem] -translate-x-1/2 -translate-y-1/2 object-contain opacity-[0.024] md:left-[76%] md:h-[34rem] md:w-[34rem] md:opacity-[0.02]"
         style={{
           filter:
             "brightness(0) saturate(100%) invert(16%) sepia(18%) saturate(1704%) hue-rotate(178deg) brightness(88%) contrast(91%)",
