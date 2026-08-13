@@ -18,13 +18,13 @@ const BrandLockup = ({
       className={`inline-flex items-center ${isFooter ? "gap-4 md:gap-5" : "gap-3 sm:gap-3.5"} ${className}`}
     >
       <img
-        src="/splash-icon.png?v=10"
+        src="/splash-icon.png?v=12"
         alt=""
         aria-hidden="true"
-        width="592"
-        height="534"
+        width="488"
+        height="442"
         className={`shrink-0 object-contain transition-all duration-500 ${
-          isFooter ? "h-[4.75rem] w-[4.75rem] md:h-24 md:w-24" : "h-12 w-12 sm:h-14 sm:w-14"
+          isFooter ? "h-[4.75rem] w-[4.75rem] md:h-24 md:w-24" : "h-14 w-14 sm:h-16 sm:w-16"
         }`}
         style={{
           filter: inverted
