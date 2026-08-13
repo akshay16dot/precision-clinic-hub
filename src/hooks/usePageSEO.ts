@@ -42,6 +42,11 @@ const PAGE_SEO: Record<string, SeoEntry> = {
     description:
       "Board-certified prosthodontist, NYU faculty and implant educator. The training, credentials and treatment philosophy behind the Hamilton Township practice.",
   },
+  "/meet-the-team": {
+    title: "Meet the Prosthodontic Team | Parmar, Hamilton Township NJ",
+    description:
+      "Meet the specialist-led team providing coordinated prosthodontic, implant, restorative and maxillofacial care in Hamilton Township, New Jersey.",
+  },
   "/contact": {
     title: "Contact Our Hamilton Township, NJ Office | (609) 585-1616",
     description:

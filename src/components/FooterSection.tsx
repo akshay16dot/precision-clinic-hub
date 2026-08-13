@@ -122,6 +122,9 @@ const FooterSection = () => {
               <Link to="/about" className="block font-body text-xs text-primary-foreground/55 hover:text-primary-foreground/85 tracking-wide transition-colors">
                 About Dr. Parmar
               </Link>
+              <Link to="/meet-the-team" className="block font-body text-xs text-primary-foreground/55 hover:text-primary-foreground/85 tracking-wide transition-colors">
+                Meet the Team
+              </Link>
             </div>
 
             {/* Patient pathways + professional */}

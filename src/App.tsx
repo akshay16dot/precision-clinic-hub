@@ -13,6 +13,7 @@ const MaxillofacialRehabilitation = lazy(() => import("./pages/MaxillofacialReha
 const ImmediateImplants = lazy(() => import("./pages/ImmediateImplants"));
 const VeneersAesthetic = lazy(() => import("./pages/VeneersAesthetic"));
 const About = lazy(() => import("./pages/About"));
+const MeetTheTeam = lazy(() => import("./pages/MeetTheTeam"));
 const Contact = lazy(() => import("./pages/Contact"));
 const ClinicalCases = lazy(() => import("./pages/ClinicalCases"));
 const ProfessionalEducation = lazy(() => import("./pages/ProfessionalEducation"));
@@ -64,6 +65,7 @@ const App = () => (
           <Route path="/tooth-wear-rehabilitation" element={<ToothWearRehabilitation />} />
           <Route path="/teeth-whitening" element={<TeethWhitening />} />
           <Route path="/about" element={<About />} />
+          <Route path="/meet-the-team" element={<MeetTheTeam />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/clinical-cases" element={<ClinicalCases />} />
           <Route path="/professional-education" element={<ProfessionalEducation />} />

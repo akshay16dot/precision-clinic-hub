@@ -75,7 +75,10 @@ const navItems: NavItem[] = [
   },
   {
     label: "About",
-    to: "/about",
+    links: [
+      { to: "/about", label: "About Dr. Parmar" },
+      { to: "/meet-the-team", label: "Meet the Team" },
+    ],
   },
   {
     label: "Contact",
@@ -154,6 +157,7 @@ const megaMenuSections: { title: string; links: NavLink[] }[] = [
     title: "About & Contact",
     links: [
       { to: "/about", label: "About Dr. Parmar" },
+      { to: "/meet-the-team", label: "Meet the Team" },
       { to: "/about", label: "Treatment Philosophy", hash: "#philosophy" },
       { to: "/contact", label: "Contact" },
     ],
