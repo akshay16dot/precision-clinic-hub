@@ -52,7 +52,7 @@ const faqs = [
   {
     question: "Where is the office?",
     answer:
-      "Dr. Parmar's practice is at 1544 Kuser Road, Suite C3, Hamilton, New Jersey 08619. Patients can call (609) 585-1616 for arrival guidance.",
+      "Dr. Parmar sees patients at Dr. Joseph Randazzo’s practice at 1544 Kuser Road, Suite C3, Hamilton, New Jersey 08619. Patients can call (609) 585-1616 for arrival guidance.",
   },
 ];
 

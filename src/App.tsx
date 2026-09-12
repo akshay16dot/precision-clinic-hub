@@ -14,6 +14,7 @@ const ImmediateImplants = lazy(() => import("./pages/ImmediateImplants"));
 const VeneersAesthetic = lazy(() => import("./pages/VeneersAesthetic"));
 const About = lazy(() => import("./pages/About"));
 const MeetTheTeam = lazy(() => import("./pages/MeetTheTeam"));
+const RegionalTravel = lazy(() => import("./pages/RegionalTravel"));
 const PracticeLocation = lazy(() => import("./pages/PracticeLocation"));
 const Contact = lazy(() => import("./pages/Contact"));
 const ClinicalCases = lazy(() => import("./pages/ClinicalCases"));
@@ -68,6 +69,7 @@ const App = () => (
           <Route path="/about" element={<About />} />
           <Route path="/meet-the-team" element={<MeetTheTeam />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/traveling-for-care" element={<RegionalTravel />} />
           <Route path="/locations/hamilton" element={<PracticeLocation slug="hamilton" />} />
           <Route path="/locations/jersey-city" element={<PracticeLocation slug="jersey-city" />} />
           <Route path="/clinical-cases" element={<ClinicalCases />} />

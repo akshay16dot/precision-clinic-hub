@@ -16,6 +16,7 @@ const ROUTES = [
   "/about",
   "/meet-the-team",
   "/contact",
+  "/traveling-for-care",
   "/locations/hamilton",
   "/locations/jersey-city",
   "/dental-implants-new-jersey",

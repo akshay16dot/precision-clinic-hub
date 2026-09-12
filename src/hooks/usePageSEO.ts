@@ -34,7 +34,7 @@ type SeoEntry = { title: string; description: string };
 const PAGE_SEO: Record<string, SeoEntry> = {
   "/": {
     title: "Dr. Akshay Parmar | Prosthodontist in Hamilton & Jersey City, NJ",
-    description: "Board-certified prosthodontist and maxillofacial specialist. Explore Dr. Parmar’s clinical work and book with him in Hamilton or Jersey City, New Jersey.",
+    description: "Board-certified prosthodontist in Hamilton and Jersey City, welcoming inquiries from New Jersey, NYC and Philadelphia for implant, reconstructive and maxillofacial care.",
   },
   "/about": {
     title: "About Dr. Akshay Parmar | Board-Certified Prosthodontist",
