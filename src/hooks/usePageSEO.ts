@@ -265,7 +265,7 @@ const PAGE_SEO: Record<string, SeoEntry> = {
   },
   "/professional-education": {
     title: "STABLE Academy | Dental Education with Dr. Akshay Parmar",
-    description: "Explore STABLE Academy, Dr. Akshay Parmar’s education brand for dental professionals, including implant, prosthetic and restorative training.",
+    description: "Explore STABLE Academy, Dr. Akshay Parmar’s education brand for dental professionals, covering fixed, removable, implant and maxillofacial prosthodontics, aesthetics, occlusion and digital workflows.",
   },
 
 };

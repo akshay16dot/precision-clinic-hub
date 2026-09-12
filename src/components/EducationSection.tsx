@@ -38,12 +38,12 @@ const EducationSection = () => {
           </p>
           <img src="/images/stable-academy-logo-navy-transparent.png" alt="STABLE Academy" width="1864" height="843" loading="lazy" className="w-full max-w-xl mx-auto mb-6" />
           <h2 className="font-display text-4xl md:text-5xl font-light text-navy mb-5">
-            Implant Education
+            Prosthodontic Education
             <br />
             <span className="italic">Without Shortcuts</span>
           </h2>
           <p className="font-body text-sm text-charcoal-light font-light leading-relaxed max-w-xl mx-auto">
-            STABLE Academy — implant and restorative education with Dr. Akshay Parmar.
+            STABLE Academy covers the full scope of prosthodontics with Dr. Akshay Parmar, including fixed, removable, implant and maxillofacial care, aesthetics, occlusion and digital workflows.
           </p>
         </motion.div>
 
