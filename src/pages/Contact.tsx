@@ -13,7 +13,7 @@ export default function Contact() {
    </div><LocationCards />
    <div className="mt-10 max-w-3xl mx-auto text-center font-body text-sm text-charcoal-light leading-relaxed">
     <p>Dr. Parmar is an associate prosthodontist at both practices. Each office manages its own scheduling and billing, and will confirm his availability, the consultation fee and what to bring.</p>
-    <p className="mt-5">For professional and educational inquiries: <a href="mailto:drparmardds@gmail.com" className="text-navy underline underline-offset-4">drparmardds@gmail.com</a>.</p>
+    <p className="mt-5">You can also email Dr. Parmar directly with patient, professional or educational inquiries: <a href="mailto:drparmardds@gmail.com" className="text-navy underline underline-offset-4">drparmardds@gmail.com</a>.</p>
    </div>
   </div></section><PageFooter />
  </main>;
