@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useId, useState } from "react";
 import { supabase } from "@/integrations/supabase/client";
 
 interface InquiryFormProps {
@@ -22,6 +22,7 @@ const InquiryForm = ({
   messageLabel = "Message",
   submitLabel = "Submit",
 }: InquiryFormProps) => {
+  const formId = useId();
   const [formState, setFormState] = useState<"idle" | "submitting" | "success" | "error">("idle");
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -64,7 +65,7 @@ const InquiryForm = ({
           Thank You
         </h3>
         <p className="font-body text-sm text-charcoal-light font-light leading-relaxed">
-          Your message was sent. Our team will contact you shortly.
+          Your message was sent to Dr. Parmar’s inquiry inbox. This does not confirm an appointment.
         </p>
       </div>
     );
@@ -97,10 +98,11 @@ const InquiryForm = ({
 
         {fields.includes("name") && (
           <div>
-            <label className="font-body text-xs tracking-[0.15em] uppercase text-charcoal-light block mb-3">
+            <label htmlFor={`${formId}-name`} className="font-body text-xs tracking-[0.15em] uppercase text-charcoal-light block mb-3">
               Full Name
             </label>
             <input
+              id={`${formId}-name`}
               type="text"
               required
               maxLength={100}
@@ -113,10 +115,11 @@ const InquiryForm = ({
 
         {fields.includes("email") && (
           <div>
-            <label className="font-body text-xs tracking-[0.15em] uppercase text-charcoal-light block mb-3">
+            <label htmlFor={`${formId}-email`} className="font-body text-xs tracking-[0.15em] uppercase text-charcoal-light block mb-3">
               Email Address
             </label>
             <input
+              id={`${formId}-email`}
               type="email"
               required
               maxLength={255}
@@ -129,10 +132,11 @@ const InquiryForm = ({
 
         {fields.includes("phone") && (
           <div>
-            <label className="font-body text-xs tracking-[0.15em] uppercase text-charcoal-light block mb-3">
+            <label htmlFor={`${formId}-phone`} className="font-body text-xs tracking-[0.15em] uppercase text-charcoal-light block mb-3">
               Phone Number
             </label>
             <input
+              id={`${formId}-phone`}
               type="tel"
               maxLength={20}
               value={phone}
@@ -144,10 +148,11 @@ const InquiryForm = ({
 
         {fields.includes("message") && (
           <div>
-            <label className="font-body text-xs tracking-[0.15em] uppercase text-charcoal-light block mb-3">
+            <label htmlFor={`${formId}-message`} className="font-body text-xs tracking-[0.15em] uppercase text-charcoal-light block mb-3">
               {messageLabel}
             </label>
             <textarea
+              id={`${formId}-message`}
               rows={4}
               required
               maxLength={2000}

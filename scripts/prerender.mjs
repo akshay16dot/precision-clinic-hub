@@ -66,6 +66,7 @@ const ROUTES = [
   "/front-tooth-implant-new-jersey",
   // Legacy URLs: emit static HTML at the old paths so GitHub Pages does not
   // return a 404 before React can redirect to the canonical destination.
+  "/education",
   "/aesthetic-dentistry",
   "/guide/dental-implants",
   "/guide/immediate-implants",

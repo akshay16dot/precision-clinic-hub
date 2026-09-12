@@ -121,7 +121,7 @@ const App = () => (
 
           {/* The STABLE Protocol, replaces the near-empty /education hub */}
           <Route path="/stable-protocol" element={<StableProtocol />} />
-          <Route path="/education" element={<RedirectTo to="/stable-protocol" />} />
+          <Route path="/education" element={<RedirectTo to="/professional-education" />} />
 
           {/* Anterior aesthetics */}
           <Route path="/front-tooth-implant-new-jersey" element={<FrontToothImplant />} />
