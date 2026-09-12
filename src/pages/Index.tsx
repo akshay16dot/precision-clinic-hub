@@ -1,3 +1,4 @@
+import GoogleReviewSection from "@/components/GoogleReviewSection";
 import SiteNavigation from "@/components/SiteNavigation";
 import HeroSection from "@/components/HeroSection";
 import CredentialStrip from "@/components/CredentialStrip";
@@ -38,6 +39,7 @@ const Index = () => {
       <MaxfacStrip />
       <AuthoritySection />
       <HowItWorks />
+      <GoogleReviewSection />
       <CTASection />
       <EducationSection />
       <FooterSection />
