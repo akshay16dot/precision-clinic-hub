@@ -29,15 +29,15 @@ const OneRoofCare = ({ dark = false, compact = false }: OneRoofCareProps) => {
           className="max-w-4xl mx-auto text-center"
         >
           <p className={`font-body text-[10px] tracking-[0.38em] uppercase mb-5 ${dark ? "text-white/45" : "text-charcoal-light"}`}>
-            One Coordinated Office
+            A Connected Treatment Plan
           </p>
           <h2 className={`font-display text-3xl sm:text-4xl md:text-5xl font-light leading-[1.08] mb-7 ${dark ? "text-white/90" : "text-navy"}`}>
             From implant surgery to final teeth,
             <br className="hidden sm:block" />
-            <span className="italic"> under one roof.</span>
+            <span className="italic"> one considered plan.</span>
           </h2>
           <p className={`font-body text-sm md:text-base font-light leading-relaxed max-w-3xl mx-auto ${dark ? "text-white/55" : "text-charcoal-light"}`}>
-            When clinically appropriate, Dr. Parmar and one specialist-led team coordinate the entire treatment in the Hamilton office. The surgical plan is designed around the final teeth from the beginning, and the same team remains responsible through delivery, follow-up and maintenance.
+            Dr. Parmar plans the final teeth from the beginning, connecting diagnosis, surgical planning, restoration and maintenance. He coordinates your care with the team at your treating practice, with the treatment setting and sequence determined by your individual needs.
           </p>
 
           <div className={`grid grid-cols-1 sm:grid-cols-5 gap-px mt-10 md:mt-12 ${dark ? "bg-white/10" : "bg-divider"}`}>

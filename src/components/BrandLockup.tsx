@@ -74,7 +74,7 @@ const BrandLockup = ({
             <span className="block whitespace-nowrap">Aesthetic Reconstruction</span>
           </span>
         )}
-        <span className="sr-only">Parmar Prosthodontics</span>
+        <span className={`mt-1 font-body text-[9px] tracking-[0.12em] ${inverted ? "text-primary-foreground/80" : "text-navy"}`}>Dr. Akshay Parmar</span>
       </span>
     </span>
   );

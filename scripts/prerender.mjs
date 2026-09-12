@@ -16,6 +16,8 @@ const ROUTES = [
   "/about",
   "/meet-the-team",
   "/contact",
+  "/locations/hamilton",
+  "/locations/jersey-city",
   "/dental-implants-new-jersey",
   "/full-arch-implants-new-jersey",
   "/immediate-implant-rehabilitation",

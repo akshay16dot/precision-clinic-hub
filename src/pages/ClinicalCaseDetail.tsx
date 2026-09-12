@@ -37,7 +37,7 @@ const ClinicalCaseDetail = ({ slug }: { slug: ClinicalCaseSlug }) => {
           description: clinicalCase.metaDescription,
           about: ["Prosthodontics", "Dental implants", "Oral rehabilitation"],
           author: { "@id": "https://drparmardds.com/#akshay-parmar" },
-          publisher: { "@id": "https://drparmardds.com/#practice" },
+          publisher: { "@id": "https://drparmardds.com/#akshay-parmar" },
           primaryImageOfPage: {
             "@type": "ImageObject",
             contentUrl: `https://drparmardds.com${clinicalCase.images[0].after}`,

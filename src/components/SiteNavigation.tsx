@@ -62,7 +62,7 @@ const navItems: NavItem[] = [
       { to: "/patient-questions", label: "Questions Answered" },
       { to: "/virtual-consultation", label: "Virtual Consultation" },
       { to: "/patients-traveling-to-hamilton", label: "Traveling to Hamilton" },
-      { to: "/contact", label: "Consultations" },
+      { to: "/contact", label: "Locations & Appointments" },
     ],
   },
   {
@@ -77,11 +77,11 @@ const navItems: NavItem[] = [
     label: "About",
     links: [
       { to: "/about", label: "About Dr. Parmar" },
-      { to: "/meet-the-team", label: "Meet the Team" },
+      { to: "/meet-the-team", label: "Clinical Collaboration" },
     ],
   },
   {
-    label: "Contact",
+    label: "Locations",
     to: "/contact",
   },
 ];
@@ -141,7 +141,7 @@ const megaMenuSections: { title: string; links: NavLink[] }[] = [
       { to: "/testimonials", label: "Patient Testimonials" },
       { to: "/leave-review", label: "Leave a Review" },
       { to: "/patient-questions", label: "Questions Answered" },
-      { to: "/contact", label: "Consultations" },
+      { to: "/contact", label: "Locations & Appointments" },
     ],
   },
   {
@@ -157,9 +157,9 @@ const megaMenuSections: { title: string; links: NavLink[] }[] = [
     title: "About & Contact",
     links: [
       { to: "/about", label: "About Dr. Parmar" },
-      { to: "/meet-the-team", label: "Meet the Team" },
+      { to: "/meet-the-team", label: "Clinical Collaboration" },
       { to: "/about", label: "Treatment Philosophy", hash: "#philosophy" },
-      { to: "/contact", label: "Contact" },
+      { to: "/contact", label: "Locations" },
     ],
   },
 ];
@@ -246,7 +246,7 @@ const SiteNavigation = () => {
           <Link
             to="/"
             className="flex justify-center transition-opacity duration-300 hover:opacity-80 lg:justify-start"
-            aria-label="Parmar Prosthodontics, home"
+            aria-label="Dr. Akshay Parmar, home"
           >
             <BrandLockup inverted={!showSolid} />
           </Link>

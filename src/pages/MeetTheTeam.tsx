@@ -16,7 +16,7 @@ const MeetTheTeam = () => {
   usePageSEO({
     title: "Meet the Prosthodontic Team | Parmar, Hamilton Township NJ",
     description:
-      "Meet Dr. Akshay Parmar, practice owner and clinical lead, with Dr. Joseph Randazzo and Dr. Neel Vakharia providing select coordinated prosthodontic care.",
+      "Dr. Akshay Parmar sees patients as an associate prosthodontist in Hamilton and Jersey City, working with the team at each practice.",
   });
 
   return (
@@ -37,10 +37,10 @@ const MeetTheTeam = () => {
           <h1 className="font-display text-4xl font-light leading-[0.95] tracking-tight text-navy sm:text-5xl md:text-6xl">
             Individual expertise.
             <br />
-            <span className="italic">One coordinated team.</span>
+            <span className="italic">Care through collaboration.</span>
           </h1>
           <p className="mx-auto mt-9 max-w-2xl font-body text-sm font-light leading-[1.9] text-charcoal-light md:text-[15px]">
-            Dr. Akshay Parmar is the practice owner, clinical lead and principal specialist. He is supported by clinicians who bring continuity, experience and thoughtful collaboration to select cases. Your care is planned clearly, communicated carefully and coordinated around the outcome you need.
+            Dr. Akshay Parmar sees patients as an associate prosthodontist at Dr. Joseph Randazzo’s practice in Hamilton and Dental Associates of Jersey City. Each practice has its own clinical team, appointments and billing. The clinicians below are associated with the Hamilton practice.
           </p>
         </motion.div>
       </section>
@@ -63,7 +63,7 @@ const MeetTheTeam = () => {
             <div className="flex items-center px-8 py-12 sm:px-12 lg:col-span-7 lg:px-16 xl:px-20">
               <div>
                 <p className="mb-5 font-body text-[10px] uppercase tracking-[0.34em] text-charcoal-light">
-                  Practice Owner &amp; Clinical Lead
+                  Associate Prosthodontist · Hamilton &amp; Jersey City
                 </p>
                 <h2 className="font-display text-4xl font-light tracking-tight text-navy md:text-5xl">
                   Dr. Akshay Parmar
@@ -94,7 +94,7 @@ const MeetTheTeam = () => {
         <div className="luxury-container max-w-6xl">
           <motion.div {...fadeUp} transition={{ duration: 0.8 }} className="mx-auto mb-16 max-w-2xl text-center">
             <p className="mb-6 font-body text-[10px] uppercase tracking-[0.35em] text-charcoal-light">
-              Continuity &amp; Collaboration
+              At the Hamilton Practice
             </p>
             <h2 className="font-display text-3xl font-light leading-[0.98] text-navy md:text-5xl">
               Experienced clinicians,
@@ -119,7 +119,7 @@ const MeetTheTeam = () => {
                 Dr. Randazzo is a board-certified prosthodontist with more than 20 years of experience in complex restorative care, dental oncology, facial prosthetics and dental implants. He earned his DDS at New York University, completed residency training at the University of Medicine and Dentistry of New Jersey and Marquette University, and completed fellowships in maxillofacial prosthetics at Memorial Sloan Kettering Cancer Center and implant dentistry at NYU.
               </p>
               <p className="mt-5 font-body text-sm font-light leading-[1.85] text-charcoal-light">
-                He serves as Director of Maxillofacial Prosthetics at Memorial Sloan Kettering and remains involved here in select maxillofacial and prosthodontic care. His continued presence preserves longstanding patient relationships and meaningful clinical continuity as the practice moves forward under Dr. Parmar's leadership.
+                Dr. Parmar sees patients as an associate in Dr. Randazzo’s Hamilton practice. Please contact the practice to confirm the appropriate clinician and appointment for your needs.
               </p>
               <a
                 href="https://www.mskcc.org/cancer-care/doctors/joseph-randazzo"
@@ -166,8 +166,8 @@ const MeetTheTeam = () => {
       </section>
 
       <PageCTA
-        title="Meet the Team in Hamilton"
-        description="Tell us what you need help with, and our team will guide you toward the right consultation."
+        title="Meet Dr. Parmar"
+        description="Choose Hamilton or Jersey City and contact the practice to schedule with Dr. Parmar."
       />
       <PageFooter />
     </main>

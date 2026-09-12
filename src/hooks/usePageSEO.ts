@@ -33,36 +33,30 @@ type SeoEntry = { title: string; description: string };
 
 const PAGE_SEO: Record<string, SeoEntry> = {
   "/": {
-    title: "Prosthodontist in Hamilton Township, NJ | Dr. Akshay Parmar",
-    description:
-      "Dental implants, All-on-4 and All-on-X, veneers, full-mouth reconstruction and maxillofacial prosthetics under one roof in Hamilton Township, NJ.",
+    title: "Dr. Akshay Parmar | Prosthodontist in Hamilton & Jersey City, NJ",
+    description: "Board-certified prosthodontist and maxillofacial specialist. Explore Dr. Parmar’s clinical work and book with him in Hamilton or Jersey City, New Jersey.",
   },
   "/about": {
-    title: "About Dr. Akshay Parmar, DDS, MDSc, FACP | Prosthodontist",
-    description:
-      "Board-certified prosthodontist, NYU faculty and implant educator. The training, credentials and treatment philosophy behind the Hamilton Township practice.",
+    title: "About Dr. Akshay Parmar | Board-Certified Prosthodontist",
+    description: "Explore Dr. Parmar’s training, credentials and treatment philosophy. Seeing patients as an associate prosthodontist in Hamilton and Jersey City, NJ.",
   },
   "/meet-the-team": {
-    title: "Meet the Prosthodontic Team | Parmar, Hamilton Township NJ",
-    description:
-      "Meet Dr. Akshay Parmar, practice owner and clinical lead, with Dr. Joseph Randazzo and Dr. Neel Vakharia providing select coordinated prosthodontic care.",
+    title: "Clinical Collaboration | Dr. Akshay Parmar",
+    description: "Dr. Parmar works with the teams at Dr. Randazzo’s Hamilton practice and Dental Associates of Jersey City as an associate prosthodontist.",
   },
   "/contact": {
-    title: "Contact Our Hamilton Township, NJ Office | (609) 585-1616",
-    description:
-      "Visit our prosthodontic practice at 1544 Kuser Road, Suite C3, Hamilton, NJ 08619. Office hours, directions, parking and consultation requests.",
+    title: "Book with Dr. Akshay Parmar | Hamilton & Jersey City",
+    description: "Choose Hamilton or Jersey City to schedule with Dr. Akshay Parmar. Practice phone numbers, directions and appointment information.",
   },
 
   // Service pages
   "/dental-implants-new-jersey": {
-    title: "Dental Implants Placed & Restored Under One Roof | Hamilton NJ",
-    description:
-      "Dental implants placed and restored by one specialist-led team, from 3D planning and surgery through the final tooth and maintenance. Hamilton Township, NJ.",
+    title: "Dental Implants | Dr. Akshay Parmar | Hamilton & Jersey City",
+    description: "Dental implant evaluation, placement and restoration with board-certified prosthodontist Dr. Akshay Parmar. Choose Hamilton or Jersey City for your consultation.",
   },
   "/full-arch-implants-new-jersey": {
-    title: "All-on-4 & Full-Arch Implants Under One Roof | Hamilton NJ",
-    description:
-      "All-on-4 and All-on-X implants coordinated under one roof, from surgery and same-day provisional teeth through the final bridge and maintenance.",
+    title: "All-on-4 & Full-Arch Implants | Dr. Akshay Parmar, NJ",
+    description: "Explore full-arch implant care with Dr. Akshay Parmar, from treatment planning through restoration and maintenance. Consultations in Hamilton and Jersey City.",
   },
   "/immediate-implant-rehabilitation": {
     title: "Immediate Dental Implants, Teeth in a Day | Hamilton, NJ",
@@ -81,9 +75,8 @@ const PAGE_SEO: Record<string, SeoEntry> = {
       "Severe wear, erosion and collapsed bite. Recovering lost vertical dimension with restorations planned around how your jaw actually works.",
   },
   "/veneers-aesthetic-reconstruction": {
-    title: "Natural Porcelain Veneers & Aesthetic Dentistry | Hamilton NJ",
-    description:
-      "Natural porcelain veneers and aesthetic smile reconstruction planned, tested and delivered by a board-certified prosthodontist in one Hamilton office.",
+    title: "Porcelain Veneers | Dr. Akshay Parmar | New Jersey",
+    description: "Natural-looking porcelain veneers and aesthetic reconstruction planned with function and facial harmony in mind. See Dr. Parmar in Hamilton or Jersey City.",
   },
   "/maxillofacial-rehabilitation": {
     title: "Maxillofacial Prosthodontics, Oral Cancer Care | NJ",

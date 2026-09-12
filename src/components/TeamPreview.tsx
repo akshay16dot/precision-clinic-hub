@@ -5,7 +5,7 @@ const clinicians = [
   {
     initials: "AP",
     name: "Dr. Akshay Parmar",
-    role: "Practice Owner & Clinical Lead",
+    role: "Associate Prosthodontist",
     featured: true,
   },
   {
@@ -39,7 +39,7 @@ const TeamPreview = () => {
             <span className="italic">Strengthened by continuity.</span>
           </h2>
           <p className="mt-8 max-w-xl font-body text-sm font-light leading-[1.9] text-primary-foreground/80 md:text-[15px]">
-            Every complex treatment begins with Dr. Parmar's diagnosis and clinical direction. Dr. Randazzo remains involved in select maxillofacial and prosthodontic care, while Dr. Vakharia provides select prosthodontic care. Together, the team offers clear leadership, trusted experience and coordinated treatment.
+            Dr. Parmar sees patients as an associate at Dr. Randazzo’s Hamilton practice and Dental Associates of Jersey City. Each office manages its own clinical team and appointments.
           </p>
           <Link
             to="/meet-the-team"

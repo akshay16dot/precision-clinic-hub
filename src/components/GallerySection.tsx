@@ -146,8 +146,7 @@ const GallerySection = () => {
           </h2>
           <p className="font-body text-sm md:text-[15px] text-charcoal-light font-light leading-relaxed max-w-xl mx-auto">
             Hover over any case to see where it began. Full-mouth rebuilds,
-            implant restorations, veneers and corrective work, every case
-            treated in this practice.
+            implant restorations, veneers and corrective work, shown through documented clinical cases.
           </p>
           <div className="w-12 h-px bg-navy/20 mx-auto mt-8" />
         </motion.div>
@@ -190,8 +189,7 @@ const GallerySection = () => {
           className="text-center mt-12 md:mt-14"
         >
           <p className="font-body text-[11px] text-charcoal-light/65 font-light italic mb-5 max-w-md mx-auto leading-relaxed">
-            Every case shown is treatment completed in this practice.
-            Photographs reflect actual patient outcomes.
+            Photographs document actual clinical outcomes. Treatment needs and results vary for each patient.
           </p>
           <div className="flex items-center justify-center gap-8 flex-wrap">
             <Link

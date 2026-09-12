@@ -13,12 +13,12 @@ import EducationSection from "@/components/EducationSection";
 import FooterSection from "@/components/FooterSection";
 import OneRoofCare from "@/components/OneRoofCare";
 import RegionalReach from "@/components/RegionalReach";
-import TeamPreview from "@/components/TeamPreview";
+import LocationsSection from "@/components/LocationsSection";
 import { usePageSEO } from "@/hooks/usePageSEO";
 
 const Index = () => {
   usePageSEO({
-    title: "Prosthodontist & Dental Implant Specialist | Hamilton Township NJ | Dr. Akshay Parmar",
+    title: "Dr. Akshay Parmar | Prosthodontist in Hamilton & Jersey City, NJ",
     description: "Board-certified prosthodontist providing dental implants, All-on-4 and All-on-X full-arch rehabilitation, porcelain veneers, full-mouth reconstruction and maxillofacial prosthetics in Hamilton Township, New Jersey.",
   });
 
@@ -27,9 +27,10 @@ const Index = () => {
       <SiteNavigation />
       <HeroSection />
       <CredentialStrip />
+      <LocationsSection />
       <GallerySection />
       <IntroSection />
-      <TeamPreview />
+
       <OneRoofCare />
       <RegionalReach />
       <ServicesSection />

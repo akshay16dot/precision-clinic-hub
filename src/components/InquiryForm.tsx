@@ -81,6 +81,7 @@ const InquiryForm = ({
         </p>
       )}
 
+      <p className="font-body text-xs text-charcoal-light leading-relaxed mb-6">This message goes to Dr. Parmar’s inquiry inbox; it does not book an appointment. For scheduling and fees, <a href="/contact" className="text-navy underline">contact your preferred practice</a>. Please do not include medical records or sensitive clinical details here.</p>
       <form onSubmit={handleSubmit} className="space-y-6">
         {/* Honeypot */}
         <div className="absolute opacity-0 pointer-events-none" aria-hidden="true" tabIndex={-1}>
