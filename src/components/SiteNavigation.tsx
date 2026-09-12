@@ -69,7 +69,7 @@ const navItems: NavItem[] = [
   {
     label: "Education",
     links: [
-      { to: "/professional-education", label: "Courses & Live Programs" },
+      { to: "/professional-education", label: "STABLE Academy" },
       { to: "/stable-protocol", label: "The STABLE Protocol™" },
       { to: "/professional-testimonials", label: "Peer Feedback" },
     ],
@@ -78,7 +78,6 @@ const navItems: NavItem[] = [
     label: "About",
     links: [
       { to: "/about", label: "About Dr. Parmar" },
-      { to: "/meet-the-team", label: "Clinical Collaboration" },
     ],
   },
   {
@@ -149,7 +148,7 @@ const megaMenuSections: { title: string; links: NavLink[] }[] = [
   {
     title: "For Dentists",
     links: [
-      { to: "/professional-education", label: "Courses & Live Programs" },
+      { to: "/professional-education", label: "STABLE Academy" },
       { to: "/stable-protocol", label: "The STABLE Protocol™" },
       { to: "/professional-testimonials", label: "Peer Feedback" },
       { to: "/prosthodontist-vs-oral-surgeon", label: "Referral Guidance" },
@@ -159,7 +158,6 @@ const megaMenuSections: { title: string; links: NavLink[] }[] = [
     title: "About & Contact",
     links: [
       { to: "/about", label: "About Dr. Parmar" },
-      { to: "/meet-the-team", label: "Clinical Collaboration" },
       { to: "/about", label: "Treatment Philosophy", hash: "#philosophy" },
       { to: "/contact", label: "Locations" },
     ],

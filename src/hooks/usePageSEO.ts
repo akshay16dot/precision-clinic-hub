@@ -40,10 +40,6 @@ const PAGE_SEO: Record<string, SeoEntry> = {
     title: "About Dr. Akshay Parmar | Board-Certified Prosthodontist",
     description: "Explore Dr. Parmar’s training, credentials and treatment philosophy. Seeing patients as an associate prosthodontist in Hamilton and Jersey City, NJ.",
   },
-  "/meet-the-team": {
-    title: "Clinical Collaboration | Dr. Akshay Parmar",
-    description: "Dr. Parmar works with the teams at Dr. Randazzo’s Hamilton practice and Dental Associates of Jersey City as an associate prosthodontist.",
-  },
   "/contact": {
     title: "Book with Dr. Akshay Parmar | Hamilton & Jersey City",
     description: "Choose Hamilton or Jersey City to schedule with Dr. Akshay Parmar. Practice phone numbers, directions and appointment information.",
@@ -268,9 +264,8 @@ const PAGE_SEO: Record<string, SeoEntry> = {
       "Plain-language answers on dental implants, dentures, full-arch treatment and full mouth reconstruction, written by a prosthodontist.",
   },
   "/professional-education": {
-    title: "Implant CE for Dentists | Dr. Akshay Parmar, New Jersey",
-    description:
-      "Live courses in surgical implant foundations, full-arch prosthetic protocols and digital workflows. New Jersey, New York, Philadelphia, Delhi and Mumbai.",
+    title: "STABLE Academy | Dental Education with Dr. Akshay Parmar",
+    description: "Explore STABLE Academy, Dr. Akshay Parmar’s education brand for dental professionals, including implant, prosthetic and restorative training.",
   },
 
 };

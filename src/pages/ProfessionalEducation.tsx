@@ -92,7 +92,7 @@ const ProfessionalEducation = () => {
       <SiteNavigation />
 
       {/* ═══════ SECTION 1: HERO ═══════ */}
-      <section className="relative hero-min-h hero-navy-fallback flex items-center justify-center overflow-hidden">
+      <section className="relative hero-min-h pt-40 pb-16 hero-navy-fallback flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <img
             src={eduLiveSurgery}
@@ -119,8 +119,9 @@ const ProfessionalEducation = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
           >
+            <img src="/images/stable-academy-logo-warm-white-transparent.png" alt="STABLE Academy" width="1864" height="843" className="w-full max-w-md mx-auto mb-5" />
             <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-light tracking-tight text-primary-foreground leading-[0.95] mb-6">
-              Education for <span className="italic">Dentists</span>
+              STABLE Academy <span className="italic">with Dr. Parmar</span>
             </h1>
             <p className="font-body text-xs md:text-sm text-primary-foreground/55 font-light leading-relaxed max-w-2xl mx-auto mb-4">
               Advanced Implant, Prosthetic, and Biologic Rehabilitation Training
@@ -308,7 +309,7 @@ const ProfessionalEducation = () => {
               Mentorship · Live Cases · Surgical & Prosthetic Integration
             </p>
             <Link
-              to="/contact"
+              to="/professional-education#education-enquiry"
               className="inline-block px-10 py-4 border border-navy/15 text-navy font-body text-[11px] tracking-[0.25em] uppercase transition-all duration-300 hover:bg-navy hover:text-primary-foreground"
             >
               Request Program Details
@@ -330,7 +331,7 @@ const ProfessionalEducation = () => {
               Mentorship · Live Cases · Surgical & Prosthetic Integration
             </p>
             <Link
-              to="/contact"
+              to="/professional-education#education-enquiry"
               className="inline-block px-10 py-4 border border-navy/15 text-navy font-body text-[11px] tracking-[0.25em] uppercase transition-all duration-300 hover:bg-navy hover:text-primary-foreground"
             >
               Request Program Details
@@ -378,7 +379,7 @@ const ProfessionalEducation = () => {
       </section>
 
       {/* ═══════ SECTION 7: EDUCATION ENQUIRY FORM ═══════ */}
-      <section className="section-padding px-6 md:px-8">
+      <section id="education-enquiry" className="section-padding px-6 md:px-8">
         <div className="luxury-container max-w-lg">
           <motion.div {...fadeUp} transition={{ duration: 0.6 }} className="text-center mb-12">
             <p className="font-body text-[10px] tracking-[0.35em] uppercase text-charcoal-light mb-6">
