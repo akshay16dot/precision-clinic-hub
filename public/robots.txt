@@ -1,7 +1,7 @@
 User-agent: *
 Allow: /
 
-# AI crawlers (these drive a growing share of referrals and do NOT run JavaScript)
+# Explicit crawler access; access alone does not guarantee indexing or referrals.
 User-agent: GPTBot
 Allow: /
 

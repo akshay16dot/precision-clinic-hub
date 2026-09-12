@@ -37,7 +37,7 @@ const BrandLockup = ({
 
       <span
         className={`flex min-w-0 flex-col ${
-          isFooter ? "items-center" : "translate-y-0.5 items-start sm:translate-y-1"
+          isFooter ? "items-center" : "translate-y-0.5 items-center text-center sm:translate-y-1"
         }`}
       >
         <img
@@ -46,7 +46,7 @@ const BrandLockup = ({
           aria-hidden="true"
           width="917"
           height="440"
-          className={`object-contain ${isFooter ? "object-center" : "object-left"} ${
+          className={`object-contain object-center ${
             isFooter ? "h-10 w-40 md:h-12 md:w-52" : "h-[3.65rem] w-auto sm:h-[4.15rem]"
           }`}
           style={{
@@ -74,7 +74,7 @@ const BrandLockup = ({
             <span className="block whitespace-nowrap">Aesthetic Reconstruction</span>
           </span>
         )}
-        <span className="sr-only">Parmar Prosthodontics</span>
+        <span className={`mt-1 font-body text-[9px] tracking-[0.12em] ${inverted ? "text-primary-foreground/80" : "text-navy"}`}>Dr. Akshay Parmar</span>
       </span>
     </span>
   );

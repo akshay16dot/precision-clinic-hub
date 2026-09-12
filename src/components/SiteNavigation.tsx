@@ -61,14 +61,15 @@ const navItems: NavItem[] = [
       { to: "/leave-review", label: "Leave a Review" },
       { to: "/patient-questions", label: "Questions Answered" },
       { to: "/virtual-consultation", label: "Virtual Consultation" },
-      { to: "/patients-traveling-to-hamilton", label: "Traveling to Hamilton" },
-      { to: "/contact", label: "Consultations" },
+      { to: "/traveling-for-care", label: "Travel from NJ, NYC & Philadelphia" },
+      { to: "/patients-traveling-to-hamilton", label: "Hamilton Travel Guide" },
+      { to: "/contact", label: "Locations & Appointments" },
     ],
   },
   {
     label: "Education",
     links: [
-      { to: "/professional-education", label: "Courses & Live Programs" },
+      { to: "/professional-education", label: "STABLE Academy" },
       { to: "/stable-protocol", label: "The STABLE Protocol™" },
       { to: "/professional-testimonials", label: "Peer Feedback" },
     ],
@@ -77,11 +78,10 @@ const navItems: NavItem[] = [
     label: "About",
     links: [
       { to: "/about", label: "About Dr. Parmar" },
-      { to: "/meet-the-team", label: "Meet the Team" },
     ],
   },
   {
-    label: "Contact",
+    label: "Locations",
     to: "/contact",
   },
 ];
@@ -137,17 +137,18 @@ const megaMenuSections: { title: string; links: NavLink[] }[] = [
     links: [
       { to: "/clinical-assessment", label: "Clinical Self-Assessment" },
       { to: "/virtual-consultation", label: "Virtual Consultation" },
-      { to: "/patients-traveling-to-hamilton", label: "Traveling to Hamilton" },
+      { to: "/traveling-for-care", label: "Travel from NJ, NYC & Philadelphia" },
+      { to: "/patients-traveling-to-hamilton", label: "Hamilton Travel Guide" },
       { to: "/testimonials", label: "Patient Testimonials" },
       { to: "/leave-review", label: "Leave a Review" },
       { to: "/patient-questions", label: "Questions Answered" },
-      { to: "/contact", label: "Consultations" },
+      { to: "/contact", label: "Locations & Appointments" },
     ],
   },
   {
     title: "For Dentists",
     links: [
-      { to: "/professional-education", label: "Courses & Live Programs" },
+      { to: "/professional-education", label: "STABLE Academy" },
       { to: "/stable-protocol", label: "The STABLE Protocol™" },
       { to: "/professional-testimonials", label: "Peer Feedback" },
       { to: "/prosthodontist-vs-oral-surgeon", label: "Referral Guidance" },
@@ -157,9 +158,8 @@ const megaMenuSections: { title: string; links: NavLink[] }[] = [
     title: "About & Contact",
     links: [
       { to: "/about", label: "About Dr. Parmar" },
-      { to: "/meet-the-team", label: "Meet the Team" },
       { to: "/about", label: "Treatment Philosophy", hash: "#philosophy" },
-      { to: "/contact", label: "Contact" },
+      { to: "/contact", label: "Locations" },
     ],
   },
 ];
@@ -246,7 +246,7 @@ const SiteNavigation = () => {
           <Link
             to="/"
             className="flex justify-center transition-opacity duration-300 hover:opacity-80 lg:justify-start"
-            aria-label="Parmar Prosthodontics, home"
+            aria-label="Dr. Akshay Parmar, home"
           >
             <BrandLockup inverted={!showSolid} />
           </Link>

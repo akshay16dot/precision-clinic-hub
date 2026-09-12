@@ -102,7 +102,7 @@ const StableProtocol = () => {
             >
               A treatment system built on a single premise: the soft tissue and the bone
               decide the outcome, so every decision is planned and sequenced around them.
-              It governs how this practice approaches implants, immediate placement,
+              It guides Dr. Parmar’s approach to implants, immediate placement,
               full-arch rehabilitation, veneers and crowns, and it is taught to clinicians
               in the United States and India.
             </p>

@@ -1,3 +1,4 @@
+import GoogleReviewSection from "@/components/GoogleReviewSection";
 import { motion } from "framer-motion";
 import SiteNavigation from "@/components/SiteNavigation";
 import PageFooter from "@/components/PageFooter";
@@ -96,6 +97,8 @@ const Testimonials = () => {
           </motion.div>
         </div>
       </section>
+
+      <GoogleReviewSection />
 
       {/* Testimonials */}
       <section className="pb-20 md:pb-28 px-6 md:px-8">

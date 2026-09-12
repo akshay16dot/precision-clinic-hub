@@ -15,7 +15,7 @@ const steps = [
   {
     num: "03",
     title: "Rebuild",
-    body: "One specialist-led team coordinates surgery, provisional teeth, the final prosthesis and maintenance in one office, with same-day provisionals where the case allows.",
+    body: "Dr. Parmar works with the team at your treating practice to coordinate surgery, provisional and final restorations, and maintenance as appropriate for your case.",
   },
 ];
 

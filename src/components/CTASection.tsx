@@ -35,7 +35,7 @@ const CTASection = () => {
               to="/contact"
               className="cta-tactile flex-1 px-6 py-4 bg-navy text-primary-foreground font-body text-[11px] tracking-[0.25em] uppercase font-medium transition-all duration-300 hover:opacity-90 text-center shadow-[0_8px_24px_-8px_hsl(220_30%_8%/0.4)]"
             >
-              Schedule Consultation
+              Choose Your Location
             </Link>
             <Link
               to="/clinical-assessment"
@@ -52,7 +52,7 @@ const CTASection = () => {
           </div>
 
           <p className="font-body text-[11px] text-charcoal-light/70 font-light">
-            Or call <a href="tel:+16095851616" className="text-navy hover:underline underline-offset-4">(609) 585-1616</a> &nbsp;·&nbsp; 1544 Kuser Road, Suite C3, Hamilton, NJ
+            Hamilton: <a href="tel:+16095851616" className="text-navy hover:underline underline-offset-4">(609) 585-1616</a><br />Jersey City: <a href="tel:+12014330773" className="text-navy hover:underline underline-offset-4">(201) 433-0773</a>
           </p>
         </motion.div>
       </div>

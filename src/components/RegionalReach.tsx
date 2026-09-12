@@ -13,9 +13,9 @@ const RegionalReach = () => (
         className="text-center"
       >
         <p className="font-body text-[10px] tracking-[0.32em] uppercase text-charcoal-light mb-5">Patients Across the Region</p>
-        <h2 className="font-display text-3xl md:text-4xl font-light text-navy mb-7">Specialist care in <span className="italic">Hamilton</span></h2>
+        <h2 className="font-display text-3xl md:text-4xl font-light text-navy mb-7">For patients across <span className="italic">NJ, NYC &amp; Philadelphia</span></h2>
         <p className="font-body text-sm text-charcoal-light font-light leading-relaxed max-w-2xl mx-auto mb-9">
-          Patients visit from Mercer County, Princeton, Central Jersey and Bucks County for coordinated implant, reconstructive and maxillofacial care.
+          Considering travel for implant, reconstructive or maxillofacial care? Meet Dr. Parmar in Hamilton or Jersey City, and plan the evaluation, treatment sequence and follow-up with your chosen practice.
         </p>
         <div className="flex flex-wrap justify-center gap-x-6 gap-y-3 mb-8">
           {REGION_LIST.map((region) => (
@@ -24,8 +24,8 @@ const RegionalReach = () => (
             </Link>
           ))}
         </div>
-        <Link to="/patients-traveling-to-hamilton" className="font-body text-[10px] tracking-[0.2em] uppercase text-navy border-b border-navy/30 hover:border-navy pb-1 transition-colors">
-          Plan a Visit to Hamilton
+        <Link to="/traveling-for-care" className="font-body text-[10px] tracking-[0.2em] uppercase text-navy border-b border-navy/30 hover:border-navy pb-1 transition-colors">
+          Plan Your Visit from NJ, NYC or Philadelphia
         </Link>
       </motion.div>
     </div>

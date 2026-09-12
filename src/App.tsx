@@ -13,7 +13,8 @@ const MaxillofacialRehabilitation = lazy(() => import("./pages/MaxillofacialReha
 const ImmediateImplants = lazy(() => import("./pages/ImmediateImplants"));
 const VeneersAesthetic = lazy(() => import("./pages/VeneersAesthetic"));
 const About = lazy(() => import("./pages/About"));
-const MeetTheTeam = lazy(() => import("./pages/MeetTheTeam"));
+const RegionalTravel = lazy(() => import("./pages/RegionalTravel"));
+const PracticeLocation = lazy(() => import("./pages/PracticeLocation"));
 const Contact = lazy(() => import("./pages/Contact"));
 const ClinicalCases = lazy(() => import("./pages/ClinicalCases"));
 const ProfessionalEducation = lazy(() => import("./pages/ProfessionalEducation"));
@@ -65,8 +66,11 @@ const App = () => (
           <Route path="/tooth-wear-rehabilitation" element={<ToothWearRehabilitation />} />
           <Route path="/teeth-whitening" element={<TeethWhitening />} />
           <Route path="/about" element={<About />} />
-          <Route path="/meet-the-team" element={<MeetTheTeam />} />
+          <Route path="/meet-the-team" element={<RedirectTo to="/about" />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/traveling-for-care" element={<RegionalTravel />} />
+          <Route path="/locations/hamilton" element={<PracticeLocation slug="hamilton" />} />
+          <Route path="/locations/jersey-city" element={<PracticeLocation slug="jersey-city" />} />
           <Route path="/clinical-cases" element={<ClinicalCases />} />
           <Route path="/professional-education" element={<ProfessionalEducation />} />
           <Route path="/patient-questions" element={<PatientQuestions />} />
@@ -117,7 +121,7 @@ const App = () => (
 
           {/* The STABLE Protocol, replaces the near-empty /education hub */}
           <Route path="/stable-protocol" element={<StableProtocol />} />
-          <Route path="/education" element={<RedirectTo to="/stable-protocol" />} />
+          <Route path="/education" element={<RedirectTo to="/professional-education" />} />
 
           {/* Anterior aesthetics */}
           <Route path="/front-tooth-implant-new-jersey" element={<FrontToothImplant />} />

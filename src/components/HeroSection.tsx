@@ -6,7 +6,7 @@ const HeroSection = () => {
   return (
     <section className="relative bg-background overflow-hidden">
       {/* ── Mobile: warm portrait band that melts into the page ── */}
-      <div className="lg:hidden relative w-full h-[52vh] min-h-[340px] mt-[78px] sm:mt-[86px]">
+      <div className="lg:hidden relative w-full h-[36vh] min-h-[260px] mt-[78px] sm:mt-[86px]">
         <img
           src={heroPortrait}
           alt="Dr. Akshay Parmar, board-certified prosthodontist in Hamilton Township, NJ"
@@ -30,14 +30,17 @@ const HeroSection = () => {
             transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
           >
             <p className="font-body text-[10px] sm:text-[11px] tracking-[0.32em] uppercase text-charcoal-light mb-6 sm:mb-8">
-              Board-Certified Prosthodontist · Hamilton Township, NJ
+              Board-Certified Prosthodontist · New Jersey
             </p>
 
             <h1 className="font-display font-light text-navy tracking-tight leading-[1.04] text-[38px] sm:text-[50px] lg:text-[58px] xl:text-[68px] mb-5 sm:mb-6">
-              Rebuilding smiles
-              <br />
-              that feel <span className="italic">like your own.</span>
+              Dr. Akshay<br />
+              <span className="italic">Parmar.</span>
             </h1>
+
+            <div className="flex flex-wrap justify-center lg:justify-start gap-5 mb-6 font-body text-xs text-navy"><Link to="/locations/hamilton" className="underline underline-offset-4">See me in Hamilton</Link><Link to="/locations/jersey-city" className="underline underline-offset-4">See me in Jersey City</Link></div>
+
+            <p className="font-display text-2xl text-navy mb-6">Rebuilding smiles that feel like your own.</p>
 
             <p className="font-body text-[9.5px] sm:text-[10.5px] tracking-[0.2em] sm:tracking-[0.24em] uppercase text-navy/60 font-medium leading-loose mb-6 sm:mb-8">
               <span className="block sm:inline">Prosthodontics &nbsp;·&nbsp; Implants</span>
@@ -49,9 +52,8 @@ const HeroSection = () => {
 
             <p className="font-body text-[14px] sm:text-[15px] text-charcoal-light font-light leading-relaxed max-w-md mx-auto lg:mx-0 mb-9 sm:mb-11">
               Dental implants, All-on-4 and All-on-X full-arch care, veneers, full-mouth
-              reconstruction and maxillofacial prosthetics, coordinated by one
-              specialist-led team from surgery through final teeth and maintenance.
-              All in one Hamilton office when clinically appropriate.
+              reconstruction and maxillofacial prosthetics. Personal, specialist-led
+              care with Dr. Akshay Parmar, seeing patients in Hamilton and Jersey City, New Jersey.
             </p>
 
             <div className="flex flex-col items-center lg:items-start gap-5">
@@ -59,7 +61,7 @@ const HeroSection = () => {
                 to="/contact"
                 className="cta-tactile inline-block px-12 py-[18px] bg-navy text-primary-foreground font-body text-[12px] tracking-[0.25em] uppercase font-medium transition-all duration-300 hover:bg-navy/90 shadow-[0_10px_30px_-10px_hsl(220_45%_18%/0.45)] w-full sm:w-auto text-center"
               >
-                Book a Consultation
+                Choose Your Location
               </Link>
 
               <Link
@@ -73,7 +75,7 @@ const HeroSection = () => {
             <div className="mt-10 sm:mt-12 pt-6 border-t border-divider max-w-md mx-auto lg:mx-0">
               <p className="font-body text-[9.5px] sm:text-[10px] tracking-[0.22em] uppercase text-charcoal-light/60 leading-loose">
                 Trained at Memorial Sloan Kettering &nbsp;·&nbsp; Former NYU Faculty
-                &nbsp;·&nbsp; (609) 585-1616
+                &nbsp;·&nbsp; Hamilton &amp; Jersey City
               </p>
             </div>
           </motion.div>

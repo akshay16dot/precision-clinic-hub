@@ -24,26 +24,15 @@ const fadeUp = {
 
 
 const educationalScope = [
-  {
-    title: "Single Tooth & Conventional Implants",
-    description: "Diagnosis, planning, surgical execution, prosthetic integration",
-  },
-  {
-    title: "Immediate Implant Therapy",
-    description: "Extraction protocols, grafting, temporization, tissue preservation",
-  },
-  {
-    title: "Full-Arch Rehabilitation",
-    description: "Prosthetic space, occlusion, biomechanics, long-term stability",
-  },
-  {
-    title: "Soft Tissue & Biologic Management",
-    description: "Grafting strategies, emergence profile control, stability protocols",
-  },
-  {
-    title: "Digital Workflows",
-    description: "Intraoral scanning, photogrammetry, prosthetic accuracy systems",
-  },
+  { title: "Fixed Prosthodontics", description: "Crowns, bridges, tooth preparation, materials and restorative treatment planning" },
+  { title: "Removable Prosthodontics", description: "Complete and partial dentures, overdentures, impressions and prosthesis design" },
+  { title: "Implant Prosthodontics", description: "Single-tooth through full-arch care, surgical planning, restoration and maintenance" },
+  { title: "Maxillofacial Prosthodontics", description: "Oral and facial prosthetic rehabilitation, oncology care and interdisciplinary planning" },
+  { title: "Aesthetics & Adhesive Dentistry", description: "Veneers, smile design, restorative materials and conservative rehabilitation" },
+  { title: "Occlusion & Full-Mouth Rehabilitation", description: "Bite assessment, tooth wear, function and comprehensive treatment sequencing" },
+  { title: "Digital Prosthodontics", description: "Scanning, CAD/CAM, digital planning and integration of clinical and laboratory workflows" },
+  { title: "Biology & Long-Term Care", description: "Soft tissue and bone considerations, maintenance and management of complications" },
+  { title: "Diagnosis & Treatment Planning", description: "Patient assessment, evidence-based decisions and communication across all areas of prosthodontics" },
 ];
 
 const galleryItems = [
@@ -83,8 +72,8 @@ const peerTestimonials = [
 
 const ProfessionalEducation = () => {
   usePageSEO({
-    title: "Dental Implant Courses & Prosthodontic Training | NJ, NY & Mumbai",
-    description: "Advanced dental implant, prosthodontic, and rehabilitation training programs for dentists, including live courses and clinical education led by a board-certified prosthodontist. Programs available in New Jersey, New York, Philadelphia, New Delhi, and Mumbai.",
+    title: "STABLE Academy | Comprehensive Prosthodontic Education",
+    description: "STABLE Academy with Dr. Akshay Parmar covers all areas of prosthodontics, including fixed, removable, implant and maxillofacial care, aesthetics, occlusion and digital workflows.",
   });
 
   return (
@@ -92,7 +81,7 @@ const ProfessionalEducation = () => {
       <SiteNavigation />
 
       {/* ═══════ SECTION 1: HERO ═══════ */}
-      <section className="relative hero-min-h hero-navy-fallback flex items-center justify-center overflow-hidden">
+      <section className="relative hero-min-h pt-40 pb-16 hero-navy-fallback flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <img
             src={eduLiveSurgery}
@@ -119,11 +108,12 @@ const ProfessionalEducation = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
           >
+            <img src="/images/stable-academy-logo-warm-white-transparent.png" alt="STABLE Academy" width="1864" height="843" className="w-full max-w-md mx-auto mb-5" />
             <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-light tracking-tight text-primary-foreground leading-[0.95] mb-6">
-              Education for <span className="italic">Dentists</span>
+              STABLE Academy <span className="italic">with Dr. Parmar</span>
             </h1>
             <p className="font-body text-xs md:text-sm text-primary-foreground/55 font-light leading-relaxed max-w-2xl mx-auto mb-4">
-              Advanced Implant, Prosthetic, and Biologic Rehabilitation Training
+              Education Across the Full Scope of Prosthodontics
             </p>
             <p className="font-body text-[10px] tracking-[0.25em] uppercase text-primary-foreground/45 mb-14">
               Global Programs &nbsp;·&nbsp; Surgical Precision &nbsp;·&nbsp; Prosthetic Intelligence
@@ -152,7 +142,7 @@ const ProfessionalEducation = () => {
         <div className="luxury-container max-w-3xl">
           <motion.div {...fadeUp} transition={{ duration: 0.8 }} className="text-center mb-14">
             <p className="font-body text-[10px] tracking-[0.35em] uppercase text-charcoal-light mb-6">
-              Signature Framework
+              One Framework Within STABLE Academy
             </p>
             <h2 className="font-display text-3xl md:text-4xl font-light text-navy mb-3">
               STABLE IMPLANT <span className="italic">Protocol™</span>
@@ -167,7 +157,7 @@ const ProfessionalEducation = () => {
               The STABLE IMPLANT Protocol™ is a biologically driven treatment philosophy centered on long-term tissue stability, structural preservation, and prosthetic predictability.
             </p>
             <p className="font-body text-sm md:text-[15px] text-charcoal font-light leading-[2] mb-6">
-              This protocol is not limited to implants.
+              STABLE Academy covers all areas of prosthodontics. The STABLE IMPLANT Protocol™ is one framework within that broader educational scope.
             </p>
             <p className="font-body text-sm md:text-[15px] text-charcoal font-light leading-[2] mb-3">
               It is a comprehensive framework applicable across:
@@ -308,7 +298,7 @@ const ProfessionalEducation = () => {
               Mentorship · Live Cases · Surgical & Prosthetic Integration
             </p>
             <Link
-              to="/contact"
+              to="/professional-education#education-enquiry"
               className="inline-block px-10 py-4 border border-navy/15 text-navy font-body text-[11px] tracking-[0.25em] uppercase transition-all duration-300 hover:bg-navy hover:text-primary-foreground"
             >
               Request Program Details
@@ -330,7 +320,7 @@ const ProfessionalEducation = () => {
               Mentorship · Live Cases · Surgical & Prosthetic Integration
             </p>
             <Link
-              to="/contact"
+              to="/professional-education#education-enquiry"
               className="inline-block px-10 py-4 border border-navy/15 text-navy font-body text-[11px] tracking-[0.25em] uppercase transition-all duration-300 hover:bg-navy hover:text-primary-foreground"
             >
               Request Program Details
@@ -378,7 +368,7 @@ const ProfessionalEducation = () => {
       </section>
 
       {/* ═══════ SECTION 7: EDUCATION ENQUIRY FORM ═══════ */}
-      <section className="section-padding px-6 md:px-8">
+      <section id="education-enquiry" className="section-padding px-6 md:px-8">
         <div className="luxury-container max-w-lg">
           <motion.div {...fadeUp} transition={{ duration: 0.6 }} className="text-center mb-12">
             <p className="font-body text-[10px] tracking-[0.35em] uppercase text-charcoal-light mb-6">

@@ -43,30 +43,25 @@ const PageFooter = () => {
             >
               drparmardds@gmail.com
             </a>
-            <a
-              href="https://maps.google.com/?q=1544+Kuser+Road+Suite+C3+Hamilton+NJ+08619"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="block font-body text-xs text-primary-foreground/45 font-light hover:text-primary-foreground/70 transition-colors leading-relaxed"
-            >
-              1544 Kuser Road, Suite C3, Hamilton, NJ 08619
-            </a>
+            <div className="font-body text-xs text-primary-foreground/75 space-y-3 leading-relaxed">
+              <p>Hamilton · Dr. Randazzo’s practice<br /><a href="tel:+16095851616" className="underline">(609) 585-1616</a> · <Link to="/locations/hamilton" className="underline">Location details</Link></p>
+              <p>Dental Associates of Jersey City<br /><a href="tel:+12014330773" className="underline">(201) 433-0773</a> · <Link to="/locations/jersey-city" className="underline">Location details</Link></p>
+            </div>
           </div>
 
           {/* Navigation */}
           <div className="space-y-2.5">
             <p className="font-body text-[10px] tracking-[0.3em] uppercase text-primary-foreground/45 mb-4">
-              Practice
+              Explore
             </p>
             <Link to="/dental-implants-new-jersey" className="block font-body text-xs text-primary-foreground/55 hover:text-primary-foreground/80 tracking-wide transition-colors">Dental Implants</Link>
             <Link to="/full-arch-implants-new-jersey" className="block font-body text-xs text-primary-foreground/55 hover:text-primary-foreground/80 tracking-wide transition-colors">Full-Arch Rehabilitation</Link>
             <Link to="/full-mouth-reconstruction-new-jersey" className="block font-body text-xs text-primary-foreground/55 hover:text-primary-foreground/80 tracking-wide transition-colors">Aesthetic Dentistry</Link>
             <Link to="/maxillofacial-rehabilitation" className="block font-body text-xs text-primary-foreground/55 hover:text-primary-foreground/80 tracking-wide transition-colors">Maxillofacial Rehabilitation</Link>
-            <Link to="/patients-traveling-to-hamilton" className="block font-body text-xs text-primary-foreground/55 hover:text-primary-foreground/80 tracking-wide transition-colors">Traveling to Hamilton</Link>
-            <Link to="/education" className="block font-body text-xs text-primary-foreground/55 hover:text-primary-foreground/80 tracking-wide transition-colors">Education & Courses</Link>
+            <Link to="/traveling-for-care" className="block font-body text-xs text-primary-foreground/55 hover:text-primary-foreground/80 tracking-wide transition-colors">Travel from NJ, NYC &amp; Philadelphia</Link>
+            <Link to="/professional-education" className="block font-body text-xs text-primary-foreground/55 hover:text-primary-foreground/80 tracking-wide transition-colors">STABLE Academy</Link>
             <Link to="/about" className="block font-body text-xs text-primary-foreground/55 hover:text-primary-foreground/80 tracking-wide transition-colors">About</Link>
-            <Link to="/meet-the-team" className="block font-body text-xs text-primary-foreground/55 hover:text-primary-foreground/80 tracking-wide transition-colors">Meet the Team</Link>
-            <Link to="/contact" className="block font-body text-xs text-primary-foreground/55 hover:text-primary-foreground/80 tracking-wide transition-colors">Contact</Link>
+            <Link to="/contact" className="block font-body text-xs text-primary-foreground/55 hover:text-primary-foreground/80 tracking-wide transition-colors">Locations &amp; Appointments</Link>
           </div>
 
           {/* Professional Links */}

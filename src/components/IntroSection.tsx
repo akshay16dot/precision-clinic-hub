@@ -19,7 +19,7 @@ const IntroSection = () => {
           <div className="w-12 h-px bg-navy mx-auto mb-12" />
 
           <h2 className="font-display text-2xl md:text-3xl lg:text-4xl font-light text-charcoal leading-relaxed mb-8">
-            One clinical vision. A team built around your care.
+            A personal approach to complex care.
           </h2>
 
           <p className="font-body text-sm md:text-base text-charcoal-light font-light leading-relaxed max-w-2xl mx-auto mb-4">
@@ -27,7 +27,7 @@ const IntroSection = () => {
           </p>
 
           <p className="font-body text-sm md:text-base text-charcoal-light font-light leading-relaxed max-w-2xl mx-auto">
-            He is supported by an experienced prosthodontic team that brings continuity and collaboration to select cases. When clinically appropriate, planning, implant placement, provisional teeth, the final prosthesis and long-term maintenance remain coordinated in the same Hamilton office.
+            Dr. Parmar works with the clinical team at your chosen practice to coordinate evaluation, treatment and follow-up. His approach connects the surgical and restorative plan, with clear communication about each stage of care.
           </p>
         </motion.div>
       </div>

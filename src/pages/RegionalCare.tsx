@@ -69,7 +69,7 @@ const RegionalCare = ({ region }: { region: RegionKey }) => {
           "@id": `https://drparmardds.com${data.path}/#service`,
           name: `Prosthodontic care for ${data.areas.join(", ")}`,
           serviceType: "Prosthodontics and dental implant rehabilitation",
-          provider: { "@id": "https://drparmardds.com/#practice" },
+          provider: { "@id": "https://drparmardds.com/#akshay-parmar" },
           areaServed: data.areaServed.map((name) => ({ "@type": "Place", name })),
           url: `https://drparmardds.com${data.path}/`,
         },

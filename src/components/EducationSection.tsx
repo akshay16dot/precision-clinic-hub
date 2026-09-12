@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
 const courses = [
@@ -35,16 +36,18 @@ const EducationSection = () => {
           <p className="font-body text-[10px] tracking-[0.4em] uppercase text-charcoal-light mb-5">
             For Dental Professionals
           </p>
+          <img src="/images/stable-academy-logo-navy-transparent.png" alt="STABLE Academy" width="1864" height="843" loading="lazy" className="w-full max-w-xl mx-auto mb-6" />
           <h2 className="font-display text-4xl md:text-5xl font-light text-navy mb-5">
-            Implant Education
+            Prosthodontic Education
             <br />
             <span className="italic">Without Shortcuts</span>
           </h2>
           <p className="font-body text-sm text-charcoal-light font-light leading-relaxed max-w-xl mx-auto">
-            Evidence-based surgical & prosthetic training for modern implant dentistry.
+            STABLE Academy covers the full scope of prosthodontics with Dr. Akshay Parmar, including fixed, removable, implant and maxillofacial care, aesthetics, occlusion and digital workflows.
           </p>
         </motion.div>
 
+        <div className="text-center mb-10"><Link to="/professional-education" className="font-body text-xs tracking-widest uppercase text-navy border-b border-navy/30 pb-1">Explore STABLE Academy</Link></div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-6 lg:gap-7 max-w-4xl mx-auto">
           {courses.map((course, i) => (
             <motion.div
