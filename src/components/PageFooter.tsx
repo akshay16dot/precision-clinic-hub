@@ -58,7 +58,7 @@ const PageFooter = () => {
             <Link to="/full-arch-implants-new-jersey" className="block font-body text-xs text-primary-foreground/55 hover:text-primary-foreground/80 tracking-wide transition-colors">Full-Arch Rehabilitation</Link>
             <Link to="/full-mouth-reconstruction-new-jersey" className="block font-body text-xs text-primary-foreground/55 hover:text-primary-foreground/80 tracking-wide transition-colors">Aesthetic Dentistry</Link>
             <Link to="/maxillofacial-rehabilitation" className="block font-body text-xs text-primary-foreground/55 hover:text-primary-foreground/80 tracking-wide transition-colors">Maxillofacial Rehabilitation</Link>
-            <Link to="/traveling-for-care" className="block font-body text-xs text-primary-foreground/55 hover:text-primary-foreground/80 tracking-wide transition-colors">Travel from NJ, NYC &amp; Philadelphia</Link>
+            <Link to="/traveling-for-care" className="block font-body text-xs text-primary-foreground/55 hover:text-primary-foreground/80 tracking-wide transition-colors">Travel from NJ, NYC, PA &amp; Maryland</Link>
             <Link to="/professional-education" className="block font-body text-xs text-primary-foreground/55 hover:text-primary-foreground/80 tracking-wide transition-colors">STABLE Academy</Link>
             <Link to="/about" className="block font-body text-xs text-primary-foreground/55 hover:text-primary-foreground/80 tracking-wide transition-colors">About</Link>
             <Link to="/contact" className="block font-body text-xs text-primary-foreground/55 hover:text-primary-foreground/80 tracking-wide transition-colors">Locations &amp; Appointments</Link>
