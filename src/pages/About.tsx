@@ -99,6 +99,17 @@ const About = () => {
         </div>
       </section>
 
+      <section className="px-6 py-10 border-y border-divider bg-card" aria-label="Professional directories">
+        <div className="luxury-container max-w-5xl">
+          <h2 className="font-display text-2xl sm:text-3xl font-light text-navy">Professional credentials</h2>
+          <p className="font-body text-sm text-charcoal-light mt-3 mb-5">Look up Dr. Akshay Parmar in the official professional directories. For current appointments, use the Hamilton and Jersey City location details on this website.</p>
+          <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 font-body text-sm text-navy">
+            <a href="https://www.gotoapro.org/find-a-prosthodontist/?m=50&amp;l=Parmar" target="_blank" rel="noopener noreferrer" className="underline underline-offset-4">American College of Prosthodontists directory</a>
+            <a href="https://www.abpros.org/find-abp-certified-prosthodontist/?keyword=Parmar&amp;city=&amp;statelist=&amp;statetext=&amp;country=USA&amp;zip=&amp;ziprange=" target="_blank" rel="noopener noreferrer" className="underline underline-offset-4">American Board of Prosthodontics directory</a>
+          </div>
+        </div>
+      </section>
+
       {/* ═══════ SPECIALIST BIO ═══════ */}
       <section className="section-padding px-6 md:px-8">
         <div className="luxury-container max-w-3xl">
