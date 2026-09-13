@@ -5,7 +5,7 @@ import { practiceLocations, type LocationSlug } from "@/data/practiceLocations";
 import { usePageSEO } from "@/hooks/usePageSEO";
 export default function PracticeLocation({ slug }: { slug: LocationSlug }) {
  const location = practiceLocations.find(item => item.slug === slug)!;
- usePageSEO({ title: `Dr. Akshay Parmar | Prosthodontist in ${location.city}, NJ`, description: `See Dr. Akshay Parmar, board-certified prosthodontist, at ${location.practice} in ${location.city}, NJ. Call ${location.phone} and request an appointment with Dr. Parmar.` });
+ usePageSEO({ title: `Dr. Akshay Parmar | Prosthodontist in ${location.city}, NJ`, description: `See Dr. Akshay Parmar, board-certified prosthodontist, at ${location.practice} in ${location.city}, NJ. ${location.days}, by appointment only. Call ${location.phone}.` });
  return <main className="bg-background"><SiteNavigation />
   <section className="px-6 pt-32 pb-16 md:pt-40 md:pb-24"><div className="luxury-container max-w-5xl">
    <Link to="/contact" className="font-body text-xs text-navy underline underline-offset-4">View both locations</Link>
@@ -16,6 +16,7 @@ export default function PracticeLocation({ slug }: { slug: LocationSlug }) {
      <p>{location.description}</p>
      <p>His clinical work includes dental implants, full-arch rehabilitation, veneers, full-mouth reconstruction and maxillofacial prosthetics. An evaluation establishes the appropriate treatment, setting and sequence for your individual needs.</p>
      <h2 className="font-display text-3xl text-navy">Planning your visit</h2>
+     <p>Dr. Parmar sees patients here on {location.days}, by appointment only.</p>
      <p>When calling, ask specifically for an appointment with Dr. Akshay Parmar. The practice will confirm his next available appointment, the consultation fee and any records to bring.</p>
      <p>Appointments, treatment fees and billing are managed by this practice. Please confirm arrangements with the office before your visit.</p>
      <div className="flex flex-wrap gap-5 text-navy underline underline-offset-4"><Link to="/about">About Dr. Parmar</Link><Link to="/clinical-cases">Explore clinical work</Link><Link to="/patient-questions">Patient questions</Link></div>
