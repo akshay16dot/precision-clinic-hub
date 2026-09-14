@@ -71,7 +71,7 @@ const Testimonials = () => {
             transition={{ duration: 0.7, delay: 0.1 }}
             className="font-display text-3xl md:text-5xl font-light text-primary-foreground mb-5"
           >
-            Patient <span className="italic">Experiences</span>
+            Dr. Akshay Parmar <span className="italic">Patient Reviews</span>
           </motion.h1>
           <motion.p
             initial={{ opacity: 0 }}

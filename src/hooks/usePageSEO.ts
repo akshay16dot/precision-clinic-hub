@@ -242,9 +242,8 @@ const PAGE_SEO: Record<string, SeoEntry> = {
       "A documented anterior aesthetic correction case addressing grey shadowing, thin soft tissue and compromised restorative contours.",
   },
   "/testimonials": {
-    title: "Patient Reviews | Dr. Akshay Parmar, Hamilton Township NJ",
-    description:
-      "What patients say about implant, denture and full mouth reconstruction treatment at our Hamilton Township, NJ prosthodontic practice.",
+    title: "Dr. Akshay Parmar Reviews | Google & Zocdoc Patient Experiences",
+    description: "Read selected Google and Zocdoc reviews of Dr. Akshay Parmar’s implant and restorative care. Now seeing patients in Hamilton and Jersey City, New Jersey.",
   },
   "/professional-testimonials": {
     title: "What Referring Dentists Say | Dr. Akshay Parmar, NJ",
