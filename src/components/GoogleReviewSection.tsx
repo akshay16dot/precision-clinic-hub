@@ -9,6 +9,7 @@ const brooklyn = "https://www.google.com/maps/place/Dr.+Richard+A.+Romano/data=!
 const excerpts = [
   { name: "Krystyna Zakoscielny", quote: "Dr Parmar is a perfectionist in his work.", source: "Google", location: "Hamilton", context: "Care with Dr. Parmar", url: hamiltonReviewLinks.read },
   { name: "carol rooney", quote: "On my first visit with Dr Parmar, he immediately made me feel comfortable", source: "Google", location: "Hamilton", context: "Dental implant care", url: hamiltonReviewLinks.read },
+  { name: "Cesibel Moreno", quote: "The implant and crown look and feel great, and I’m very pleased with how everything turned out.", source: "Google", location: "Hamilton", context: "Implant and crown treatment with Dr. Parmar", url: hamiltonReviewLinks.read },
   { name: "CA", quote: "Everything went and looks terrific.", source: "Zocdoc", location: "Jersey City", context: "Implant and crown treatment with Dr. Parmar", url: zocdoc },
   { name: "NM", quote: "He made me laugh and feel comfortable.", source: "Zocdoc", location: "Jersey City", context: "A reassuring visit with Dr. Parmar", url: zocdoc },
   { name: "Kara Ostwind", quote: "He has great bed side manner, listens, and displays patience and compassion.", source: "Google", location: "Former Brooklyn practice", context: "Dental work completed by Dr. Parmar", url: brooklyn },
@@ -40,7 +41,7 @@ const GoogleReviewSection = () => (
       </div>
       <div className="max-w-2xl mx-auto text-center mt-8">
         <p className="font-body text-xs text-charcoal-light leading-relaxed">These are selected individual reviews, not an overall practice rating. Brooklyn reviews describe care at Dr. Romano’s practice when Dr. Parmar worked there. Dr. Parmar now sees patients only in Hamilton and Jersey City, New Jersey.</p>
-        <p className="font-body text-[11px] text-charcoal-light mt-4">Sources checked September 14, 2026. Excerpts are shortened; individual experiences and treatment results vary.</p>
+        <p className="font-body text-[11px] text-charcoal-light mt-4">Sources checked October 6, 2026. Excerpts are shortened; individual experiences and treatment results vary.</p>
         <Link to="/contact" className="inline-block mt-5 py-3 font-body text-xs uppercase tracking-widest text-navy underline underline-offset-4">See Dr. Parmar in Hamilton or Jersey City</Link>
       </div>
     </div>
