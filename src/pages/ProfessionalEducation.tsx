@@ -49,6 +49,11 @@ const galleryItems = [
 
 const peerTestimonials = [
   {
+    quote: "The examples made the ideas memorable, and your lecture helped me realize I can make sense of prosthodontics, even if it takes time. Canine guidance just clicked in my head like common sense. Thank you for opening my eyes more.",
+    name: "Course Participant",
+    credential: "Occlusion Simplified · Shared anonymously",
+  },
+  {
     quote: "Exceptionally structured program. The integration of biology, prosthetics, and surgical decision-making was unlike conventional implant courses.",
     name: "Dr. R. Mehta",
     credential: "Prosthodontist",

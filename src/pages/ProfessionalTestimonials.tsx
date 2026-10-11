@@ -13,6 +13,12 @@ const fadeUp = {
 const testimonials = [
   {
     quote:
+      "The examples made the ideas memorable, and your lecture helped me realize I can make sense of prosthodontics, even if it takes time. Canine guidance just clicked in my head like common sense. Thank you for opening my eyes more.",
+    name: "Course Participant",
+    credential: "Occlusion Simplified · Shared anonymously",
+  },
+  {
+    quote:
       "Dr. Parmar's approach to implant education is rooted in biology and systematic thinking. His courses reshaped how I plan full-arch cases, from diagnostics through prosthetic delivery.",
     name: "Dr. R. Mehta",
     credential: "Prosthodontist, New York",
